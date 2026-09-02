@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "hoGAMEGATA"
   text: "Index Mirror & Directory"
-  tagline: "A backed-up static index copy of all 1,07,809 games registered on hoGAMEGATA."
+  tagline: "A backed-up static index of all 1,07,809 games on hoGAMEGATA, the web's most curated horror database."
   actions:
     - theme: brand
       text: Browse Directory (A-Z)

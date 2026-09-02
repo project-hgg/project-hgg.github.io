@@ -1,6 +1,6 @@
-﻿# Project HGG — The Horror Game Index
+# Project HGG — The Horror Game Index
 
-A free, public backup directory for [hoGAMEGATA](https://gamegata.xyz), the largest horror game catalog in the world.
+A free, public backup directory for [hoGAMEGATA](https://gamegata.xyz), the most curated horror game catalog in the world.
 
 ---
 
