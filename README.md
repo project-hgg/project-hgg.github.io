@@ -19,9 +19,15 @@ Its purpose is simple: to make sure video game history and indie horror projects
 
 - **107,000+ Horror Games:** Organized alphabetically from numbers (0–9) to letters (A–Z).
 - **68,000+ Developers and Studios:** Solo creators, small teams, and major publishers.
+- **15,800+ Horror & Gameplay Tags:** Exhaustive tag vocabulary cataloging every subgenre, motif, and mechanic.
 - **Store Links:** Direct links to find games on Steam, itch.io, GOG, and hoGAMEGATA.
 - **Fast Title Search:** Search through the whole catalog instantly in your web browser.
 - **Zero Ads:** Completely free to use, without popups or commercial sponsors.
+
+### Raw Data Dumps & Preservation Files
+- [`all-games.txt`](https://raw.githubusercontent.com/project-hgg/project-hgg.github.io/main/all-games.txt) (9.2 MB plain text catalog: Title | Developer | URL)
+- [`all-games.md`](https://github.com/project-hgg/project-hgg.github.io/blob/main/all-games.md) (11.3 MB structured Markdown table)
+- [`all-tags.txt`](https://raw.githubusercontent.com/project-hgg/project-hgg.github.io/main/all-tags.txt) (362 KB raw plain text list of all 15,825 tags: Tag Name | Slug)
 
 ---
 
