@@ -1,0 +1,18 @@
+{
+  "name": "hogamegata-vitepress-index",
+  "version": "1.0.0",
+  "description": "VitePress-based static index mirror of hoGAMEGATA hosted on GitHub Pages",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "index:dev": "vitepress dev docs",
+    "index:build": "vitepress build docs",
+    "index:generate": "cd .. && npx tsx scripts/generate-vitepress-index.ts"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  }
+}

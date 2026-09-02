@@ -1,0 +1,167 @@
+:root {
+  --vp-c-bg: #09090b;
+  --vp-c-bg-alt: #121215;
+  --vp-c-bg-elv: #18181b;
+  --vp-c-brand-1: #ffffff;
+  --vp-c-brand-2: #e4e4e7;
+  --vp-c-brand-3: #d4d4d8;
+  --vp-c-brand-soft: rgba(255, 255, 255, 0.08);
+  --vp-c-text-1: #ffffff;
+  --vp-c-text-2: #a1a1aa;
+  --vp-c-text-3: #71717a;
+  --vp-c-border: rgba(255, 255, 255, 0.1);
+  --vp-c-divider: rgba(255, 255, 255, 0.08);
+  --vp-sidebar-width: 0px;
+}
+
+/* Full Width & Centered Container */
+.VPDoc .container {
+  max-width: 1240px !important;
+}
+
+.VPDoc .content {
+  padding: 32px 24px !important;
+  max-width: 100% !important;
+}
+
+/* Clean Minimalist Monochrome Table Styling */
+.vp-doc table {
+  display: table !important;
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin: 24px 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: #121215 !important;
+}
+
+.vp-doc th {
+  background: #18181b !important;
+  color: #ffffff !important;
+  font-family: var(--vp-font-family-mono, monospace) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  padding: 12px 18px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.vp-doc td {
+  padding: 11px 18px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  font-size: 14px !important;
+  color: #e4e4e7 !important;
+  vertical-align: middle !important;
+}
+
+/* Strictly Inline Links Column */
+.vp-doc th:last-child,
+.vp-doc td:last-child {
+  white-space: nowrap !important;
+  width: 110px !important;
+  text-align: center !important;
+}
+
+.vp-doc tr:last-child td {
+  border-bottom: none !important;
+}
+
+.vp-doc tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.vp-doc tr:hover td {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Inline SVG Logo Button Styling replacing text */
+.vp-doc a.link-hgg {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  background-image: url('/hgg.svg') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  text-indent: -9999px !important;
+  overflow: hidden !important;
+  vertical-align: middle !important;
+  margin-right: 12px !important;
+  transition: transform 0.15s ease, opacity 0.15s ease !important;
+  opacity: 0.85 !important;
+}
+
+.vp-doc a.link-igdb {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 34px !important;
+  height: 22px !important;
+  background-image: url('/IgdbLogo.svg') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  text-indent: -9999px !important;
+  overflow: hidden !important;
+  vertical-align: middle !important;
+  transition: transform 0.15s ease, opacity 0.15s ease !important;
+  opacity: 0.85 !important;
+}
+
+.vp-doc a.link-hgg:hover,
+.vp-doc a.link-igdb:hover {
+  opacity: 1 !important;
+  transform: scale(1.15) !important;
+}
+
+/* Row Target Search Highlight Animation - Clean Monochrome Glow */
+.vp-doc tr:has(.game-target:target) td,
+.vp-doc tr:has(:target) td {
+  animation: rowTargetHighlightMonochrome 3s ease-out !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+@keyframes rowTargetHighlightMonochrome {
+  0% {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+}
+
+/* Hidden Anchor Element */
+.game-target {
+  display: inline-block;
+  position: relative;
+  top: -120px;
+  visibility: hidden;
+}
+
+/* Clean Link & Button Styling */
+.vp-doc a {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.vp-doc a:hover {
+  opacity: 0.8 !important;
+  text-decoration: underline !important;
+}
+
+/* Hide Sidebar when disabled */
+.VPSidebar {
+  display: none !important;
+}
