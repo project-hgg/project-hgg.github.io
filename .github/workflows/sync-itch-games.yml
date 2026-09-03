@@ -29,7 +29,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install @libsql/client dotenv tsx --no-audit --no-fund
+        run: npm ci
 
       - name: Run Itch Horror Ingestion Engine
         env:
