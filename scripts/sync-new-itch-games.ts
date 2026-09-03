@@ -40,9 +40,44 @@ function decodeHtmlEntities(str: string): string {
     .replace(/&gt;/g, ">");
 }
 
-function cleanFeedTitle(title: string): string {
-  return decodeHtmlEntities(title)
-    .replace(/\[(?:Free|Demo|Windows|macOS|Linux|Android|iOS|WebGL|HTML5|Shooter|Action|Adventure|Puzzle|Simulation|Survival|Visual Novel|Role Playing|Platformer|Other)\]/gi, "")
+/**
+ * Normalizes an itch.io URL to a canonical format to prevent URL-variant duplicates
+ */
+function normalizeItchUrl(rawUrl: string): string {
+  try {
+    const u = new URL(rawUrl.trim());
+    u.protocol = "https:";
+    u.search = "";
+    u.hash = "";
+    const cleanPath = u.pathname.replace(/\/purchase$/, "").replace(/\/+$/, "");
+    return `https://${u.hostname.toLowerCase()}${cleanPath}`;
+  } catch {
+    return rawUrl.trim().toLowerCase().split("?")[0].replace(/\/purchase$/, "").replace(/\/+$/, "");
+  }
+}
+
+/**
+ * Normalizes title string for aggressive deduplication:
+ * Strips bracket metadata ([Free], [Windows]), punctuation, diacritics, and stop-words.
+ */
+function normalizeTitle(rawTitle: string): string {
+  return decodeHtmlEntities(rawTitle || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // strip diacritics
+    .replace(/\[.*?\]/g, "") // strip all bracket tags like [Free], [Windows], [20% Off]
+    .replace(/\(.*?\)/g, "") // strip parenthetical info
+    .replace(/\b(demo|prologue|remake|remaster|free|download|game|reupload|edition)\b/gi, "")
+    .replace(/[^a-z0-9]/g, "") // remove all non-alphanumeric chars
+    .trim();
+}
+
+/**
+ * Cleans user-facing title by stripping bracket tags like [Free] [Windows]
+ */
+function cleanDisplayTitle(title: string): string {
+  return decodeHtmlEntities(title || "")
+    .replace(/\[.*?\]/g, "") // strip all brackets
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -70,8 +105,8 @@ function parseXmlFeed(xmlText: string): FeedItem[] {
       const rawTitle = titleMatch[1].trim();
       const rawLink = linkMatch[1].trim();
       if (rawLink.includes(".itch.io/")) {
-        const cleanUrl = rawLink.replace(/\/purchase$/, "").replace(/\/+$/, "");
-        items.push({ title: cleanFeedTitle(rawTitle), link: cleanUrl });
+        const canonicalUrl = normalizeItchUrl(rawLink);
+        items.push({ title: cleanDisplayTitle(rawTitle), link: canonicalUrl });
       }
     }
   }
@@ -80,8 +115,8 @@ function parseXmlFeed(xmlText: string): FeedItem[] {
 }
 
 async function fetchItchDataJson(url: string, timeoutMs = 4000): Promise<any> {
-  const cleanUrl = url.trim().replace(/\/purchase$/, "").replace(/\/+$/, "");
-  const jsonUrl = cleanUrl.endsWith("/data.json") ? cleanUrl : `${cleanUrl}/data.json`;
+  const canonicalUrl = normalizeItchUrl(url);
+  const jsonUrl = canonicalUrl.endsWith("/data.json") ? canonicalUrl : `${canonicalUrl}/data.json`;
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
@@ -112,32 +147,59 @@ function delay(ms: number) {
 
 async function main() {
   const isDryRun = process.argv.includes("--dry-run");
-  console.log(`🎃 [Itch Horror Ingestion] Starting discovery pipeline (Dry run: ${isDryRun})...`);
+  console.log(`🎃 [Itch Horror Ingestion] Starting discovery & deduplication pipeline (Dry run: ${isDryRun})...`);
 
-  // Path inside project-hgg.github.io
-  const indexPath = path.join(process.cwd(), "docs", "public", "search-index.json");
+  // Path resolution for either gamegata-astro or project-hgg.github.io
+  let indexPath = path.join(process.cwd(), "docs", "public", "search-index.json");
+  if (!fs.existsSync(indexPath)) {
+    indexPath = path.join(process.cwd(), "public", "search-index.json");
+  }
   if (!fs.existsSync(indexPath)) {
     console.error(`❌ search-index.json not found at: ${indexPath}`);
     process.exit(1);
   }
 
-  // 1. In-memory diff: 0 Turso reads!
-  console.log("📂 Loading search index to diff...");
+  // 1. Two-Tiered In-Memory Deduplication Index: 0 Turso reads!
+  console.log("📂 Loading catalog to build deduplication index...");
   const catalog: SearchRecord[] = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
   console.log(`📦 Loaded ${catalog.length} existing games from search-index.json.`);
 
-  const existingSlugs = new Set<string>();
-  const existingTitles = new Set<string>();
   const existingIds = new Set<string>();
+  const existingSlugs = new Set<string>();
+  const existingUrlHashes = new Set<string>();
+
+  // Canonical IGDB/Steam game map (normTitle -> record)
+  const canonicalMainGameMap = new Map<string, SearchRecord>();
+  // Existing Itch game map (normTitle -> record)
+  const existingItchGameMap = new Map<string, SearchRecord>();
 
   for (const g of catalog) {
-    if (g.s) existingSlugs.add(g.s.toLowerCase());
-    if (g.t) existingTitles.add(g.t.toLowerCase().trim());
     if (g.i) existingIds.add(g.i);
+    if (g.s) existingSlugs.add(g.s.toLowerCase());
+
+    if (g.i && g.i.startsWith("itch_")) {
+      const uHash = g.i.replace(/^itch_/, "");
+      existingUrlHashes.add(uHash);
+    }
+
+    const norm = normalizeTitle(g.t);
+    if (norm) {
+      if (g.s && !g.s.startsWith("itch-")) {
+        if (!canonicalMainGameMap.has(norm)) {
+          canonicalMainGameMap.set(norm, g);
+        }
+      } else {
+        if (!existingItchGameMap.has(norm)) {
+          existingItchGameMap.set(norm, g);
+        }
+      }
+    }
   }
 
+  console.log(`🧠 Deduplication Index Ready: ${canonicalMainGameMap.size} canonical main games, ${existingItchGameMap.size} existing itch games.`);
+
   // 2. Poll Horror RSS Feeds
-  const discoveredMap = new Map<string, string>(); // url -> title
+  const discoveredMap = new Map<string, string>(); // canonicalUrl -> feedTitle
 
   for (const feedUrl of FEEDS) {
     try {
@@ -154,8 +216,9 @@ async function main() {
       console.log(`   Found ${items.length} items in feed.`);
 
       for (const item of items) {
-        if (!discoveredMap.has(item.link)) {
-          discoveredMap.set(item.link, item.title);
+        const canonicalUrl = normalizeItchUrl(item.link);
+        if (!discoveredMap.has(canonicalUrl)) {
+          discoveredMap.set(canonicalUrl, item.title);
         }
       }
     } catch (err) {
@@ -165,15 +228,23 @@ async function main() {
 
   console.log(`🔍 Total unique game URLs discovered: ${discoveredMap.size}`);
 
-  // 3. Diff against existing catalog
+  // 3. Pre-Filter against existing catalog
   const candidates: { url: string; feedTitle: string; urlHash: string }[] = [];
 
   for (const [url, feedTitle] of discoveredMap.entries()) {
     const urlHash = hashUrl(url);
     const expectedId = `itch_${urlHash}`;
 
-    if (existingIds.has(expectedId)) continue;
-    if (existingTitles.has(feedTitle.toLowerCase().trim())) continue;
+    // Deduplication check: Exact ID or URL hash already exists
+    if (existingIds.has(expectedId) || existingUrlHashes.has(urlHash)) {
+      continue;
+    }
+
+    // Deduplication check: Title normalized already matches an itch game
+    const preNorm = normalizeTitle(feedTitle);
+    if (preNorm && existingItchGameMap.has(preNorm)) {
+      continue;
+    }
 
     candidates.push({ url, feedTitle, urlHash });
   }
@@ -185,10 +256,19 @@ async function main() {
     return;
   }
 
-  // 4. Selective data.json Enrichment & Horror Gate Verification
+  // 4. Selective data.json Enrichment & Multi-Tier Deduplication
   const validNewGames: any[] = [];
+  const matchedCanonicalLinks: any[] = [];
+
+  // In-flight run deduplication sets to prevent duplicate items within the same feed
+  const seenUrls = new Set<string>();
+  const seenNormTitles = new Set<string>();
+  const seenSlugs = new Set<string>();
 
   for (const candidate of candidates) {
+    if (seenUrls.has(candidate.url)) continue;
+    seenUrls.add(candidate.url);
+
     console.log(`  🔎 Enriching: ${candidate.feedTitle} (${candidate.url})...`);
     await delay(700); // Polite rate limit
 
@@ -208,20 +288,25 @@ async function main() {
       continue;
     }
 
-    const title = decodeHtmlEntities((data.title || candidate.feedTitle).trim());
+    const rawTitle = data.title || candidate.feedTitle;
+    const cleanTitle = cleanDisplayTitle(rawTitle);
+    const normTitle = normalizeTitle(cleanTitle);
+
+    // In-flight batch deduplication
+    if (seenNormTitles.has(normTitle)) {
+      console.log(`     🔄 In-flight duplicate: "${cleanTitle}" already processed in this run.`);
+      continue;
+    }
+    seenNormTitles.add(normTitle);
+
+    // Secondary catalog check: Did data.title reveal it's already in the itch catalog?
+    if (existingItchGameMap.has(normTitle)) {
+      console.log(`     ⏩ Duplicate Itch Game: "${cleanTitle}" already exists in catalog as ${existingItchGameMap.get(normTitle)?.s}. Skipping.`);
+      continue;
+    }
+
     const author = data.authors?.[0]?.name || "Independent Creator";
     const coverUrl = data.cover_image || null;
-
-    let baseSlug = slugify(title);
-    if (!baseSlug) baseSlug = `game-${candidate.urlHash}`;
-    let finalSlug = `itch-${baseSlug}`;
-    if (existingSlugs.has(finalSlug)) {
-      finalSlug = `itch-${slugify(author)}-${baseSlug}`;
-      if (existingSlugs.has(finalSlug)) {
-        finalSlug = `itch-${baseSlug}-${candidate.urlHash.slice(0, 6)}`;
-      }
-    }
-    existingSlugs.add(finalSlug);
 
     // Parse Prices & Sales accurately
     let dealPrice = 0;
@@ -244,11 +329,43 @@ async function main() {
       data.sale?.rate ||
       (retailPrice > dealPrice ? Math.round(((retailPrice - dealPrice) / retailPrice) * 100) : 0);
 
+    // --- DEDUPLICATION TIER 3: CANONICAL MAIN GAME MATCH ---
+    // If this itch game already exists as an IGDB/Steam game (e.g. Buckshot Roulette),
+    // attach the itch purchase link and price snapshot to the canonical game instead of creating a duplicate!
+    if (canonicalMainGameMap.has(normTitle)) {
+      const canonical = canonicalMainGameMap.get(normTitle)!;
+      console.log(`     🎯 MATCHED CANONICAL MAIN GAME: "${cleanTitle}" matches existing game "${canonical.t}" (${canonical.s})! Attaching itch store link without duplicating game entity.`);
+      matchedCanonicalLinks.push({
+        targetGameId: canonical.i,
+        url: candidate.url,
+        urlHash: candidate.urlHash,
+        dealPrice,
+        retailPrice,
+        discountPercent,
+        coverUrl,
+      });
+      continue;
+    }
+
+    // --- NEW INDIE HORROR GAME INGESTION ---
+    let baseSlug = slugify(cleanTitle);
+    if (!baseSlug) baseSlug = `game-${candidate.urlHash}`;
+    let finalSlug = `itch-${baseSlug}`;
+
+    if (existingSlugs.has(finalSlug) || seenSlugs.has(finalSlug)) {
+      finalSlug = `itch-${slugify(author)}-${baseSlug}`;
+      if (existingSlugs.has(finalSlug) || seenSlugs.has(finalSlug)) {
+        finalSlug = `itch-${baseSlug}-${candidate.urlHash.slice(0, 6)}`;
+      }
+    }
+    existingSlugs.add(finalSlug);
+    seenSlugs.add(finalSlug);
+
     const gameId = `itch_${candidate.urlHash}`;
 
     validNewGames.push({
       id: gameId,
-      title,
+      title: cleanTitle,
       slug: finalSlug,
       coverUrl,
       author,
@@ -259,13 +376,13 @@ async function main() {
       tags: tags.join(", ") || "Horror, Indie",
     });
 
-    console.log(`     ✅ Validated Horror: "${title}" by ${author} [Price: $${dealPrice}]`);
+    console.log(`     ✅ Validated New Horror Game: "${cleanTitle}" by ${author} [Price: $${dealPrice}]`);
   }
 
-  console.log(`\n🎉 Verified ${validNewGames.length} new horror games ready to ingest.`);
+  console.log(`\n🎉 Summary: ${validNewGames.length} brand new games, ${matchedCanonicalLinks.length} matched to existing canonical games.`);
 
-  if (validNewGames.length === 0) {
-    console.log("✨ No new games passed horror validation.");
+  if (validNewGames.length === 0 && matchedCanonicalLinks.length === 0) {
+    console.log("✨ No new games or price links to insert.");
     return;
   }
 
@@ -288,6 +405,7 @@ async function main() {
   const batchStatements: any[] = [];
   const now = Date.now();
 
+  // A. Insert Brand New Games
   for (const g of validNewGames) {
     // 1. Game Table
     batchStatements.push({
@@ -314,39 +432,68 @@ async function main() {
     });
   }
 
+  // B. Attach Itch Links & Price Snapshots to Existing Canonical Games
+  for (const m of matchedCanonicalLinks) {
+    batchStatements.push({
+      sql: `INSERT INTO "PurchaseLink" (id, storeName, url, gameId) VALUES (?, 'itch.io', ?, ?) ON CONFLICT DO NOTHING`,
+      args: [`pl_itch_${m.urlHash}`, m.url, m.targetGameId],
+    });
+
+    batchStatements.push({
+      sql: `INSERT INTO "PriceSnapshot" (
+        id, gameId, storeName, dealPrice, retailPrice, discountPercent, dealUrl, currency, country, provider, updatedAt
+      ) VALUES (?, ?, 'itch.io', ?, ?, ?, ?, 'USD', 'US', 'direct', ?)
+      ON CONFLICT DO NOTHING`,
+      args: [`ps_itch_${m.urlHash}`, m.targetGameId, m.dealPrice, m.retailPrice, m.discountPercent, m.url, now],
+    });
+
+    // Backfill coverUrl if canonical game was missing one
+    if (m.coverUrl) {
+      batchStatements.push({
+        sql: `UPDATE "Game" SET coverUrl = coalesce(coverUrl, ?) WHERE id = ?`,
+        args: [m.coverUrl, m.targetGameId],
+      });
+    }
+  }
+
   try {
     await client.batch(batchStatements, "write");
-    console.log(`💾 Successfully inserted ${validNewGames.length} new horror games into TursoDB!`);
+    console.log(`💾 Successfully committed batch transaction (${batchStatements.length} operations) to TursoDB!`);
   } catch (dbErr) {
     console.error("❌ Turso batch insert error:", dbErr);
     process.exit(1);
   }
 
-  // 6. Append to docs/public/search-index.json
-  console.log("📝 Updating docs/public/search-index.json...");
-  for (const g of validNewGames) {
-    catalog.push({
-      i: g.id,
-      t: g.title,
-      s: g.slug,
-      c: g.coverUrl,
-      d: [g.author],
-    });
+  // 6. Append Brand New Games to search-index.json
+  if (validNewGames.length > 0) {
+    console.log("📝 Updating search-index.json with deduplicated entries...");
+    for (const g of validNewGames) {
+      catalog.push({
+        i: g.id,
+        t: g.title,
+        s: g.slug,
+        c: g.coverUrl,
+        d: [g.author],
+      });
+    }
+
+    fs.writeFileSync(indexPath, JSON.stringify(catalog), "utf-8");
+    console.log(`✅ search-index.json updated. New total games: ${catalog.length}.`);
+
+    // Synchronize across local repositories if available
+    const otherPath = indexPath.includes("project-hgg")
+      ? path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "gamegata-astro", "public", "search-index.json")
+      : path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "project-hgg.github.io", "docs", "public", "search-index.json");
+
+    if (fs.existsSync(path.dirname(otherPath))) {
+      try {
+        fs.copyFileSync(indexPath, otherPath);
+        console.log(`✅ Synced updated index to peer repository!`);
+      } catch {}
+    }
   }
 
-  fs.writeFileSync(indexPath, JSON.stringify(catalog), "utf-8");
-  console.log(`✅ search-index.json updated. New total games: ${catalog.length}.`);
-
-  // 7. Also mirror to gamegata-astro if local folder exists
-  const gamegataPath = path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "gamegata-astro", "public", "search-index.json");
-  if (fs.existsSync(path.dirname(gamegataPath))) {
-    try {
-      fs.copyFileSync(indexPath, gamegataPath);
-      console.log(`✅ Synced updated index to gamegata-astro!`);
-    } catch {}
-  }
-
-  console.log("🏁 Ingestion pipeline completed successfully!");
+  console.log("🏁 Ingestion & deduplication pipeline completed successfully!");
 }
 
 main().catch((err) => {
