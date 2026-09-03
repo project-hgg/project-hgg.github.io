@@ -25,9 +25,13 @@ interface GameCandidate {
   totalRating: number | null;
   follows: number | null;
   coverId: number | null;
+  screenshotIds: number[];
+  videoIds: number[];
   involvedCompanyIds: number[];
   platformIds: number[];
   genreIds: number[];
+  keywordIds: number[];
+  playerPerspectiveIds: number[];
   websiteIds: number[];
 }
 
@@ -222,8 +226,12 @@ async function main() {
     console.log("🔍 Streaming games dump and diffing horror candidates against catalog...");
     const candidateGames: GameCandidate[] = [];
     const neededCoverIds = new Set<number>();
+    const neededScreenshotIds = new Set<number>();
+    const neededVideoIds = new Set<number>();
     const neededInvolvedCompanyIds = new Set<number>();
     const neededPlatformIds = new Set<number>();
+    const neededGenreIds = new Set<number>();
+    const neededKeywordIds = new Set<number>();
     const neededWebsiteIds = new Set<number>();
 
     let totalChecked = 0;
@@ -246,9 +254,13 @@ async function main() {
       if (norm && existingNormTitles.has(norm)) return;
 
       const coverId = parseInt(getField("cover"), 10);
+      const screenshotIds = extractNumbers(getField("screenshots"));
+      const videoIds = extractNumbers(getField("videos"));
       const involvedCompanyIds = extractNumbers(getField("involved_companies"));
       const platformIds = extractNumbers(getField("platforms"));
       const genreIds = extractNumbers(getField("genres"));
+      const keywordIds = extractNumbers(getField("keywords"));
+      const playerPerspectiveIds = extractNumbers(getField("player_perspectives"));
       const websiteIds = extractNumbers(getField("websites"));
 
       candidateGames.push({
@@ -261,15 +273,23 @@ async function main() {
         totalRating: parseFloat(getField("total_rating")) || null,
         follows: parseInt(getField("follows"), 10) || null,
         coverId: !isNaN(coverId) ? coverId : null,
+        screenshotIds,
+        videoIds,
         involvedCompanyIds,
         platformIds,
         genreIds,
+        keywordIds,
+        playerPerspectiveIds,
         websiteIds,
       });
 
       if (!isNaN(coverId)) neededCoverIds.add(coverId);
+      screenshotIds.forEach((s) => neededScreenshotIds.add(s));
+      videoIds.forEach((v) => neededVideoIds.add(v));
       involvedCompanyIds.forEach((c) => neededInvolvedCompanyIds.add(c));
       platformIds.forEach((p) => neededPlatformIds.add(p));
+      genreIds.forEach((g) => neededGenreIds.add(g));
+      keywordIds.forEach((k) => neededKeywordIds.add(k));
       websiteIds.forEach((w) => neededWebsiteIds.add(w));
 
       if (candidateGames.length >= maxLimit) return;
@@ -283,18 +303,17 @@ async function main() {
       return;
     }
 
-    // 6. Download Relational Dumps needed ONLY for the candidate games
-    console.log("\n📦 Downloading relation dumps for new games enrichment...");
+    // 6. Download All Required Relation Dumps (11 Endpoints Suite)
+    console.log("\n📦 Downloading relation dumps for full hoGAMEGATA metadata enrichment...");
 
     // 6.1 Covers
     const coversMap = new Map<number, string>();
     if (neededCoverIds.size > 0) {
-      console.log("  📸 Downloading covers dump...");
+      console.log("  📸 [2/11] Downloading covers dump...");
       const coversInfo = await getDumpDownloadUrl("covers", twitchClientId, token);
       const coversPath = path.join(tempDir, coversInfo.fileName);
       await downloadFile(coversInfo.url, coversPath);
 
-      console.log("  🔍 Resolving cover URLs...");
       await streamCsv(coversPath, (getField) => {
         const cId = parseInt(getField("id"), 10);
         if (neededCoverIds.has(cId)) {
@@ -305,12 +324,47 @@ async function main() {
       });
     }
 
-    // 6.2 Companies & Involved Companies
+    // 6.2 Screenshots (Galleries)
+    const screenshotsMap = new Map<number, string>();
+    if (neededScreenshotIds.size > 0) {
+      console.log("  🖼️ [3/11] Downloading screenshots dump...");
+      const screenshotsInfo = await getDumpDownloadUrl("screenshots", twitchClientId, token);
+      const screenshotsPath = path.join(tempDir, screenshotsInfo.fileName);
+      await downloadFile(screenshotsInfo.url, screenshotsPath);
+
+      await streamCsv(screenshotsPath, (getField) => {
+        const sId = parseInt(getField("id"), 10);
+        if (neededScreenshotIds.has(sId)) {
+          const rawUrl = getField("url");
+          const fullUrl = rawUrl.startsWith("//") ? `https:${rawUrl}` : rawUrl;
+          screenshotsMap.set(sId, fullUrl.replace("t_thumb", "t_screenshot_huge"));
+        }
+      });
+    }
+
+    // 6.3 Game Videos (YouTube Trailers)
+    const videosMap = new Map<number, string>();
+    if (neededVideoIds.size > 0) {
+      console.log("  🎬 [4/11] Downloading game_videos dump...");
+      const videosInfo = await getDumpDownloadUrl("game_videos", twitchClientId, token);
+      const videosPath = path.join(tempDir, videosInfo.fileName);
+      await downloadFile(videosInfo.url, videosPath);
+
+      await streamCsv(videosPath, (getField) => {
+        const vId = parseInt(getField("id"), 10);
+        if (neededVideoIds.has(vId)) {
+          const videoId = getField("video_id");
+          if (videoId) videosMap.set(vId, `https://www.youtube.com/embed/${videoId}`);
+        }
+      });
+    }
+
+    // 6.4 Involved Companies & Companies (Developers / Publishers)
     const companyIdToName = new Map<number, string>();
     const involvedCompanyToCompanyId = new Map<number, { companyId: number; isDeveloper: boolean }>();
 
     if (neededInvolvedCompanyIds.size > 0) {
-      console.log("  🏢 Downloading involved_companies dump...");
+      console.log("  🏢 [5/11] Downloading involved_companies dump...");
       const invInfo = await getDumpDownloadUrl("involved_companies", twitchClientId, token);
       const invPath = path.join(tempDir, invInfo.fileName);
       await downloadFile(invInfo.url, invPath);
@@ -326,7 +380,7 @@ async function main() {
         }
       });
 
-      console.log("  🏢 Downloading companies dump...");
+      console.log("  🏢 [6/11] Downloading companies dump...");
       const compInfo = await getDumpDownloadUrl("companies", twitchClientId, token);
       const compPath = path.join(tempDir, compInfo.fileName);
       await downloadFile(compInfo.url, compPath);
@@ -339,10 +393,10 @@ async function main() {
       });
     }
 
-    // 6.3 Platforms
+    // 6.5 Platforms
     const platformsMap = new Map<number, string>();
     if (neededPlatformIds.size > 0) {
-      console.log("  🎮 Downloading platforms dump...");
+      console.log("  🎮 [7/11] Downloading platforms dump...");
       const platInfo = await getDumpDownloadUrl("platforms", twitchClientId, token);
       const platPath = path.join(tempDir, platInfo.fileName);
       await downloadFile(platInfo.url, platPath);
@@ -355,10 +409,26 @@ async function main() {
       });
     }
 
-    // 6.4 Websites (Store Links)
+    // 6.6 Genres
+    const genresMap = new Map<number, string>();
+    if (neededGenreIds.size > 0) {
+      console.log("  🏷️ [8/11] Downloading genres dump...");
+      const genresInfo = await getDumpDownloadUrl("genres", twitchClientId, token);
+      const genresPath = path.join(tempDir, genresInfo.fileName);
+      await downloadFile(genresInfo.url, genresPath);
+
+      await streamCsv(genresPath, (getField) => {
+        const gId = parseInt(getField("id"), 10);
+        if (neededGenreIds.has(gId)) {
+          genresMap.set(gId, getField("name").trim());
+        }
+      });
+    }
+
+    // 6.7 Websites (Store Links)
     const websitesMap = new Map<number, { store: string; url: string }>();
     if (neededWebsiteIds.size > 0) {
-      console.log("  🌐 Downloading websites dump...");
+      console.log("  🌐 [9/11] Downloading websites dump...");
       const webInfo = await getDumpDownloadUrl("websites", twitchClientId, token);
       const webPath = path.join(tempDir, webInfo.fileName);
       await downloadFile(webInfo.url, webPath);
@@ -381,14 +451,40 @@ async function main() {
       });
     }
 
-    // 7. Assemble Games for Ingestion
-    console.log("\n🔨 Assembling validated horror game records...");
+    // 6.8 Keywords (Scare Meter Taxonomy)
+    const keywordsMap = new Map<number, string>();
+    if (neededKeywordIds.size > 0) {
+      console.log("  🔑 [10/11] Downloading keywords dump...");
+      const keywordsInfo = await getDumpDownloadUrl("keywords", twitchClientId, token);
+      const keywordsPath = path.join(tempDir, keywordsInfo.fileName);
+      await downloadFile(keywordsInfo.url, keywordsPath);
+
+      await streamCsv(keywordsPath, (getField) => {
+        const kId = parseInt(getField("id"), 10);
+        if (neededKeywordIds.has(kId)) {
+          keywordsMap.set(kId, getField("name").trim());
+        }
+      });
+    }
+
+    // 7. Assemble Full hoGAMEGATA Records
+    console.log("\n🔨 Assembling full hoGAMEGATA game records with media & taxonomy...");
     const gamesToInsert: any[] = [];
     const now = Date.now();
 
     for (const g of candidateGames) {
       const gameId = generateId();
       const coverUrl = g.coverId ? coversMap.get(g.coverId) || null : null;
+
+      // Screenshots
+      const screenshots: string[] = [];
+      for (const sId of g.screenshotIds) {
+        const sUrl = screenshotsMap.get(sId);
+        if (sUrl && !screenshots.includes(sUrl)) screenshots.push(sUrl);
+      }
+
+      // Trailer
+      const trailerUrl = g.videoIds.length > 0 ? videosMap.get(g.videoIds[0]) || null : null;
 
       // Developers
       const devNames: string[] = [];
@@ -404,6 +500,15 @@ async function main() {
       // Platforms
       const platNames = g.platformIds.map((pId) => platformsMap.get(pId)).filter((x): x is string => !!x);
       const platformNames = platNames.join(", ") || "PC";
+
+      // Genres
+      const genreNamesList = Array.from(
+        new Set([
+          "Horror",
+          ...g.genreIds.map((gId) => genresMap.get(gId)).filter((x): x is string => !!x),
+        ])
+      );
+      const genreNames = genreNamesList.join(", ");
 
       // Purchase Links
       const purchaseLinks: { store: string; url: string }[] = [];
@@ -423,10 +528,12 @@ async function main() {
         summary: g.summary,
         storyline: g.storyline,
         coverUrl,
+        trailerUrl,
+        screenshots: screenshots.length > 0 ? JSON.stringify(screenshots) : null,
         rating: g.totalRating,
         popularity: g.follows,
         developerNames,
-        genreNames: "Horror",
+        genreNames,
         platformNames,
         releaseDate,
         status,
@@ -434,7 +541,9 @@ async function main() {
         primaryDeveloper: devNames[0] || "Independent Creator",
       });
 
-      console.log(`  ➕ Prepared: "${g.name}" [Dev: ${developerNames}] [Cover: ${coverUrl ? "YES" : "NO"}] [Links: ${purchaseLinks.length}]`);
+      console.log(
+        `  ➕ Prepared: "${g.name}" [Dev: ${developerNames}] [Cover: ${coverUrl ? "YES" : "NO"}] [Screenshots: ${screenshots.length}] [Trailer: ${trailerUrl ? "YES" : "NO"}] [Links: ${purchaseLinks.length}]`
+      );
     }
 
     if (isDryRun) {
@@ -451,9 +560,9 @@ async function main() {
       // 1. Game row
       batchStatements.push({
         sql: `INSERT INTO "Game" (
-          id, igdbId, title, slug, summary, storyline, coverUrl, rating, popularity,
+          id, igdbId, title, slug, summary, storyline, coverUrl, trailerUrl, screenshots, rating, popularity,
           developerNames, genreNames, platformNames, status, source, isTrending, likesCount, createdAt, updatedAt
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'igdb', 0, 0, ?, ?)
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'igdb', 0, 0, ?, ?)
         ON CONFLICT DO NOTHING`,
         args: [
           g.id,
@@ -463,6 +572,8 @@ async function main() {
           g.summary,
           g.storyline,
           g.coverUrl,
+          g.trailerUrl,
+          g.screenshots,
           g.rating,
           g.popularity,
           g.developerNames,
@@ -514,7 +625,7 @@ async function main() {
       } catch {}
     }
 
-    console.log("🎉 IGDB horror ingestion completed successfully!");
+    console.log("🎉 Full hoGAMEGATA IGDB horror ingestion completed successfully!");
   } finally {
     // 10. Clean up temporary dump files to conserve disk space
     try {
