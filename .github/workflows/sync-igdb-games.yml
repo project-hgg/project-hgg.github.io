@@ -1,0 +1,53 @@
+name: Sync IGDB Horror Games
+
+on:
+  schedule:
+    # Run every Sunday at 04:00 UTC
+    - cron: '0 4 * * 0'
+  workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
+
+concurrency:
+  group: sync-igdb-catalog
+  cancel-in-progress: false
+
+jobs:
+  sync-games:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to push updated search-index.json back to main
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run IGDB Partner Dumps Horror Ingestion Engine
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: npx tsx scripts/sync-new-igdb-dumps.ts
+
+      - name: Commit & Push Updated Search Index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain docs/public/search-index.json)" ]; then
+            git add docs/public/search-index.json
+            git commit -m "chore(catalog): auto-sync weekly igdb horror games [skip ci]"
+            git push
+            echo "🚀 Pushed updated search index with newly discovered IGDB horror games!"
+          else
+            echo "✨ No catalog changes to commit."
+          fi
