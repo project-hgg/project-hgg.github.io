@@ -1,4 +1,4 @@
-# Project HGG — The Horror Game Index
+# Project hGG — Horror Games Mega Metadata
 
 A free, public backup directory for [hoGAMEGATA](https://gamegata.xyz), the most curated horror game catalog in the world.
 
@@ -11,7 +11,7 @@ This website is a lightweight backup mirror of the games and creators listed on 
 Its purpose is simple: to make sure video game history and indie horror projects are preserved and always easy to find. If you want to browse horror games, find who made them, and see where to play them, you can do so here with zero ads and zero sign-ups.
 
 - **Live Website:** [project-hgg.github.io](https://project-hgg.github.io)
-- **Main Game Search Engine:** [gamegata.xyz](https://gamegata.xyz)
+- **Main Game Search Engine/Project Link:** [gamegata.xyz](https://gamegata.xyz)
 
 ---
 
@@ -73,7 +73,6 @@ If you want to view or test this index on your own machine:
 hoGAMEGATA is an open, independent database built to catalog and preserve the entire world of horror video games — from retro classics to modern indie releases. 
 
 - **Official Website:** [https://gamegata.xyz](https://gamegata.xyz)
-- **Verified World Records & Stats:** [https://gamegata.xyz/promo/stats](https://gamegata.xyz/promo/stats)
 
 ---
 
