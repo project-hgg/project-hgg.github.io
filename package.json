@@ -9,9 +9,13 @@
     "docs:preview": "vitepress preview docs",
     "index:dev": "vitepress dev docs",
     "index:build": "vitepress build docs",
-    "index:generate": "cd .. && npx tsx scripts/generate-vitepress-index.ts"
+    "index:generate": "cd .. && npx tsx scripts/generate-vitepress-index.ts",
+    "sync:itch": "tsx scripts/sync-new-itch-games.ts"
   },
   "devDependencies": {
+    "@libsql/client": "^0.17.4",
+    "dotenv": "^16.4.7",
+    "tsx": "^4.19.2",
     "vitepress": "^1.6.3",
     "vue": "^3.5.13"
   }
