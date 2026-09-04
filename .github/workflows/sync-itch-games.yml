@@ -41,11 +41,28 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain docs/public/search-index.json)" ]; then
-            git add docs/public/search-index.json
+          if [ -n "$(git status --porcelain docs/public/search-index.json docs/public/data-version.json)" ]; then
+            git add docs/public/search-index.json docs/public/data-version.json
             git commit -m "chore(catalog): auto-sync new itch horror games [skip ci]"
+            COMMIT_SHA=$(git rev-parse --short HEAD)
+            FULL_SHA=$(git rev-parse HEAD)
+            COMMIT_DATE=$(git log -1 --format=%cI)
+            node -e "
+              const fs = require('fs');
+              const p = 'docs/public/data-version.json';
+              const d = fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf-8')) : {};
+              d.commitSha = '$COMMIT_SHA';
+              d.fullSha = '$FULL_SHA';
+              d.commitMessage = 'chore(catalog): auto-sync new itch horror games';
+              d.timestamp = '$COMMIT_DATE';
+              d.totalGames = JSON.parse(fs.readFileSync('docs/public/search-index.json')).length;
+              fs.writeFileSync(p, JSON.stringify(d, null, 2));
+            "
+            git add docs/public/data-version.json
+            git commit --amend --no-edit
             git push
-            echo "🚀 Pushed updated search index with newly discovered horror games!"
+            echo "🚀 Pushed updated search index and data-version.json ($COMMIT_SHA)!"
           else
             echo "✨ No catalog changes to commit."
           fi
+
