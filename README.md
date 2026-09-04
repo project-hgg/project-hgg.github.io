@@ -15,7 +15,7 @@ Its purpose is simple: to make sure video game history and indie horror projects
 
 ---
 
-## What is included? (The total number keeps increasing as new games added frequently!)
+## What is included? (The total number keeps increasing as new games are added frequently!)
 
 - **107,000+ Horror Games:** Organized alphabetically from numbers (0–9) to letters (A–Z). 
 - **68,000+ Developers and Studios:** Solo creators, small teams, and major publishers.
