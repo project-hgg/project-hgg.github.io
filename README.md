@@ -15,9 +15,9 @@ Its purpose is simple: to make sure video game history and indie horror projects
 
 ---
 
-## What is included?
+## What is included? (The total number keeps increasing as new games added frequently!)
 
-- **107,000+ Horror Games:** Organized alphabetically from numbers (0–9) to letters (A–Z).
+- **107,000+ Horror Games:** Organized alphabetically from numbers (0–9) to letters (A–Z). 
 - **68,000+ Developers and Studios:** Solo creators, small teams, and major publishers.
 - **15,800+ Horror & Gameplay Tags:** Exhaustive tag vocabulary cataloging every subgenre, motif, and mechanic.
 - **Store Links:** Direct links to find games on Steam, itch.io, GOG, and hoGAMEGATA.
@@ -25,9 +25,9 @@ Its purpose is simple: to make sure video game history and indie horror projects
 - **Zero Ads:** Completely free to use, without popups or commercial sponsors.
 
 ### Raw Data Dumps & Preservation Files
-- [`all-games.txt`](https://raw.githubusercontent.com/project-hgg/project-hgg.github.io/main/all-games.txt) (9.2 MB plain text catalog: Title | Developer | URL)
-- [`all-games.md`](https://github.com/project-hgg/project-hgg.github.io/blob/main/all-games.md) (11.3 MB structured Markdown table)
-- [`all-tags.txt`](https://raw.githubusercontent.com/project-hgg/project-hgg.github.io/main/all-tags.txt) (362 KB raw plain text list of all 15,825 tags: Tag Name | Slug)
+- [`all-games.txt`](https://raw.githubusercontent.com/project-hgg/project-hgg.github.io/main/all-games.txt) (plain text catalog: Title | Developer | URL)
+- [`all-games.md`](https://github.com/project-hgg/project-hgg.github.io/blob/main/all-games.md) (structured Markdown table)
+- [`all-tags.txt`](https://raw.githubusercontent.com/project-hgg/project-hgg.github.io/main/all-tags.txt) (raw plain text list of all 15,825 tags: Tag Name | Slug)
 
 ---
 
@@ -45,24 +45,24 @@ Its purpose is simple: to make sure video game history and indie horror projects
 If you want to view or test this index on your own machine:
 
 1. **Clone this repository:**
-   `ash
+   `
    git clone https://github.com/project-hgg/project-hgg.github.io.git
    cd project-hgg.github.io
    `
 
-2. **Install dependencies:**
-   `ash
+3. **Install dependencies:**
+   `
    npm install
    `
 
-3. **Start local preview:**
-   `ash
+4. **Start local preview:**
+   `
    npm run docs:dev
    `
    Open your browser to http://localhost:5173 to browse the site.
 
-4. **Build static files:**
-   `ash
+5. **Build static files:**
+   `
    npm run docs:build
    `
 
@@ -70,7 +70,7 @@ If you want to view or test this index on your own machine:
 
 ## About hoGAMEGATA
 
-hoGAMEGATA is an open, independent database built to catalog and preserve the entire world of horror video games — from retro classics to modern indie releases. 
+hoGAMEGATA is an open, independent database built to catalog and preserve the entire world of horror video games. From retro classics to modern indie releases. 
 
 - **Official Website:** [https://gamegata.xyz](https://gamegata.xyz)
 
