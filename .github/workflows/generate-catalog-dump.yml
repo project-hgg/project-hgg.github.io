@@ -1,0 +1,63 @@
+name: Generate Offline Catalog Dump
+
+on:
+  schedule:
+    # Run every Sunday at 05:00 UTC (after weekly IGDB sync)
+    - cron: '0 5 * * 0'
+  workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
+
+concurrency:
+  group: generate-catalog-dump
+  cancel-in-progress: false
+
+jobs:
+  export-catalog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to commit dump and publish releases
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Generate Sanitized Gzip Catalog Dump
+        env:
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+        run: npx tsx scripts/generate-catalog-dump.ts
+
+      - name: Commit & Push Catalog Dump to Main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json)" ]; then
+            git add docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json
+            git commit -m "chore(catalog): auto-sync weekly offline catalog dump [skip ci]"
+            git push origin main
+          else
+            echo "No changes in catalog dump."
+          fi
+
+      - name: Publish / Update GitHub Release Asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f docs/public/catalog-dump.json.gz ]; then
+            VERSION=$(node -p "require('./docs/public/catalog-manifest.json').version")
+            COUNT=$(node -p "require('./docs/public/catalog-manifest.json').totalGames")
+            gh release create catalog-latest docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json \
+              --title "Offline Catalog Dump (v${VERSION})" \
+              --notes "Weekly synchronized database dump of hoGAMEGATA catalog (${COUNT} games). Cleaned and sanitized for offline in-memory search." \
+              --clobber || true
+          fi
