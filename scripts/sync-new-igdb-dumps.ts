@@ -85,7 +85,9 @@ function extractNumbers(field: string): number[] {
   if (!field) return [];
   const matches = field.match(/\d+/g);
   if (!matches) return [];
-  return matches.map((n) => parseInt(n, 10));
+  return matches
+    .map((n) => parseInt(n, 10))
+    .filter((n) => Number.isFinite(n) && n > 0);
 }
 
 async function streamCsv(filePath: string, onRow: (getField: (name: string) => string) => void): Promise<void> {
@@ -93,14 +95,37 @@ async function streamCsv(filePath: string, onRow: (getField: (name: string) => s
   const rlStream = readline.createInterface({ input: fileStream, crlfDelay: Infinity });
 
   let headerIndexMap: Map<string, number> | null = null;
+  let accumulated = "";
 
   for await (const line of rlStream) {
-    if (!line.trim()) continue;
-    if (!headerIndexMap) {
-      headerIndexMap = buildHeaderIndexMap(line);
+    accumulated = accumulated ? accumulated + "\n" + line : line;
+
+    // Count quotes to ensure multiline fields inside quotes are not broken
+    let quoteCount = 0;
+    for (let i = 0; i < accumulated.length; i++) {
+      if (accumulated[i] === '"') {
+        if (accumulated[i + 1] === '"') {
+          i++; // Skip escaped double quote
+        } else {
+          quoteCount++;
+        }
+      }
+    }
+
+    // Odd number of quotes indicates we are inside a multiline quoted field
+    if (quoteCount % 2 !== 0) {
       continue;
     }
-    const cells = parseCsvLine(line);
+
+    const rowText = accumulated;
+    accumulated = "";
+
+    if (!rowText.trim()) continue;
+    if (!headerIndexMap) {
+      headerIndexMap = buildHeaderIndexMap(rowText);
+      continue;
+    }
+    const cells = parseCsvLine(rowText);
     const getField = (fieldName: string): string => {
       const idx = headerIndexMap!.get(fieldName);
       if (idx === undefined || idx >= cells.length) return "";
@@ -244,16 +269,24 @@ async function main() {
       if (!themes.includes(19)) return;
 
       horrorFound++;
-      const id = parseInt(getField("id"), 10);
+      const rawId = parseInt(getField("id"), 10);
+      if (isNaN(rawId) || !Number.isFinite(rawId) || rawId <= 0) return;
+      const id = rawId;
+
       const name = getField("name").trim();
+      if (!name) return;
+
       const slug = (getField("slug") || name.toLowerCase().replace(/[^a-z0-9]+/g, "-")).toLowerCase();
+      if (!slug) return;
 
       // Deduplication checks against in-repo catalog (Zero Turso Reads!)
       if (existingSlugs.has(slug)) return;
       const norm = normalizeTitle(name);
       if (norm && existingNormTitles.has(norm)) return;
 
-      const coverId = parseInt(getField("cover"), 10);
+      const rawCoverId = parseInt(getField("cover"), 10);
+      const coverId = Number.isFinite(rawCoverId) && rawCoverId > 0 ? rawCoverId : null;
+
       const screenshotIds = extractNumbers(getField("screenshots"));
       const videoIds = extractNumbers(getField("videos"));
       const involvedCompanyIds = extractNumbers(getField("involved_companies"));
@@ -263,16 +296,25 @@ async function main() {
       const playerPerspectiveIds = extractNumbers(getField("player_perspectives"));
       const websiteIds = extractNumbers(getField("websites"));
 
+      const rawReleaseDate = parseInt(getField("first_release_date"), 10);
+      const firstReleaseDate = Number.isFinite(rawReleaseDate) && rawReleaseDate > 0 ? rawReleaseDate : null;
+
+      const rawRating = parseFloat(getField("total_rating"));
+      const totalRating = Number.isFinite(rawRating) ? Math.round(rawRating * 10) / 10 : null;
+
+      const rawFollows = parseInt(getField("follows"), 10);
+      const follows = Number.isFinite(rawFollows) && rawFollows >= 0 ? rawFollows : null;
+
       candidateGames.push({
         id,
         name,
         slug,
         summary: getField("summary") || null,
         storyline: getField("storyline") || null,
-        firstReleaseDate: parseInt(getField("first_release_date"), 10) || null,
-        totalRating: parseFloat(getField("total_rating")) || null,
-        follows: parseInt(getField("follows"), 10) || null,
-        coverId: !isNaN(coverId) ? coverId : null,
+        firstReleaseDate,
+        totalRating,
+        follows,
+        coverId,
         screenshotIds,
         videoIds,
         involvedCompanyIds,
@@ -283,7 +325,7 @@ async function main() {
         websiteIds,
       });
 
-      if (!isNaN(coverId)) neededCoverIds.add(coverId);
+      if (coverId !== null) neededCoverIds.add(coverId);
       screenshotIds.forEach((s) => neededScreenshotIds.add(s));
       videoIds.forEach((v) => neededVideoIds.add(v));
       involvedCompanyIds.forEach((c) => neededInvolvedCompanyIds.add(c));
@@ -316,6 +358,7 @@ async function main() {
 
       await streamCsv(coversPath, (getField) => {
         const cId = parseInt(getField("id"), 10);
+        if (!Number.isFinite(cId)) return;
         if (neededCoverIds.has(cId)) {
           const rawUrl = getField("url");
           const fullUrl = rawUrl.startsWith("//") ? `https:${rawUrl}` : rawUrl;
@@ -334,6 +377,7 @@ async function main() {
 
       await streamCsv(screenshotsPath, (getField) => {
         const sId = parseInt(getField("id"), 10);
+        if (!Number.isFinite(sId)) return;
         if (neededScreenshotIds.has(sId)) {
           const rawUrl = getField("url");
           const fullUrl = rawUrl.startsWith("//") ? `https:${rawUrl}` : rawUrl;
@@ -352,6 +396,7 @@ async function main() {
 
       await streamCsv(videosPath, (getField) => {
         const vId = parseInt(getField("id"), 10);
+        if (!Number.isFinite(vId)) return;
         if (neededVideoIds.has(vId)) {
           const videoId = getField("video_id");
           if (videoId) videosMap.set(vId, `https://www.youtube.com/embed/${videoId}`);
@@ -372,8 +417,10 @@ async function main() {
       const neededCompanyIds = new Set<number>();
       await streamCsv(invPath, (getField) => {
         const icId = parseInt(getField("id"), 10);
+        if (!Number.isFinite(icId)) return;
         if (neededInvolvedCompanyIds.has(icId)) {
           const companyId = parseInt(getField("company"), 10);
+          if (!Number.isFinite(companyId)) return;
           const isDev = getField("developer") === "true" || getField("developer") === "1";
           involvedCompanyToCompanyId.set(icId, { companyId, isDeveloper: isDev });
           neededCompanyIds.add(companyId);
@@ -387,6 +434,7 @@ async function main() {
 
       await streamCsv(compPath, (getField) => {
         const compId = parseInt(getField("id"), 10);
+        if (!Number.isFinite(compId)) return;
         if (neededCompanyIds.has(compId)) {
           companyIdToName.set(compId, getField("name").trim());
         }
@@ -403,6 +451,7 @@ async function main() {
 
       await streamCsv(platPath, (getField) => {
         const pId = parseInt(getField("id"), 10);
+        if (!Number.isFinite(pId)) return;
         if (neededPlatformIds.has(pId)) {
           platformsMap.set(pId, getField("name").trim());
         }
@@ -419,6 +468,7 @@ async function main() {
 
       await streamCsv(genresPath, (getField) => {
         const gId = parseInt(getField("id"), 10);
+        if (!Number.isFinite(gId)) return;
         if (neededGenreIds.has(gId)) {
           genresMap.set(gId, getField("name").trim());
         }
@@ -435,6 +485,7 @@ async function main() {
 
       await streamCsv(webPath, (getField) => {
         const wId = parseInt(getField("id"), 10);
+        if (!Number.isFinite(wId)) return;
         if (neededWebsiteIds.has(wId)) {
           const category = parseInt(getField("category"), 10);
           const url = getField("url").trim();
@@ -461,6 +512,7 @@ async function main() {
 
       await streamCsv(keywordsPath, (getField) => {
         const kId = parseInt(getField("id"), 10);
+        if (!Number.isFinite(kId)) return;
         if (neededKeywordIds.has(kId)) {
           keywordsMap.set(kId, getField("name").trim());
         }
@@ -551,12 +603,16 @@ async function main() {
       return;
     }
 
-    // 8. Single Batched Write into TursoDB
-    console.log(`\n⚡ Committing ${gamesToInsert.length} games to TursoDB in a single batch transaction...`);
+    // 8. Chunked Batched Write into TursoDB
     const client = createClient({ url: dbUrl!, authToken: dbToken });
     const batchStatements: any[] = [];
 
     for (const g of gamesToInsert) {
+      const safeIgdbId = Number.isFinite(g.igdbId) ? g.igdbId : null;
+      const safeRating = Number.isFinite(g.rating) ? g.rating : null;
+      const safePopularity = Number.isFinite(g.popularity) ? g.popularity : null;
+      const safeNow = Number.isFinite(now) ? now : Date.now();
+
       // 1. Game row
       batchStatements.push({
         sql: `INSERT INTO "Game" (
@@ -566,22 +622,22 @@ async function main() {
         ON CONFLICT DO NOTHING`,
         args: [
           g.id,
-          g.igdbId,
+          safeIgdbId,
           g.title,
           g.slug,
-          g.summary,
-          g.storyline,
-          g.coverUrl,
-          g.trailerUrl,
-          g.screenshots,
-          g.rating,
-          g.popularity,
-          g.developerNames,
-          g.genreNames,
-          g.platformNames,
-          g.status,
-          now,
-          now,
+          g.summary || null,
+          g.storyline || null,
+          g.coverUrl || null,
+          g.trailerUrl || null,
+          g.screenshots || null,
+          safeRating,
+          safePopularity,
+          g.developerNames || null,
+          g.genreNames || null,
+          g.platformNames || null,
+          g.status || "released",
+          safeNow,
+          safeNow,
         ],
       });
 
@@ -595,8 +651,16 @@ async function main() {
       }
     }
 
-    await client.batch(batchStatements, "write");
-    console.log(`💾 Successfully committed batch transaction (${batchStatements.length} operations) to TursoDB!`);
+    const BATCH_CHUNK_SIZE = 200;
+    console.log(`\n⚡ Committing ${batchStatements.length} operations to TursoDB in chunks of ${BATCH_CHUNK_SIZE}...`);
+    for (let i = 0; i < batchStatements.length; i += BATCH_CHUNK_SIZE) {
+      const chunk = batchStatements.slice(i, i + BATCH_CHUNK_SIZE);
+      await client.batch(chunk, "write");
+      const chunkNum = Math.floor(i / BATCH_CHUNK_SIZE) + 1;
+      const totalChunks = Math.ceil(batchStatements.length / BATCH_CHUNK_SIZE);
+      console.log(`  💾 Committed batch chunk ${chunkNum}/${totalChunks} (${chunk.length} statements)`);
+    }
+    console.log(`💾 Successfully committed all ${batchStatements.length} operations to TursoDB!`);
 
     // 9. Append to search-index.json
     console.log("📝 Appending new games to search-index.json...");
