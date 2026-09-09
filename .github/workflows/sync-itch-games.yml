@@ -1,9 +1,13 @@
 name: Sync Itch Horror Games
 
 on:
-  schedule:
-    # Run every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
-    - cron: '0 */6 * * *'
+  # PAUSED 2026-09-09: Turso account blocked on rows-read quota until ~Oct 1.
+  # Every scheduled run fails against BLOCKED and will resume unverified writes
+  # on unblock. Re-enable only after DB cutover + daily-reads verification.
+  # Manual runs still available via workflow_dispatch.
+  # schedule:
+  #   Run every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
+  #   - cron: '0 */6 * * *'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
 concurrency:
@@ -37,12 +41,12 @@ jobs:
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
         run: npx tsx scripts/sync-new-itch-games.ts
 
-      - name: Commit & Push Updated Search Index
+      - name: Commit & Push Updated Catalog Dump & Manifest
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain docs/public/search-index.json docs/public/data-version.json)" ]; then
-            git add docs/public/search-index.json docs/public/data-version.json
+          if [ -n "$(git status --porcelain docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/data-version.json)" ]; then
+            git add docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/data-version.json
             git commit -m "chore(catalog): auto-sync new itch horror games [skip ci]"
             COMMIT_SHA=$(git rev-parse --short HEAD)
             FULL_SHA=$(git rev-parse HEAD)
@@ -55,13 +59,13 @@ jobs:
               d.fullSha = '$FULL_SHA';
               d.commitMessage = 'chore(catalog): auto-sync new itch horror games';
               d.timestamp = '$COMMIT_DATE';
-              d.totalGames = JSON.parse(fs.readFileSync('docs/public/search-index.json')).length;
+              d.totalGames = JSON.parse(fs.readFileSync('docs/public/catalog-manifest.json')).totalGames;
               fs.writeFileSync(p, JSON.stringify(d, null, 2));
             "
             git add docs/public/data-version.json
             git commit --amend --no-edit
             git push
-            echo "🚀 Pushed updated search index and data-version.json ($COMMIT_SHA)!"
+            echo "🚀 Pushed updated catalog dump, manifest, and data-version.json ($COMMIT_SHA)!"
           else
             echo "✨ No catalog changes to commit."
           fi

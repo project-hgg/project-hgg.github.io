@@ -1,9 +1,12 @@
 name: Generate Offline Catalog Dump
 
 on:
-  schedule:
-    # Run every Sunday at 05:00 UTC (after weekly IGDB sync)
-    - cron: '0 5 * * 0'
+  # PAUSED 2026-09-09: Turso account blocked on rows-read quota until ~Oct 1.
+  # A full-dump run is a ~1-2M read scan — re-enable only after DB cutover.
+  # Manual runs still available via workflow_dispatch.
+  # schedule:
+  #   Run every Sunday at 05:00 UTC (after weekly IGDB sync)
+  #   - cron: '0 5 * * 0'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
 concurrency:
