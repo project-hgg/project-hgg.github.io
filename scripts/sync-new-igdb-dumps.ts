@@ -1,18 +1,34 @@
 import "dotenv/config";
 import * as fs from "fs";
 import * as path from "path";
+import * as zlib from "zlib";
 import * as readline from "readline";
 import * as crypto from "crypto";
 import { Readable } from "stream";
 import { pipeline } from "stream/promises";
 import { createClient } from "@libsql/client";
 
-interface SearchRecord {
+interface CatalogRecord {
   i: string;
   t: string;
   s: string;
   c?: string | null;
+  dn?: string | null;
   d?: string[] | string | null;
+  pn?: string | null;
+  rd?: number | null;
+  rt?: number | null;
+  sr?: number | null;
+  mc?: number | null;
+  rr?: number | null;
+  cat?: number | null;
+  pop?: number | null;
+  tr?: boolean;
+  lk?: number;
+  gs?: string[];
+  ts?: string[];
+  dp?: number | null;
+  st?: string | null;
 }
 
 interface GameCandidate {
@@ -202,19 +218,23 @@ async function main() {
     process.exit(1);
   }
 
-  // 2. Resolve Search Index (Zero Turso Reads Diffs)
-  let indexPath = path.join(process.cwd(), "docs", "public", "search-index.json");
-  if (!fs.existsSync(indexPath)) {
-    indexPath = path.join(process.cwd(), "public", "search-index.json");
+  // 2. Resolve Catalog Dump (Zero Turso Reads Diffs)
+  let dumpPath = path.join(process.cwd(), "docs", "public", "catalog-dump.json.gz");
+  if (!fs.existsSync(dumpPath)) {
+    dumpPath = path.join(process.cwd(), "public", "catalog", "catalog-dump.json.gz");
   }
-  if (!fs.existsSync(indexPath)) {
-    console.error(`❌ search-index.json not found at: ${indexPath}`);
+  if (!fs.existsSync(dumpPath)) {
+    dumpPath = path.join(process.cwd(), "..", "project-hgg.github.io", "docs", "public", "catalog-dump.json.gz");
+  }
+  if (!fs.existsSync(dumpPath)) {
+    console.error(`❌ catalog-dump.json.gz not found at: ${dumpPath}`);
     process.exit(1);
   }
 
-  console.log("📂 Loading local search index to build deduplication index...");
-  const catalog: SearchRecord[] = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
-  console.log(`📦 Loaded ${catalog.length} existing games from search-index.json.`);
+  console.log("📂 Loading catalog dump to build deduplication index...");
+  const rawGzip = fs.readFileSync(dumpPath);
+  const catalog: CatalogRecord[] = JSON.parse(zlib.gunzipSync(rawGzip).toString("utf-8"));
+  console.log(`📦 Loaded ${catalog.length.toLocaleString()} existing games from catalog-dump.json.gz.`);
 
   const existingSlugs = new Set<string>();
   const existingNormTitles = new Set<string>();
@@ -662,30 +682,66 @@ async function main() {
     }
     console.log(`💾 Successfully committed all ${batchStatements.length} operations to TursoDB!`);
 
-    // 9. Append to search-index.json
-    console.log("📝 Appending new games to search-index.json...");
+    // 9. Append to catalog-dump.json.gz
+    console.log("📝 Appending new games to catalog-dump.json.gz...");
     for (const g of gamesToInsert) {
       catalog.push({
         i: g.id,
         t: g.title,
         s: g.slug,
         c: g.coverUrl,
-        d: [g.primaryDeveloper],
+        dn: g.primaryDeveloper,
+        pn: "PC (Microsoft Windows)",
+        rd: g.firstReleaseDate ? Math.floor(g.firstReleaseDate / 1000) : null,
+        rt: g.totalRating ? Math.round(g.totalRating) : null,
+        sr: null,
+        mc: null,
+        rr: null,
+        cat: 0,
+        pop: 1,
+        tr: false,
+        lk: 0,
+        gs: ["horror"],
+        ts: [],
+        dp: null,
+        st: "released",
       });
     }
 
-    fs.writeFileSync(indexPath, JSON.stringify(catalog), "utf-8");
-    console.log(`✅ search-index.json updated. Total catalog entries: ${catalog.length}.`);
+    const rawBuffer = Buffer.from(JSON.stringify(catalog));
+    const gzipBuffer = zlib.gzipSync(rawBuffer, { level: 9 });
+    fs.writeFileSync(dumpPath, gzipBuffer);
+
+    // Update catalog-manifest.json
+    const manifestPath = path.join(path.dirname(dumpPath), "catalog-manifest.json");
+    if (fs.existsSync(manifestPath)) {
+      try {
+        const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+        manifest.totalGames = catalog.length;
+        manifest.compressedBytes = gzipBuffer.length;
+        manifest.uncompressedBytes = rawBuffer.length;
+        manifest.compressedMb = parseFloat((gzipBuffer.length / (1024 * 1024)).toFixed(2));
+        manifest.uncompressedMb = parseFloat((rawBuffer.length / (1024 * 1024)).toFixed(2));
+        manifest.updatedAt = new Date().toISOString();
+        fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
+      } catch {}
+    }
+
+    console.log(`✅ catalog-dump.json.gz updated. Total catalog entries: ${catalog.length.toLocaleString()}.`);
 
     // Sync to peer repository if running locally
-    const otherPath = indexPath.includes("project-hgg")
-      ? path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "gamegata-astro", "public", "search-index.json")
-      : path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "project-hgg.github.io", "docs", "public", "search-index.json");
+    const otherDumpPath = dumpPath.includes("project-hgg")
+      ? path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "gamegata-astro", "public", "catalog", "catalog-dump.json.gz")
+      : path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "project-hgg.github.io", "docs", "public", "catalog-dump.json.gz");
 
-    if (fs.existsSync(path.dirname(otherPath))) {
+    if (fs.existsSync(path.dirname(otherDumpPath))) {
       try {
-        fs.copyFileSync(indexPath, otherPath);
-        console.log("✅ Synced updated index to peer repository!");
+        fs.copyFileSync(dumpPath, otherDumpPath);
+        const otherManifestPath = path.join(path.dirname(otherDumpPath), "catalog-manifest.json");
+        if (fs.existsSync(manifestPath)) {
+          fs.copyFileSync(manifestPath, otherManifestPath);
+        }
+        console.log("✅ Synced updated dump & manifest to peer repository!");
       } catch {}
     }
 

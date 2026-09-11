@@ -11,7 +11,8 @@
     "index:build": "vitepress build docs",
     "index:generate": "cd .. && npx tsx scripts/generate-vitepress-index.ts",
     "sync:itch": "tsx scripts/sync-new-itch-games.ts",
-    "sync:igdb": "tsx scripts/sync-new-igdb-dumps.ts"
+    "sync:igdb": "tsx scripts/sync-new-igdb-dumps.ts",
+    "catalog:dump": "tsx scripts/generate-catalog-dump.ts"
   },
   "devDependencies": {
     "@libsql/client": "^0.17.4",

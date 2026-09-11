@@ -125,14 +125,25 @@ onMounted(async () => {
   })
 
   try {
-    const res = await fetch('/search-index.json')
-    const rawData = await res.json()
+    const res = await fetch('/catalog-dump.json.gz')
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+
+    let rawData: any[] = []
+    if (typeof DecompressionStream !== 'undefined' && res.body) {
+      const ds = new DecompressionStream('gzip')
+      const decompressedStream = res.body.pipeThrough(ds)
+      const text = await new Response(decompressedStream).text()
+      rawData = JSON.parse(text)
+    } else {
+      throw new Error('DecompressionStream not supported')
+    }
+
     allGames = rawData.map((item: any, i: number) => ({
-      id: String(i),
+      id: item.i || String(i),
       t: item.t,
       s: item.s,
-      d: item.d || '',
-      g: item.g || 0
+      d: item.dn || item.d || '',
+      g: 1
     }))
 
     miniSearch = new MiniSearch<GameDoc>({

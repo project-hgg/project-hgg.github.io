@@ -4,6 +4,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "hoGAMEGATA Index Mirror",
   description: "A backed-up static index copy of all games registered on hoGAMEGATA.",
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   themeConfig: {
     sidebar: false,
 

@@ -25,9 +25,11 @@ Its purpose is simple: to make sure video game history and indie horror projects
 - **Zero Ads:** Completely free to use, without popups or commercial sponsors.
 
 ### Raw Data Dumps & Preservation Files
-- [`all-games.txt`](https://raw.githubusercontent.com/project-hgg/project-hgg.github.io/main/all-games.txt) (plain text catalog: Title | Developer | URL)
-- [`all-games.md`](https://github.com/project-hgg/project-hgg.github.io/blob/main/all-games.md) (structured Markdown table)
-- [`all-tags.txt`](https://raw.githubusercontent.com/project-hgg/project-hgg.github.io/main/all-tags.txt) (raw plain text list of all 15,825 tags: Tag Name | Slug)
+- [`catalog-dump.json.gz`](https://project-hgg.github.io/catalog-dump.json.gz) (official compressed full catalog with tags, ratings, and deal prices)
+- [`catalog-manifest.json`](https://project-hgg.github.io/catalog-manifest.json) (catalog metadata, version, and timestamps)
+- [`dumps/all-games.txt`](dumps/all-games.txt) (plain text catalog: Title | Developer | URL)
+- [`dumps/all-games.md`](dumps/all-games.md) (structured Markdown table)
+- [`dumps/all-tags.txt`](dumps/all-tags.txt) (raw plain text list of tags)
 
 ---
 

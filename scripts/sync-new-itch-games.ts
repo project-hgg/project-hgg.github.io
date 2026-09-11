@@ -1,15 +1,31 @@
 import "dotenv/config";
 import * as fs from "fs";
 import * as path from "path";
+import * as zlib from "zlib";
 import * as crypto from "crypto";
 import { createClient } from "@libsql/client";
 
-interface SearchRecord {
+interface CatalogRecord {
   i: string;
   t: string;
   s: string;
   c?: string | null;
+  dn?: string | null;
   d?: string[] | string | null;
+  pn?: string | null;
+  rd?: number | null;
+  rt?: number | null;
+  sr?: number | null;
+  mc?: number | null;
+  rr?: number | null;
+  cat?: number | null;
+  pop?: number | null;
+  tr?: boolean;
+  lk?: number;
+  gs?: string[];
+  ts?: string[];
+  dp?: number | null;
+  st?: string | null;
 }
 
 interface FeedItem {
@@ -150,28 +166,32 @@ async function main() {
   console.log(`🎃 [Itch Horror Ingestion] Starting discovery & deduplication pipeline (Dry run: ${isDryRun})...`);
 
   // Path resolution for either gamegata-astro or project-hgg.github.io
-  let indexPath = path.join(process.cwd(), "docs", "public", "search-index.json");
-  if (!fs.existsSync(indexPath)) {
-    indexPath = path.join(process.cwd(), "public", "search-index.json");
+  let dumpPath = path.join(process.cwd(), "docs", "public", "catalog-dump.json.gz");
+  if (!fs.existsSync(dumpPath)) {
+    dumpPath = path.join(process.cwd(), "public", "catalog", "catalog-dump.json.gz");
   }
-  if (!fs.existsSync(indexPath)) {
-    console.error(`❌ search-index.json not found at: ${indexPath}`);
+  if (!fs.existsSync(dumpPath)) {
+    dumpPath = path.join(process.cwd(), "..", "project-hgg.github.io", "docs", "public", "catalog-dump.json.gz");
+  }
+  if (!fs.existsSync(dumpPath)) {
+    console.error(`❌ catalog-dump.json.gz not found at: ${dumpPath}`);
     process.exit(1);
   }
 
   // 1. Two-Tiered In-Memory Deduplication Index: 0 Turso reads!
-  console.log("📂 Loading catalog to build deduplication index...");
-  const catalog: SearchRecord[] = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
-  console.log(`📦 Loaded ${catalog.length} existing games from search-index.json.`);
+  console.log("📂 Loading catalog dump to build deduplication index...");
+  const rawGzip = fs.readFileSync(dumpPath);
+  const catalog: CatalogRecord[] = JSON.parse(zlib.gunzipSync(rawGzip).toString("utf-8"));
+  console.log(`📦 Loaded ${catalog.length.toLocaleString()} existing games from catalog-dump.json.gz.`);
 
   const existingIds = new Set<string>();
   const existingSlugs = new Set<string>();
   const existingUrlHashes = new Set<string>();
 
   // Canonical IGDB/Steam game map (normTitle -> record)
-  const canonicalMainGameMap = new Map<string, SearchRecord>();
+  const canonicalMainGameMap = new Map<string, CatalogRecord>();
   // Existing Itch game map (normTitle -> record)
-  const existingItchGameMap = new Map<string, SearchRecord>();
+  const existingItchGameMap = new Map<string, CatalogRecord>();
 
   for (const g of catalog) {
     if (g.i) existingIds.add(g.i);
@@ -464,31 +484,67 @@ async function main() {
     process.exit(1);
   }
 
-  // 6. Append Brand New Games to search-index.json
+  // 6. Append Brand New Games to catalog-dump.json.gz
   if (validNewGames.length > 0) {
-    console.log("📝 Updating search-index.json with deduplicated entries...");
+    console.log("📝 Updating catalog-dump.json.gz and manifest with deduplicated entries...");
     for (const g of validNewGames) {
       catalog.push({
         i: g.id,
         t: g.title,
         s: g.slug,
         c: g.coverUrl,
-        d: [g.author],
+        dn: g.author,
+        pn: "PC (Microsoft Windows)",
+        rd: Math.floor(Date.now() / 1000),
+        rt: null,
+        sr: null,
+        mc: null,
+        rr: null,
+        cat: 0,
+        pop: 1,
+        tr: false,
+        lk: 0,
+        gs: ["horror"],
+        ts: ["indie", "itch-io"],
+        dp: 0,
+        st: "released",
       });
     }
 
-    fs.writeFileSync(indexPath, JSON.stringify(catalog), "utf-8");
-    console.log(`✅ search-index.json updated. New total games: ${catalog.length}.`);
+    const rawBuffer = Buffer.from(JSON.stringify(catalog));
+    const gzipBuffer = zlib.gzipSync(rawBuffer, { level: 9 });
+    fs.writeFileSync(dumpPath, gzipBuffer);
+
+    // Update catalog-manifest.json
+    const manifestPath = path.join(path.dirname(dumpPath), "catalog-manifest.json");
+    if (fs.existsSync(manifestPath)) {
+      try {
+        const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+        manifest.totalGames = catalog.length;
+        manifest.compressedBytes = gzipBuffer.length;
+        manifest.uncompressedBytes = rawBuffer.length;
+        manifest.compressedMb = parseFloat((gzipBuffer.length / (1024 * 1024)).toFixed(2));
+        manifest.uncompressedMb = parseFloat((rawBuffer.length / (1024 * 1024)).toFixed(2));
+        manifest.updatedAt = new Date().toISOString();
+        fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
+      } catch {}
+    }
+
+    console.log(`✅ catalog-dump.json.gz updated. New total games: ${catalog.length.toLocaleString()}.`);
 
     // Synchronize across local repositories if available
-    const otherPath = indexPath.includes("project-hgg")
-      ? path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "gamegata-astro", "public", "search-index.json")
-      : path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "project-hgg.github.io", "docs", "public", "search-index.json");
+    const otherDumpPath = dumpPath.includes("project-hgg")
+      ? path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "gamegata-astro", "public", "catalog", "catalog-dump.json.gz")
+      : path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "project-hgg.github.io", "docs", "public", "catalog-dump.json.gz");
 
-    if (fs.existsSync(path.dirname(otherPath))) {
+    if (fs.existsSync(path.dirname(otherDumpPath))) {
       try {
-        fs.copyFileSync(indexPath, otherPath);
-        console.log(`✅ Synced updated index to peer repository!`);
+        fs.copyFileSync(dumpPath, otherDumpPath);
+        const otherManifestPath = path.join(path.dirname(otherDumpPath), "catalog-manifest.json");
+        if (fs.existsSync(manifestPath)) {
+          fs.copyFileSync(manifestPath, otherManifestPath);
+        }
+        console.log(`✅ Synced updated dump & manifest to peer repository!`);
       } catch {}
     }
   }
