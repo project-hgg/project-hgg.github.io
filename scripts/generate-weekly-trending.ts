@@ -278,7 +278,7 @@ Guidelines:
   const elapsed = ((performance.now() - startTime) / 1000).toFixed(2);
 
   console.log(`\n==================================================`);
-  console.log(`🎉 SUCCESS! Saved ${validatedTop50.length} curated trending games to ${outPath}`);
+  console.log(`🎉 SUCCESS! Saved ${validatedTop50.length} curated trending games to ${targetOutputs.join(", ")}`);
   console.log(`⏱️ Total Execution Time: ${elapsed}s`);
   console.log(`==================================================\n`);
 

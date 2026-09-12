@@ -5,6 +5,7 @@ import * as zlib from "zlib";
 import * as readline from "readline";
 import * as crypto from "crypto";
 import { Readable } from "stream";
+import { pipeline } from "stream/promises";
 import { d1Client as client } from "./d1-client.js";
 
 interface CatalogRecord {
@@ -581,7 +582,7 @@ async function main() {
         if (w) purchaseLinks.push(w);
       }
 
-      const releaseDate = g.firstReleaseDate ? new Date(g.firstReleaseDate * 1000).toISOString() : null;
+      const releaseDate = g.firstReleaseDate || null;
       const status = g.firstReleaseDate && g.firstReleaseDate * 1000 > now ? "upcoming" : "released";
 
       gamesToInsert.push({
@@ -628,8 +629,8 @@ async function main() {
       batchStatements.push({
         sql: `INSERT INTO "Game" (
           id, igdbId, title, slug, summary, storyline, coverUrl, trailerUrl, screenshots, rating, popularity,
-          developerNames, genreNames, platformNames, status, source, isTrending, likesCount, createdAt, updatedAt
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'igdb', 0, 0, ?, ?)
+          developerNames, genreNames, platformNames, status, releaseDate, source, isTrending, likesCount, createdAt, updatedAt
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'igdb', 0, 0, ?, ?)
         ON CONFLICT DO NOTHING`,
         args: [
           g.id,
@@ -647,6 +648,7 @@ async function main() {
           g.genreNames || null,
           g.platformNames || null,
           g.status || "released",
+          g.releaseDate || null,
           safeNow,
           safeNow,
         ],
@@ -683,7 +685,7 @@ async function main() {
         c: g.coverUrl,
         dn: g.primaryDeveloper,
         pn: "PC (Microsoft Windows)",
-        rd: g.firstReleaseDate ? Math.floor(g.firstReleaseDate / 1000) : null,
+        rd: g.firstReleaseDate ? (g.firstReleaseDate > 100000000000 ? Math.floor(g.firstReleaseDate / 1000) : g.firstReleaseDate) : null,
         rt: g.totalRating ? Math.round(g.totalRating) : null,
         sr: null,
         mc: null,
@@ -695,7 +697,7 @@ async function main() {
         gs: ["horror"],
         ts: [],
         dp: null,
-        st: "released",
+        st: g.status || "released",
       });
     }
 
