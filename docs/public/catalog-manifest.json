@@ -1,9 +1,9 @@
 {
-  "version": "2026.09.08.1614",
-  "totalGames": 108849,
-  "compressedBytes": 7357616,
-  "uncompressedBytes": 42114742,
+  "version": "2026.09.12.0938",
+  "totalGames": 109359,
+  "compressedBytes": 7358455,
+  "uncompressedBytes": 42257627,
   "compressedMb": 7.02,
-  "uncompressedMb": 40.16,
-  "updatedAt": "2026-09-08T16:14:06.464Z"
+  "uncompressedMb": 40.3,
+  "updatedAt": "2026-09-12T09:38:51.576Z"
 }

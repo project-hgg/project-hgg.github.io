@@ -1,13 +1,9 @@
 name: Sync Itch Horror Games
 
 on:
-  # PAUSED 2026-09-09: Turso account blocked on rows-read quota until ~Oct 1.
-  # Every scheduled run fails against BLOCKED and will resume unverified writes
-  # on unblock. Re-enable only after DB cutover + daily-reads verification.
-  # Manual runs still available via workflow_dispatch.
-  # schedule:
-  #   Run every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
-  #   - cron: '0 */6 * * *'
+  schedule:
+    # Run every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
+    - cron: '0 */6 * * *'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
 concurrency:
@@ -37,8 +33,9 @@ jobs:
 
       - name: Run Itch Horror Ingestion Engine
         env:
-          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
-          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_DATABASE_ID: ${{ secrets.CLOUDFLARE_DATABASE_ID }}
         run: npx tsx scripts/sync-new-itch-games.ts
 
       - name: Commit & Push Updated Catalog Dump & Manifest

@@ -2,20 +2,7 @@ import "dotenv/config";
 import fs from "node:fs";
 import path from "node:path";
 import zlib from "node:zlib";
-import { createClient } from "@libsql/client";
-
-const dbUrl = process.env.TURSO_DATABASE_URL;
-const authToken = process.env.TURSO_AUTH_TOKEN;
-
-if (!dbUrl) {
-  console.error("TURSO_DATABASE_URL environment variable is required.");
-  process.exit(1);
-}
-
-const client = createClient({
-  url: dbUrl,
-  authToken: authToken,
-});
+import { d1Client as client } from "./d1-client.js";
 
 interface CatalogRecord {
   i: string;           // id
@@ -45,7 +32,7 @@ async function generateCatalogDump() {
   console.log("📦 PROJECT-HGG: GENERATING GZIP CATALOG DUMP");
   console.log("==================================================\n");
 
-  console.log("1. Fetching all visible games from TursoDB...");
+  console.log("1. Fetching all visible games from Cloudflare D1...");
   const gamesRes = await client.execute(`
     SELECT 
       id, title, slug, coverUrl, developerNames, platformNames, 

@@ -5,8 +5,7 @@ import * as zlib from "zlib";
 import * as readline from "readline";
 import * as crypto from "crypto";
 import { Readable } from "stream";
-import { pipeline } from "stream/promises";
-import { createClient } from "@libsql/client";
+import { d1Client as client } from "./d1-client.js";
 
 interface CatalogRecord {
   i: string;
@@ -205,16 +204,9 @@ async function main() {
   // 1. Verify Credentials
   const twitchClientId = process.env.TWITCH_CLIENT_ID;
   const twitchClientSecret = process.env.TWITCH_CLIENT_SECRET;
-  const dbUrl = process.env.TURSO_DATABASE_URL;
-  const dbToken = process.env.TURSO_AUTH_TOKEN;
 
   if (!twitchClientId || !twitchClientSecret) {
     console.error("❌ Missing TWITCH_CLIENT_ID or TWITCH_CLIENT_SECRET environment variable.");
-    process.exit(1);
-  }
-
-  if (!isDryRun && !dbUrl) {
-    console.error("❌ Missing TURSO_DATABASE_URL environment variable.");
     process.exit(1);
   }
 
@@ -623,8 +615,7 @@ async function main() {
       return;
     }
 
-    // 8. Chunked Batched Write into TursoDB
-    const client = createClient({ url: dbUrl!, authToken: dbToken });
+    // 8. Chunked Batched Write into Database
     const batchStatements: any[] = [];
 
     for (const g of gamesToInsert) {
@@ -671,8 +662,8 @@ async function main() {
       }
     }
 
-    const BATCH_CHUNK_SIZE = 200;
-    console.log(`\n⚡ Committing ${batchStatements.length} operations to TursoDB in chunks of ${BATCH_CHUNK_SIZE}...`);
+    const BATCH_CHUNK_SIZE = 50;
+    console.log(`\n⚡ Committing ${batchStatements.length} operations to Database in chunks of ${BATCH_CHUNK_SIZE}...`);
     for (let i = 0; i < batchStatements.length; i += BATCH_CHUNK_SIZE) {
       const chunk = batchStatements.slice(i, i + BATCH_CHUNK_SIZE);
       await client.batch(chunk, "write");
@@ -680,7 +671,7 @@ async function main() {
       const totalChunks = Math.ceil(batchStatements.length / BATCH_CHUNK_SIZE);
       console.log(`  💾 Committed batch chunk ${chunkNum}/${totalChunks} (${chunk.length} statements)`);
     }
-    console.log(`💾 Successfully committed all ${batchStatements.length} operations to TursoDB!`);
+    console.log(`💾 Successfully committed all ${batchStatements.length} operations to Database!`);
 
     // 9. Append to catalog-dump.json.gz
     console.log("📝 Appending new games to catalog-dump.json.gz...");

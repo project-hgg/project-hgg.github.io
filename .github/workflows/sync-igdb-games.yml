@@ -1,12 +1,9 @@
 name: Sync IGDB Horror Games
 
 on:
-  # PAUSED 2026-09-09: Turso account blocked on rows-read quota until ~Oct 1.
-  # Re-enable only after DB cutover + daily-reads verification.
-  # Manual runs still available via workflow_dispatch.
-  # schedule:
-  #   Run every Sunday at 04:00 UTC
-  #   - cron: '0 4 * * 0'
+  schedule:
+    # Run every Sunday at 04:00 UTC
+    - cron: '0 4 * * 0'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
 concurrency:
@@ -38,8 +35,9 @@ jobs:
         env:
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
-          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
-          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_DATABASE_ID: ${{ secrets.CLOUDFLARE_DATABASE_ID }}
         run: npx tsx scripts/sync-new-igdb-dumps.ts
 
       - name: Commit & Push Updated Catalog Dump & Manifest

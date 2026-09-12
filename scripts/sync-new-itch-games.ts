@@ -3,7 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as zlib from "zlib";
 import * as crypto from "crypto";
-import { createClient } from "@libsql/client";
+import { d1Client as client } from "./d1-client.js";
 
 interface CatalogRecord {
   i: string;
@@ -411,17 +411,8 @@ async function main() {
     return;
   }
 
-  // 5. Single Batched Write Transaction into TursoDB
-  const dbUrl = process.env.TURSO_DATABASE_URL;
-  const dbToken = process.env.TURSO_AUTH_TOKEN;
-
-  if (!dbUrl) {
-    console.error("❌ Missing TURSO_DATABASE_URL environment variable.");
-    process.exit(1);
-  }
-
-  console.log("⚡ Executing single batched write transaction into TursoDB...");
-  const client = createClient({ url: dbUrl, authToken: dbToken });
+  // 5. Batched Write Transaction into Database
+  console.log("⚡ Executing batched write transaction into Database...");
   const batchStatements: any[] = [];
   const now = Date.now();
 
@@ -478,9 +469,9 @@ async function main() {
 
   try {
     await client.batch(batchStatements, "write");
-    console.log(`💾 Successfully committed batch transaction (${batchStatements.length} operations) to TursoDB!`);
+    console.log(`💾 Successfully committed batch transaction (${batchStatements.length} operations) to Database!`);
   } catch (dbErr) {
-    console.error("❌ Turso batch insert error:", dbErr);
+    console.error("❌ Database batch insert error:", dbErr);
     process.exit(1);
   }
 
