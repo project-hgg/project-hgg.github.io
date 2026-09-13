@@ -2,7 +2,7 @@ name: Sync IGDB Horror Games
 
 on:
   schedule:
-    # Run every Sunday at 04:00 UTC
+    # Run every Sunday at 04:00 UTC (catalog dump runs at 05:00 UTC after this)
     - cron: '0 4 * * 0'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
@@ -68,3 +68,9 @@ jobs:
           else
             echo "✨ No catalog changes to commit."
           fi
+
+  # After IGDB sync finishes, trigger a full catalog rebuild + HF upload
+  trigger-catalog-rebuild:
+    needs: sync-games
+    uses: ./.github/workflows/generate-catalog-dump.yml
+    secrets: inherit

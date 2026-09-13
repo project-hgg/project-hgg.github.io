@@ -1,6 +1,12 @@
-﻿node_modules/
+node_modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
 dist/
 .DS_Store
 *.log
+
+# HF master catalog output (large binary, not tracked in git — lives on HF)
+dist-hf/
+
+# Local environment secrets
+.env

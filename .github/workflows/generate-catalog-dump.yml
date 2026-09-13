@@ -1,10 +1,11 @@
-name: Generate Offline Catalog Dump
+name: Generate Offline Catalog Dump + Upload to Hugging Face
 
 on:
   schedule:
-    # Run every Sunday at 05:00 UTC (after weekly IGDB sync)
+    # Run every Sunday at 05:00 UTC (after IGDB sync at 04:00 UTC)
     - cron: '0 5 * * 0'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
+  workflow_call:     # Allows other workflows to trigger this one
 
 concurrency:
   group: generate-catalog-dump
@@ -28,37 +29,66 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Install Dependencies
+      - name: Install Node Dependencies
         run: npm ci
 
-      - name: Generate Sanitized Gzip Catalog Dump
+      - name: Setup Python & Install Hugging Face CLI
+        run: pip install -q -U "huggingface_hub[cli]>=0.25.0"
+
+      - name: Generate Catalog Dump + catalog.raw
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_DATABASE_ID: ${{ secrets.CLOUDFLARE_DATABASE_ID }}
         run: npx tsx scripts/generate-catalog-dump.ts
 
-      - name: Commit & Push Catalog Dump to Main
+      - name: Upload catalog.raw to Hugging Face Dataset
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          echo "Uploading dist-hf/catalog.raw → aurostron/hogamegata/catalog.raw"
+          huggingface-cli upload aurostron/hogamegata \
+            dist-hf/catalog.raw \
+            catalog.raw \
+            --repo-type=dataset \
+            --commit-message="chore(catalog): auto-sync weekly master catalog.raw"
+          echo "✅ catalog.raw uploaded to Hugging Face dataset."
+
+      - name: Commit & Push Catalog Files to Main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json)" ]; then
-            git add docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json
+          # Check for changes in any of the three generated files
+          CHANGED=$(git status --porcelain \
+            docs/public/catalog-dump.json.gz \
+            docs/public/catalog-manifest.json \
+            docs/public/offsets.json.gz)
+          if [ -n "$CHANGED" ]; then
+            git add \
+              docs/public/catalog-dump.json.gz \
+              docs/public/catalog-manifest.json \
+              docs/public/offsets.json.gz
             git commit -m "chore(catalog): auto-sync weekly offline catalog dump [skip ci]"
             git push origin main
+            echo "✅ Pushed catalog-dump.json.gz, offsets.json.gz, catalog-manifest.json"
           else
-            echo "No changes in catalog dump."
+            echo "✨ No changes in catalog output files."
           fi
 
-      - name: Publish / Update GitHub Release Asset
+      - name: Publish / Update GitHub Release Assets
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ -f docs/public/catalog-dump.json.gz ]; then
             VERSION=$(node -p "require('./docs/public/catalog-manifest.json').version")
             COUNT=$(node -p "require('./docs/public/catalog-manifest.json').totalGames")
-            gh release create catalog-latest docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json \
+            RAW_MB=$(node -p "require('./docs/public/catalog-manifest.json').rawMb")
+            gh release create catalog-latest \
+              docs/public/catalog-dump.json.gz \
+              docs/public/catalog-manifest.json \
+              docs/public/offsets.json.gz \
               --title "Offline Catalog Dump (v${VERSION})" \
-              --notes "Weekly synchronized database dump of hoGAMEGATA catalog (${COUNT} games). Cleaned and sanitized for offline in-memory search." \
+              --notes "Weekly synchronized database dump of hoGAMEGATA catalog (${COUNT} games, ${RAW_MB} MB raw). Includes compact search index with byte-range coordinates for Hugging Face master catalog. Zero user data — public game catalog only." \
               --clobber || true
+            echo "✅ GitHub Release catalog-latest updated."
           fi

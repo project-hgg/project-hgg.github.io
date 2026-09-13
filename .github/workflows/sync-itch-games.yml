@@ -67,3 +67,8 @@ jobs:
             echo "✨ No catalog changes to commit."
           fi
 
+  # After itch sync finishes, trigger a full catalog rebuild + HF upload
+  trigger-catalog-rebuild:
+    needs: sync-games
+    uses: ./.github/workflows/generate-catalog-dump.yml
+    secrets: inherit

@@ -12,7 +12,8 @@
     "index:generate": "cd .. && npx tsx scripts/generate-vitepress-index.ts",
     "sync:itch": "tsx scripts/sync-new-itch-games.ts",
     "sync:igdb": "tsx scripts/sync-new-igdb-dumps.ts",
-    "catalog:dump": "tsx scripts/generate-catalog-dump.ts"
+    "catalog:dump": "tsx scripts/generate-catalog-dump.ts",
+    "catalog:dump:hf": "tsx scripts/generate-catalog-dump.ts && huggingface-cli upload aurostron/hogamegata dist-hf/catalog.raw catalog.raw --repo-type=dataset"
   },
   "devDependencies": {
     "@libsql/client": "^0.17.4",
