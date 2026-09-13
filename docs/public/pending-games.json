@@ -10,7 +10,8 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzE5MjQ0NDc5LnBuZw==/315x250%23c/wtflM3.png",
     "queuedAt": "2026-09-13T11:07:05.824Z",
-    "inD1": true
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
   },
   {
     "_type": "canonicalLink",
@@ -23,7 +24,8 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzI3MTY2MjMucG5n/315x250%23c/bFnDqL.png",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": true
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
   },
   {
     "_type": "canonicalLink",
@@ -36,7 +38,8 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzcxMDUyNjUucG5n/315x250%23c/%2FSHfYQ.png",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": true
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
   },
   {
     "_type": "canonicalLink",
@@ -62,7 +65,8 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzIxNTI3NTAuZ2lm/original/zeDrXs.gif",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": true
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
   },
   {
     "_type": "canonicalLink",
@@ -75,7 +79,8 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzg3MzM4NTEuZ2lm/original/R0bBdx.gif",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": true
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
   },
   {
     "_type": "canonicalLink",
@@ -88,6 +93,157 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzEwMTM5MjUxLnBuZw==/315x250%23c/tItICn.png",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": true
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_292af4da1e5944c8",
+    "title": "Shadow Heritage",
+    "slug": "itch-shadow-heritage",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5NjM0MTcyLnBuZw==/315x250%23c/vs6MVD.png",
+    "author": "ComradeDragonBy",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://comradedragonby.itch.io/shadow-heritage",
+    "tags": "2d, dark-fantasy, detective, horror, multiple-endings, no-ai, renpy, romance, visual-novel",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_573d4e1390c600f2",
+    "title": "Sprunki Randomized Phase 4",
+    "slug": "itch-sprunki-randomized-phase-4",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5OTY0OTM1LnBuZw==/315x250%23c/moMYtC.png",
+    "author": "Sprunktime114mods",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://sprunktime114mods.itch.io/sprunki-adees-ocs-phase-3",
+    "tags": "fnf, horror, indie, music, no-ai, sprunki",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_d8ce04e7061f9c12",
+    "title": "Sprunki Randomized Phase 3",
+    "slug": "itch-sprunki-randomized-phase-3",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5OTYzODU1LnBuZw==/315x250%23c/em54%2FX.png",
+    "author": "Sprunktime114mods",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://sprunktime114mods.itch.io/sprunki-randomized-phase-3",
+    "tags": "horror, indie, music, no-ai, sprunki",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_6de9d3822c9392e6",
+    "title": "Forsaken Clicker",
+    "slug": "itch-forsaken-clicker",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5OTYyNjMxLnBuZw==/315x250%23c/ebCfkI.png",
+    "author": "SanicRealTime",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://sanicrealtime.itch.io/forsaken-clicker",
+    "tags": "2d, horror, idle, incremental, no-ai, singleplayer",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_97bbaaaace68ced8",
+    "title": "Vila Ultimate Preschool",
+    "slug": "itch-vila-ultimate-preschool",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5OTYxNTE3LmpwZw==/315x250%23c/GPlt8y.jpg",
+    "author": "DagaDeveloper",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://dagadev.itch.io/vilaultimatepreschool",
+    "tags": "3d, ai-generated, ai-generated-code, collector, horror, indie, other, retro",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_aabb9a13cefe681e",
+    "title": "Devil's Dice: Last Game",
+    "slug": "itch-devil-s-dice-last-game",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5OTYwNjI1LnBuZw==/315x250%23c/dujjvZ.png",
+    "author": "bondayvin",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://bondayvin.itch.io/devils-dice-last-game",
+    "tags": "ai-generated, ai-generated-audio, ai-generated-code, ai-generated-graphics, ai-generated-text, card-game, dice, horror",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_d4024b34d3284b39",
+    "title": "And he lost his mind.",
+    "slug": "itch-and-he-lost-his-mind",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5OTU5MjAxLmdpZg==/original/Q%2FkLpP.gif",
+    "author": "perico415",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://perico415.itch.io/and-he-lost-his-mind",
+    "tags": "3d, casual, creepy, godot, gore, horror, music, mystery, psychological-horror, simulation",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_cd429a61b2311347",
+    "title": "Curved Horizon",
+    "slug": "itch-curved-horizon",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5ODAxMzY2LnBuZw==/315x250%23c/j92%2FJG.png",
+    "author": "Airman380",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://airman380.itch.io/curved-horizon",
+    "tags": "3d, ai-generated, ai-generated-audio, ai-generated-graphics, horror, hotel, survival, survival-horror",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_08cb3910f2021908",
+    "title": "Finding King Trump",
+    "slug": "itch-finding-king-trump",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5OTU4Njg5LnBuZw==/315x250%23c/wf6cDg.png",
+    "author": "bao_daika",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://bao-daika.itch.io/finding-king-trump",
+    "tags": "action-adventure, adventure, comedy, experimental, first-person, ghosts, horror, meme, science-fiction, survival-horror",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+  },
+  {
+    "id": "itch_5359dc31bd28dfdc",
+    "title": "SCP 106 maze",
+    "slug": "itch-scp-106-maze",
+    "coverUrl": "https://img.itch.zone/aW1nLzI5OTU4NDQyLnBuZw==/315x250%23c/kemM%2BR.png",
+    "author": "Dolako",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "url": "https://dolako.itch.io/scp-106-maze",
+    "tags": "horror, maze, no-ai, pixel-art, scratch, survival",
+    "queuedAt": "2026-09-13T15:39:20.891Z",
+    "inD1": false,
+    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
   }
 ]
