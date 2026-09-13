@@ -13,6 +13,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as zlib from "zlib";
 import { d1Client as client } from "./d1-client.js";
+import { writeTodoMarkdown } from "./todo-helper.js";
 
 const PENDING_PATH = path.join(process.cwd(), "docs", "public", "pending-games.json");
 
@@ -51,15 +52,25 @@ async function main() {
 
   if (pending.length === 0) {
     console.log("✅ pending-games.json is empty — nothing to retry.");
-    // Clean up empty file
     fs.writeFileSync(PENDING_PATH, "[]", "utf-8");
+    writeTodoMarkdown([]);
     return;
   }
 
-  console.log(`📋 Found ${pending.length} pending entries to retry in D1...`);
+  // Filter only items that haven't yet been successfully written to D1
+  const unwrittenToD1 = pending.filter((e) => !e.inD1);
+  if (unwrittenToD1.length === 0) {
+    console.log("✅ All items in queue are already written to D1. Checking if any await HF sync...");
+    const remainingForHf = pending.filter((e) => !e.inHf);
+    fs.writeFileSync(PENDING_PATH, JSON.stringify(remainingForHf, null, 2), "utf-8");
+    writeTodoMarkdown(remainingForHf);
+    return;
+  }
 
-  const newGameEntries = pending.filter((e) => e._type !== "canonicalLink");
-  const canonicalLinks = pending.filter((e) => e._type === "canonicalLink");
+  console.log(`📋 Found ${unwrittenToD1.length} pending entries to retry in D1 (total in queue: ${pending.length})...`);
+
+  const newGameEntries = unwrittenToD1.filter((e) => e._type !== "canonicalLink");
+  const canonicalLinks = unwrittenToD1.filter((e) => e._type === "canonicalLink");
 
   const batchStatements: any[] = [];
   const now = Date.now();
@@ -106,26 +117,32 @@ async function main() {
   }
 
   if (batchStatements.length === 0) {
-    console.log("✅ No valid statements to run. Clearing pending queue.");
-    fs.writeFileSync(PENDING_PATH, "[]", "utf-8");
+    console.log("✅ No valid statements to run.");
+    const remainingForHf = pending.filter((e) => !e.inHf);
+    fs.writeFileSync(PENDING_PATH, JSON.stringify(remainingForHf, null, 2), "utf-8");
+    writeTodoMarkdown(remainingForHf);
     return;
   }
 
   try {
     await client.batch(batchStatements, "write");
-    console.log(`💾 Successfully retried ${batchStatements.length} D1 operations for ${pending.length} pending entries!`);
+    console.log(`💾 Successfully retried ${batchStatements.length} D1 operations for ${unwrittenToD1.length} pending entries!`);
 
-    // Clear the pending queue on success
-    fs.writeFileSync(PENDING_PATH, "[]", "utf-8");
-    console.log("✅ pending-games.json cleared.");
+    // Mark successful items as inD1 = true
+    const updated = pending.map((e) => ({ ...e, inD1: true, failureReason: undefined }));
+    // If an item is already merged in HF and now in D1, it can be dropped from queue
+    const remaining = updated.filter((e) => !(e.inD1 && e.inHf));
+    fs.writeFileSync(PENDING_PATH, JSON.stringify(remaining, null, 2), "utf-8");
+    writeTodoMarkdown(remaining);
+    console.log(`✅ Queue updated: ${remaining.length} items remaining awaiting HF sync.`);
 
-    // Also update the HF dataset — trigger catalog rebuild by touching data-version.json
+    // Also update data-version.json metadata
     const dvPath = path.join(process.cwd(), "docs", "public", "data-version.json");
     if (fs.existsSync(dvPath)) {
       try {
         const dv = JSON.parse(fs.readFileSync(dvPath, "utf-8"));
         dv.lastRetryAt = new Date().toISOString();
-        dv.retriedCount = (dv.retriedCount || 0) + pending.length;
+        dv.retriedCount = (dv.retriedCount || 0) + unwrittenToD1.length;
         fs.writeFileSync(dvPath, JSON.stringify(dv, null, 2), "utf-8");
         console.log("📝 Updated data-version.json with retry metadata.");
       } catch {}
@@ -133,11 +150,12 @@ async function main() {
   } catch (err: any) {
     const msg = String(err?.message || err);
     console.warn(`⚠️  D1 retry failed again: ${msg}`);
-    console.log(`📋 ${pending.length} entries remain in pending-games.json for the next attempt.`);
+    console.log(`📋 ${pending.length} entries remain in queue for the next attempt.`);
 
     // Update the failureReason in pending queue with latest error
     const updated = pending.map((e) => ({ ...e, lastRetryAt: new Date().toISOString(), failureReason: msg }));
     fs.writeFileSync(PENDING_PATH, JSON.stringify(updated, null, 2), "utf-8");
+    writeTodoMarkdown(updated);
     // Exit 0 so the workflow doesn't fail (will retry next scheduled run)
     process.exit(0);
   }
