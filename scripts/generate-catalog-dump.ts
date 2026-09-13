@@ -3,6 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as zlib from "zlib";
 import { uploadFilesWithProgress } from "@huggingface/hub";
+import { writeTodoMarkdown } from "./todo-helper.js";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -478,11 +479,18 @@ async function main() {
   fs.writeFileSync(path.join(docsDir, "catalog-manifest.json"), JSON.stringify(manifest, null, 2), "utf8");
   console.log("   ✓ catalog-manifest.json written");
 
-  // Clear pending queue since games are now safely indexed into master catalog
-  if (appendedCount > 0 && fs.existsSync(pendingPath)) {
+  // Update pending queue: mark merged games with inHf: true, remove if also inD1
+  if (fs.existsSync(pendingPath)) {
     try {
-      fs.writeFileSync(pendingPath, "[]", "utf-8");
-      console.log("   ✓ Cleared pending-games.json queue (all merged into master dataset)");
+      const rawPending = JSON.parse(fs.readFileSync(pendingPath, "utf-8"));
+      if (Array.isArray(rawPending)) {
+        const updatedPending = rawPending
+          .map((item: any) => ({ ...item, inHf: true }))
+          .filter((item: any) => !(item.inD1 && item.inHf));
+        fs.writeFileSync(pendingPath, JSON.stringify(updatedPending, null, 2), "utf-8");
+        writeTodoMarkdown(updatedPending);
+        console.log(`   ✓ Updated pending-games.json & todo.md (${updatedPending.length} entries awaiting D1 retry)`);
+      }
     } catch {}
   }
 
