@@ -222,7 +222,7 @@ function buildFullGameRecord(g: PendingGame): any {
 }
 
 function generateCreatorIndexFromCatalog(catalog: DumpGame[], outPath: string) {
-  const creatorMap: Record<string, any[]> = {};
+  const creatorMap: Record<string, { name: string; slug: string; games: any[] }> = {};
   for (const g of catalog) {
     if (!g.dn) continue;
     const creators = g.dn.split(",").map((s: string) => s.trim()).filter(Boolean);
@@ -233,24 +233,38 @@ function generateCreatorIndexFromCatalog(catalog: DumpGame[], outPath: string) {
       coverUrl: g.c || null,
       developerNames: g.dn || null,
       platformNames: g.pn || "PC (Microsoft Windows)",
-      releaseDate: g.rd ?? null,
+      releaseDate: g.rd ? (g.rd > 100000000000 ? g.rd : g.rd * 1000) : null,
       rating: g.rt ?? null,
       status: g.st || "released",
+      category: g.cat ?? null,
+      genres: (g.gs || ["horror"]).map((x: string) => ({ name: x, slug: x })),
+      tags: (g.ts || []).map((x: string) => ({ name: x, slug: x })),
     };
     for (const c of creators) {
       const slug = slugify(c);
       if (!slug) continue;
-      if (!creatorMap[slug]) creatorMap[slug] = [];
-      creatorMap[slug].push(card);
+      if (!creatorMap[slug]) {
+        creatorMap[slug] = {
+          name: c,
+          slug,
+          games: [],
+        };
+      }
+      creatorMap[slug].games.push(card);
     }
   }
 
-  const filteredMap: Record<string, any[]> = {};
+  const filteredMap: Record<string, { name: string; slug: string; games: any[] }> = {};
   let multiCount = 0;
-  for (const [slug, games] of Object.entries(creatorMap)) {
-    if (games.length > 1) {
-      games.sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0) || (b.releaseDate || 0) - (a.releaseDate || 0));
-      filteredMap[slug] = games.slice(0, 12);
+  for (const [slug, profile] of Object.entries(creatorMap)) {
+    if (profile.games.length > 1) {
+      profile.games.sort((a: any, b: any) => {
+        const timeA = a.releaseDate || 0;
+        const timeB = b.releaseDate || 0;
+        if (timeA && timeB) return timeB - timeA;
+        return (b.rating || 0) - (a.rating || 0);
+      });
+      filteredMap[slug] = profile;
       multiCount++;
     }
   }
@@ -258,7 +272,36 @@ function generateCreatorIndexFromCatalog(catalog: DumpGame[], outPath: string) {
   const outJson = JSON.stringify(filteredMap);
   const outGz = zlib.gzipSync(Buffer.from(outJson, "utf8"), { level: 9 });
   fs.writeFileSync(outPath, outGz);
-  console.log(`   ✓ creator-games.json.gz written (${(outGz.length / 1024).toFixed(1)} KB for ${multiCount.toLocaleString()} creators)`);
+  console.log(`   ✓ creator-games.json.gz written (${(outGz.length / 1024 / 1024).toFixed(2)} MB for ${multiCount.toLocaleString()} creators)`);
+}
+
+function generateUpcomingIndexFromCatalog(catalog: DumpGame[], outPath: string) {
+  const nowSec = Math.floor(Date.now() / 1000);
+  const up = catalog.filter((g: any) => g.st === "upcoming" || (g.rd && g.rd > nowSec));
+
+  const list = up.map((g: any) => ({
+    id: g.i,
+    title: g.t,
+    slug: g.s,
+    coverUrl: g.c || null,
+    developerNames: g.dn || null,
+    platformNames: g.pn || "PC (Microsoft Windows)",
+    releaseDate: g.rd ? (g.rd > 100000000000 ? g.rd : g.rd * 1000) : null,
+    rating: g.rt ?? null,
+    status: g.st || "upcoming",
+    category: g.cat ?? null,
+    isTrending: Boolean(g.tr),
+    tags: (g.ts || []).map((t: string) => ({ name: t, slug: t })),
+    genres: (g.gs || []).map((gen: string) => ({ name: gen, slug: gen })),
+    purchaseLinks: [],
+  }));
+
+  list.sort((a: any, b: any) => (a.releaseDate || 9999999999999) - (b.releaseDate || 9999999999999));
+
+  const outJson = JSON.stringify(list);
+  const outGz = zlib.gzipSync(Buffer.from(outJson, "utf8"), { level: 9 });
+  fs.writeFileSync(outPath, outGz);
+  console.log(`   ✓ upcoming-games.json.gz written (${(outGz.length / 1024).toFixed(1)} KB for ${list.length.toLocaleString()} games)`);
 }
 
 async function uploadToHuggingFace(
@@ -471,9 +514,12 @@ async function main() {
   fs.writeFileSync(dumpPath, dumpGz);
   console.log(`   ✓ catalog-dump.json.gz: ${(dumpGz.length / (1024 * 1024)).toFixed(2)} MB (${catalog.length.toLocaleString()} entries)`);
 
-  // 6b. Write Creator Games index (zero-DB creator lookups)
+  // 6b. Write Creator Games index & Upcoming Games index (zero-DB lookups)
   const creatorIndexPath = path.join(docsDir, "creator-games.json.gz");
   generateCreatorIndexFromCatalog(catalog, creatorIndexPath);
+
+  const upcomingIndexPath = path.join(docsDir, "upcoming-games.json.gz");
+  generateUpcomingIndexFromCatalog(catalog, upcomingIndexPath);
 
   // 7. Write updated catalog-manifest.json
   const now = new Date();
@@ -513,6 +559,7 @@ async function main() {
   const peerDocsDump = path.resolve("..", "gamegata-astro", "public", "catalog", "catalog-dump.json.gz");
   const peerDocsOffsets = path.resolve("..", "gamegata-astro", "public", "catalog", "offsets.json.gz");
   const peerDocsCreator = path.resolve("..", "gamegata-astro", "public", "catalog", "creator-games.json.gz");
+  const peerDocsUpcoming = path.resolve("..", "gamegata-astro", "public", "catalog", "upcoming-games.json.gz");
   if (fs.existsSync(path.dirname(peerDocsDump))) {
     try {
       fs.copyFileSync(dumpPath, peerDocsDump);
@@ -520,7 +567,10 @@ async function main() {
       if (fs.existsSync(creatorIndexPath)) {
         fs.copyFileSync(creatorIndexPath, peerDocsCreator);
       }
-      console.log("   ✓ Synced catalog-dump, offsets & creator-games to gamegata-astro peer repo!");
+      if (fs.existsSync(upcomingIndexPath)) {
+        fs.copyFileSync(upcomingIndexPath, peerDocsUpcoming);
+      }
+      console.log("   ✓ Synced catalog-dump, offsets, creator-games & upcoming-games to gamegata-astro peer repo!");
     } catch {}
   }
 
@@ -531,6 +581,7 @@ async function main() {
         { path: "catalog-dump.json.gz", filePath: dumpPath },
         { path: "offsets.json.gz", filePath: offsetsPath },
         { path: "creator-games.json.gz", filePath: creatorIndexPath },
+        { path: "upcoming-games.json.gz", filePath: upcomingIndexPath },
         { path: "catalog-manifest.json", filePath: path.join(docsDir, "catalog-manifest.json") },
       ]);
     } catch (hfErr: any) {
