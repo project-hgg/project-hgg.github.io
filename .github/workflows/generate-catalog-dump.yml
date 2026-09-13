@@ -11,6 +11,9 @@ concurrency:
   group: generate-catalog-dump
   cancel-in-progress: false
 
+permissions:
+  contents: write # Needed to commit dump and publish releases
+
 jobs:
   export-catalog:
     runs-on: ubuntu-latest

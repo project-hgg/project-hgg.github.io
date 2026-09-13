@@ -6,6 +6,9 @@ on:
     - cron: '0 4 * * 0'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
+permissions:
+  contents: write # Needed for committing data and invoking reusable export workflow
+
 concurrency:
   group: sync-igdb-catalog
   cancel-in-progress: false
@@ -72,5 +75,7 @@ jobs:
   # After IGDB sync finishes, trigger a full catalog rebuild + HF upload
   trigger-catalog-rebuild:
     needs: sync-games
+    permissions:
+      contents: write
     uses: ./.github/workflows/generate-catalog-dump.yml
     secrets: inherit

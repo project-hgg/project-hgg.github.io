@@ -6,6 +6,9 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
+permissions:
+  contents: write # Needed for committing data and invoking reusable export workflow
+
 concurrency:
   group: sync-itch-catalog
   cancel-in-progress: false
@@ -14,7 +17,7 @@ jobs:
   sync-games:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Needed to push updated search-index.json back to main
+      contents: write
 
     steps:
       - name: Checkout Repository
@@ -70,5 +73,7 @@ jobs:
   # After itch sync finishes, trigger a full catalog rebuild + HF upload
   trigger-catalog-rebuild:
     needs: sync-games
+    permissions:
+      contents: write
     uses: ./.github/workflows/generate-catalog-dump.yml
     secrets: inherit
