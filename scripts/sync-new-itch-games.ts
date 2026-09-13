@@ -467,17 +467,52 @@ async function main() {
     }
   }
 
+  // 5. Batched Write Transaction into Database — with graceful D1 quota fallback
+  let d1Failed = false;
+  let d1FailureReason = "";
   try {
     await client.batch(batchStatements, "write");
-    console.log(`💾 Successfully committed batch transaction (${batchStatements.length} operations) to Database!`);
-  } catch (dbErr) {
-    console.error("❌ Database batch insert error:", dbErr);
-    process.exit(1);
+    console.log(`💾 Successfully committed batch transaction (${batchStatements.length} operations) to D1!`);
+  } catch (dbErr: any) {
+    d1Failed = true;
+    d1FailureReason = String(dbErr?.message || dbErr);
+    console.warn(`⚠️  D1 write failed (quota or API error): ${d1FailureReason}`);
+    console.log(`📋 Queuing failed games to pending-games.json for next run retry...`);
+
+    // Load existing pending queue
+    const pendingPath = path.join(process.cwd(), "docs", "public", "pending-games.json");
+    let pending: any[] = [];
+    if (fs.existsSync(pendingPath)) {
+      try { pending = JSON.parse(fs.readFileSync(pendingPath, "utf-8")); } catch {}
+    }
+
+    // Merge new games into pending (deduplicate by id)
+    const pendingIds = new Set(pending.map((g: any) => g.id));
+    let added = 0;
+    for (const g of validNewGames) {
+      if (!pendingIds.has(g.id)) {
+        pending.push({ ...g, queuedAt: new Date().toISOString(), failureReason: d1FailureReason });
+        pendingIds.add(g.id);
+        added++;
+      }
+    }
+    // Also queue matched canonical links
+    for (const m of matchedCanonicalLinks) {
+      const pendingLinkId = `link_${m.urlHash}`;
+      if (!pendingIds.has(pendingLinkId)) {
+        pending.push({ _type: "canonicalLink", id: pendingLinkId, ...m, queuedAt: new Date().toISOString(), failureReason: d1FailureReason });
+        pendingIds.add(pendingLinkId);
+        added++;
+      }
+    }
+
+    fs.writeFileSync(pendingPath, JSON.stringify(pending, null, 2), "utf-8");
+    console.log(`📝 Queued ${added} entries to pending-games.json (total pending: ${pending.length}).`);
   }
 
-  // 6. Append Brand New Games to catalog-dump.json.gz
+  // 6. Always append brand new games to catalog-dump.json.gz (HF is source of truth!)
   if (validNewGames.length > 0) {
-    console.log("📝 Updating catalog-dump.json.gz and manifest with deduplicated entries...");
+    console.log("📝 Updating catalog-dump.json.gz with new games (HF source of truth, D1-independent)...");
     for (const g of validNewGames) {
       catalog.push({
         i: g.id,
@@ -521,9 +556,9 @@ async function main() {
       } catch {}
     }
 
-    console.log(`✅ catalog-dump.json.gz updated. New total games: ${catalog.length.toLocaleString()}.`);
+    console.log(`✅ catalog-dump.json.gz updated. New total: ${catalog.length.toLocaleString()} games.${d1Failed ? " (D1 writes pending — retried next run)" : ""}`);
 
-    // Synchronize across local repositories if available
+    // Synchronize across local repositories if available (dev-only)
     const otherDumpPath = dumpPath.includes("project-hgg")
       ? path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "gamegata-astro", "public", "catalog", "catalog-dump.json.gz")
       : path.join("c:", "Users", "bapum", "Desktop", "Portfolio", "project-hgg.github.io", "docs", "public", "catalog-dump.json.gz");
@@ -531,16 +566,21 @@ async function main() {
     if (fs.existsSync(path.dirname(otherDumpPath))) {
       try {
         fs.copyFileSync(dumpPath, otherDumpPath);
+        const manifestPath2 = path.join(path.dirname(dumpPath), "catalog-manifest.json");
         const otherManifestPath = path.join(path.dirname(otherDumpPath), "catalog-manifest.json");
-        if (fs.existsSync(manifestPath)) {
-          fs.copyFileSync(manifestPath, otherManifestPath);
+        if (fs.existsSync(manifestPath2)) {
+          fs.copyFileSync(manifestPath2, otherManifestPath);
         }
         console.log(`✅ Synced updated dump & manifest to peer repository!`);
       } catch {}
     }
   }
 
-  console.log("🏁 Ingestion & deduplication pipeline completed successfully!");
+  if (d1Failed) {
+    console.warn(`⚠️  Run completed with D1 failure. New games are in catalog + pending-games.json for retry.`);
+  } else {
+    console.log("🏁 Ingestion & deduplication pipeline completed successfully!");
+  }
 }
 
 main().catch((err) => {

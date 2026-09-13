@@ -1,0 +1,114 @@
+name: Retry Pending D1 Games
+
+on:
+  schedule:
+    # Run every 6 hours, offset by 2h from itch sync (00:02, 06:02, 12:02, 18:02 UTC)
+    - cron: '2 */6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: retry-pending-d1
+  cancel-in-progress: false
+
+jobs:
+  check-pending:
+    runs-on: ubuntu-latest
+    outputs:
+      has_pending: ${{ steps.check.outputs.has_pending }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Check if pending-games.json has entries
+        id: check
+        run: |
+          PENDING="docs/public/pending-games.json"
+          if [ -f "$PENDING" ]; then
+            COUNT=$(node -e "const d=JSON.parse(require('fs').readFileSync('$PENDING','utf-8'));console.log(d.length)")
+            echo "📋 Pending entries: $COUNT"
+            if [ "$COUNT" -gt "0" ]; then
+              echo "has_pending=true" >> $GITHUB_OUTPUT
+            else
+              echo "has_pending=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "has_pending=false" >> $GITHUB_OUTPUT
+          fi
+
+  retry-d1:
+    needs: check-pending
+    if: needs.check-pending.outputs.has_pending == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Retry Pending D1 Inserts
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_DATABASE_ID: ${{ secrets.CLOUDFLARE_DATABASE_ID }}
+        run: npx tsx scripts/retry-pending-games.ts
+
+      - name: Update HF Dataset if retry succeeded
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          PENDING="docs/public/pending-games.json"
+          # If pending queue is now empty, games were successfully inserted — rebuild catalog
+          if [ -f "$PENDING" ]; then
+            COUNT=$(node -e "const d=JSON.parse(require('fs').readFileSync('$PENDING','utf-8'));console.log(d.length)")
+            if [ "$COUNT" -eq "0" ]; then
+              echo "✅ D1 retry succeeded! Triggering catalog rebuild + HF upload..."
+              echo "RETRY_SUCCEEDED=true" >> $GITHUB_ENV
+            else
+              echo "⚠️ D1 still failing, $COUNT entries remain."
+              echo "RETRY_SUCCEEDED=false" >> $GITHUB_ENV
+            fi
+          fi
+
+      - name: Commit Updated pending-games.json & data-version.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          CHANGED=$(git status --porcelain docs/public/pending-games.json docs/public/data-version.json)
+          if [ -n "$CHANGED" ]; then
+            git add docs/public/pending-games.json docs/public/data-version.json
+            if [ "$RETRY_SUCCEEDED" = "true" ]; then
+              git commit -m "chore(catalog): d1 retry succeeded — pending queue cleared [skip ci]"
+            else
+              git commit -m "chore(catalog): d1 retry attempted — queue updated [skip ci]"
+            fi
+            git push
+            echo "📤 Committed pending queue update."
+          else
+            echo "No changes to commit."
+          fi
+
+  # If retry succeeded, rebuild the full catalog + HF upload
+  rebuild-catalog:
+    needs: retry-d1
+    if: always() && needs.retry-d1.result == 'success'
+    permissions:
+      contents: write
+    uses: ./.github/workflows/generate-catalog-dump.yml
+    secrets: inherit
