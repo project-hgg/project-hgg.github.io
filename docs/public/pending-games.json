@@ -10,8 +10,7 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzE5MjQ0NDc5LnBuZw==/315x250%23c/wtflM3.png",
     "queuedAt": "2026-09-13T11:07:05.824Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -24,8 +23,7 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzI3MTY2MjMucG5n/315x250%23c/bFnDqL.png",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -38,8 +36,7 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzcxMDUyNjUucG5n/315x250%23c/%2FSHfYQ.png",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -52,8 +49,7 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzQyNDA0MDIucG5n/315x250%23c/truQkk.png",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -66,8 +62,7 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzIxNTI3NTAuZ2lm/original/zeDrXs.gif",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -80,8 +75,7 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzg3MzM4NTEuZ2lm/original/R0bBdx.gif",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -94,8 +88,7 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzEwMTM5MjUxLnBuZw==/315x250%23c/tItICn.png",
     "queuedAt": "2026-09-13T11:07:05.825Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "id": "itch_292af4da1e5944c8",
@@ -249,8 +242,7 @@
     "url": "https://cyanidetimegames.itch.io/silly-cat",
     "tags": "3d, adventure, atmospheric, cats, creepy, first-person, horror, indie, multiple-endings, no-ai, scary, short",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "id": "itch_2ed018c5ab6d8ec0",
@@ -264,8 +256,7 @@
     "url": "https://sentryisgod.itch.io/backrooms-zero",
     "tags": "3d, action, ai-generated, ai-generated-code, ai-generated-graphics, atmospheric, creepy, dark, horror, psychological-horror, singleplayer, survival, survival-horror",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "id": "itch_697aae7499d4b1c0",
@@ -279,8 +270,7 @@
     "url": "https://jorkothered.itch.io/the-xokening",
     "tags": "2d, ai-generated, ai-generated-graphics, fantasy, horror, indie, singleplayer, visual-novel",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "id": "itch_b5b44fb9cc230706",
@@ -294,8 +284,7 @@
     "url": "https://dreamveloper.itch.io/backrooms-95-demo",
     "tags": "adventure, atmospheric, backrooms, first-person, godot, horror, liminal-space, no-ai, psx, short, singleplayer, walking-simulator",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "id": "itch_37c487550fb8f077",
@@ -309,8 +298,7 @@
     "url": "https://onesunnyday.itch.io/clouded-memories",
     "tags": "adventure, horror, narrative, no-ai, puzzle",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "id": "itch_d2d2fe249b27c1f7",
@@ -324,8 +312,7 @@
     "url": "https://roflrawrvt.itch.io/rawr",
     "tags": "3d, adventure, alpha, atmospheric, first-person, horror, no-ai, psychological-horror, singleplayer, stealth, story-rich",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "id": "itch_de14f20421a44730",
@@ -339,8 +326,7 @@
     "url": "https://caracalll.itch.io/caracals-nostalgic-horror",
     "tags": "3d, gorilla-tag, horror, multiplayer, no-ai, survival",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "id": "itch_055f9eac1838d11b",
@@ -354,8 +340,7 @@
     "url": "https://bearsharktopus.itch.io/corridor",
     "tags": "3d, atmospheric, cozy, farming, godot, horror, no-ai, pixel-art, procedural, psx, survival",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "id": "itch_6304f2a18b23be4f",
@@ -369,8 +354,7 @@
     "url": "https://richard-tnd.itch.io/dantalion",
     "tags": "adventure, commodore-64, flip-screen-adventure, horror, no-ai, retro, seuck",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -383,7 +367,6 @@
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzI5OTUwMTgzLnBuZw==/315x250%23c/v1%2B0%2B7.png",
     "queuedAt": "2026-09-13T20:21:40.122Z",
-    "inD1": false,
-    "failureReason": "D1 API error (400): Your account has exceeded D1's free tier daily row read limit. Upgrade to a paid plan or wait until tomorrow (midnight UTC) to continue. See https://developers.cloudflare.com/d1/platform/limits/ for more details."
+    "inD1": true
   }
 ]

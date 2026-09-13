@@ -1,17 +1,17 @@
 # 📋 Pending Sync Queue (D1 & Hugging Face)
 
 > **Status**: ⏳ 27 item(s) pending sync
-> **Last updated**: 2026-09-13T20:21:45.361Z
+> **Last updated**: 2026-09-13T20:25:06.519Z
 
 | # | Title / Item | Source | Type | In Hugging Face? | In D1? | Queued At | Last Error |
 |---|---|---|---|:---:|:---:|---|---|
-| 1 | **link_8794f916d916f3a0** | itch | Canonical Link | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 11:07:05 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 2 | **link_18223ea907cbe807** | itch | Canonical Link | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 11:07:05 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 3 | **link_ca33723e021731d7** | itch | Canonical Link | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 11:07:05 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 4 | **link_b5dde76c0c3a54f0** | itch | Canonical Link | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 11:07:05 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 5 | **link_936cedf836ac838d** | itch | Canonical Link | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 11:07:05 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 6 | **link_f7399dfb55eb95f8** | itch | Canonical Link | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 11:07:05 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 7 | **link_beb20d98b81a00a1** | itch | Canonical Link | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 11:07:05 | `D1 API error (400): Your account has exceeded D1's free tier` |
+| 1 | **link_8794f916d916f3a0** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-13 11:07:05 | - |
+| 2 | **link_18223ea907cbe807** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-13 11:07:05 | - |
+| 3 | **link_ca33723e021731d7** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-13 11:07:05 | - |
+| 4 | **link_b5dde76c0c3a54f0** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-13 11:07:05 | - |
+| 5 | **link_936cedf836ac838d** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-13 11:07:05 | - |
+| 6 | **link_f7399dfb55eb95f8** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-13 11:07:05 | - |
+| 7 | **link_beb20d98b81a00a1** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-13 11:07:05 | - |
 | 8 | **Shadow Heritage** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 15:39:20 | - |
 | 9 | **Sprunki Randomized Phase 4** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 15:39:20 | - |
 | 10 | **Sprunki Randomized Phase 3** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 15:39:20 | - |
@@ -22,16 +22,16 @@
 | 15 | **Curved Horizon** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 15:39:20 | - |
 | 16 | **Finding King Trump** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 15:39:20 | - |
 | 17 | **SCP 106 maze** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 15:39:20 | - |
-| 18 | **Silly Cat** | itch | Game | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 19 | **Backrooms Zero** | itch | Game | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 20 | **The Xokening** | itch | Game | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 21 | **Backrooms 95 (Demo)** | itch | Game | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 22 | **Clouded Memories** | itch | Game | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 23 | **Rawr-Alpha Build** | itch | Game | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 24 | **Caracals Nostalgic Horror** | itch | Game | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 25 | **CORRIDOR Prototype** | itch | Game | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 26 | **Dantalion (Commodore 64)** | itch | Game | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
-| 27 | **link_e0cef06a0c6837ed** | itch | Canonical Link | ⏳ Pending | ❌ Pending/Quota | 2026-09-13 20:21:40 | `D1 API error (400): Your account has exceeded D1's free tier` |
+| 18 | **Silly Cat** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 19 | **Backrooms Zero** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 20 | **The Xokening** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 21 | **Backrooms 95 (Demo)** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 22 | **Clouded Memories** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 23 | **Rawr-Alpha Build** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 24 | **Caracals Nostalgic Horror** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 25 | **CORRIDOR Prototype** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 26 | **Dantalion (Commodore 64)** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 27 | **link_e0cef06a0c6837ed** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
 
 ---
 *This queue is automatically monitored by `.github/workflows/retry-pending.yml` (every 6 hours) and `.github/workflows/generate-catalog-dump.yml` (weekly/on-demand).
