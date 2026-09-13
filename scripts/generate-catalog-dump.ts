@@ -1,402 +1,480 @@
 import "dotenv/config";
-import fs from "node:fs";
-import path from "node:path";
-import zlib from "node:zlib";
-import { d1Client as client } from "./d1-client.js";
+import * as fs from "fs";
+import * as path from "path";
+import * as zlib from "zlib";
+import { uploadFilesWithProgress } from "@huggingface/hub";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-interface EntityRef {
-  name: string;
-  slug: string;
+interface OffsetEntry {
+  i: string;
+  s: string;
+  o: number;
+  l: number;
 }
 
-interface PurchaseLinkRecord {
-  storeName: string;
-  url: string;
-}
-
-interface PriceSnapshotRecord {
-  storeName: string;
-  dealPrice: number | null;
-  retailPrice: number | null;
-  discountPercent: number | null;
-  dealUrl: string | null;
-  currency: string | null;
-  country: string | null;
-  provider: string | null;
-}
-
-/** Compact search-index entry embedded in catalog-dump.json.gz */
 interface CatalogRecord {
-  i: string;         // id
-  t: string;         // title
-  s: string;         // slug
-  c: string | null;  // coverUrl
-  dn: string | null; // developerNames (denormalized)
-  pn: string | null; // platformNames  (denormalized)
-  rd: number | null; // releaseDate epoch seconds
-  rt: number | null; // rating 0-100
-  sr: number | null; // steamRating (0-100 scaled)
-  mc: number | null; // metacritic
-  rr: number | null; // rawgRating
-  cat: number | null;// category
-  pop: number | null;// popularity
-  tr: boolean;       // isTrending
-  lk: number;        // likesCount
-  gs: string[];      // genre slugs
-  ts: string[];      // tag slugs
-  dp: number | null; // cheapest deal price
-  st: string | null; // status
-  /** byte offset in catalog.raw (injected after raw is written) */
+  i: string;
+  t: string;
+  s: string;
+  c: string | null;
+  dn: string | null;
+  pn: string | null;
+  rd: number | null;
+  rt: number | null;
+  sr: number | null;
+  mc: number | null;
+  rr: number | null;
+  cat: number | null;
+  pop: number | null;
+  tr: boolean;
+  lk: number;
+  gs: string[];
+  ts: string[];
+  dp: number | null;
+  st: string | null;
   o?: number;
-  /** byte length in catalog.raw (injected after raw is written) */
   l?: number;
 }
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
-const GAME_BATCH = 5_000; // Stay safely under D1 1 MB response cap
-
-async function loadEntityMap(tableName: string): Promise<Map<string, EntityRef>> {
-  const map = new Map<string, EntityRef>();
-  // D1 has no row limit here since entity tables are small (<500 rows each)
-  try {
-    const res = await client.execute(`SELECT id, name, slug FROM "${tableName}"`);
-    for (const r of res.rows) {
-      if (r.id && r.name && r.slug) {
-        map.set(String(r.id), { name: String(r.name), slug: String(r.slug) });
-      }
-    }
-    console.log(`   ✓ ${tableName}: ${map.size.toLocaleString()} entries`);
-  } catch (err: any) {
-    console.warn(`   ⚠️ Could not load ${tableName}: ${err.message}`);
-  }
-  return map;
+interface PendingGame {
+  id: string;
+  title: string;
+  slug: string;
+  coverUrl?: string | null;
+  author?: string;
+  developerNames?: string | null;
+  platformNames?: string | null;
+  tags?: string | string[];
+  status?: string;
+  source?: string;
+  dealPrice?: number | null;
+  retailPrice?: number | null;
+  discountPercent?: number | null;
+  url?: string;
+  purchaseLinks?: { store: string; url: string }[];
+  summary?: string | null;
+  firstReleaseDate?: number | null;
+  releaseDate?: number | null;
+  totalRating?: number | null;
+  rating?: number | null;
+  queuedAt?: string;
+  failureReason?: string;
+  _type?: string;
 }
 
-async function loadJoinMap(
-  joinTable: string,
-  entityCol: "A" | "B",
-  gameCol: "A" | "B",
-  entityLookup: Map<string, EntityRef>
-): Promise<Map<string, EntityRef[]>> {
-  const map = new Map<string, EntityRef[]>();
-  try {
-    const res = await client.execute(`SELECT "A", "B" FROM "${joinTable}"`);
-    for (const r of res.rows) {
-      const entityId = String(r[entityCol]);
-      const gameId = String(r[gameCol]);
-      const ref = entityLookup.get(entityId);
-      if (ref) {
-        if (!map.has(gameId)) map.set(gameId, []);
-        map.get(gameId)!.push(ref);
-      }
-    }
-    console.log(`   ✓ ${joinTable}: ${res.rows.length.toLocaleString()} associations → ${map.size.toLocaleString()} games`);
-  } catch (err: any) {
-    console.warn(`   ⚠️ Could not load ${joinTable}: ${err.message}`);
-  }
-  return map;
+const HF_DATASET = "aurostron/hogamegata";
+const HF_RAW_FILENAME = "catalog.raw";
+const HF_RAW_URL = `https://huggingface.co/datasets/${HF_DATASET}/resolve/main/${HF_RAW_FILENAME}`;
+
+function slugify(text: string): string {
+  return (text || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
 }
 
-function safeJson<T>(val: any): T | null {
-  if (val == null) return null;
-  if (typeof val === "string") {
-    try { return JSON.parse(val) as T; } catch { return null; }
-  }
-  return val as T;
-}
-
-function toEpochSec(val: any): number | null {
-  if (val == null) return null;
-  const n = Number(val);
-  if (isNaN(n) || n <= 0) return null;
-  return n > 100_000_000_000 ? Math.floor(n / 1000) : n;
-}
-
-// ─── Main ─────────────────────────────────────────────────────────────────────
-
-async function generateCatalogDump() {
-  const t0 = performance.now();
-  console.log("===========================================================");
-  console.log("📦  PROJECT-HGG: GENERATING FULL CATALOG DUMP + HF MASTER");
-  console.log("===========================================================\n");
-
-  // Output directories
-  const hfDir = path.resolve("dist-hf");
-  const docsDir = path.resolve("docs", "public");
-  for (const dir of [hfDir, docsDir]) {
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  }
-  const rawFilePath = path.join(hfDir, "catalog.raw");
-
-  // ── 1. Entity lookup maps ─────────────────────────────────────────────────
-  console.log("1. Loading entity lookup maps...");
-  const [devsMap, genresMap, platformsMap, tagsMap, pubsMap] = await Promise.all([
-    loadEntityMap("Developer"),
-    loadEntityMap("Genre"),
-    loadEntityMap("Platform"),
-    loadEntityMap("Tag"),
-    loadEntityMap("Publisher"),
-  ]);
-
-  // ── 2. Join maps ──────────────────────────────────────────────────────────
-  console.log("\n2. Loading relation join maps...");
-  const [gameDevs, gameGenres, gamePlatforms, gameTags, gamePubs] = await Promise.all([
-    loadJoinMap("_DeveloperToGame", "A", "B", devsMap),
-    loadJoinMap("_GameToGenre",     "B", "A", genresMap),
-    loadJoinMap("_GameToPlatform",  "B", "A", platformsMap),
-    loadJoinMap("_GameToTag",       "B", "A", tagsMap),
-    loadJoinMap("_GameToPublisher", "B", "A", pubsMap),
-  ]);
-
-  // ── 3. Price maps ─────────────────────────────────────────────────────────
-  console.log("\n3. Loading purchase links & deal prices...");
-  const purchaseLinksMap = new Map<string, PurchaseLinkRecord[]>();
-  const priceSnapshotsMap = new Map<string, PriceSnapshotRecord[]>();
-  const priceMinMap = new Map<string, number>(); // cheapest deal price
-
-  try {
-    const pLinksRes = await client.execute(
-      `SELECT gameId, storeName, url FROM "PurchaseLink"`
-    );
-    for (const r of pLinksRes.rows) {
-      const gId = String(r.gameId);
-      if (!purchaseLinksMap.has(gId)) purchaseLinksMap.set(gId, []);
-      purchaseLinksMap.get(gId)!.push({
-        storeName: String(r.storeName || ""),
-        url: String(r.url || ""),
-      });
+/**
+ * Downloads or copies the current master catalog.raw so we can update it incrementally
+ */
+async function ensureMasterCatalogRaw(targetPath: string, hfToken?: string): Promise<number> {
+  // 1. If it already exists on disk and is > 50 MB, use it
+  if (fs.existsSync(targetPath)) {
+    const stat = fs.statSync(targetPath);
+    if (stat.size > 50 * 1024 * 1024) {
+      console.log(`📦 Found existing local catalog.raw (${(stat.size / (1024 * 1024)).toFixed(2)} MB)`);
+      return stat.size;
     }
-    console.log(`   ✓ PurchaseLink: ${pLinksRes.rows.length.toLocaleString()} rows`);
-  } catch (err: any) {
-    console.warn(`   ⚠️ PurchaseLink: ${err.message}`);
   }
 
-  try {
-    const pSnapRes = await client.execute(
-      `SELECT gameId, storeName, dealPrice, retailPrice, discountPercent, dealUrl, currency, country, provider FROM "PriceSnapshot"`
-    );
-    for (const r of pSnapRes.rows) {
-      const gId = String(r.gameId);
-      const deal = r.dealPrice != null ? Number(r.dealPrice) : null;
-      // Track minimum
-      if (deal != null) {
-        const cur = priceMinMap.get(gId);
-        if (cur == null || deal < cur) priceMinMap.set(gId, deal);
-      }
-      if (!priceSnapshotsMap.has(gId)) priceSnapshotsMap.set(gId, []);
-      priceSnapshotsMap.get(gId)!.push({
-        storeName: String(r.storeName || ""),
-        dealPrice: deal,
-        retailPrice: r.retailPrice != null ? Number(r.retailPrice) : null,
-        discountPercent: r.discountPercent != null ? Number(r.discountPercent) : null,
-        dealUrl: r.dealUrl != null ? String(r.dealUrl) : null,
-        currency: r.currency != null ? String(r.currency) : null,
-        country: r.country != null ? String(r.country) : null,
-        provider: r.provider != null ? String(r.provider) : null,
-      });
-    }
-    console.log(`   ✓ PriceSnapshot: ${pSnapRes.rows.length.toLocaleString()} rows`);
-  } catch (err: any) {
-    console.warn(`   ⚠️ PriceSnapshot: ${err.message}`);
+  // 2. Check peer repository in local workspace (gamegata-astro/data-export/catalog.raw)
+  const peerExport = path.resolve("..", "gamegata-astro", "data-export", "catalog.raw");
+  if (fs.existsSync(peerExport)) {
+    console.log(`📂 Found local master catalog at ${peerExport}. Copying...`);
+    fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+    fs.copyFileSync(peerExport, targetPath);
+    const stat = fs.statSync(targetPath);
+    console.log(`✅ Copied ${(stat.size / (1024 * 1024)).toFixed(2)} MB catalog.raw`);
+    return stat.size;
   }
 
-  // ── 4. Genre slug map (id → slug) for compact index ──────────────────────
-  const genreSlugMap = new Map<string, string>(); // gameId → genre slugs[]
-  // We already have gameGenres (gameId → EntityRef[]), extract slugs below.
+  // 3. Download from Hugging Face dataset
+  console.log(`⬇️ Downloading master catalog.raw from Hugging Face dataset (${HF_DATASET})...`);
+  fs.mkdirSync(path.dirname(targetPath), { recursive: true });
 
-  const tagSlugMap = new Map<string, string[]>();
-  const genreSlugListMap = new Map<string, string[]>();
-  for (const [gId, refs] of gameGenres) {
-    genreSlugListMap.set(gId, refs.map((r) => r.slug));
-  }
-  for (const [gId, refs] of gameTags) {
-    tagSlugMap.set(gId, refs.map((r) => r.slug));
+  const headers: Record<string, string> = {
+    "User-Agent": "gamegata-catalog-sync/1.0",
+  };
+  if (hfToken) {
+    headers["Authorization"] = `Bearer ${hfToken}`;
   }
 
-  // ── 5. Stream games into catalog.raw & build compact index ───────────────
-  console.log("\n4. Streaming games into catalog.raw + building compact index...");
-  const rawStream = fs.createWriteStream(rawFilePath, { flags: "w", encoding: "utf8" });
+  const res = await fetch(HF_RAW_URL, { headers });
+  if (!res.ok) {
+    throw new Error(`Failed to fetch catalog.raw from Hugging Face: ${res.status} ${res.statusText}`);
+  }
 
-  let byteOffset = 0;
-  let totalProcessed = 0;
-  const compactRecords: CatalogRecord[] = [];
+  const reader = res.body?.getReader();
+  if (!reader) throw new Error("Could not acquire reader stream for Hugging Face download");
 
-  let page = 0;
+  const writeStream = fs.createWriteStream(targetPath);
+  let totalBytes = 0;
+  let lastLoggedMb = 0;
+
   while (true) {
-    const batchOffset = page * GAME_BATCH;
-    const res = await client.execute({
-      sql: `SELECT * FROM "Game" WHERE (status IS NULL OR status != 'hidden') LIMIT ? OFFSET ?`,
-      args: [GAME_BATCH, batchOffset],
-    });
-
-    if (res.rows.length === 0) break;
-
-    for (const row of res.rows) {
-      const gId = String(row.id);
-      const slug = String(row.slug);
-      const title = String(row.title);
-      const releaseDateSec = toEpochSec(row.releaseDate);
-
-      // ---- Full game record (goes into catalog.raw) -----------------------
-      const fullRecord = {
-        id: gId,
-        igdbId: row.igdbId ?? null,
-        title,
-        slug,
-        summary: row.summary ?? null,
-        storyline: row.storyline ?? null,
-        releaseDate: releaseDateSec,
-        status: row.status ?? "released",
-        coverUrl: row.coverUrl ?? null,
-        rating: row.rating != null ? Math.round(Number(row.rating) * 10) / 10 : null,
-        trailerUrl: row.trailerUrl ?? null,
-        screenshots: safeJson<string[]>(row.screenshots) ?? [],
-        catboxAlbumId: row.catboxAlbumId ?? null,
-        metacritic: row.metacritic ?? null,
-        metacriticUrl: row.metacriticUrl ?? null,
-        playtime: row.playtime ?? null,
-        esrbRating: row.esrbRating ?? null,
-        pegiRating: row.pegiRating ?? null,
-        redditUrl: row.redditUrl ?? null,
-        websiteUrl: row.websiteUrl ?? null,
-        rawgRating: row.rawgRating != null ? Number(row.rawgRating) : null,
-        rawgSlug: row.rawgSlug ?? null,
-        steamRating: row.steamRating != null ? Number(row.steamRating) : null,
-        steamRatingDesc: row.steamRatingDesc ?? null,
-        scareRating: row.scareRating != null ? Number(row.scareRating) : null,
-        scareProfile: safeJson(row.scareProfile),
-        scareReviewCount: row.scareReviewCount ?? null,
-        protonDbTier: row.protonDbTier ?? null,
-        protonDbConfidence: row.protonDbConfidence ?? null,
-        protonDbScore: row.protonDbScore != null ? Number(row.protonDbScore) : null,
-        minRequirements: row.minRequirements ?? null,
-        recRequirements: row.recRequirements ?? null,
-        popularity: row.popularity != null ? Math.round(Number(row.popularity) * 100) / 100 : null,
-        isTrending: Boolean(row.isTrending),
-        developerNames: row.developerNames ?? null,
-        genreNames: row.genreNames ?? null,
-        platformNames: row.platformNames ?? null,
-        source: row.source ?? null,
-        taxonomyScores: safeJson(row.taxonomyScores),
-        devs: (gameDevs.get(gId) || []).map((r) => ({ name: r.name, slug: r.slug })),
-        pubs: (gamePubs.get(gId) || []).map((r) => ({ name: r.name, slug: r.slug })),
-        genres: (gameGenres.get(gId) || []).map((r) => ({ name: r.name, slug: r.slug })),
-        tags: (gameTags.get(gId) || []).map((r) => ({ name: r.name, slug: r.slug })),
-        platforms: (gamePlatforms.get(gId) || []).map((r) => ({ name: r.name, slug: r.slug })),
-        purchaseLinks: purchaseLinksMap.get(gId) || [],
-        priceSnapshots: priceSnapshotsMap.get(gId) || [],
-      };
-
-      // Each line in catalog.raw = one JSON game + newline
-      const jsonStr = JSON.stringify(fullRecord) + "\n";
-      const byteLen = Buffer.byteLength(jsonStr, "utf8");
-      rawStream.write(jsonStr);
-
-      // ---- Compact search record (goes into catalog-dump.json.gz) ---------
-      compactRecords.push({
-        i: gId,
-        t: title,
-        s: slug,
-        c: (row.coverUrl as string) || null,
-        dn: (row.developerNames as string) || null,
-        pn: (row.platformNames as string) || null,
-        rd: releaseDateSec,
-        rt: row.rating != null ? Math.round(Number(row.rating)) : null,
-        sr: row.steamRating != null ? Math.round(Number(row.steamRating) * 10) / 10 : null,
-        mc: (row.metacritic as number) || null,
-        rr: row.rawgRating != null ? Math.round(Number(row.rawgRating) * 10) / 10 : null,
-        cat: row.category != null ? Number(row.category) : null,
-        pop: row.popularity != null ? Math.round(Number(row.popularity) * 10) / 10 : null,
-        tr: Boolean(row.isTrending),
-        lk: Number(row.likesCount) || 0,
-        gs: genreSlugListMap.get(gId) || [],
-        ts: tagSlugMap.get(gId) || [],
-        dp: priceMinMap.get(gId) ?? null,
-        st: (row.status as string) || null,
-        // Byte coordinates for Range request into catalog.raw
-        o: byteOffset,
-        l: byteLen - 1, // Exclude trailing \n for clean JSON parse
-      });
-
-      byteOffset += byteLen;
-      totalProcessed++;
+    const { done, value } = await reader.read();
+    if (done) break;
+    writeStream.write(Buffer.from(value));
+    totalBytes += value.length;
+    const currentMb = Math.floor(totalBytes / (25 * 1024 * 1024)) * 25;
+    if (currentMb > lastLoggedMb) {
+      lastLoggedMb = currentMb;
+      process.stdout.write(`   Downloaded ${(totalBytes / (1024 * 1024)).toFixed(1)} MB...\r`);
     }
+  }
+  await new Promise<void>((resolve) => writeStream.end(resolve));
 
-    page++;
-    process.stdout.write(
-      `   Processed ${totalProcessed.toLocaleString()} games (batch ${page})...\r`
-    );
-    if (res.rows.length < GAME_BATCH) break; // Last partial batch
+  console.log(`\n✅ Download complete: ${(totalBytes / (1024 * 1024)).toFixed(2)} MB written to ${targetPath}`);
+  return totalBytes;
+}
+
+/**
+ * Builds the full JSON game representation as expected by gamePackFetcher
+ */
+function buildFullGameRecord(g: PendingGame): any {
+  const authorName = g.author || g.developerNames || "Independent Creator";
+  const rawTags = Array.isArray(g.tags)
+    ? g.tags
+    : typeof g.tags === "string"
+    ? g.tags.split(",").map((s) => s.trim()).filter(Boolean)
+    : ["Horror", "Indie"];
+
+  const pLinks = g.purchaseLinks
+    ? g.purchaseLinks.map((p) => ({ storeName: p.store, url: p.url }))
+    : g.url
+    ? [{ storeName: g.source || "itch.io", url: g.url }]
+    : [];
+
+  const prices = g.dealPrice != null
+    ? [{
+        storeName: g.source || "itch.io",
+        dealPrice: g.dealPrice,
+        retailPrice: g.retailPrice ?? g.dealPrice,
+        discountPercent: g.discountPercent ?? 0,
+        dealUrl: g.url ?? null,
+        currency: "USD",
+        country: "US",
+        provider: "direct",
+      }]
+    : [];
+
+  return {
+    id: g.id,
+    igdbId: null,
+    title: g.title,
+    slug: g.slug,
+    summary: g.summary ?? null,
+    storyline: null,
+    releaseDate: g.releaseDate ?? g.firstReleaseDate ?? Math.floor(Date.now() / 1000),
+    status: g.status || "released",
+    coverUrl: g.coverUrl || null,
+    rating: g.rating ?? g.totalRating ?? null,
+    trailerUrl: null,
+    screenshots: [],
+    catboxAlbumId: null,
+    metacritic: null,
+    metacriticUrl: null,
+    playtime: null,
+    esrbRating: null,
+    pegiRating: null,
+    redditUrl: null,
+    websiteUrl: null,
+    rawgRating: null,
+    rawgSlug: null,
+    steamRating: null,
+    steamRatingDesc: null,
+    scareRating: null,
+    scareProfile: null,
+    scareReviewCount: null,
+    protonDbTier: null,
+    protonDbConfidence: null,
+    protonDbScore: null,
+    minRequirements: null,
+    recRequirements: null,
+    popularity: 1,
+    isTrending: false,
+    developerNames: authorName,
+    genreNames: "Horror",
+    platformNames: g.platformNames || "PC (Microsoft Windows)",
+    source: g.source || (g.slug.startsWith("itch-") ? "itch" : "igdb"),
+    taxonomyScores: null,
+    devs: [{ name: authorName, slug: slugify(authorName) }],
+    pubs: [],
+    genres: [{ name: "Horror", slug: "horror" }],
+    tags: rawTags.map((t) => ({ name: t, slug: slugify(t) })),
+    platforms: [{ name: "PC (Microsoft Windows)", slug: "pc-microsoft-windows" }],
+    purchaseLinks: pLinks,
+    priceSnapshots: prices,
+  };
+}
+
+async function uploadToHuggingFace(rawFilePath: string, hfToken: string) {
+  console.log(`\n🚀 Uploading catalog.raw to Hugging Face dataset (${HF_DATASET})...`);
+  const fileBuffer = fs.readFileSync(rawFilePath);
+
+  const progress = uploadFilesWithProgress({
+    repo: { type: "dataset", name: HF_DATASET },
+    credentials: { accessToken: hfToken },
+    files: [
+      {
+        path: HF_RAW_FILENAME,
+        content: new Blob([fileBuffer]),
+      },
+    ],
+    commitMessage: `chore(catalog): auto-update master catalog.raw (${new Date().toISOString()})`,
+  });
+
+  for await (const event of progress) {
+    if (event.event === "phase") {
+      console.log(`   HF Status: ${event.phase}...`);
+    }
   }
 
-  await new Promise<void>((resolve) => rawStream.end(resolve));
-  console.log(
-    `\n   ✓ catalog.raw: ${totalProcessed.toLocaleString()} games | ${(byteOffset / (1024 * 1024)).toFixed(2)} MB`
-  );
+  console.log(`🎉 Successfully uploaded ${HF_RAW_FILENAME} to https://huggingface.co/datasets/${HF_DATASET}!`);
+}
 
-  // ── 6. Write offset-only file (offsets.json.gz) ───────────────────────────
-  console.log("\n5. Writing offsets.json.gz...");
-  // Format: [{i, o, l}, ...] — minimal file just for range-request lookups
-  const offsetsArr = compactRecords.map((r) => ({
-    i: r.i,
-    s: r.s,
-    o: r.o!,
-    l: r.l!,
-  }));
-  const offsetsGz = zlib.gzipSync(Buffer.from(JSON.stringify(offsetsArr), "utf8"), { level: 9 });
-  fs.writeFileSync(path.join(docsDir, "offsets.json.gz"), offsetsGz);
-  console.log(`   ✓ offsets.json.gz: ${(offsetsGz.length / 1024).toFixed(1)} KB (${offsetsArr.length.toLocaleString()} entries)`);
+async function main() {
+  const startTime = Date.now();
+  console.log("==========================================================");
+  console.log("🎮 HUGGING FACE MASTER CATALOG GENERATOR & SYNC");
+  console.log("   (Zero-D1 Architecture — 100% Free & Quota-Independent)");
+  console.log("==========================================================\n");
 
-  // ── 7. Write compact catalog-dump.json.gz (search index + offsets) ────────
-  console.log("\n6. Writing catalog-dump.json.gz...");
-  const rawJson = JSON.stringify(compactRecords);
-  const rawBuf = Buffer.from(rawJson, "utf8");
-  const gzipBuf = zlib.gzipSync(rawBuf, { level: 9 });
-  fs.writeFileSync(path.join(docsDir, "catalog-dump.json.gz"), gzipBuf);
-  console.log(`   ✓ catalog-dump.json.gz: ${(gzipBuf.length / (1024 * 1024)).toFixed(2)} MB (${((gzipBuf.length / rawBuf.length) * 100).toFixed(1)}% of ${(rawBuf.length / (1024 * 1024)).toFixed(2)} MB uncompressed)`);
+  const hfToken = process.env.HF_TOKEN || "";
+  const docsDir = path.join(process.cwd(), "docs", "public");
+  const distDir = path.join(process.cwd(), "dist-hf");
+  const rawFilePath = path.join(distDir, HF_RAW_FILENAME);
 
-  // ── 8. Write manifest ─────────────────────────────────────────────────────
+  fs.mkdirSync(docsDir, { recursive: true });
+  fs.mkdirSync(distDir, { recursive: true });
+
+  // 1. Ensure master catalog.raw exists (download from HF or copy local)
+  let currentRawSize = await ensureMasterCatalogRaw(rawFilePath, hfToken);
+
+  // 2. Load existing offsets and catalog-dump
+  const offsetsPath = path.join(docsDir, "offsets.json.gz");
+  const dumpPath = path.join(docsDir, "catalog-dump.json.gz");
+  const pendingPath = path.join(docsDir, "pending-games.json");
+
+  console.log("\n📂 Loading existing offsets and compact catalog...");
+  const offsetsDict: Record<string, [number, number]> = {};
+  const offsetsMap = new Map<string, [number, number]>(); // slug or id -> [offset, length]
+
+  if (fs.existsSync(offsetsPath)) {
+    try {
+      const rawOffsets = zlib.gunzipSync(fs.readFileSync(offsetsPath)).toString("utf-8");
+      const parsed = JSON.parse(rawOffsets);
+      if (Array.isArray(parsed)) {
+        for (const item of parsed) {
+          if (item.s && item.o != null && item.l != null) {
+            offsetsMap.set(item.s, [item.o, item.l]);
+            offsetsDict[item.s] = [item.o, item.l];
+            if (item.i) offsetsDict[item.i] = [item.o, item.l];
+          }
+        }
+      } else if (parsed && typeof parsed === "object") {
+        for (const [key, val] of Object.entries(parsed)) {
+          if (Array.isArray(val) && val.length >= 2) {
+            offsetsMap.set(key, [val[0] as number, val[1] as number]);
+            offsetsDict[key] = [val[0] as number, val[1] as number];
+          }
+        }
+      }
+      console.log(`   ✓ Loaded ${Object.keys(offsetsDict).length.toLocaleString()} existing offsets from offsets.json.gz`);
+    } catch (e: any) {
+      console.warn(`   ⚠️ Could not read offsets.json.gz: ${e.message}`);
+    }
+  }
+
+  let catalog: CatalogRecord[] = [];
+  if (fs.existsSync(dumpPath)) {
+    try {
+      catalog = JSON.parse(zlib.gunzipSync(fs.readFileSync(dumpPath)).toString("utf-8"));
+      console.log(`   ✓ Loaded ${catalog.length.toLocaleString()} games from catalog-dump.json.gz`);
+    } catch (e: any) {
+      console.warn(`   ⚠️ Could not read catalog-dump.json.gz: ${e.message}`);
+    }
+  }
+
+  // 3. Collect pending games to append
+  const pendingGames: PendingGame[] = [];
+  if (fs.existsSync(pendingPath)) {
+    try {
+      const list: PendingGame[] = JSON.parse(fs.readFileSync(pendingPath, "utf-8"));
+      for (const g of list) {
+        if (g && g.slug && g._type !== "canonicalLink") {
+          pendingGames.push(g);
+        }
+      }
+      console.log(`   ✓ Found ${pendingGames.length} pending games in pending-games.json`);
+    } catch {}
+  }
+
+  // Also check if any games in catalog-dump are missing offsets
+  for (const c of catalog) {
+    if (!offsetsMap.has(c.s)) {
+      if (!pendingGames.some((p) => p.slug === c.s)) {
+        pendingGames.push({
+          id: c.i,
+          title: c.t,
+          slug: c.s,
+          coverUrl: c.c,
+          author: c.dn || "Independent Creator",
+          tags: c.ts || ["Horror"],
+          status: c.st || "released",
+          releaseDate: c.rd,
+          rating: c.rt,
+        });
+      }
+    }
+  }
+
+  console.log(`\n🔍 Total unindexed / pending games to append to master dataset: ${pendingGames.length}`);
+
+  // 4. Append new games to catalog.raw & calculate exact byte offsets
+  let appendedCount = 0;
+  if (pendingGames.length > 0) {
+    console.log("✍️ Appending new games to catalog.raw...");
+    const rawAppendStream = fs.createWriteStream(rawFilePath, { flags: "a", encoding: "utf8" });
+
+    for (const g of pendingGames) {
+      if (offsetsMap.has(g.slug)) continue;
+
+      const fullRecord = buildFullGameRecord(g);
+      const jsonLine = JSON.stringify(fullRecord) + "\n";
+      const lineBuffer = Buffer.from(jsonLine, "utf8");
+      const length = lineBuffer.length;
+      const offset = currentRawSize;
+
+      rawAppendStream.write(jsonLine);
+      currentRawSize += length;
+
+      const cleanLen = length - 1; // Exclude trailing newline
+      offsetsMap.set(g.slug, [offset, cleanLen]);
+      offsetsDict[g.slug] = [offset, cleanLen];
+      offsetsDict[g.id] = [offset, cleanLen];
+
+      // Update compact catalog record
+      const catEntry = catalog.find((c) => c.s === g.slug);
+      if (catEntry) {
+        catEntry.o = offset;
+        catEntry.l = cleanLen;
+      } else {
+        catalog.push({
+          i: g.id,
+          t: g.title,
+          s: g.slug,
+          c: g.coverUrl || null,
+          dn: g.author || null,
+          pn: g.platformNames || "PC (Microsoft Windows)",
+          rd: g.releaseDate || Math.floor(Date.now() / 1000),
+          rt: g.rating ?? null,
+          sr: null,
+          mc: null,
+          rr: null,
+          cat: 0,
+          pop: 1,
+          tr: false,
+          lk: 0,
+          gs: ["horror"],
+          ts: Array.isArray(g.tags) ? g.tags : ["indie", "horror"],
+          dp: g.dealPrice ?? null,
+          st: g.status || "released",
+          o: offset,
+          l: cleanLen,
+        });
+      }
+      appendedCount++;
+    }
+
+    await new Promise<void>((resolve) => rawAppendStream.end(resolve));
+    console.log(`✅ Appended ${appendedCount} new games. New catalog.raw size: ${(currentRawSize / (1024 * 1024)).toFixed(2)} MB`);
+  }
+
+  // 5. Write updated offsets.json.gz
+  console.log("\n📦 Saving updated docs/public/offsets.json.gz...");
+  const offsetsGz = zlib.gzipSync(Buffer.from(JSON.stringify(offsetsDict), "utf8"), { level: 9 });
+  fs.writeFileSync(offsetsPath, offsetsGz);
+  console.log(`   ✓ offsets.json.gz: ${(offsetsGz.length / 1024).toFixed(1)} KB (${Object.keys(offsetsDict).length.toLocaleString()} entries)`);
+
+  // 6. Write updated catalog-dump.json.gz
+  console.log("📦 Saving updated docs/public/catalog-dump.json.gz...");
+  const dumpGz = zlib.gzipSync(Buffer.from(JSON.stringify(catalog), "utf8"), { level: 9 });
+  fs.writeFileSync(dumpPath, dumpGz);
+  console.log(`   ✓ catalog-dump.json.gz: ${(dumpGz.length / (1024 * 1024)).toFixed(2)} MB (${catalog.length.toLocaleString()} entries)`);
+
+  // 7. Write updated catalog-manifest.json
   const now = new Date();
-  const version =
-    now.toISOString().slice(0, 10).replace(/-/g, ".") +
-    "." +
-    String(now.getUTCHours()).padStart(2, "0") +
-    String(now.getUTCMinutes()).padStart(2, "0");
-
+  const version = `${now.toISOString().slice(0, 10).replace(/-/g, ".")}.${String(now.getUTCHours()).padStart(2, "0")}${String(now.getUTCMinutes()).padStart(2, "0")}`;
   const manifest = {
     version,
-    totalGames: compactRecords.length,
-    rawBytes: byteOffset,
-    rawMb: parseFloat((byteOffset / (1024 * 1024)).toFixed(2)),
-    compressedBytes: gzipBuf.length,
-    uncompressedBytes: rawBuf.length,
-    compressedMb: parseFloat((gzipBuf.length / (1024 * 1024)).toFixed(2)),
-    uncompressedMb: parseFloat((rawBuf.length / (1024 * 1024)).toFixed(2)),
-    hfDataset: "aurostron/hogamegata",
-    hfFile: "catalog.raw",
+    totalGames: catalog.length,
+    rawBytes: currentRawSize,
+    rawMb: parseFloat((currentRawSize / (1024 * 1024)).toFixed(2)),
+    compressedBytes: dumpGz.length,
+    compressedMb: parseFloat((dumpGz.length / (1024 * 1024)).toFixed(2)),
+    offsetsBytes: offsetsGz.length,
+    hfDataset: HF_DATASET,
+    hfFile: HF_RAW_FILENAME,
     updatedAt: now.toISOString(),
+    newGamesAppended: appendedCount,
   };
-  fs.writeFileSync(
-    path.join(docsDir, "catalog-manifest.json"),
-    JSON.stringify(manifest, null, 2)
-  );
+  fs.writeFileSync(path.join(docsDir, "catalog-manifest.json"), JSON.stringify(manifest, null, 2), "utf8");
   console.log("   ✓ catalog-manifest.json written");
 
-  // ── 9. Summary ────────────────────────────────────────────────────────────
-  const elapsed = ((performance.now() - t0) / 1000).toFixed(1);
-  console.log("\n===========================================================");
-  console.log(`🎉  DONE in ${elapsed}s`);
-  console.log(`    Games: ${compactRecords.length.toLocaleString()}`);
-  console.log(`    catalog.raw:            ${manifest.rawMb} MB  →  dist-hf/`);
-  console.log(`    catalog-dump.json.gz:   ${manifest.compressedMb} MB  →  docs/public/`);
-  console.log(`    offsets.json.gz:        ${(offsetsGz.length / 1024).toFixed(1)} KB  →  docs/public/`);
-  console.log("===========================================================\n");
+  // Clear pending queue since games are now safely indexed into master catalog
+  if (appendedCount > 0 && fs.existsSync(pendingPath)) {
+    try {
+      fs.writeFileSync(pendingPath, "[]", "utf-8");
+      console.log("   ✓ Cleared pending-games.json queue (all merged into master dataset)");
+    } catch {}
+  }
+
+  // Sync to peer repository if running locally
+  const peerDocsDump = path.resolve("..", "gamegata-astro", "public", "catalog", "catalog-dump.json.gz");
+  const peerDocsOffsets = path.resolve("..", "gamegata-astro", "public", "catalog", "offsets.json.gz");
+  if (fs.existsSync(path.dirname(peerDocsDump))) {
+    try {
+      fs.copyFileSync(dumpPath, peerDocsDump);
+      fs.copyFileSync(offsetsPath, peerDocsOffsets);
+      console.log("   ✓ Synced catalog-dump & offsets to gamegata-astro peer repo!");
+    } catch {}
+  }
+
+  // 8. Upload to Hugging Face
+  if (hfToken) {
+    try {
+      await uploadToHuggingFace(rawFilePath, hfToken);
+    } catch (hfErr: any) {
+      console.error(`⚠️ Hugging Face upload error: ${hfErr.message}`);
+      console.log("   (catalog.raw is generated in dist-hf/ and can be uploaded via huggingface-cli)");
+    }
+  } else {
+    console.warn("⚠️ No HF_TOKEN provided — skipping Hugging Face dataset upload step.");
+  }
+
+  const durationSec = ((Date.now() - startTime) / 1000).toFixed(1);
+  console.log("\n==========================================================");
+  console.log(`🎉 CATALOG SYNC COMPLETE in ${durationSec}s!`);
+  console.log(`   Total Games: ${catalog.length.toLocaleString()}`);
+  console.log(`   New Games Appended: ${appendedCount}`);
+  console.log(`   catalog.raw: ${(currentRawSize / (1024 * 1024)).toFixed(2)} MB`);
+  console.log("==========================================================\n");
 }
 
-generateCatalogDump().catch((err) => {
+main().catch((err) => {
   console.error("Fatal error:", err);
   process.exit(1);
 });

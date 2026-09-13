@@ -666,14 +666,51 @@ async function main() {
 
     const BATCH_CHUNK_SIZE = 50;
     console.log(`\n⚡ Committing ${batchStatements.length} operations to Database in chunks of ${BATCH_CHUNK_SIZE}...`);
-    for (let i = 0; i < batchStatements.length; i += BATCH_CHUNK_SIZE) {
-      const chunk = batchStatements.slice(i, i + BATCH_CHUNK_SIZE);
-      await client.batch(chunk, "write");
-      const chunkNum = Math.floor(i / BATCH_CHUNK_SIZE) + 1;
-      const totalChunks = Math.ceil(batchStatements.length / BATCH_CHUNK_SIZE);
-      console.log(`  💾 Committed batch chunk ${chunkNum}/${totalChunks} (${chunk.length} statements)`);
+    let d1BatchFailed = false;
+    let d1BatchError = "";
+    try {
+      for (let i = 0; i < batchStatements.length; i += BATCH_CHUNK_SIZE) {
+        const chunk = batchStatements.slice(i, i + BATCH_CHUNK_SIZE);
+        await client.batch(chunk, "write");
+        const chunkNum = Math.floor(i / BATCH_CHUNK_SIZE) + 1;
+        const totalChunks = Math.ceil(batchStatements.length / BATCH_CHUNK_SIZE);
+        console.log(`  💾 Committed batch chunk ${chunkNum}/${totalChunks} (${chunk.length} statements)`);
+      }
+      console.log(`💾 Successfully committed all ${batchStatements.length} operations to Database!`);
+    } catch (err: any) {
+      d1BatchFailed = true;
+      d1BatchError = String(err?.message || err);
+      console.warn(`⚠️  D1 database write failed (quota/limit): ${d1BatchError}`);
+      console.log(`📋 Queuing ${gamesToInsert.length} IGDB games to pending-games.json for later retry...`);
+
+      const pendingPath = path.join(process.cwd(), "docs", "public", "pending-games.json");
+      let pending: any[] = [];
+      if (fs.existsSync(pendingPath)) {
+        try { pending = JSON.parse(fs.readFileSync(pendingPath, "utf-8")); } catch {}
+      }
+
+      const pendingIds = new Set(pending.map((e: any) => e.id));
+      for (const g of gamesToInsert) {
+        if (!pendingIds.has(g.id)) {
+          pending.push({
+            id: g.id,
+            title: g.title,
+            slug: g.slug,
+            coverUrl: g.coverUrl,
+            author: g.primaryDeveloper,
+            tags: "Horror",
+            status: g.status || "released",
+            source: "igdb",
+            purchaseLinks: g.purchaseLinks,
+            queuedAt: new Date().toISOString(),
+            failureReason: d1BatchError,
+          });
+          pendingIds.add(g.id);
+        }
+      }
+      fs.writeFileSync(pendingPath, JSON.stringify(pending, null, 2), "utf-8");
+      console.log(`📝 Queued to pending-games.json (total pending: ${pending.length}).`);
     }
-    console.log(`💾 Successfully committed all ${batchStatements.length} operations to Database!`);
 
     // 9. Append to catalog-dump.json.gz
     console.log("📝 Appending new games to catalog-dump.json.gz...");

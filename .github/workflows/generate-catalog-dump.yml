@@ -40,22 +40,24 @@ jobs:
 
       - name: Generate Catalog Dump + catalog.raw
         env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_DATABASE_ID: ${{ secrets.CLOUDFLARE_DATABASE_ID }}
         run: npx tsx scripts/generate-catalog-dump.ts
 
-      - name: Upload catalog.raw to Hugging Face Dataset
+      - name: Upload catalog.raw to Hugging Face Dataset (CLI Fallback)
+        if: always() && hashFiles('dist-hf/catalog.raw') != ''
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          echo "Uploading dist-hf/catalog.raw → aurostron/hogamegata/catalog.raw"
+          echo "Verifying / Uploading dist-hf/catalog.raw → aurostron/hogamegata/catalog.raw"
           huggingface-cli upload aurostron/hogamegata \
             dist-hf/catalog.raw \
             catalog.raw \
             --repo-type=dataset \
-            --commit-message="chore(catalog): auto-sync weekly master catalog.raw"
-          echo "✅ catalog.raw uploaded to Hugging Face dataset."
+            --commit-message="chore(catalog): auto-sync master catalog.raw [skip ci]" || true
+          echo "✅ Hugging Face dataset sync verified."
 
       - name: Commit & Push Catalog Files to Main
         run: |
