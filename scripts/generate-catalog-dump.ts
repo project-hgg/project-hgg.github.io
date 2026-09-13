@@ -261,20 +261,35 @@ function generateCreatorIndexFromCatalog(catalog: DumpGame[], outPath: string) {
   console.log(`   ✓ creator-games.json.gz written (${(outGz.length / 1024).toFixed(1)} KB for ${multiCount.toLocaleString()} creators)`);
 }
 
-async function uploadToHuggingFace(rawFilePath: string, hfToken: string) {
-  console.log(`\n🚀 Uploading catalog.raw to Hugging Face dataset (${HF_DATASET})...`);
+async function uploadToHuggingFace(
+  rawFilePath: string,
+  hfToken: string,
+  extraFiles: Array<{ path: string; filePath: string }> = []
+) {
+  console.log(`\n🚀 Uploading catalog files to Hugging Face dataset (${HF_DATASET})...`);
   const fileBuffer = fs.readFileSync(rawFilePath);
+
+  const filesToUpload: any[] = [
+    {
+      path: HF_RAW_FILENAME,
+      content: new Blob([fileBuffer]),
+    },
+  ];
+
+  for (const f of extraFiles) {
+    if (fs.existsSync(f.filePath)) {
+      filesToUpload.push({
+        path: f.path,
+        content: new Blob([fs.readFileSync(f.filePath)]),
+      });
+    }
+  }
 
   const progress = uploadFilesWithProgress({
     repo: { type: "dataset", name: HF_DATASET },
     credentials: { accessToken: hfToken },
-    files: [
-      {
-        path: HF_RAW_FILENAME,
-        content: new Blob([fileBuffer]),
-      },
-    ],
-    commitMessage: `chore(catalog): auto-update master catalog.raw (${new Date().toISOString()})`,
+    files: filesToUpload,
+    commitMessage: `chore(catalog): auto-update master catalog & indices (${new Date().toISOString()})`,
   });
 
   for await (const event of progress) {
@@ -283,7 +298,7 @@ async function uploadToHuggingFace(rawFilePath: string, hfToken: string) {
     }
   }
 
-  console.log(`🎉 Successfully uploaded ${HF_RAW_FILENAME} to https://huggingface.co/datasets/${HF_DATASET}!`);
+  console.log(`🎉 Successfully uploaded ${filesToUpload.length} files to https://huggingface.co/datasets/${HF_DATASET}!`);
 }
 
 async function main() {
@@ -512,7 +527,12 @@ async function main() {
   // 8. Upload to Hugging Face
   if (hfToken) {
     try {
-      await uploadToHuggingFace(rawFilePath, hfToken);
+      await uploadToHuggingFace(rawFilePath, hfToken, [
+        { path: "catalog-dump.json.gz", filePath: dumpPath },
+        { path: "offsets.json.gz", filePath: offsetsPath },
+        { path: "creator-games.json.gz", filePath: creatorIndexPath },
+        { path: "catalog-manifest.json", filePath: path.join(docsDir, "catalog-manifest.json") },
+      ]);
     } catch (hfErr: any) {
       console.error(`⚠️ Hugging Face upload error: ${hfErr.message}`);
       console.log("   (catalog.raw is generated in dist-hf/ and can be uploaded via huggingface-cli)");
