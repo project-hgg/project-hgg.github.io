@@ -4,6 +4,6 @@
   "commitMessage": "chore(catalog): auto-sync new itch horror games",
   "timestamp": "2026-09-13T15:39:26Z",
   "totalGames": 109430,
-  "lastRetryAt": "2026-09-13T07:48:54.709Z",
-  "retriedCount": 7
+  "lastRetryAt": "2026-09-13T15:43:23.677Z",
+  "retriedCount": 23
 }
