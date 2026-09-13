@@ -23,7 +23,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -64,7 +64,11 @@ jobs:
             "
             git add docs/public/data-version.json
             git commit --amend --no-edit
-            git push
+            for i in 1 2 3; do
+              git fetch origin main
+              git pull --rebase -X theirs origin main || true
+              git push origin main && break || sleep 3
+            done
             echo "🚀 Pushed updated catalog dump, manifest, pending queue, and data-version.json ($COMMIT_SHA)!"
           else
             echo "✨ No catalog changes to commit."

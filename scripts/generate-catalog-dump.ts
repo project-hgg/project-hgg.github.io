@@ -220,6 +220,46 @@ function buildFullGameRecord(g: PendingGame): any {
   };
 }
 
+function generateCreatorIndexFromCatalog(catalog: DumpGame[], outPath: string) {
+  const creatorMap: Record<string, any[]> = {};
+  for (const g of catalog) {
+    if (!g.dn) continue;
+    const creators = g.dn.split(",").map((s: string) => s.trim()).filter(Boolean);
+    const card = {
+      id: g.i,
+      title: g.t,
+      slug: g.s,
+      coverUrl: g.c || null,
+      developerNames: g.dn || null,
+      platformNames: g.pn || "PC (Microsoft Windows)",
+      releaseDate: g.rd ?? null,
+      rating: g.rt ?? null,
+      status: g.st || "released",
+    };
+    for (const c of creators) {
+      const slug = slugify(c);
+      if (!slug) continue;
+      if (!creatorMap[slug]) creatorMap[slug] = [];
+      creatorMap[slug].push(card);
+    }
+  }
+
+  const filteredMap: Record<string, any[]> = {};
+  let multiCount = 0;
+  for (const [slug, games] of Object.entries(creatorMap)) {
+    if (games.length > 1) {
+      games.sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0) || (b.releaseDate || 0) - (a.releaseDate || 0));
+      filteredMap[slug] = games.slice(0, 12);
+      multiCount++;
+    }
+  }
+
+  const outJson = JSON.stringify(filteredMap);
+  const outGz = zlib.gzipSync(Buffer.from(outJson, "utf8"), { level: 9 });
+  fs.writeFileSync(outPath, outGz);
+  console.log(`   ✓ creator-games.json.gz written (${(outGz.length / 1024).toFixed(1)} KB for ${multiCount.toLocaleString()} creators)`);
+}
+
 async function uploadToHuggingFace(rawFilePath: string, hfToken: string) {
   console.log(`\n🚀 Uploading catalog.raw to Hugging Face dataset (${HF_DATASET})...`);
   const fileBuffer = fs.readFileSync(rawFilePath);
@@ -415,6 +455,10 @@ async function main() {
   fs.writeFileSync(dumpPath, dumpGz);
   console.log(`   ✓ catalog-dump.json.gz: ${(dumpGz.length / (1024 * 1024)).toFixed(2)} MB (${catalog.length.toLocaleString()} entries)`);
 
+  // 6b. Write Creator Games index (zero-DB creator lookups)
+  const creatorIndexPath = path.join(docsDir, "creator-games.json.gz");
+  generateCreatorIndexFromCatalog(catalog, creatorIndexPath);
+
   // 7. Write updated catalog-manifest.json
   const now = new Date();
   const version = `${now.toISOString().slice(0, 10).replace(/-/g, ".")}.${String(now.getUTCHours()).padStart(2, "0")}${String(now.getUTCMinutes()).padStart(2, "0")}`;
@@ -445,11 +489,15 @@ async function main() {
   // Sync to peer repository if running locally
   const peerDocsDump = path.resolve("..", "gamegata-astro", "public", "catalog", "catalog-dump.json.gz");
   const peerDocsOffsets = path.resolve("..", "gamegata-astro", "public", "catalog", "offsets.json.gz");
+  const peerDocsCreator = path.resolve("..", "gamegata-astro", "public", "catalog", "creator-games.json.gz");
   if (fs.existsSync(path.dirname(peerDocsDump))) {
     try {
       fs.copyFileSync(dumpPath, peerDocsDump);
       fs.copyFileSync(offsetsPath, peerDocsOffsets);
-      console.log("   ✓ Synced catalog-dump & offsets to gamegata-astro peer repo!");
+      if (fs.existsSync(creatorIndexPath)) {
+        fs.copyFileSync(creatorIndexPath, peerDocsCreator);
+      }
+      console.log("   ✓ Synced catalog-dump, offsets & creator-games to gamegata-astro peer repo!");
     } catch {}
   }
 

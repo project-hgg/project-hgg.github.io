@@ -22,7 +22,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Check if pending-games.json has entries
         id: check
@@ -51,7 +51,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -98,7 +98,11 @@ jobs:
             else
               git commit -m "chore(catalog): d1 retry attempted — queue updated [skip ci]"
             fi
-            git push
+            for i in 1 2 3; do
+              git fetch origin main
+              git pull --rebase -X theirs origin main || true
+              git push origin main && break || sleep 3
+            done
             echo "📤 Committed pending queue update."
           else
             echo "No changes to commit."

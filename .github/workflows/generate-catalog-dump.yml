@@ -24,7 +24,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -52,30 +52,38 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           echo "Verifying / Uploading dist-hf/catalog.raw → aurostron/hogamegata/catalog.raw"
-          huggingface-cli upload aurostron/hogamegata \
+          hf upload aurostron/hogamegata \
             dist-hf/catalog.raw \
             catalog.raw \
-            --repo-type=dataset \
-            --commit-message="chore(catalog): auto-sync master catalog.raw [skip ci]" || true
+            --repo-type dataset \
+            --commit-message "chore(catalog): auto-sync master catalog.raw [skip ci]" || true
           echo "✅ Hugging Face dataset sync verified."
 
       - name: Commit & Push Catalog Files to Main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Check for changes in any of the three generated files
+          # Check for changes in any of the generated files
           CHANGED=$(git status --porcelain \
             docs/public/catalog-dump.json.gz \
             docs/public/catalog-manifest.json \
-            docs/public/offsets.json.gz)
+            docs/public/offsets.json.gz \
+            docs/public/creator-games.json.gz \
+            docs/public/pending-games.json)
           if [ -n "$CHANGED" ]; then
             git add \
               docs/public/catalog-dump.json.gz \
               docs/public/catalog-manifest.json \
-              docs/public/offsets.json.gz
-            git commit -m "chore(catalog): auto-sync weekly offline catalog dump [skip ci]"
-            git push origin main
-            echo "✅ Pushed catalog-dump.json.gz, offsets.json.gz, catalog-manifest.json"
+              docs/public/offsets.json.gz \
+              docs/public/creator-games.json.gz \
+              docs/public/pending-games.json || true
+            git commit -m "chore(catalog): auto-sync weekly offline catalog dump [skip ci]" || true
+            for i in 1 2 3; do
+              git fetch origin main
+              git pull --rebase -X theirs origin main || true
+              git push origin main && break || sleep 3
+            done
+            echo "✅ Pushed updated catalog files"
           else
             echo "✨ No changes in catalog output files."
           fi
