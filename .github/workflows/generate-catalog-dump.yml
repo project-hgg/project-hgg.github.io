@@ -69,14 +69,18 @@ jobs:
             docs/public/catalog-manifest.json \
             docs/public/offsets.json.gz \
             docs/public/creator-games.json.gz \
-            docs/public/pending-games.json)
+            docs/public/pending-games.json \
+            docs/public/todo.md \
+            todo.md)
           if [ -n "$CHANGED" ]; then
             git add \
               docs/public/catalog-dump.json.gz \
               docs/public/catalog-manifest.json \
               docs/public/offsets.json.gz \
               docs/public/creator-games.json.gz \
-              docs/public/pending-games.json || true
+              docs/public/pending-games.json \
+              docs/public/todo.md \
+              todo.md || true
             git commit -m "chore(catalog): auto-sync weekly offline catalog dump [skip ci]" || true
             for i in 1 2 3; do
               git fetch origin main

@@ -90,9 +90,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          CHANGED=$(git status --porcelain docs/public/pending-games.json docs/public/data-version.json)
+          CHANGED=$(git status --porcelain docs/public/pending-games.json docs/public/data-version.json todo.md docs/public/todo.md)
           if [ -n "$CHANGED" ]; then
-            git add docs/public/pending-games.json docs/public/data-version.json
+            git add docs/public/pending-games.json docs/public/data-version.json todo.md docs/public/todo.md
             if [ "$RETRY_SUCCEEDED" = "true" ]; then
               git commit -m "chore(catalog): d1 retry succeeded — pending queue cleared [skip ci]"
             else

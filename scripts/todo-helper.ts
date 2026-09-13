@@ -38,7 +38,7 @@ export function writeTodoMarkdown(pending: PendingQueueItem[]): void {
       const hfBadge = item.inHf ? "✅ Yes" : "⏳ Pending";
       const d1Badge = item.inD1 ? "✅ Yes" : "❌ Pending/Quota";
       const queued = item.queuedAt ? item.queuedAt.slice(0, 19).replace("T", " ") : "N/A";
-      const err = item.failureReason ? ``\`${item.failureReason.slice(0, 60)}\``` : "-";
+      const err = item.failureReason ? ("`" + item.failureReason.slice(0, 60).replace(/`/g, "'") + "`") : "-";
 
       md += `| ${idx + 1} | **${title}** | ${src} | ${type} | ${hfBadge} | ${d1Badge} | ${queued} | ${err} |\n`;
     });

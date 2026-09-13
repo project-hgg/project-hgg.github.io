@@ -4,6 +4,7 @@ import * as path from "path";
 import * as zlib from "zlib";
 import * as crypto from "crypto";
 import { d1Client as client } from "./d1-client.js";
+import { writeTodoMarkdown } from "./todo-helper.js";
 
 interface CatalogRecord {
   i: string;
@@ -495,12 +496,19 @@ async function main() {
   try {
     await client.batch(batchStatements, "write");
     console.log(`💾 Successfully committed batch transaction (${batchStatements.length} operations) to D1!`);
+    // Mark newly queued items as having succeeded in D1
+    const newIds = new Set([...validNewGames.map(g => g.id), ...matchedCanonicalLinks.map(m => `link_${m.urlHash}`)]);
+    pending = pending.map(item => newIds.has(item.id) ? { ...item, inD1: true } : item);
   } catch (dbErr: any) {
     d1Failed = true;
     d1FailureReason = String(dbErr?.message || dbErr);
     console.warn(`⚠️  D1 write skipped/failed (quota or API limit): ${d1FailureReason}`);
     console.log(`📋 Games remain queued in pending-games.json for database retry.`);
+    const newIds = new Set([...validNewGames.map(g => g.id), ...matchedCanonicalLinks.map(m => `link_${m.urlHash}`)]);
+    pending = pending.map(item => newIds.has(item.id) ? { ...item, inD1: false, failureReason: d1FailureReason } : item);
   }
+  fs.writeFileSync(pendingPath, JSON.stringify(pending, null, 2), "utf-8");
+  writeTodoMarkdown(pending);
 
   // 6. Always append brand new games to catalog-dump.json.gz (HF is source of truth!)
   if (validNewGames.length > 0) {

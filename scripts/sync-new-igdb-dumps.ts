@@ -7,6 +7,7 @@ import * as crypto from "crypto";
 import { Readable } from "stream";
 import { pipeline } from "stream/promises";
 import { d1Client as client } from "./d1-client.js";
+import { writeTodoMarkdown } from "./todo-helper.js";
 
 interface CatalogRecord {
   i: string;
@@ -709,7 +710,8 @@ async function main() {
         }
       }
       fs.writeFileSync(pendingPath, JSON.stringify(pending, null, 2), "utf-8");
-      console.log(`📝 Queued to pending-games.json (total pending: ${pending.length}).`);
+      writeTodoMarkdown(pending);
+      console.log(`📝 Queued to pending-games.json & todo.md (total pending: ${pending.length}).`);
     }
 
     // 9. Append to catalog-dump.json.gz

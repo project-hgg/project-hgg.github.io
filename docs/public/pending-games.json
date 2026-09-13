@@ -9,7 +9,8 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzE5MjQ0NDc5LnBuZw==/315x250%23c/wtflM3.png",
-    "queuedAt": "2026-09-13T07:35:40.844Z"
+    "queuedAt": "2026-09-13T07:35:40.844Z",
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -21,7 +22,8 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzI3MTY2MjMucG5n/315x250%23c/bFnDqL.png",
-    "queuedAt": "2026-09-13T07:35:40.844Z"
+    "queuedAt": "2026-09-13T07:35:40.844Z",
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -33,7 +35,8 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzcxMDUyNjUucG5n/315x250%23c/%2FSHfYQ.png",
-    "queuedAt": "2026-09-13T07:35:40.844Z"
+    "queuedAt": "2026-09-13T07:35:40.844Z",
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -45,7 +48,8 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzQyNDA0MDIucG5n/315x250%23c/truQkk.png",
-    "queuedAt": "2026-09-13T07:35:40.844Z"
+    "queuedAt": "2026-09-13T07:35:40.844Z",
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -57,7 +61,8 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzIxNTI3NTAuZ2lm/original/zeDrXs.gif",
-    "queuedAt": "2026-09-13T07:35:40.844Z"
+    "queuedAt": "2026-09-13T07:35:40.844Z",
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -69,7 +74,8 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzg3MzM4NTEuZ2lm/original/R0bBdx.gif",
-    "queuedAt": "2026-09-13T07:35:40.844Z"
+    "queuedAt": "2026-09-13T07:35:40.844Z",
+    "inD1": true
   },
   {
     "_type": "canonicalLink",
@@ -81,6 +87,7 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzEwMTM5MjUxLnBuZw==/315x250%23c/tItICn.png",
-    "queuedAt": "2026-09-13T07:35:40.844Z"
+    "queuedAt": "2026-09-13T07:35:40.844Z",
+    "inD1": true
   }
 ]

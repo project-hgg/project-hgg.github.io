@@ -47,8 +47,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/data-version.json)" ]; then
-            git add docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/data-version.json
+          if [ -n "$(git status --porcelain docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/data-version.json docs/public/pending-games.json docs/public/todo.md todo.md)" ]; then
+            git add docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/data-version.json docs/public/pending-games.json docs/public/todo.md todo.md
             git commit -m "chore(catalog): auto-sync weekly igdb horror games [skip ci]"
             COMMIT_SHA=$(git rev-parse --short HEAD)
             FULL_SHA=$(git rev-parse HEAD)
