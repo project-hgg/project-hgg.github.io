@@ -1,7 +1,7 @@
 # 📋 Pending Sync Queue (D1 & Hugging Face)
 
-> **Status**: ⏳ 27 item(s) pending sync
-> **Last updated**: 2026-09-13T20:25:06.519Z
+> **Status**: ⏳ 48 item(s) pending sync
+> **Last updated**: 2026-09-14T03:28:44.267Z
 
 | # | Title / Item | Source | Type | In Hugging Face? | In D1? | Queued At | Last Error |
 |---|---|---|---|:---:|:---:|---|---|
@@ -32,6 +32,27 @@
 | 25 | **CORRIDOR Prototype** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
 | 26 | **Dantalion (Commodore 64)** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
 | 27 | **link_e0cef06a0c6837ed** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-13 20:21:40 | - |
+| 28 | **Terrible Game** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 29 | **I'm Not A Hero!** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 30 | **Countless Crypts** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 31 | **NIGHTLINE** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 32 | **Shell Zombie** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 33 | **RoboScape** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 34 | **NGIRIT** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 35 | **Echo Descent** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 36 | **Your Hot Boyfriend, Jake!** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 37 | **Odd? Cooking** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 38 | **Cube's Dark Hours Reopened** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 39 | **Shards Of A Broken Minds Ep1** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 40 | **What Watches The Woods** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 41 | **Khrushchyovka** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 42 | **Tracking** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 43 | **Heaven On Earth** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 44 | **SEVERED: Chamber 1 Demo** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 45 | **TDS v0.1.3** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 46 | **Alone with a cat** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 47 | **Granny : Grief Mode** | itch | Game | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
+| 48 | **link_dc1e35900ec36365** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-14 03:28:43 | - |
 
 ---
 *This queue is automatically monitored by `.github/workflows/retry-pending.yml` (every 6 hours) and `.github/workflows/generate-catalog-dump.yml` (weekly/on-demand).
