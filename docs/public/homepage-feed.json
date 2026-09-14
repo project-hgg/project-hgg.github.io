@@ -1,324 +1,25 @@
 {
-  "updatedAt": "2026-09-14T11:48:43.996Z",
-  "heroGames": [
-    {
-      "id": "cmpwg432100bfg4egr75fktwo",
-      "title": "Silent Hill 2",
-      "slug": "silent-hill-2--2",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5wkr.jpg",
-      "rating": 92.2523761324933,
-      "category": null,
-      "esrbRating": "Mature",
-      "pegiRating": null,
-      "developerNames": "Hijinx Studios",
-      "genreNames": "Puzzle, Adventure",
-      "platformNames": "PlayStation 3, Xbox 360",
-      "releaseDate": 1332201600,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/scjg5v.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwg75gn00nug4egx7088qvd",
-      "title": "Silent Hill 3",
-      "slug": "silent-hill-3",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3kol.jpg",
-      "rating": 86.0314489934218,
-      "category": null,
-      "esrbRating": "Teen",
-      "pegiRating": "18",
-      "developerNames": "Team Silent",
-      "genreNames": "Puzzle, Adventure",
-      "platformNames": "PC (Microsoft Windows), PlayStation 2",
-      "releaseDate": 1053648000,
-      "trailerUrl": "https://www.youtube.com/embed/MLo2WtNN69Q",
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc8903.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc8900.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc8902.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwzmt7y028z9gegjrqdrydm",
-      "title": "Silent Hill 4: The Room",
-      "slug": "silent-hill-4-the-room",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vyk.jpg",
-      "rating": 74.1626744242906,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": "18",
-      "developerNames": "Team Silent",
-      "genreNames": "Adventure",
-      "platformNames": "Xbox, PlayStation 3, PC (Microsoft Windows), PlayStation 2",
-      "releaseDate": 1087430400,
-      "trailerUrl": "https://www.youtube.com/embed/GW_is7yL6_U",
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc890o.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc890p.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc890t.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwg436e00blg4egws1ffeac",
-      "title": "Resident Evil 4",
-      "slug": "resident-evil-4--1",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6bo0.jpg",
-      "rating": 92.468868764867,
-      "category": null,
-      "esrbRating": "Mature",
-      "pegiRating": "18",
-      "developerNames": "Capcom Development Division 1",
-      "genreNames": "Shooter, Puzzle, Adventure",
-      "platformNames": "Xbox Series X|S, PlayStation 4, PC (Microsoft Windows), iOS, PlayStation 5, Mac",
-      "releaseDate": 1679616000,
-      "trailerUrl": "https://www.youtube.com/embed/cMzJv0LOJYo",
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sch7rk.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sch7rl.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sch7rm.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwg492f00cug4eg5uugmipf",
-      "title": "Resident Evil 2",
-      "slug": "resident-evil-2--1",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ir3.jpg",
-      "rating": 90.1046798585603,
-      "category": null,
-      "esrbRating": "Mature",
-      "pegiRating": "18",
-      "developerNames": "Capcom Development Division 1",
-      "genreNames": "Shooter, Adventure",
-      "platformNames": "Xbox Series X|S, PlayStation 4, PC (Microsoft Windows), iOS, PlayStation 5, Mac, Xbox One",
-      "releaseDate": 1548374400,
-      "trailerUrl": "https://www.youtube.com/embed/nog956eX-ik",
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/z35arb0woqfqh4vimybc.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/zphoa86shektugz0k8eq.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/eehliwukjmjjtkxtgkjz.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwg5qg200heg4egu83alwjz",
-      "title": "Resident Evil 7: Biohazard - Collector's Edition",
-      "slug": "resident-evil-7-biohazard-collectors-edition",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5tqc.jpg",
-      "rating": 89,
-      "category": null,
-      "esrbRating": "Mature",
-      "pegiRating": null,
-      "developerNames": "Capcom",
-      "genreNames": "Shooter, Adventure",
-      "platformNames": "PlayStation 4, PC (Microsoft Windows), Xbox One",
-      "releaseDate": 1514678400,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/q5auso9ih72slossjkm9.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc8x98.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc8x99.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwzgeta00sjl8egno9g4dpu",
-      "title": "Resident Evil Village",
-      "slug": "resident-evil-village",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab9q.jpg",
-      "rating": 85.3036121777697,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": "18",
-      "developerNames": "Capcom Development Division 1",
-      "genreNames": "Shooter, Adventure",
-      "platformNames": "Google Stadia, Xbox Series X|S, PlayStation 4, Nintendo Switch 2, PC (Microsoft Windows), iOS, PlayStation 5, Mac, Xbox One",
-      "releaseDate": 1620259200,
-      "trailerUrl": "https://www.youtube.com/embed/26tay8lMZW4",
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc8zrh.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc99kk.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc99kl.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwzhxvb01o2l8egdmc68ule",
-      "title": "Resident Evil 3: Nemesis",
-      "slug": "resident-evil-3-nemesis",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vvb.jpg",
-      "rating": 80.6611028166109,
-      "category": null,
-      "esrbRating": "Mature",
-      "pegiRating": "16",
-      "developerNames": "Capcom Planning Room 2",
-      "genreNames": "Shooter, Adventure",
-      "platformNames": "PlayStation 3, Nintendo GameCube, PC (Microsoft Windows), PlayStation, PlayStation Portable, Dreamcast",
-      "releaseDate": 937958400,
-      "trailerUrl": "https://www.youtube.com/embed/w4NQHEd65Fs",
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/jfcrdcguoxfuldo5blr3.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/v5taxpsxbengllwhep6n.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/ngjabdx9cx5zpwi8p3ea.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwg601800j4g4eg7c914b5i",
-      "title": "Dead Space 2",
-      "slug": "dead-space-2",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20xq.jpg",
-      "rating": 88.2284713795571,
-      "category": null,
-      "esrbRating": "Mature",
-      "pegiRating": "18",
-      "developerNames": "Visceral Games",
-      "genreNames": "Shooter, Adventure",
-      "platformNames": "PlayStation 3, PC (Microsoft Windows), Xbox 360",
-      "releaseDate": 1295913600,
-      "trailerUrl": "https://www.youtube.com/embed/EtEEa4PU7ok",
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/wkypfjptjgqn6s0qrkbe.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/s7y8lukfvl3vwfhobksu.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/yadkllvjpd1lnqlixxso.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwg57qj00flg4egn2fk1nbj",
-      "title": "Alien: Isolation - Last Survivor",
-      "slug": "alien-isolation-last-survivor",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ycc.jpg",
-      "rating": 89.8464868183988,
-      "category": null,
-      "esrbRating": "Mature",
-      "pegiRating": "18",
-      "developerNames": "The Creative Assembly",
-      "genreNames": "Adventure",
-      "platformNames": "PlayStation 3, PlayStation 4, Linux, PC (Microsoft Windows), Mac, Xbox 360, Xbox One",
-      "releaseDate": 1413244800,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc6izr.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc6izq.jpg",
-        "https://images.igdb.com/igdb/image/upload/t_screenshot_huge/sc6izp.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwzgtoq00ykl8egvstvc4kg",
-      "title": "Amnesia: The Dark Descent",
-      "slug": "amnesia-the-dark-descent",
-      "status": "released",
-      "coverUrl": "https://images.gog-statics.com/41ce75275bcb835c46f3fbcb5aa8d811edc24fce500b340d23033f103f55ee38.png",
-      "rating": null,
-      "category": null,
-      "esrbRating": "Mature",
-      "pegiRating": "16",
-      "developerNames": "Frictional Games",
-      "genreNames": "FPP, Horror, Adventure",
-      "platformNames": "PC (Windows), Linux",
-      "releaseDate": 1283884200,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.gog-statics.com/2895f2eacdabe62dea4ca6219958d960513b17ee9bed5930f12136102e3e6c83.jpg",
-        "https://images.gog-statics.com/3a6300d2f1c237183dcacf846a547a4bf27de54c9a893c55c2491fe0514d5164.jpg",
-        "https://images.gog-statics.com/5f9007f204bbc4f0600a7c2166c9f4ae9b868cb98dfa5d907f107624156f7f57.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmpwzk35i00nh9gegw7fzl898",
-      "title": "Amnesia: The Bunker",
-      "slug": "amnesia-the-bunker",
-      "status": "released",
-      "coverUrl": "https://images.gog-statics.com/ea3ddfee4360aa391562ad1fbb1d7ba83cdd47fe4dfd069b3f450deee568ddea.png",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Frictional Games",
-      "genreNames": "FPP, Horror, Adventure",
-      "platformNames": "PC (Windows)",
-      "releaseDate": 1685989800,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.gog-statics.com/a639412f1b26a7ba2b92d4410186a18902011d57ceb8e5d860a83d29d516766c.jpg",
-        "https://images.gog-statics.com/4eb9aaccc159ce583bed83b0ce3ebbb3096ac5ea56b80122800533ac4d8081dd.jpg",
-        "https://images.gog-statics.com/4a972e78a7ca222e528184deafa084abff4ab2c4ec426f1dc5dd9ba70d914afd.jpg"
-      ],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    }
-  ],
+  "updatedAt": "2026-09-14T21:31:17.514Z",
+  "heroGames": [],
   "latestGames": [
     {
-      "id": "itch_8e13f31c14a1d414",
-      "title": "Horror: Halcyon Refund Services",
-      "slug": "itch-horror-halcyon-refund-services",
+      "id": "itch_b7f8d3c327387901",
+      "title": "Terminal Five — DEMO",
+      "slug": "itch-terminal-five-demo",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ4NzQ0LnBuZw==/315x250%23c/GdVcty.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTk1MTg2LnBuZw==/315x250%23c/jjPqTK.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "deadfrogOfficial",
+      "developerNames": "samequik",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ4NzQ0LnBuZw==/315x250%23c/GdVcty.png"
+        "https://img.itch.zone/aW1nLzI5OTk1MTg2LnBuZw==/315x250%23c/jjPqTK.png"
       ],
       "tags": [
         {
@@ -334,23 +35,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_a8537675b4d73756",
-      "title": "Midnight Loan Officer",
-      "slug": "itch-midnight-loan-officer",
+      "id": "itch_e7d2718c3526c6bc",
+      "title": "ROBLOX DOORS BUT MY TAKE",
+      "slug": "itch-roblox-doors-but-my-take",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTU0MTAxLnBuZw==/315x250%23c/R%2FmrgB.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTk1MDg1LnBuZw==/315x250%23c/R%2BXDHn.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Emgoing",
+      "developerNames": "TheSeaWalker",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTU0MTAxLnBuZw==/315x250%23c/R%2FmrgB.png"
+        "https://img.itch.zone/aW1nLzI5OTk1MDg1LnBuZw==/315x250%23c/R%2BXDHn.png"
       ],
       "tags": [
         {
@@ -366,23 +67,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_c155d79d0a305c02",
-      "title": "The Shape of a Forgotten Memory",
-      "slug": "itch-the-shape-of-a-forgotten-memory",
+      "id": "itch_c5d3641bc3299329",
+      "title": "DreamZ Demo 1",
+      "slug": "itch-dreamz-demo-1",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTUzODI0LmdpZg==/original/5kw8Ev.gif",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTk0MTgxLnBuZw==/315x250%23c/gyOCBu.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "kazaaa6",
+      "developerNames": "8554",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTUzODI0LmdpZg==/original/5kw8Ev.gif"
+        "https://img.itch.zone/aW1nLzI5OTk0MTgxLnBuZw==/315x250%23c/gyOCBu.png"
       ],
       "tags": [
         {
@@ -398,23 +99,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_180d6f01b03c274b",
-      "title": "Sprunki but its Actually Reversed",
-      "slug": "itch-sprunki-but-its-actually-reversed",
+      "id": "itch_5464ce4ee55e7c61",
+      "title": "Aberrant Voracity",
+      "slug": "itch-aberrant-voracity",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTU0MTkzLnBuZw==/315x250%23c/092WWJ.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg0NTc4LmdpZg==/original/pgca7U.gif",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "InsertNametagHere",
+      "developerNames": "degustaf",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTU0MTkzLnBuZw==/315x250%23c/092WWJ.png"
+        "https://img.itch.zone/aW1nLzI5OTg0NTc4LmdpZg==/original/pgca7U.gif"
       ],
       "tags": [
         {
@@ -430,23 +131,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_a71b6424ac6fcaf1",
-      "title": "Imitated Love: The Last Imitator",
-      "slug": "itch-imitated-love-the-last-imitator",
+      "id": "itch_7b765a7572418111",
+      "title": "Marked by the Woods",
+      "slug": "itch-marked-by-the-woods",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5Njg2MzY1LnBuZw==/315x250%23c/TsltLp.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTkyNDU1LnBuZw==/315x250%23c/jlFTpo.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "★Humiquiti★",
+      "developerNames": "raxuEE",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5Njg2MzY1LnBuZw==/315x250%23c/TsltLp.png"
+        "https://img.itch.zone/aW1nLzI5OTkyNDU1LnBuZw==/315x250%23c/jlFTpo.png"
       ],
       "tags": [
         {
@@ -462,23 +163,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_ec98c24411a8fcfb",
-      "title": "Scary Swat Frog Simulator: 2",
-      "slug": "itch-scary-swat-frog-simulator-2",
+      "id": "itch_005128194d537c18",
+      "title": "Element7-Police",
+      "slug": "itch-element7-police",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTUyODI0LnBuZw==/315x250%23c/CI%2FiXu.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg5MzQxLnBuZw==/315x250%23c/CBUSu2.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Rexington_YT",
+      "developerNames": "AlashGames",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTUyODI0LnBuZw==/315x250%23c/CI%2FiXu.png"
+        "https://img.itch.zone/aW1nLzI5OTg5MzQxLnBuZw==/315x250%23c/CBUSu2.png"
       ],
       "tags": [
         {
@@ -494,23 +195,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_8ff0fe12e2a25308",
-      "title": "Demon Corp",
-      "slug": "itch-demon-corp",
+      "id": "itch_7021205c98d213af",
+      "title": "gorilla madness beta",
+      "slug": "itch-gorilla-madness-beta",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQzNTM2LnBuZw==/315x250%23c/pSvuVV.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTkyNTkyLnBuZw==/315x250%23c/UZb4zC.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Core_Game_Studios",
+      "developerNames": "deividaspal74",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQzNTM2LnBuZw==/315x250%23c/pSvuVV.png"
+        "https://img.itch.zone/aW1nLzI5OTkyNTkyLnBuZw==/315x250%23c/UZb4zC.png"
       ],
       "tags": [
         {
@@ -526,23 +227,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_03a4cb3ea17b0aee",
-      "title": "deepfried platformer",
-      "slug": "itch-deepfried-platformer",
+      "id": "itch_fede3455711cb56e",
+      "title": "ROJ",
+      "slug": "itch-roj",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTUyMTk2LnBuZw==/315x250%23c/mN75G6.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTkxMzk0LnBuZw==/315x250%23c/F%2Fb9vw.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "buckypeanut",
+      "developerNames": "Zrzovous",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTUyMTk2LnBuZw==/315x250%23c/mN75G6.png"
+        "https://img.itch.zone/aW1nLzI5OTkxMzk0LnBuZw==/315x250%23c/F%2Fb9vw.png"
       ],
       "tags": [
         {
@@ -558,23 +259,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_fd2ff75587b09d68",
-      "title": "BACKROOMS: Find The Noclip Wall",
-      "slug": "itch-backrooms-find-the-noclip-wall",
+      "id": "itch_166849f1e9bac860",
+      "title": "Zumbi Pachinko",
+      "slug": "itch-zumbi-pachinko",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5ODQzNDI5LmpwZw==/315x250%23c/K1lfWp.jpg",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTkxNzU4LnBuZw==/315x250%23c/UniuYb.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "wamo",
+      "developerNames": "leonardomendes201704",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5ODQzNDI5LmpwZw==/315x250%23c/K1lfWp.jpg"
+        "https://img.itch.zone/aW1nLzI5OTkxNzU4LnBuZw==/315x250%23c/UniuYb.png"
       ],
       "tags": [
         {
@@ -590,23 +291,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_f5a84ac77ccb4693",
-      "title": "incredibox - shame",
-      "slug": "itch-incredibox-shame",
+      "id": "itch_3f933bb354d597f2",
+      "title": "I don't do this",
+      "slug": "itch-i-don-t-do-this",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTUxNzIwLnBuZw==/315x250%23c/IbBjun.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTkwMjM0LnBuZw==/315x250%23c/qXSk7g.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Sphixless",
+      "developerNames": "RandomOcArts",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789421440000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTUxNzIwLnBuZw==/315x250%23c/IbBjun.png"
+        "https://img.itch.zone/aW1nLzI5OTkwMjM0LnBuZw==/315x250%23c/qXSk7g.png"
       ],
       "tags": [
         {
@@ -622,23 +323,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_b539b9391b673fa5",
-      "title": "Turophobia",
-      "slug": "itch-turophobia",
+      "id": "itch_017164ec83c4953e",
+      "title": "home is listening",
+      "slug": "itch-home-is-listening",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTUwNzEzLnBuZw==/315x250%23c/GZ89Ev.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTkwNTkwLnBuZw==/315x250%23c/zdRNIq.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "typeit",
+      "developerNames": "M BLACK",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTUwNzEzLnBuZw==/315x250%23c/GZ89Ev.png"
+        "https://img.itch.zone/aW1nLzI5OTkwNTkwLnBuZw==/315x250%23c/zdRNIq.png"
       ],
       "tags": [
         {
@@ -654,23 +355,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_3a7f197a836932cf",
-      "title": "HE IS IN THE DARK",
-      "slug": "itch-he-is-in-the-dark",
+      "id": "itch_8e718f9eda7a0848",
+      "title": "The Last Italian",
+      "slug": "itch-the-last-italian",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTUxMjA4LnBuZw==/315x250%23c/D2moJf.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg5NzQzLnBuZw==/315x250%23c/vemwXP.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "mreverett",
+      "developerNames": "DREKI277",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTUxMjA4LnBuZw==/315x250%23c/D2moJf.png"
+        "https://img.itch.zone/aW1nLzI5OTg5NzQzLnBuZw==/315x250%23c/vemwXP.png"
       ],
       "tags": [
         {
@@ -686,23 +387,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_2546c5dd2cb6c390",
-      "title": "Emergency Alert System Demo",
-      "slug": "itch-emergency-alert-system-demo",
+      "id": "itch_ec5c5c2c04005a31",
+      "title": "Scale Omen",
+      "slug": "itch-scale-omen",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI4MjEzMjU2LnBuZw==/315x250%23c/Fauf8s.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTkwMjAxLnBuZw==/315x250%23c/HfUza2.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Tigerstudios800",
+      "developerNames": "Owl Moon Game",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI4MjEzMjU2LnBuZw==/315x250%23c/Fauf8s.png"
+        "https://img.itch.zone/aW1nLzI5OTkwMjAxLnBuZw==/315x250%23c/HfUza2.png"
       ],
       "tags": [
         {
@@ -718,23 +419,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_b90429d61476a5c6",
-      "title": "Detour in Alabama (Open Beta)",
-      "slug": "itch-detour-in-alabama-open-beta",
+      "id": "itch_8228313685204307",
+      "title": "Black Seam",
+      "slug": "itch-black-seam",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTUwMTI4LnBuZw==/315x250%23c/Wmp9U3.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg5NDQ3LnBuZw==/315x250%23c/zCpFk0.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Pootato Publications",
+      "developerNames": "NinthLightMedia",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTUwMTI4LnBuZw==/315x250%23c/Wmp9U3.png"
+        "https://img.itch.zone/aW1nLzI5OTg5NDQ3LnBuZw==/315x250%23c/zCpFk0.png"
       ],
       "tags": [
         {
@@ -750,23 +451,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_bb6b623d50a8f8f0",
-      "title": "FREE THE AI",
-      "slug": "itch-free-the-ai",
+      "id": "itch_94e184d1ec802eac",
+      "title": "730",
+      "slug": "itch-730",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTI3OTA5LnBuZw==/315x250%23c/dFNQ%2F7.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg5NDk2LnBuZw==/315x250%23c/1fcmoS.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Nina",
+      "developerNames": "by1n",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTI3OTA5LnBuZw==/315x250%23c/dFNQ%2F7.png"
+        "https://img.itch.zone/aW1nLzI5OTg5NDk2LnBuZw==/315x250%23c/1fcmoS.png"
       ],
       "tags": [
         {
@@ -782,23 +483,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_f6f3d891dd4aac58",
-      "title": "Ben132231's Madness (Old Unity Version)",
-      "slug": "itch-ben132231-s-madness-old-unity-version",
+      "id": "itch_06dc96022f0def79",
+      "title": "Jump Game, To be the best",
+      "slug": "itch-jump-game-to-be-the-best",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ4ODQwLnBuZw==/315x250%23c/lTitlp.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg5NTE3LnBuZw==/315x250%23c/3tItu%2B.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Ben132231",
+      "developerNames": "JaysonQ",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ4ODQwLnBuZw==/315x250%23c/lTitlp.png"
+        "https://img.itch.zone/aW1nLzI5OTg5NTE3LnBuZw==/315x250%23c/3tItu%2B.png"
       ],
       "tags": [
         {
@@ -814,23 +515,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_70de91fbca519ae6",
-      "title": "The Last Shift At Aurora Station",
-      "slug": "itch-the-last-shift-at-aurora-station",
+      "id": "itch_1c9cd16e8d1cbf20",
+      "title": "Backrooms: Escape 1998",
+      "slug": "itch-backrooms-escape-1998",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ3OTQwLmpwZw==/315x250%23c/eFxGxk.jpg",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg5MDA3LmpwZw==/315x250%23c/WiFjra.jpg",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "JSR Games",
+      "developerNames": "nrafchik",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ3OTQwLmpwZw==/315x250%23c/eFxGxk.jpg"
+        "https://img.itch.zone/aW1nLzI5OTg5MDA3LmpwZw==/315x250%23c/WiFjra.jpg"
       ],
       "tags": [
         {
@@ -846,23 +547,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_943786a255e7a9bc",
-      "title": "L.D.F.0.2",
-      "slug": "itch-l-d-f-0-2",
+      "id": "itch_18723e8b42341c69",
+      "title": "Canvas Keepsakes",
+      "slug": "itch-canvas-keepsakes",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ5MDM5LnBuZw==/315x250%23c/4Dr8cL.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg3NDEwLnBuZw==/315x250%23c/ZAAVQS.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "X47games",
+      "developerNames": "C.T. O'Mahony",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ5MDM5LnBuZw==/315x250%23c/4Dr8cL.png"
+        "https://img.itch.zone/aW1nLzI5OTg3NDEwLnBuZw==/315x250%23c/ZAAVQS.png"
       ],
       "tags": [
         {
@@ -878,23 +579,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_54a6e2b6bccafa34",
-      "title": "Ghosts, Inc.",
-      "slug": "itch-ghosts-inc",
+      "id": "itch_2fc1897248163293",
+      "title": "Sprunki Phase 9 GG-TP (OFFICIAL) ARCHIVE",
+      "slug": "itch-sprunki-phase-9-gg-tp-official-archive",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzE4MjI0MDQzLnBuZw==/315x250%23c/e24ZKR.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg4MjAzLnBuZw==/315x250%23c/PdRnTi.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "cricketHunter",
+      "developerNames": "Stefiz",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzE4MjI0MDQzLnBuZw==/315x250%23c/e24ZKR.png"
+        "https://img.itch.zone/aW1nLzI5OTg4MjAzLnBuZw==/315x250%23c/PdRnTi.png"
       ],
       "tags": [
         {
@@ -910,23 +611,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_2aa2fae1fedaacf6",
-      "title": "It Was Your Choice",
-      "slug": "itch-it-was-your-choice",
+      "id": "itch_a6b83e00dc8db843",
+      "title": "FFFF : Fatal Five Finger Fillet Demo",
+      "slug": "itch-ffff-fatal-five-finger-fillet-demo",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ2MDE3LnBuZw==/315x250%23c/ARpesW.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI4ODU3MTY2LnBuZw==/315x250%23c/FW%2FJLG.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "robotsmoke",
+      "developerNames": "Genman Games",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ2MDE3LnBuZw==/315x250%23c/ARpesW.png"
+        "https://img.itch.zone/aW1nLzI4ODU3MTY2LnBuZw==/315x250%23c/FW%2FJLG.png"
       ],
       "tags": [
         {
@@ -942,23 +643,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_d8ecefccf92d86e6",
-      "title": "Midnight Pawn",
-      "slug": "itch-midnight-pawn",
+      "id": "itch_e3e6ef43a4f91a63",
+      "title": "Sega Mega Drive And Genesis Classics",
+      "slug": "itch-sega-mega-drive-and-genesis-classics",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ4NDYzLnBuZw==/315x250%23c/I6pLAF.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg1Nzc5LnBuZw==/315x250%23c/Uo22Vi.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "pechenka.dev",
+      "developerNames": "juliaegvc",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ4NDYzLnBuZw==/315x250%23c/I6pLAF.png"
+        "https://img.itch.zone/aW1nLzI5OTg1Nzc5LnBuZw==/315x250%23c/Uo22Vi.png"
       ],
       "tags": [
         {
@@ -974,23 +675,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_145677e47f635230",
-      "title": "Bear5: Terror",
-      "slug": "itch-bear5-terror",
+      "id": "itch_a314862a30f97a3c",
+      "title": "Duel",
+      "slug": "itch-duel",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTI4Njk1LnBuZw==/315x250%23c/hsngIo.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg3NTc2LmdpZg==/original/xAjj00.gif",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Felipe Q.",
+      "developerNames": "juliaegvc",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTI4Njk1LnBuZw==/315x250%23c/hsngIo.png"
+        "https://img.itch.zone/aW1nLzI5OTg3NTc2LmdpZg==/original/xAjj00.gif"
       ],
       "tags": [
         {
@@ -1006,23 +707,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_db15dba488aa0c2c",
-      "title": "Chthonic Plant​",
-      "slug": "itch-chthonic-plant",
+      "id": "itch_938392ecc3fe1b02",
+      "title": "Bringer",
+      "slug": "itch-bringer",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ3Njk4LnBuZw==/315x250%23c/Iagyxn.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg3MzU5LnBuZw==/315x250%23c/2GXRl9.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "DiElecktrik",
+      "developerNames": "juliaegvc",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ3Njk4LnBuZw==/315x250%23c/Iagyxn.png"
+        "https://img.itch.zone/aW1nLzI5OTg3MzU5LnBuZw==/315x250%23c/2GXRl9.png"
       ],
       "tags": [
         {
@@ -1038,23 +739,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_2a70d4fd3f638453",
-      "title": "XVII Near (Demo)",
-      "slug": "itch-xvii-near-demo",
+      "id": "itch_66cd587723eb8db5",
+      "title": "Samurai Chess",
+      "slug": "itch-samurai-chess",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5ODgxOTYzLnBuZw==/315x250%23c/rFbmI2.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg1NDA3LnBuZw==/315x250%23c/21gCxv.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "WatermelonOwl",
+      "developerNames": "melissaqolu-hue",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5ODgxOTYzLnBuZw==/315x250%23c/rFbmI2.png"
+        "https://img.itch.zone/aW1nLzI5OTg1NDA3LnBuZw==/315x250%23c/21gCxv.png"
       ],
       "tags": [
         {
@@ -1070,23 +771,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_b11c5e44407be208",
-      "title": "Dracula — ZX Spectrum Illustrated Edition",
-      "slug": "itch-dracula-zx-spectrum-illustrated-edition",
+      "id": "itch_5065f846f0d3a739",
+      "title": "A-90 Windows",
+      "slug": "itch-a-90-windows",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ0MTY3LnBuZw==/315x250%23c/6E6XDS.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTgzOTc2LnBuZw==/315x250%23c/9zPnBV.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "DJSoft",
+      "developerNames": "likeout",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ0MTY3LnBuZw==/315x250%23c/6E6XDS.png"
+        "https://img.itch.zone/aW1nLzI5OTgzOTc2LnBuZw==/315x250%23c/9zPnBV.png"
       ],
       "tags": [
         {
@@ -1102,23 +803,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_c30bf51a17a38102",
-      "title": "They are Flesh",
-      "slug": "itch-they-are-flesh",
+      "id": "itch_1f60cb024996c0f4",
+      "title": "Disco Samurai",
+      "slug": "itch-disco-samurai",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ2ODk2LnBuZw==/315x250%23c/IoQ%2FpJ.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg0NTM3LmpwZw==/315x250%23c/ZNS%2BBO.jpg",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Optimus_beg",
+      "developerNames": "paxillus",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ2ODk2LnBuZw==/315x250%23c/IoQ%2FpJ.png"
+        "https://img.itch.zone/aW1nLzI5OTg0NTM3LmpwZw==/315x250%23c/ZNS%2BBO.jpg"
       ],
       "tags": [
         {
@@ -1134,23 +835,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_983a2d39e47cf2aa",
-      "title": "Order Driving 13 (DEMO)",
-      "slug": "itch-order-driving-13-demo",
+      "id": "itch_6d201e890c8569f4",
+      "title": "Necrotic Attachment",
+      "slug": "itch-necrotic-attachment",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI4NjU4ODI0LmpwZw==/315x250%23c/5beEO3.jpg",
+      "coverUrl": "https://img.itch.zone/aW1nLzI4MzI1NDkzLnBuZw==/315x250%23c/8x1FxQ.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "SeenThai",
+      "developerNames": "love in the brain matter",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI4NjU4ODI0LmpwZw==/315x250%23c/5beEO3.jpg"
+        "https://img.itch.zone/aW1nLzI4MzI1NDkzLnBuZw==/315x250%23c/8x1FxQ.png"
       ],
       "tags": [
         {
@@ -1166,23 +867,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_edeb34417c930a6e",
-      "title": "WGTH OLD VERSIONS",
-      "slug": "itch-wgth-old-versions",
+      "id": "itch_7f5c9815314e8229",
+      "title": "The Final Gate (Prototype)",
+      "slug": "itch-the-final-gate-prototype",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ1MTI2LnBuZw==/315x250%23c/kv7Q%2Fg.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg0NjkyLnBuZw==/315x250%23c/RfwlF5.png",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Wowz_gt",
+      "developerNames": "Rez1Games",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ1MTI2LnBuZw==/315x250%23c/kv7Q%2Fg.png"
+        "https://img.itch.zone/aW1nLzI5OTg0NjkyLnBuZw==/315x250%23c/RfwlF5.png"
       ],
       "tags": [
         {
@@ -1198,23 +899,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_652b0472768b2cde",
-      "title": "Weigh Station",
-      "slug": "itch-weigh-station",
+      "id": "itch_f3939e462b8a8b4a",
+      "title": "SAMURAI SHODOWN II",
+      "slug": "itch-samurai-shodown-ii",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTQ0MTU2LnBuZw==/315x250%23c/xgTvnQ.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTgzNTM2LmpwZw==/315x250%23c/rZnDP3.jpg",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "MidknightFire",
+      "developerNames": "juliajqjg-commits",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789407870000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTQ0MTU2LnBuZw==/315x250%23c/xgTvnQ.png"
+        "https://img.itch.zone/aW1nLzI5OTgzNTM2LmpwZw==/315x250%23c/rZnDP3.jpg"
       ],
       "tags": [
         {
@@ -1230,23 +931,23 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_7a0a4c4addfd0efe",
-      "title": "monkey eaters beta",
-      "slug": "itch-monkey-eaters-beta",
+      "id": "itch_8229c379ffd6070e",
+      "title": "Abyss Chamber Horror Game",
+      "slug": "itch-abyss-chamber-horror-game",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5NTM4NzExLnBuZw==/315x250%23c/9Jou8R.png",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5NTUzOTE3LmpwZw==/315x250%23c/NUBnhn.jpg",
       "rating": null,
       "category": 0,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Myquelbigdog",
+      "developerNames": "Eivar",
       "genreNames": "horror",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789284143000,
+      "releaseDate": 1789386719000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5NTM4NzExLnBuZw==/315x250%23c/9Jou8R.png"
+        "https://img.itch.zone/aW1nLzI5NTUzOTE3LmpwZw==/315x250%23c/NUBnhn.jpg"
       ],
       "tags": [
         {
@@ -5016,7 +4717,7 @@
     }
   ],
   "stats": {
-    "games": 109420,
+    "games": 109476,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
