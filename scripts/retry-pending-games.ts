@@ -61,7 +61,32 @@ async function main() {
   const unwrittenToD1 = pending.filter((e) => !e.inD1);
   if (unwrittenToD1.length === 0) {
     console.log("✅ All items in queue are already written to D1. Checking if any await HF sync...");
-    const remainingForHf = pending.filter((e) => !e.inHf);
+    const offsetsPath = path.join(process.cwd(), "docs", "public", "offsets.json.gz");
+    const offsetsSet = new Set<string>();
+    if (fs.existsSync(offsetsPath)) {
+      try {
+        const rawOffsets = zlib.gunzipSync(fs.readFileSync(offsetsPath)).toString("utf-8");
+        const parsed = JSON.parse(rawOffsets);
+        if (Array.isArray(parsed)) {
+          for (const item of parsed) if (item.s) offsetsSet.add(item.s);
+        } else if (parsed && typeof parsed === "object") {
+          for (const key of Object.keys(parsed)) offsetsSet.add(key);
+        }
+      } catch {}
+    }
+
+    const checkHfStatus = (item: any) =>
+      Boolean(
+        item.inHf ||
+        item._type === "canonicalLink" ||
+        (item.slug && offsetsSet.has(item.slug)) ||
+        (item.id && offsetsSet.has(item.id))
+      );
+
+    const remainingForHf = pending
+      .map((e: any) => ({ ...e, inHf: checkHfStatus(e) }))
+      .filter((e) => !(e.inD1 && e.inHf));
+
     fs.writeFileSync(PENDING_PATH, JSON.stringify(remainingForHf, null, 2), "utf-8");
     writeTodoMarkdown(remainingForHf);
     return;
@@ -116,9 +141,33 @@ async function main() {
     });
   }
 
-  if (batchStatements.length === 0) {
-    console.log("✅ No valid statements to run.");
-    const remainingForHf = pending.filter((e) => !e.inHf);
+    // Helper to check which items already exist in the HF dataset via offsets.json.gz
+    const offsetsPath = path.join(process.cwd(), "docs", "public", "offsets.json.gz");
+    const offsetsSet = new Set<string>();
+    if (fs.existsSync(offsetsPath)) {
+      try {
+        const rawOffsets = zlib.gunzipSync(fs.readFileSync(offsetsPath)).toString("utf-8");
+        const parsed = JSON.parse(rawOffsets);
+        if (Array.isArray(parsed)) {
+          for (const item of parsed) if (item.s) offsetsSet.add(item.s);
+        } else if (parsed && typeof parsed === "object") {
+          for (const key of Object.keys(parsed)) offsetsSet.add(key);
+        }
+      } catch {}
+    }
+
+    const checkHfStatus = (item: any) =>
+      Boolean(
+        item.inHf ||
+        item._type === "canonicalLink" ||
+        (item.slug && offsetsSet.has(item.slug)) ||
+        (item.id && offsetsSet.has(item.id))
+      );
+
+    const remainingForHf = pending
+      .map((e: any) => ({ ...e, inHf: checkHfStatus(e) }))
+      .filter((e) => !(e.inD1 && e.inHf));
+
     fs.writeFileSync(PENDING_PATH, JSON.stringify(remainingForHf, null, 2), "utf-8");
     writeTodoMarkdown(remainingForHf);
     return;
@@ -128,8 +177,37 @@ async function main() {
     await client.batch(batchStatements, "write");
     console.log(`💾 Successfully retried ${batchStatements.length} D1 operations for ${unwrittenToD1.length} pending entries!`);
 
-    // Mark successful items as inD1 = true
-    const updated = pending.map((e) => ({ ...e, inD1: true, failureReason: undefined }));
+    // Helper to check which items already exist in the HF dataset via offsets.json.gz
+    const offsetsPath = path.join(process.cwd(), "docs", "public", "offsets.json.gz");
+    const offsetsSet = new Set<string>();
+    if (fs.existsSync(offsetsPath)) {
+      try {
+        const rawOffsets = zlib.gunzipSync(fs.readFileSync(offsetsPath)).toString("utf-8");
+        const parsed = JSON.parse(rawOffsets);
+        if (Array.isArray(parsed)) {
+          for (const item of parsed) if (item.s) offsetsSet.add(item.s);
+        } else if (parsed && typeof parsed === "object") {
+          for (const key of Object.keys(parsed)) offsetsSet.add(key);
+        }
+      } catch {}
+    }
+
+    const checkHfStatus = (item: any) =>
+      Boolean(
+        item.inHf ||
+        item._type === "canonicalLink" ||
+        (item.slug && offsetsSet.has(item.slug)) ||
+        (item.id && offsetsSet.has(item.id))
+      );
+
+    // Mark successful items as inD1 = true and evaluate inHf
+    const updated = pending.map((e: any) => ({
+      ...e,
+      inD1: true,
+      inHf: checkHfStatus(e),
+      failureReason: undefined,
+    }));
+
     // If an item is already merged in HF and now in D1, it can be dropped from queue
     const remaining = updated.filter((e) => !(e.inD1 && e.inHf));
     fs.writeFileSync(PENDING_PATH, JSON.stringify(remaining, null, 2), "utf-8");

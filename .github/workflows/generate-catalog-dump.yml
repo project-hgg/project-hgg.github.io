@@ -24,6 +24,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -69,6 +70,9 @@ jobs:
             docs/public/catalog-manifest.json \
             docs/public/offsets.json.gz \
             docs/public/creator-games.json.gz \
+            docs/public/upcoming-games.json.gz \
+            docs/public/homepage-feed.json \
+            docs/public/offsets \
             docs/public/pending-games.json \
             docs/public/todo.md \
             todo.md)
@@ -78,13 +82,16 @@ jobs:
               docs/public/catalog-manifest.json \
               docs/public/offsets.json.gz \
               docs/public/creator-games.json.gz \
+              docs/public/upcoming-games.json.gz \
+              docs/public/homepage-feed.json \
+              docs/public/offsets \
               docs/public/pending-games.json \
               docs/public/todo.md \
               todo.md || true
             git commit -m "chore(catalog): auto-sync weekly offline catalog dump [skip ci]" || true
             for i in 1 2 3; do
               git fetch origin main
-              git pull --rebase -X theirs origin main || true
+              git pull --rebase -X ours origin main || (git rebase --abort && git pull --rebase -X theirs origin main)
               git push origin main && break || sleep 3
             done
             echo "✅ Pushed updated catalog files"

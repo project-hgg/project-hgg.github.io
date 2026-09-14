@@ -74,14 +74,17 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           PENDING="docs/public/pending-games.json"
-          # If pending queue is now empty, games were successfully inserted — rebuild catalog
           if [ -f "$PENDING" ]; then
-            COUNT=$(node -e "const d=JSON.parse(require('fs').readFileSync('$PENDING','utf-8'));console.log(d.length)")
-            if [ "$COUNT" -eq "0" ]; then
-              echo "✅ D1 retry succeeded! Triggering catalog rebuild + HF upload..."
+            REMAINING_D1=$(node -e "const d=JSON.parse(require('fs').readFileSync('$PENDING','utf-8'));console.log(d.filter(x => !x.inD1).length)")
+            TOTAL=$(node -e "const d=JSON.parse(require('fs').readFileSync('$PENDING','utf-8'));console.log(d.length)")
+            if [ "$TOTAL" -eq "0" ]; then
+              echo "✅ D1 & HF retry succeeded! Pending queue is completely cleared."
+              echo "RETRY_SUCCEEDED=true" >> $GITHUB_ENV
+            elif [ "$REMAINING_D1" -eq "0" ]; then
+              echo "✅ D1 retry succeeded! All items written to D1, $TOTAL await HF rebuild."
               echo "RETRY_SUCCEEDED=true" >> $GITHUB_ENV
             else
-              echo "⚠️ D1 still failing, $COUNT entries remain."
+              echo "⚠️ D1 still has $REMAINING_D1 unwritten entries ($TOTAL in queue)."
               echo "RETRY_SUCCEEDED=false" >> $GITHUB_ENV
             fi
           fi
@@ -93,8 +96,11 @@ jobs:
           CHANGED=$(git status --porcelain docs/public/pending-games.json docs/public/data-version.json todo.md docs/public/todo.md)
           if [ -n "$CHANGED" ]; then
             git add docs/public/pending-games.json docs/public/data-version.json todo.md docs/public/todo.md
-            if [ "$RETRY_SUCCEEDED" = "true" ]; then
+            TOTAL=$(node -e "const d=JSON.parse(require('fs').readFileSync('docs/public/pending-games.json','utf-8'));console.log(d.length)")
+            if [ "$TOTAL" -eq "0" ]; then
               git commit -m "chore(catalog): d1 retry succeeded — pending queue cleared [skip ci]"
+            elif [ "$RETRY_SUCCEEDED" = "true" ]; then
+              git commit -m "chore(catalog): d1 retry succeeded — awaiting hf rebuild [skip ci]"
             else
               git commit -m "chore(catalog): d1 retry attempted — queue updated [skip ci]"
             fi
