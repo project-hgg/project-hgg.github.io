@@ -1,7 +1,167 @@
 {
-  "updatedAt": "2026-09-15T16:18:40.304Z",
+  "updatedAt": "2026-09-15T20:53:50.771Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_b946e63972960de2",
+      "title": "Machine's Prayer",
+      "slug": "itch-machine-s-prayer",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTg1MzEyLnBuZw==/315x250%23c/dhaIYB.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Chuqiannn",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789505590000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI5OTg1MzEyLnBuZw==/315x250%23c/dhaIYB.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_c910e818651a793a",
+      "title": "SLENDYHERBERT",
+      "slug": "itch-slendyherbert",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDA3NTU1LnBuZw==/315x250%23c/E4kVHc.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "555ultra",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789505590000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDA3NTU1LnBuZw==/315x250%23c/E4kVHc.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_d67095aabe5a23c2",
+      "title": "sprunki but my way",
+      "slug": "itch-sprunki-but-my-way",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDE1MDQ5LnBuZw==/315x250%23c/OmPhsF.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "maleli92",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789505590000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDE1MDQ5LnBuZw==/315x250%23c/OmPhsF.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_354302f581633aa3",
+      "title": "A Normal Snow Shift",
+      "slug": "itch-a-normal-snow-shift",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5OTk4MDY1LnBuZw==/315x250%23c/sq8ZAH.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "fentrabishh",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789505590000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI5OTk4MDY1LnBuZw==/315x250%23c/sq8ZAH.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_ada0cf1752e9ac8d",
+      "title": "Silent Doll",
+      "slug": "itch-silent-doll",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDAwNDkyLmpwZWc=/315x250%23c/04jTXE.jpeg",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "tilkiwonno",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789505590000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDAwNDkyLmpwZWc=/315x250%23c/04jTXE.jpeg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_ec4bc6883d5f7360",
       "title": "Maniac Mania: Time Twist",
@@ -788,166 +948,6 @@
       "isTrending": false,
       "screenshots": [
         "https://img.itch.zone/aW1nLzI5OTg5Nzk0LnBuZw==/315x250%23c/jLg%2BkW.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_c2d0143c7b7ed736",
-      "title": "Average and generic SPRUNKI SHIFTED mod",
-      "slug": "itch-average-and-generic-sprunki-shifted-mod",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTk4NDIzLnBuZw==/315x250%23c/71c7WU.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "migan",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789442962000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTk4NDIzLnBuZw==/315x250%23c/71c7WU.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_6c55e05e8541c9f8",
-      "title": "Five Nights at Capitan Clark's Madriguera Hitler Backrooms",
-      "slug": "itch-five-nights-at-capitan-clark-s-madriguera-hitler-backrooms",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTkyODI4LnBuZw==/315x250%23c/GbkTxD.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "PurpleGuyig",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789442962000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTkyODI4LnBuZw==/315x250%23c/GbkTxD.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_60f5fb187634d620",
-      "title": "University of the Supernatural",
-      "slug": "itch-university-of-the-supernatural",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTk3NTU0LnBuZw==/315x250%23c/WOUUCf.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Azuz28",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789442962000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTk3NTU0LnBuZw==/315x250%23c/WOUUCf.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_63b249aacecc2362",
-      "title": "Patient Paralysis",
-      "slug": "itch-patient-paralysis",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTk1NDI1LnBuZw==/315x250%23c/T1Uk0H.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "CasualKing",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789442962000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTk1NDI1LnBuZw==/315x250%23c/T1Uk0H.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_1da0cfa325b3d574",
-      "title": "Sprunki 5 shifted siamese’s take",
-      "slug": "itch-sprunki-5-shifted-siamese-s-take",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTk2Nzk1LmpwZWc=/315x250%23c/K9f9xO.jpeg",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Siamesecat.itch.io official",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789442962000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTk2Nzk1LmpwZWc=/315x250%23c/K9f9xO.jpeg"
       ],
       "tags": [
         {
@@ -4717,7 +4717,7 @@
     }
   ],
   "stats": {
-    "games": 109509,
+    "games": 109514,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
