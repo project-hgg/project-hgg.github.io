@@ -1,7 +1,263 @@
 {
-  "updatedAt": "2026-09-16T16:11:39.066Z",
+  "updatedAt": "2026-09-16T20:54:21.164Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_238abf01c3b9d08d",
+      "title": "Data Center 5",
+      "slug": "itch-data-center-5",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDM0NzQwLnBuZw==/315x250%23c/6mdhcD.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "hackathons-dev",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789592024000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDM0NzQwLnBuZw==/315x250%23c/6mdhcD.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_482f219e9e7576c9",
+      "title": "O Último Bastião",
+      "slug": "itch-o-ultimo-bastiao",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDM4NzMzLmpwZw==/315x250%23c/pY85ZR.jpg",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "estudiovanguarda",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789592024000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDM4NzMzLmpwZw==/315x250%23c/pY85ZR.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_8693642022c5f58c",
+      "title": "The Anxious Front Desk Clerk 不安的前台客服",
+      "slug": "itch-the-anxious-front-desk-clerk",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5NzI2ODIxLnBuZw==/315x250%23c/UczJsT.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "FatfreeJoy",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789592024000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI5NzI2ODIxLnBuZw==/315x250%23c/UczJsT.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_1c41cdfa97621a8b",
+      "title": "What did we bring back from the Borneo rainforest?",
+      "slug": "itch-what-did-we-bring-back-from-the-borneo-rainforest",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDA4MTI2LnBuZw==/315x250%23c/i1S0La.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "brunnhyld",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789592024000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDA4MTI2LnBuZw==/315x250%23c/i1S0La.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_31ab653d6b6fcd14",
+      "title": "Midnight Dispatch — Free Playtest",
+      "slug": "itch-midnight-dispatch-free-playtest",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDM2NjE0LnBuZw==/315x250%23c/cNzOZp.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "anegriy",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789592024000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDM2NjE0LnBuZw==/315x250%23c/cNzOZp.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_d45e5bd3800c8709",
+      "title": "STAR TOURS : Runtime Error",
+      "slug": "itch-star-tours-runtime-error",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDM1NzMzLnBuZw==/315x250%23c/Ds1EVM.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "SunnyBenni",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789592024000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDM1NzMzLnBuZw==/315x250%23c/Ds1EVM.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_271c960f5d72afbe",
+      "title": "Don't cry",
+      "slug": "itch-don-t-cry",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDM1NzY5LmpwZw==/315x250%23c/7wCroI.jpg",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Hunter_RE",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789592024000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDM1NzY5LmpwZw==/315x250%23c/7wCroI.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_1b1171a78aca50fd",
+      "title": "WHEN THE LIGHT REMEMBERS YOU",
+      "slug": "itch-when-the-light-remembers-you",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDM1MjU0LnBuZw==/315x250%23c/jizFAJ.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "z888z",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789592024000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDM1MjU0LnBuZw==/315x250%23c/jizFAJ.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_4818a5802bef8d6a",
       "title": "THE SNOW - A Text Adventure",
@@ -692,262 +948,6 @@
       "isTrending": false,
       "screenshots": [
         "https://img.itch.zone/aW1nLzMwMDI3MTQ2LnBuZw==/315x250%23c/E93xAc.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_807fc1e7029621e1",
-      "title": "Jiangshi Night 殭屍之夜",
-      "slug": "itch-jiangshi-night",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDI2ODI4LnBuZw==/315x250%23c/AsN%2Bdn.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "tomaming",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789555977000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDI2ODI4LnBuZw==/315x250%23c/AsN%2Bdn.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_98e1e5da77ed3cd9",
-      "title": "DISCHARGE",
-      "slug": "itch-discharge",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTMzOTc0LnBuZw==/315x250%23c/MKke4i.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "K-wanDev",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789555977000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTMzOTc0LnBuZw==/315x250%23c/MKke4i.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_0f8dd2bd78b102b8",
-      "title": "Tramonto-Demo",
-      "slug": "itch-tramonto-demo",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDIzNDgwLnBuZw==/315x250%23c/EujVKd.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "PuffinGlaze",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789529112000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDIzNDgwLnBuZw==/315x250%23c/EujVKd.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_86be41acd43779aa",
-      "title": "Sanatorium Of Guilt",
-      "slug": "itch-sanatorium-of-guilt",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDIzNzQwLnBuZw==/315x250%23c/YSFljh.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Emaa117",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789529112000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDIzNzQwLnBuZw==/315x250%23c/YSFljh.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_cee5830bc218d04f",
-      "title": "The Broken Horn",
-      "slug": "itch-the-broken-horn",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDE5MjEyLmdpZg==/original/of3VCn.gif",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "joao_acelino_official",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789529112000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDE5MjEyLmdpZg==/original/of3VCn.gif"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_446798736c437140",
-      "title": "DeadFront",
-      "slug": "itch-deadfront",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDIyNjg4LnBuZw==/315x250%23c/5E23WK.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "NiLL_UnreaL",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789529112000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDIyNjg4LnBuZw==/315x250%23c/5E23WK.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_40bf0131b26dc624",
-      "title": "Vigilance Improvement Program (注意力向上プログラム)",
-      "slug": "itch-vigilance-improvement-program",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDIyODU3LnBuZw==/315x250%23c/3qoyAF.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "a_25mc",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789529112000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDIyODU3LnBuZw==/315x250%23c/3qoyAF.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_5612461f930dcbe0",
-      "title": "COST OF TRUST",
-      "slug": "itch-cost-of-trust",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5NjAzNjg2LmdpZg==/original/Ep1KDr.gif",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Alexey Nazariev",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789529112000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5NjAzNjg2LmdpZg==/original/Ep1KDr.gif"
       ],
       "tags": [
         {
@@ -4717,7 +4717,7 @@
     }
   ],
   "stats": {
-    "games": 109547,
+    "games": 109555,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
