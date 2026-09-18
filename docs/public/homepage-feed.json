@@ -1,7 +1,103 @@
 {
-  "updatedAt": "2026-09-18T03:17:54.752Z",
+  "updatedAt": "2026-09-18T10:37:31.950Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_5bdcf1b0cb432e07",
+      "title": "BackhomeXL-Demo",
+      "slug": "itch-backhomexl-demo",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDY5NjY3LnBuZw==/315x250%23c/uCDY%2FL.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "yiyinshi1984",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789727804000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDY5NjY3LnBuZw==/315x250%23c/uCDY%2FL.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_d4a6f8a647342fa2",
+      "title": "Five nights at Jordan Barrett",
+      "slug": "itch-five-nights-at-jordan-barrett",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDY5MTg1LnBuZw==/315x250%23c/i7rm2O.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Maksim_sladkii",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789727804000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDY5MTg1LnBuZw==/315x250%23c/i7rm2O.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_4c9e1e8c07f79994",
+      "title": "Mented",
+      "slug": "itch-mented",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5NDgwMzA3LnBuZw==/315x250%23c/%2BFNmoP.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Fábrica De Chocolate Game Studio",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789727804000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI5NDgwMzA3LnBuZw==/315x250%23c/%2BFNmoP.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_ef02635729d7e054",
       "title": "Over There",
@@ -852,102 +948,6 @@
       "isTrending": false,
       "screenshots": [
         "https://img.itch.zone/aW1nLzMwMDU4NTE2LnBuZw==/315x250%23c/os%2BTpR.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_0c9388f8d105fb13",
-      "title": "Midnight Pawn Shop",
-      "slug": "itch-midnight-pawn-shop",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDU4Mjc3LnBuZw==/315x250%23c/dGQVZm.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "giannaherrera",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789678715000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDU4Mjc3LnBuZw==/315x250%23c/dGQVZm.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_f50559cbebf6a421",
-      "title": "Accidental Demon Slayers",
-      "slug": "itch-accidental-demon-slayers",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDU3NzU1LmpwZw==/315x250%23c/HEV3Mn.jpg",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Trash with a Capital T Games",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789678715000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDU3NzU1LmpwZw==/315x250%23c/HEV3Mn.jpg"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_98a7832ba98fe014",
-      "title": "Arcadice",
-      "slug": "itch-arcadice",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDA2NTkwLmdpZg==/original/zXXqT6.gif",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Rotako Games",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789678715000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDA2NTkwLmdpZg==/original/zXXqT6.gif"
       ],
       "tags": [
         {
@@ -4717,7 +4717,7 @@
     }
   ],
   "stats": {
-    "games": 109619,
+    "games": 109622,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
