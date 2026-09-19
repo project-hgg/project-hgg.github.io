@@ -1,7 +1,135 @@
 {
-  "updatedAt": "2026-09-19T03:13:45.344Z",
+  "updatedAt": "2026-09-19T10:21:32.485Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_af655d7eea95d26c",
+      "title": "The Last Bullet",
+      "slug": "itch-the-last-bullet",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDUzOTgyLnBuZw==/315x250%23c/IWh9EI.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "M0nsT3rG",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789813245000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDUzOTgyLnBuZw==/315x250%23c/IWh9EI.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_f6cb481cd2cc748f",
+      "title": "Dracula — Amiga Illustrated Edition",
+      "slug": "itch-dracula-amiga-illustrated-edition",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDkwNzY0LnBuZw==/315x250%23c/TgKa50.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "DJSoft",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789813245000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDkwNzY0LnBuZw==/315x250%23c/TgKa50.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_90b50ddf924bcee9",
+      "title": "Dark Circus 2",
+      "slug": "itch-dark-circus-2",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDkxMDI4LnBuZw==/315x250%23c/UIw8yL.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "lazybones88",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789813245000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDkxMDI4LnBuZw==/315x250%23c/UIw8yL.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_20f521db8ffba70f",
+      "title": "SuperScaryHorrorGame",
+      "slug": "itch-superscaryhorrorgame",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDkwMzcwLnBuZw==/315x250%23c/aUVcqC.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Shota",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789813245000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDkwMzcwLnBuZw==/315x250%23c/aUVcqC.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_f199e9d47bba1a07",
       "title": "ĦɆŁŁ SᵾɌVɆɎ",
@@ -820,134 +948,6 @@
       "isTrending": false,
       "screenshots": [
         "https://img.itch.zone/aW1nLzMwMDcyNDg5LnBuZw==/315x250%23c/bUK9Es.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_136516b639ed50d5",
-      "title": "Z-Hunt",
-      "slug": "itch-z-hunt",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDcyMTc2LmpwZw==/315x250%23c/sSb3xp.jpg",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "shadowleafgames55-code",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789746731000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDcyMTc2LmpwZw==/315x250%23c/sSb3xp.jpg"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_5f1a007842b9a849",
-      "title": "Fantasy Monsters — 30 Animated Pixel Art Characters",
-      "slug": "itch-fantasy-monsters-30-animated-pixel-art-characters",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDcxOTQzLnBuZw==/315x250%23c/s9uNA5.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "spajx123c",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789746731000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDcxOTQzLnBuZw==/315x250%23c/s9uNA5.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_bd8fb434497d9f29",
-      "title": "De Noctis Natura",
-      "slug": "itch-de-noctis-natura",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5NTc4NjMzLnBuZw==/315x250%23c/OF3MdB.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Miss Matanza 1",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789746731000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5NTc4NjMzLnBuZw==/315x250%23c/OF3MdB.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_5bdcf1b0cb432e07",
-      "title": "BackhomeXL-Demo",
-      "slug": "itch-backhomexl-demo",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDY5NjY3LnBuZw==/315x250%23c/uCDY%2FL.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "yiyinshi1984",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789727804000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDY5NjY3LnBuZw==/315x250%23c/uCDY%2FL.png"
       ],
       "tags": [
         {
@@ -4717,7 +4717,7 @@
     }
   ],
   "stats": {
-    "games": 109651,
+    "games": 109655,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
