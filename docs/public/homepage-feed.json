@@ -1,7 +1,231 @@
 {
-  "updatedAt": "2026-09-18T20:27:05.809Z",
+  "updatedAt": "2026-09-19T03:13:45.344Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_f199e9d47bba1a07",
+      "title": "ĦɆŁŁ SᵾɌVɆɎ",
+      "slug": "itch-s-v",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDg3NTE0LmpwZw==/315x250%23c/RRyb03.jpg",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Timez☑",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789787584000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDg3NTE0LmpwZw==/315x250%23c/RRyb03.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_38c1c6ab1254adef",
+      "title": "Sprunki 18-shifted Jafri’s take",
+      "slug": "itch-sprunki-18-shifted-jafri-s-take",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDg3MTU1LmpwZWc=/315x250%23c/gY8dfo.jpeg",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Jafri the hedgehog",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789787584000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDg3MTU1LmpwZWc=/315x250%23c/gY8dfo.jpeg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_84f4a8e6bbe77f34",
+      "title": "MalaPieza",
+      "slug": "itch-malapieza",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDg2Mzg1LmpwZw==/315x250%23c/9hi%2F5d.jpg",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "SebasuGD",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789787584000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDg2Mzg1LmpwZw==/315x250%23c/9hi%2F5d.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_374667c27776ad11",
+      "title": "1996 Recriation (TuGLuCK's Take)",
+      "slug": "itch-1996-recriation-tugluck-s-take",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDg0OTgxLmpwZw==/315x250%23c/Puc8ZA.jpg",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "TuGLuCK",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789787584000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDg0OTgxLmpwZw==/315x250%23c/Puc8ZA.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_3c594d661880ed30",
+      "title": "A Totally Serious Backrooms Game: Nostalgia",
+      "slug": "itch-a-totally-serious-backrooms-game-nostalgia",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDg0MzI0LmpwZw==/315x250%23c/%2Fy96eQ.jpg",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Slimy Abomination Interactive",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789787584000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDg0MzI0LmpwZw==/315x250%23c/%2Fy96eQ.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_418f82ef9b603d24",
+      "title": "(My) Mirror Image",
+      "slug": "itch-my-mirror-image",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDgzODI3LnBuZw==/315x250%23c/Pcg0vz.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "songwings",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789787584000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDgzODI3LnBuZw==/315x250%23c/Pcg0vz.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_005440eef0ff00bc",
+      "title": "Stagnation Demo",
+      "slug": "itch-stagnation-demo",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDgyNDM2LnBuZw==/315x250%23c/kqaf3j.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Jordan Tomkins",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1789787584000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDgyNDM2LnBuZw==/315x250%23c/kqaf3j.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_74f9bbf18abfb914",
       "title": "FinAle Demo",
@@ -724,230 +948,6 @@
       "isTrending": false,
       "screenshots": [
         "https://img.itch.zone/aW1nLzMwMDY5NjY3LnBuZw==/315x250%23c/uCDY%2FL.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_d4a6f8a647342fa2",
-      "title": "Five nights at Jordan Barrett",
-      "slug": "itch-five-nights-at-jordan-barrett",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDY5MTg1LnBuZw==/315x250%23c/i7rm2O.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Maksim_sladkii",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789727804000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDY5MTg1LnBuZw==/315x250%23c/i7rm2O.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_4c9e1e8c07f79994",
-      "title": "Mented",
-      "slug": "itch-mented",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5NDgwMzA3LnBuZw==/315x250%23c/%2BFNmoP.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Fábrica De Chocolate Game Studio",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789727804000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5NDgwMzA3LnBuZw==/315x250%23c/%2BFNmoP.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_ef02635729d7e054",
-      "title": "Over There",
-      "slug": "itch-over-there",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDY1Mzc5LnBuZw==/315x250%23c/w%2B8TPn.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Spaghetti Blacc",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789701426000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDY1Mzc5LnBuZw==/315x250%23c/w%2B8TPn.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_6d6124729453cc29",
-      "title": "Which One Is the Latest Build?",
-      "slug": "itch-which-one-is-the-latest-build",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5OTcxOTA2LnBuZw==/315x250%23c/U8s0ib.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "pepolon2",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789701426000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5OTcxOTA2LnBuZw==/315x250%23c/U8s0ib.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_056d8b6aeee5adff",
-      "title": "Baldi's Camp Night",
-      "slug": "itch-baldi-s-camp-night",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDY0NzI3LnBuZw==/315x250%23c/qxFxi%2F.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Navjeet_29",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789701426000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDY0NzI3LnBuZw==/315x250%23c/qxFxi%2F.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_2273d3bacaa7e8e7",
-      "title": "ＩS L A N D・ＢO U N D",
-      "slug": "itch-s-l-a-n-d-o-u-n-d",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDUxOTM4LnBuZw==/315x250%23c/BE3ZZB.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "OTΛKU",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789701426000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDUxOTM4LnBuZw==/315x250%23c/BE3ZZB.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_dcc84c1deef6b332",
-      "title": "Doorbound",
-      "slug": "itch-doorbound",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDY0NjgwLmpwZw==/315x250%23c/rq8Pqe.jpg",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "maurofallico",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1789701426000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDY0NjgwLmpwZw==/315x250%23c/rq8Pqe.jpg"
       ],
       "tags": [
         {
@@ -4717,7 +4717,7 @@
     }
   ],
   "stats": {
-    "games": 109644,
+    "games": 109651,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
