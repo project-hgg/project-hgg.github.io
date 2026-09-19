@@ -141,6 +141,8 @@ async function main() {
     });
   }
 
+  if (batchStatements.length === 0) {
+    console.log("✅ No valid statements to run.");
     // Helper to check which items already exist in the HF dataset via offsets.json.gz
     const offsetsPath = path.join(process.cwd(), "docs", "public", "offsets.json.gz");
     const offsetsSet = new Set<string>();
