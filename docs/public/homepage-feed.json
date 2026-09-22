@@ -1,7 +1,167 @@
 {
-  "updatedAt": "2026-09-22T16:19:59.740Z",
+  "updatedAt": "2026-09-22T20:55:25.849Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_0af888ab09cf5803",
+      "title": "The Furniture Barn",
+      "slug": "itch-the-furniture-barn",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5ODEyMzk4LnBuZw==/315x250%23c/tPKxQz.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Plushcat",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790110478000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI5ODEyMzk4LnBuZw==/315x250%23c/tPKxQz.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_97ac7966a0db2a55",
+      "title": "MTR: Third Man",
+      "slug": "itch-mtr-third-man",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI3Mjk5MzIzLnBuZw==/315x250%23c/hQWpbZ.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "JohnSapato",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790110478000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI3Mjk5MzIzLnBuZw==/315x250%23c/hQWpbZ.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_488e806e8b9b8afa",
+      "title": "GODHUNTER",
+      "slug": "itch-godhunter",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMTAyNjM2LnBuZw==/315x250%23c/87qEVb.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "SatsumaDev",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790110478000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMTAyNjM2LnBuZw==/315x250%23c/87qEVb.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_18d0694e7f56e788",
+      "title": "Mario.exe Part 1 2 And 5 (Reupload)",
+      "slug": "itch-mario-exe-part-1-2-and-5-reupload",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMTgzNTM0LmpwZw==/315x250%23c/Yw%2BX9f.jpg",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "htv9600",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790110478000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMTgzNTM0LmpwZw==/315x250%23c/Yw%2BX9f.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_5f8dc2f40b716106",
+      "title": "Turn Off The PC",
+      "slug": "itch-turn-off-the-pc",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMTgzMDkyLnBuZw==/315x250%23c/ijOWmx.png",
+      "rating": null,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "MegaloPetit",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790110478000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMTgzMDkyLnBuZw==/315x250%23c/ijOWmx.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_2d482062bfb189b9",
       "title": "Survive to Sostenibilidad",
@@ -788,166 +948,6 @@
       "isTrending": false,
       "screenshots": [
         "https://img.itch.zone/aW1nLzMwMTUyNTUxLnBuZw==/315x250%23c/ocgiJc.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_4f28023fd2fcd9bf",
-      "title": "Spronklins (Postponed Build)",
-      "slug": "itch-spronklins-postponed-build",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMTY2MzIxLnBuZw==/315x250%23c/f8WTlC.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "jairjam",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790047452000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMTY2MzIxLnBuZw==/315x250%23c/f8WTlC.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_bba1d208f5b568c0",
-      "title": "Die Simulator",
-      "slug": "itch-die-simulator",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMTY2MTI3LnBuZw==/315x250%23c/0erWj8.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Gus",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790047452000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMTY2MTI3LnBuZw==/315x250%23c/0erWj8.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_c631ed2e4214297a",
-      "title": "Colorful Outside",
-      "slug": "itch-colorful-outside",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMTY1ODMyLnBuZw==/315x250%23c/agneLj.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Pocoilas",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790047452000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMTY1ODMyLnBuZw==/315x250%23c/agneLj.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_7e2df1ec3dfc4736",
-      "title": "LA CASA DE LAS 3 AM",
-      "slug": "itch-la-casa-de-las-3-am",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMTY2MDIwLnBuZw==/315x250%23c/tCsYNk.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Mazuko999",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790047452000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMTY2MDIwLnBuZw==/315x250%23c/tCsYNk.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_037b2546efd3601e",
-      "title": "UNLUCKY KNIGHT",
-      "slug": "itch-unlucky-knight",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMTY0ODIxLnBuZw==/315x250%23c/Uj0u9L.png",
-      "rating": null,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "gonzalo2026",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790047452000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMTY0ODIxLnBuZw==/315x250%23c/Uj0u9L.png"
       ],
       "tags": [
         {
@@ -4717,7 +4717,7 @@
     }
   ],
   "stats": {
-    "games": 109926,
+    "games": 109931,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
