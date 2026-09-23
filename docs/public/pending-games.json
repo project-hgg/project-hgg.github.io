@@ -1,1 +1,80 @@
-[]
+[
+  {
+    "_type": "canonicalLink",
+    "id": "link_18223ea907cbe807",
+    "targetGameId": "cmqsj77ha08nhhkegqnqne5ek",
+    "url": "https://litrouke.itch.io/please-answer-carefully",
+    "urlHash": "18223ea907cbe807",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "coverUrl": "https://img.itch.zone/aW1nLzI3MTY2MjMucG5n/315x250%23c/bFnDqL.png",
+    "queuedAt": "2026-09-23T16:09:00.455Z",
+    "inD1": true
+  },
+  {
+    "_type": "canonicalLink",
+    "id": "link_ca33723e021731d7",
+    "targetGameId": "cmpwzkuow012w9geg9iwqmx22",
+    "url": "https://waxwing0.itch.io/fbc",
+    "urlHash": "ca33723e021731d7",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "coverUrl": "https://img.itch.zone/aW1nLzcxMDUyNjUucG5n/315x250%23c/%2FSHfYQ.png",
+    "queuedAt": "2026-09-23T16:09:00.456Z",
+    "inD1": true
+  },
+  {
+    "_type": "canonicalLink",
+    "id": "link_b5dde76c0c3a54f0",
+    "targetGameId": "cmqsjayt00a46hkeg1pqwh07t",
+    "url": "https://dino999z.itch.io/therapy-with-dr-albert-krueger",
+    "urlHash": "b5dde76c0c3a54f0",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "coverUrl": "https://img.itch.zone/aW1nLzQyNDA0MDIucG5n/315x250%23c/truQkk.png",
+    "queuedAt": "2026-09-23T16:09:00.456Z",
+    "inD1": true
+  },
+  {
+    "_type": "canonicalLink",
+    "id": "link_936cedf836ac838d",
+    "targetGameId": "cmpwzo895033g9gegio99t5zo",
+    "url": "https://zephyo.itch.io/missed-message",
+    "urlHash": "936cedf836ac838d",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "coverUrl": "https://img.itch.zone/aW1nLzIxNTI3NTAuZ2lm/original/zeDrXs.gif",
+    "queuedAt": "2026-09-23T16:09:00.456Z",
+    "inD1": true
+  },
+  {
+    "_type": "canonicalLink",
+    "id": "link_f7399dfb55eb95f8",
+    "targetGameId": "cmqsf1or604fvqwegbj4igj9c",
+    "url": "https://adayofjoy.itch.io/exhibit-of-sorrows",
+    "urlHash": "f7399dfb55eb95f8",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "coverUrl": "https://img.itch.zone/aW1nLzg3MzM4NTEuZ2lm/original/R0bBdx.gif",
+    "queuedAt": "2026-09-23T16:09:00.456Z",
+    "inD1": true
+  },
+  {
+    "_type": "canonicalLink",
+    "id": "link_beb20d98b81a00a1",
+    "targetGameId": "cmpwzk5ge00om9gegmmg210mr",
+    "url": "https://racheldrawsthis.itch.io/elevator-hitch",
+    "urlHash": "beb20d98b81a00a1",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "coverUrl": "https://img.itch.zone/aW1nLzEwMTM5MjUxLnBuZw==/315x250%23c/tItICn.png",
+    "queuedAt": "2026-09-23T16:09:00.456Z",
+    "inD1": true
+  }
+]
