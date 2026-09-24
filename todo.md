@@ -1,7 +1,7 @@
 # 📋 Pending Sync Queue (D1 & Hugging Face)
 
-> **Status**: ⏳ 50 item(s) pending sync
-> **Last updated**: 2026-09-24T16:54:22.443Z
+> **Status**: ⏳ 73 item(s) pending sync
+> **Last updated**: 2026-09-24T21:10:57.600Z
 
 | # | Title / Item | Source | Type | In Hugging Face? | In D1? | Queued At | Last Error |
 |---|---|---|---|:---:|:---:|---|---|
@@ -55,6 +55,29 @@
 | 48 | **A Hand With Many Fingers [$5.00] [Other] [Windows] [macOS] [Linux]** | itch | Game | ✅ Yes | ❌ Pending/Quota | 2026-09-24 16:53:42 | - |
 | 49 | **COLDLINE [Free] [Action] [Windows]** | itch | Game | ✅ Yes | ❌ Pending/Quota | 2026-09-24 16:53:42 | - |
 | 50 | **Pyramida** | itch | Game | ✅ Yes | ❌ Pending/Quota | 2026-09-24 16:53:42 | - |
+| 51 | **link_d908d40211bd75ce** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 52 | **link_979270e0f8cc23f3** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 53 | **link_77120d80216fbaf4** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 54 | **link_285ae86eced28e79** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 55 | **link_6c703e9698ad47b1** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 56 | **link_658ca58d55f9dde7** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 57 | **link_beb20d98b81a00a1** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 58 | **link_048785924e5319bd** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 59 | **link_ac9e4291a81cc4ff** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 60 | **link_8794f916d916f3a0** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 61 | **link_cb375f48d7135ce4** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 62 | **link_caf36a1584bb5481** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 63 | **link_44b4b04a8926fb44** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 64 | **link_936cedf836ac838d** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 65 | **link_12d18202e54dc673** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 66 | **link_f7399dfb55eb95f8** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 67 | **link_b5dde76c0c3a54f0** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 68 | **link_2ad69ff42a6ce0f6** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 69 | **link_11e9dfcac5578230** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 70 | **link_086948eb456b595c** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 71 | **link_8dfcb15f2b1ccbe5** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 72 | **link_9c73c3f411d92194** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
+| 73 | **link_18223ea907cbe807** | itch | Canonical Link | ⏳ Pending | ✅ Yes | 2026-09-24 21:10:56 | - |
 
 ---
 *This queue is automatically monitored by `.github/workflows/retry-pending.yml` (every 6 hours) and `.github/workflows/generate-catalog-dump.yml` (weekly/on-demand).
