@@ -38,6 +38,33 @@ interface EvaluationResult {
   errors: number;
 }
 
+function decodeHtmlEntities(str: string): string {
+  return str
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#34;/g, '"')
+    .replace(/&#039;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+/**
+ * Normalizes title string for aggressive deduplication:
+ * Strips bracket metadata ([Free], [Windows]), punctuation, diacritics, and stop-words.
+ */
+function normalizeTitle(rawTitle: string): string {
+  return decodeHtmlEntities(rawTitle || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // strip diacritics
+    .replace(/\[.*?\]/g, "") // strip all bracket tags like [Free], [Windows], [20% Off]
+    .replace(/\(.*?\)/g, "") // strip parenthetical info
+    .replace(/\b(demo|prologue|remake|remaster|free|download|game|reupload|edition)\b/gi, "")
+    .replace(/[^a-z0-9]/g, "") // remove all non-alphanumeric chars
+    .trim();
+}
+
 /**
  * Extracts Schema.org LD+JSON rating and tooltip rating without external dependencies
  */
@@ -148,6 +175,40 @@ export async function evaluatePendingPool(options: Partial<EvaluationOptions> = 
   const pool: PendingGameRecord[] = JSON.parse(zlib.gunzipSync(rawGzip).toString("utf-8"));
   console.log(`📦 Loaded ${pool.length.toLocaleString()} games currently in incubation.\n`);
 
+  // Load Catalog Dump for Deduplication against Canonical & Active Itch Games
+  let dumpPath = path.join(path.dirname(pendingPath), "catalog-dump.json.gz");
+  if (!fs.existsSync(dumpPath)) {
+    dumpPath = path.join(process.cwd(), "public", "catalog", "catalog-dump.json.gz");
+  }
+  if (!fs.existsSync(dumpPath)) {
+    dumpPath = path.join(process.cwd(), "data", "curated-catalog-dump.json.gz");
+  }
+
+  const canonicalMainGameMap = new Map<string, any>();
+  const existingItchGameMap = new Map<string, any>();
+
+  if (fs.existsSync(dumpPath)) {
+    try {
+      const rawCatalogGzip = fs.readFileSync(dumpPath);
+      const catalog = JSON.parse(zlib.gunzipSync(rawCatalogGzip).toString("utf-8"));
+      for (const catGame of catalog) {
+        const norm = normalizeTitle(catGame.t);
+        if (norm) {
+          if (catGame.s && !catGame.s.startsWith("itch-")) {
+            if (!canonicalMainGameMap.has(norm)) canonicalMainGameMap.set(norm, catGame);
+          } else {
+            if (!existingItchGameMap.has(norm)) existingItchGameMap.set(norm, catGame);
+          }
+        }
+      }
+      console.log(
+        `🧠 Catalog Deduplication Index Ready: ${canonicalMainGameMap.size.toLocaleString()} canonical games, ${existingItchGameMap.size.toLocaleString()} active itch games.\n`
+      );
+    } catch (e: any) {
+      console.warn(`⚠️ Could not parse catalog-dump for deduplication: ${e?.message}`);
+    }
+  }
+
   // Sort by rolling priority window:
   // Never checked first, then oldest checked
   const sorted = pool
@@ -254,15 +315,92 @@ export async function evaluatePendingPool(options: Partial<EvaluationOptions> = 
 
   // If any games graduated, write to D1 and queue for Hugging Face catalog compilation
   if (graduated.length > 0) {
-    console.log(`⚡ Promoting ${graduated.length} graduated games into Cloudflare D1...`);
+    console.log(`⚡ Promoting ${graduated.length} graduated games into Cloudflare D1 with Deduplication...`);
     const batchStatements: any[] = [];
     const now = Date.now();
+
+    // Prepare pending-games queue
+    const pendingGamesPath = path.join(path.dirname(pendingPath), "pending-games.json");
+    let pendingGames: any[] = [];
+    if (fs.existsSync(pendingGamesPath)) {
+      try { pendingGames = JSON.parse(fs.readFileSync(pendingGamesPath, "utf-8")); } catch {}
+    }
+    const pendingIds = new Set(pendingGames.map((item: any) => item.id));
+
+    let canonicalMatchesCount = 0;
+    let itchMergedCount = 0;
+    let newStandaloneCount = 0;
 
     for (const g of graduated) {
       const candidateUrl = resolveCandidateUrl(g) || `https://itch.io`;
       const author = g.dn || "Independent Creator";
       const tags = [...(g.gs || []), ...(g.ts || [])].join(", ") || "Horror, Indie";
       const dealPrice = g.dp ?? 0;
+      const normTitle = normalizeTitle(g.t);
+
+      // --- DEDUPLICATION TIER 1: CANONICAL MAIN GAME MATCH ---
+      if (canonicalMainGameMap.has(normTitle)) {
+        const canonical = canonicalMainGameMap.get(normTitle)!;
+        console.log(
+          `     🎯 MATCHED CANONICAL MAIN GAME: "${g.t}" matches existing game "${canonical.t}" (${canonical.s})! Attaching store link without duplicate entity.`
+        );
+        canonicalMatchesCount++;
+
+        batchStatements.push({
+          sql: `INSERT INTO "PurchaseLink" (id, storeName, url, gameId) VALUES (?, 'itch.io', ?, ?) ON CONFLICT DO NOTHING`,
+          args: [`pl_${g.i}`, candidateUrl, canonical.i],
+        });
+        batchStatements.push({
+          sql: `INSERT INTO "PriceSnapshot" (
+            id, gameId, storeName, dealPrice, retailPrice, discountPercent, dealUrl, currency, country, provider, updatedAt
+          ) VALUES (?, ?, 'itch.io', ?, ?, 0, ?, 'USD', 'US', 'direct', ?)
+          ON CONFLICT DO NOTHING`,
+          args: [`ps_${g.i}`, canonical.i, dealPrice, dealPrice, candidateUrl, now],
+        });
+        if (g.c) {
+          batchStatements.push({
+            sql: `UPDATE "Game" SET coverUrl = coalesce(coverUrl, ?) WHERE id = ?`,
+            args: [g.c, canonical.i],
+          });
+        }
+        if (!pendingIds.has(`link_${g.i}`)) {
+          pendingGames.push({
+            _type: "canonicalLink",
+            id: `link_${g.i}`,
+            targetGameId: canonical.i,
+            url: candidateUrl,
+            dealPrice,
+            retailPrice: dealPrice,
+            discountPercent: 0,
+            coverUrl: g.c || null,
+            queuedAt: new Date().toISOString(),
+          });
+          pendingIds.add(`link_${g.i}`);
+        }
+        continue;
+      }
+
+      // --- DEDUPLICATION TIER 2: EXISTING ACTIVE ITCH GAME MATCH ---
+      if (existingItchGameMap.has(normTitle)) {
+        const existingItch = existingItchGameMap.get(normTitle)!;
+        console.log(
+          `     ⏩ MERGED EXISTING ITCH LISTING: "${g.t}" matches active game "${existingItch.t}" (${existingItch.s}). Updating rating & store link without duplicate entity.`
+        );
+        itchMergedCount++;
+
+        batchStatements.push({
+          sql: `UPDATE "Game" SET rating = coalesce(?, rating), coverUrl = coalesce(coverUrl, ?), updatedAt = ? WHERE id = ?`,
+          args: [g.stars ?? null, g.c || null, now, existingItch.i],
+        });
+        batchStatements.push({
+          sql: `INSERT INTO "PurchaseLink" (id, storeName, url, gameId) VALUES (?, 'itch.io', ?, ?) ON CONFLICT DO NOTHING`,
+          args: [`pl_${g.i}`, candidateUrl, existingItch.i],
+        });
+        continue;
+      }
+
+      // --- BRAND NEW VALIDATED STANDALONE HORROR GAME ---
+      newStandaloneCount++;
 
       // 1. Game Table
       batchStatements.push({
@@ -287,24 +425,7 @@ export async function evaluatePendingPool(options: Partial<EvaluationOptions> = 
         ON CONFLICT DO NOTHING`,
         args: [`ps_${g.i}`, g.i, dealPrice, dealPrice, candidateUrl, now],
       });
-    }
 
-    try {
-      await client.batch(batchStatements, "write");
-      console.log(`💾 Successfully inserted ${graduated.length} graduated games into D1!`);
-    } catch (e: any) {
-      console.warn(`⚠️ D1 batch write failed: ${e?.message || e}. Games will queue in pending-games.json.`);
-    }
-
-    // Queue in pending-games.json for master HF catalog compilation
-    const pendingGamesPath = path.join(path.dirname(pendingPath), "pending-games.json");
-    let pendingGames: any[] = [];
-    if (fs.existsSync(pendingGamesPath)) {
-      try { pendingGames = JSON.parse(fs.readFileSync(pendingGamesPath, "utf-8")); } catch {}
-    }
-    const pendingIds = new Set(pendingGames.map((item: any) => item.id));
-
-    for (const g of graduated) {
       if (!pendingIds.has(g.i)) {
         pendingGames.push({
           id: g.i,
@@ -326,6 +447,19 @@ export async function evaluatePendingPool(options: Partial<EvaluationOptions> = 
         });
         pendingIds.add(g.i);
       }
+    }
+
+    console.log(
+      `📊 Graduation Deduplication Summary: ${newStandaloneCount} brand-new standalone games, ${canonicalMatchesCount} matched to canonical games, ${itchMergedCount} merged into active itch listings.`
+    );
+
+    try {
+      if (batchStatements.length > 0) {
+        await client.batch(batchStatements, "write");
+        console.log(`💾 Successfully committed batch transaction (${batchStatements.length} operations) to Cloudflare D1!`);
+      }
+    } catch (e: any) {
+      console.warn(`⚠️ D1 batch write failed: ${e?.message || e}. Games will queue in pending-games.json.`);
     }
 
     fs.writeFileSync(pendingGamesPath, JSON.stringify(pendingGames, null, 2), "utf-8");
