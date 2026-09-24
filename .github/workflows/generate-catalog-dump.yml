@@ -47,17 +47,27 @@ jobs:
           CLOUDFLARE_DATABASE_ID: ${{ secrets.CLOUDFLARE_DATABASE_ID }}
         run: npx tsx scripts/generate-catalog-dump.ts
 
-      - name: Upload catalog.raw to Hugging Face Dataset (CLI Fallback)
-        if: always() && hashFiles('dist-hf/catalog.raw') != ''
+      - name: Upload catalog.raw and pending-catalog to Hugging Face Dataset (CLI Fallback)
+        if: always()
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          echo "Verifying / Uploading dist-hf/catalog.raw → aurostron/hogamegata/catalog.raw"
-          hf upload aurostron/hogamegata \
-            dist-hf/catalog.raw \
-            catalog.raw \
-            --repo-type dataset \
-            --commit-message "chore(catalog): auto-sync master catalog.raw [skip ci]" || true
+          if [ -f dist-hf/catalog.raw ]; then
+            echo "Verifying / Uploading dist-hf/catalog.raw → aurostron/hogamegata/catalog.raw"
+            hf upload aurostron/hogamegata \
+              dist-hf/catalog.raw \
+              catalog.raw \
+              --repo-type dataset \
+              --commit-message "chore(catalog): auto-sync master catalog.raw [skip ci]" || true
+          fi
+          if [ -f docs/public/pending-catalog.json.gz ]; then
+            echo "Verifying / Uploading docs/public/pending-catalog.json.gz → aurostron/hogamegata/pending-catalog.json.gz"
+            hf upload aurostron/hogamegata \
+              docs/public/pending-catalog.json.gz \
+              pending-catalog.json.gz \
+              --repo-type dataset \
+              --commit-message "chore(incubation): sync pending incubation catalog [skip ci]" || true
+          fi
           echo "✅ Hugging Face dataset sync verified."
 
       - name: Commit & Push Catalog Files to Main
@@ -68,6 +78,8 @@ jobs:
           CHANGED=$(git status --porcelain \
             docs/public/catalog-dump.json.gz \
             docs/public/catalog-manifest.json \
+            docs/public/pending-catalog.json.gz \
+            docs/public/pending-manifest.json \
             docs/public/offsets.json.gz \
             docs/public/creator-games.json.gz \
             docs/public/upcoming-games.json.gz \
@@ -80,6 +92,8 @@ jobs:
             git add \
               docs/public/catalog-dump.json.gz \
               docs/public/catalog-manifest.json \
+              docs/public/pending-catalog.json.gz \
+              docs/public/pending-manifest.json \
               docs/public/offsets.json.gz \
               docs/public/creator-games.json.gz \
               docs/public/upcoming-games.json.gz \

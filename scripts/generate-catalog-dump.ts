@@ -360,8 +360,11 @@ function generateHomepageFeed(catalog: DumpGame[], outPath: string) {
   // Load rich fallback games to guarantee verified screenshots and trailer metadata for hero
   let baseFallback: any[] = [];
   try {
+    const localFallbackPath = path.join(__dirname, "homepageFallback.json");
     const peerFallbackPath = path.resolve("..", "gamegata-astro", "src", "data", "homepageFallback.json");
-    if (fs.existsSync(peerFallbackPath)) {
+    if (fs.existsSync(localFallbackPath)) {
+      baseFallback = JSON.parse(fs.readFileSync(localFallbackPath, "utf8"));
+    } else if (fs.existsSync(peerFallbackPath)) {
       baseFallback = JSON.parse(fs.readFileSync(peerFallbackPath, "utf8"));
     }
   } catch {}

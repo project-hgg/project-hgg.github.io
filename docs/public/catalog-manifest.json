@@ -1,13 +1,13 @@
 {
-  "version": "2026.09.24.1633",
-  "totalGames": 110006,
-  "rawBytes": 194003349,
-  "rawMb": 185.02,
-  "compressedBytes": 8326022,
-  "compressedMb": 7.94,
-  "offsetsBytes": 1772222,
+  "version": "2026.09.24.2140",
+  "totalGames": 40919,
+  "canonicalGames": 20065,
+  "verifiedItchGames": 20854,
+  "rawBytes": 17482218,
+  "rawMb": 16.67,
+  "compressedBytes": 3176756,
+  "compressedMb": 3.03,
   "hfDataset": "aurostron/hogamegata",
   "hfFile": "catalog.raw",
-  "updatedAt": "2026-09-24T16:33:21.057Z",
-  "newGamesAppended": 13
+  "updatedAt": "2026-09-24T16:13:32.312Z"
 }

@@ -18,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      rebuild_needed: ${{ steps.sync-step.outputs.rebuild_needed }}
+      valid_new_count: ${{ steps.sync-step.outputs.valid_new_count }}
+      incubated_count: ${{ steps.sync-step.outputs.incubated_count }}
 
     steps:
       - name: Checkout Repository
@@ -35,6 +39,7 @@ jobs:
         run: npm ci
 
       - name: Run Itch Horror Ingestion Engine
+        id: sync-step
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -45,8 +50,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/data-version.json docs/public/pending-games.json docs/public/todo.md todo.md)" ]; then
-            git add docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/data-version.json docs/public/pending-games.json docs/public/todo.md todo.md
+          if [ -n "$(git status --porcelain docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/pending-catalog.json.gz docs/public/pending-manifest.json docs/public/data-version.json docs/public/pending-games.json docs/public/todo.md todo.md)" ]; then
+            git add docs/public/catalog-dump.json.gz docs/public/catalog-manifest.json docs/public/pending-catalog.json.gz docs/public/pending-manifest.json docs/public/data-version.json docs/public/pending-games.json docs/public/todo.md todo.md
             git commit -m "chore(catalog): auto-sync new itch horror games [skip ci]"
             COMMIT_SHA=$(git rev-parse --short HEAD)
             FULL_SHA=$(git rev-parse HEAD)
@@ -69,14 +74,15 @@ jobs:
               git pull --rebase -X theirs origin main || true
               git push origin main && break || sleep 3
             done
-            echo "🚀 Pushed updated catalog dump, manifest, pending queue, and data-version.json ($COMMIT_SHA)!"
+            echo "🚀 Pushed updated catalog dump, pending pool, manifest, pending queue, and data-version.json ($COMMIT_SHA)!"
           else
             echo "✨ No catalog changes to commit."
           fi
 
-  # After itch sync finishes, trigger a full catalog rebuild + HF upload
+  # Only trigger full catalog rebuild + HF upload if new games passed the quality evaluation gate
   trigger-catalog-rebuild:
     needs: sync-games
+    if: needs.sync-games.outputs.rebuild_needed == 'true'
     permissions:
       contents: write
     uses: ./.github/workflows/generate-catalog-dump.yml
