@@ -1,7 +1,167 @@
 {
-  "updatedAt": "2026-09-24T21:14:50.155Z",
+  "updatedAt": "2026-09-25T03:33:31.717Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_8b7bf55bb5f47e0e",
+      "title": "Big Bad Dogs",
+      "slug": "itch-big-bad-dogs",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzIyMTY5MDQxLmdpZg==/original/FqFEf8.gif",
+      "rating": 98,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "spar0w",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790307172000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzIyMTY5MDQxLmdpZg==/original/FqFEf8.gif"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_14a8df4b98d6c8b3",
+      "title": "House of Petals",
+      "slug": "itch-house-of-petals",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI3NzM5MDkzLmpwZw==/315x250%23c/61e7EC.jpg",
+      "rating": 94,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Little Snake Studio",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790307172000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI3NzM5MDkzLmpwZw==/315x250%23c/61e7EC.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_1c4b3742322834f5",
+      "title": "Koibito No Nazo | Lover's Enigma (Prologue)",
+      "slug": "itch-koibito-no-nazo-lover-s-enigma-prologue",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzIxODQ2NTA5LnBuZw==/315x250%23c/KmjczW.png",
+      "rating": 98,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "FallenCranberry Studio",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790307172000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzIxODQ2NTA5LnBuZw==/315x250%23c/KmjczW.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_222b33e9bea5520e",
+      "title": "Allele: Origin",
+      "slug": "itch-allele-origin",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI0ODYyODEyLnBuZw==/315x250%23c/EeKAxF.png",
+      "rating": 96,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "coffeedripstudios",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790307172000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI0ODYyODEyLnBuZw==/315x250%23c/EeKAxF.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_b4b386244c02aeee",
+      "title": "Oblivion Blackout - BETA by Cryptid Renchy",
+      "slug": "itch-oblivion-blackout-beta-by-cryptid-renchy",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzIyNzU4NTY4LnBuZw==/315x250%23c/usnUP0.png",
+      "rating": 98,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "cryptid_renchy",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790307172000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzIyNzU4NTY4LnBuZw==/315x250%23c/usnUP0.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "cmqsc4j6i0005qkeghdblvskc",
       "title": "The Sinking City 2",
@@ -1303,364 +1463,6 @@
           "country": "US"
         }
       ]
-    },
-    {
-      "id": "cmqqsf0nz000gpoegiafkalmz",
-      "title": "Hariti",
-      "slug": "itch-hariti",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI3OTU2NzI0LnBuZw==/original/ATJf9E.png",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Ghostcase001",
-      "genreNames": "",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782031440000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI3OTU2NzI0LnBuZw==/original/ATJf9E.png"
-      ],
-      "tags": [
-        {
-          "name": "body-horror",
-          "slug": "body-horror"
-        },
-        {
-          "name": "folk-horror",
-          "slug": "folk-horror"
-        },
-        {
-          "name": "action-horror",
-          "slug": "action-horror"
-        },
-        {
-          "name": "supernatural",
-          "slug": "supernatural"
-        },
-        {
-          "name": "adventure",
-          "slug": "adventure"
-        },
-        {
-          "name": "3d",
-          "slug": "3d"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "singleplayer",
-          "slug": "singleplayer"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "creature-horror",
-          "slug": "creature-horror"
-        },
-        {
-          "name": "setting-medical",
-          "slug": "setting-medical"
-        },
-        {
-          "name": "narrative-horror",
-          "slug": "narrative-horror"
-        },
-        {
-          "name": "third-person",
-          "slug": "third-person"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsaqed200greweg2xm8plll",
-      "title": "Curse: The First Knot",
-      "slug": "curse-the-first-knot",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc1gx.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Kaan ASLAN",
-      "genreNames": "adventure, puzzle, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782000000000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc1gx.jpg"
-      ],
-      "tags": [
-        {
-          "name": "walking-sim",
-          "slug": "walking-sim"
-        },
-        {
-          "name": "supernatural",
-          "slug": "supernatural"
-        },
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "setting-rural",
-          "slug": "setting-rural"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        },
-        {
-          "name": "jumpscare-heavy",
-          "slug": "jumpscare-heavy"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqqsc7j40003poegozmgwe7m",
-      "title": "MATILDA 2",
-      "slug": "itch-matilda-2-2-50-",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI4MDA3MDU2LnBuZw==/original/9xwHcU.png",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Red Cap Games",
-      "genreNames": "",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1781978640000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI4MDA3MDU2LnBuZw==/original/9xwHcU.png"
-      ],
-      "tags": [
-        {
-          "name": "folk-horror",
-          "slug": "folk-horror"
-        },
-        {
-          "name": "vhs-analog",
-          "slug": "vhs-analog"
-        },
-        {
-          "name": "retro-ps1",
-          "slug": "retro-ps1"
-        },
-        {
-          "name": "mascot-horror",
-          "slug": "mascot-horror"
-        },
-        {
-          "name": "setting-sci-fi",
-          "slug": "setting-sci-fi"
-        },
-        {
-          "name": "slasher",
-          "slug": "slasher"
-        },
-        {
-          "name": "stealth-no-combat",
-          "slug": "stealth-no-combat"
-        },
-        {
-          "name": "walking-sim",
-          "slug": "walking-sim"
-        },
-        {
-          "name": "supernatural",
-          "slug": "supernatural"
-        },
-        {
-          "name": "3d",
-          "slug": "3d"
-        },
-        {
-          "name": "atmospheric",
-          "slug": "atmospheric"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "short",
-          "slug": "short"
-        },
-        {
-          "name": "singleplayer",
-          "slug": "singleplayer"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "creepy",
-          "slug": "creepy"
-        },
-        {
-          "name": "setting-rural",
-          "slug": "setting-rural"
-        },
-        {
-          "name": "setting-analog",
-          "slug": "setting-analog"
-        },
-        {
-          "name": "narrative-horror",
-          "slug": "narrative-horror"
-        },
-        {
-          "name": "high-tension",
-          "slug": "high-tension"
-        },
-        {
-          "name": "isolated",
-          "slug": "isolated"
-        },
-        {
-          "name": "unsettling",
-          "slug": "unsettling"
-        },
-        {
-          "name": "dark",
-          "slug": "dark"
-        },
-        {
-          "name": "ai-assisted",
-          "slug": "ai-assisted"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 5,
-          "retailPrice": 5,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
-    },
-    {
-      "id": "cmqsactaa055grcegcbcqul35",
-      "title": "Shout-Ai",
-      "slug": "shout-ai",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocarr.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, visual-novel",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1781913600000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocarr.jpg"
-      ],
-      "tags": [
-        {
-          "name": "body-horror",
-          "slug": "body-horror"
-        },
-        {
-          "name": "vhs-analog",
-          "slug": "vhs-analog"
-        },
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        },
-        {
-          "name": "visual-novel",
-          "slug": "visual-novel"
-        },
-        {
-          "name": "unsettling",
-          "slug": "unsettling"
-        },
-        {
-          "name": "text",
-          "slug": "text"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsaqd1000gkewegduprxb2s",
-      "title": "Reality Stability Office",
-      "slug": "reality-stability-office",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc1os.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Nyrel Design LLC",
-      "genreNames": "adventure, simulator, indie, strategy",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1781913600000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc1os.jpg"
-      ],
-      "tags": [
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "narrative-horror",
-          "slug": "narrative-horror"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
     }
   ],
   "trendingGames": [
@@ -5417,7 +5219,7 @@
     }
   ],
   "stats": {
-    "games": 40919,
+    "games": 40924,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
