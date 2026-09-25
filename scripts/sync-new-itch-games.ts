@@ -541,9 +541,9 @@ async function main() {
     const gameId = `itch_${candidate.urlHash}`;
 
     // --- QUALITY EVALUATION GATE ---
-    // Community Traction Threshold: Must have >= 2 ratings to enter Active Catalog.
-    // 0-rating and single-vote scrap are safely routed to Incubation Pool (pending-catalog.json.gz).
-    if (ratingCount >= 2) {
+    // Community Traction Threshold: Must have >= 5 ratings to enter Active Catalog.
+    // Submissions with fewer than 5 ratings are safely routed to Incubation Pool (pending-catalog.json.gz).
+    if (ratingCount >= 5) {
       validNewGames.push({
         id: gameId,
         title: cleanTitle,

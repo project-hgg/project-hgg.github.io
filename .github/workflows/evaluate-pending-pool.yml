@@ -14,7 +14,7 @@ on:
       min_votes:
         description: 'Minimum ratings/votes required to graduate to Main Catalog'
         required: false
-        default: '2'
+        default: '5'
         type: string
       dry_run:
         description: 'Dry run mode (do not commit changes)'
@@ -60,7 +60,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_DATABASE_ID: ${{ secrets.CLOUDFLARE_DATABASE_ID }}
         run: |
-          ARGS="--limit=${{ inputs.limit || 150 }} --min-votes=${{ inputs.min_votes || 2 }}"
+          ARGS="--limit=${{ inputs.limit || 150 }} --min-votes=${{ inputs.min_votes || 5 }}"
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"
           fi

@@ -152,7 +152,7 @@ export async function evaluatePendingPool(options: Partial<EvaluationOptions> = 
   const config: EvaluationOptions = {
     batchSize: options.batchSize ?? 100,
     delayMs: options.delayMs ?? 800,
-    graduationMinVotes: options.graduationMinVotes ?? 2,
+    graduationMinVotes: options.graduationMinVotes ?? 5,
     dryRun: options.dryRun ?? false,
   };
 
@@ -486,7 +486,7 @@ if (isMain) {
   const limitArg = process.argv.find((a) => a.startsWith("--limit="));
   const limit = limitArg ? parseInt(limitArg.split("=")[1], 10) : 100;
   const minVotesArg = process.argv.find((a) => a.startsWith("--min-votes="));
-  const minVotes = minVotesArg ? parseInt(minVotesArg.split("=")[1], 10) : 2;
+  const minVotes = minVotesArg ? parseInt(minVotesArg.split("=")[1], 10) : 5;
   const isDryRun = process.argv.includes("--dry-run");
 
   evaluatePendingPool({ batchSize: limit, graduationMinVotes: minVotes, dryRun: isDryRun }).catch(console.error);
