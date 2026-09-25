@@ -1,13 +1,7 @@
 {
   "version": "1.0.0",
-  "totalPending": 69024,
-  "unratedScrap": 55019,
-  "singleVoteAnomalies": 14055,
-  "compressedBytes": 5255796,
-  "compressedMb": 5.01,
-  "hfDataset": "aurostron/hogamegata",
-  "hfFile": "pending-catalog.json.gz",
-  "lastEvaluatedAt": "2026-09-24T16:53:41.465Z",
-  "updatedAt": "2026-09-24T16:13:32.313Z",
-  "sizeBytes": 5253373
+  "totalPending": 69025,
+  "lastUpdated": "2026-09-25T03:32:50.855Z",
+  "compressedBytes": 5253544,
+  "compressedMb": 5.01
 }
