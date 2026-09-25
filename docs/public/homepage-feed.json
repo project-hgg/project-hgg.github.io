@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-09-25T03:33:31.717Z",
+  "updatedAt": "2026-09-25T11:13:08.318Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_9f20150e7c82c469",
+      "title": "Five Nights in Anime: REDUX",
+      "slug": "itch-five-nights-in-anime-redux",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjM5NDU1LmpwZw==/315x250%23c/pl7p97.jpg",
+      "rating": 88,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "FNIA Studios (Nateraizer)",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790334749000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjM5NDU1LmpwZw==/315x250%23c/pl7p97.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_8b7bf55bb5f47e0e",
       "title": "Big Bad Dogs",
@@ -1405,64 +1437,6 @@
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
-    },
-    {
-      "id": "cmqsj5tob089shkeg2vqb3qga",
-      "title": "Desolation Seed",
-      "slug": "desolation-seed",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8jd.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Emergent Cybersoft",
-      "genreNames": "simulator, puzzle, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782086400000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8jd.jpg"
-      ],
-      "tags": [
-        {
-          "name": "body-horror",
-          "slug": "body-horror"
-        },
-        {
-          "name": "setting-sci-fi",
-          "slug": "setting-sci-fi"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "setting-cyberpunk",
-          "slug": "setting-cyberpunk"
-        },
-        {
-          "name": "setting-analog",
-          "slug": "setting-analog"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 13.49,
-          "retailPrice": 13.49,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
     }
   ],
   "trendingGames": [
@@ -5219,7 +5193,7 @@
     }
   ],
   "stats": {
-    "games": 40924,
+    "games": 40925,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
