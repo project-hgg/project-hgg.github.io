@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-09-26T03:51:59.442Z",
+  "updatedAt": "2026-09-26T10:52:14.205Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_378e46cf10cf3c98",
+      "title": "Save Me a Slice!",
+      "slug": "itch-save-me-a-slice",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjU5NzI2LnBuZw==/315x250%23c/WBrVin.png",
+      "rating": 96,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Mooki !!",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790419896000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjU5NzI2LnBuZw==/315x250%23c/WBrVin.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_9f20150e7c82c469",
       "title": "Five Nights in Anime: REDUX",
@@ -1393,46 +1425,6 @@
         {
           "name": "melancholic",
           "slug": "melancholic"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsadist05ftrcegriu4ep45",
-      "title": "Crazy Neighbour",
-      "slug": "crazy-neighbour",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb57.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Wamu Games",
-      "genreNames": "adventure, puzzle, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782086400000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb57.jpg"
-      ],
-      "tags": [
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "setting-deep-sea",
-          "slug": "setting-deep-sea"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
         }
       ],
       "purchaseLinks": [],
@@ -5193,7 +5185,7 @@
     }
   ],
   "stats": {
-    "games": 40925,
+    "games": 40926,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
