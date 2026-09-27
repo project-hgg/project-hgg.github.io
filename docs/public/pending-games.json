@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "itch_c9b0dc3f2eef8ee3",
+    "title": "Pyrena",
+    "slug": "itch-pyrena",
+    "coverUrl": "https://img.itch.zone/aW1nLzI3NjAyMjE1LmdpZg==/original/bIJcKV.gif",
+    "author": "Aderie",
+    "rating": 92,
+    "totalRating": 92,
+    "url": "https://aderie.itch.io/pyrena",
+    "tags": "horror, indie, body-horror, furry, horror, mature, queer, no-ai",
+    "status": "released",
+    "source": "itch",
+    "dealPrice": 0,
+    "retailPrice": 0,
+    "discountPercent": 0,
+    "queuedAt": "2026-09-27T09:06:28.224Z",
+    "graduatedFromIncubation": true
+  }
+]
