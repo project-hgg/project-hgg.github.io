@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-09-27T16:31:59.804Z",
+  "updatedAt": "2026-09-27T20:56:02.554Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_45c92f0a9605fa2e",
+      "title": "Wender",
+      "slug": "itch-wender",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjUzMTQ0LnBuZw==/315x250%23c/IALIPW.png",
+      "rating": 92,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "wizorge",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790542519000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjUzMTQ0LnBuZw==/315x250%23c/IALIPW.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_d8f85f5ae7e85ed1",
       "title": "Amoris",
@@ -1369,58 +1401,6 @@
           "country": "US"
         }
       ]
-    },
-    {
-      "id": "cmqsacs65054prceglskkzpad",
-      "title": "Acatalepsy",
-      "slug": "acatalepsy--1",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocat4.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782086400000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocat4.jpg"
-      ],
-      "tags": [
-        {
-          "name": "liminal-surreal",
-          "slug": "liminal-surreal"
-        },
-        {
-          "name": "folk-horror",
-          "slug": "folk-horror"
-        },
-        {
-          "name": "setting-sci-fi",
-          "slug": "setting-sci-fi"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "setting-medical",
-          "slug": "setting-medical"
-        },
-        {
-          "name": "setting-space",
-          "slug": "setting-space"
-        },
-        {
-          "name": "isolated",
-          "slug": "isolated"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
     }
   ],
   "trendingGames": [
@@ -5177,7 +5157,7 @@
     }
   ],
   "stats": {
-    "games": 41185,
+    "games": 41186,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
