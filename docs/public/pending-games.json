@@ -15,6 +15,7 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "queuedAt": "2026-09-27T09:06:28.224Z",
-    "graduatedFromIncubation": true
+    "graduatedFromIncubation": true,
+    "inHf": true
   }
 ]
