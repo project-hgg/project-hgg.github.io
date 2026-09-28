@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-09-27T20:56:02.554Z",
+  "updatedAt": "2026-09-28T03:46:58.844Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_b829050a16de7df6",
+      "title": "I Can Smell You from Here",
+      "slug": "itch-i-can-smell-you-from-here",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjEwNTQyLmpwZw==/315x250%23c/baNJVN.jpg",
+      "rating": 98,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "catproblem9735",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790567175000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjEwNTQyLmpwZw==/315x250%23c/baNJVN.jpg"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_45c92f0a9605fa2e",
       "title": "Wender",
@@ -1351,56 +1383,6 @@
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
-    },
-    {
-      "id": "cmqsacp9v053qrcegx75gh41r",
-      "title": "Paranormal Meatball Simulator",
-      "slug": "paranormal-meatball-simulator",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb5t.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, simulator, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782086400000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb5t.jpg"
-      ],
-      "tags": [
-        {
-          "name": "supernatural",
-          "slug": "supernatural"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        },
-        {
-          "name": "chaotic-panic",
-          "slug": "chaotic-panic"
-        },
-        {
-          "name": "third-person",
-          "slug": "third-person"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 1.99,
-          "retailPrice": 1.99,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
     }
   ],
   "trendingGames": [
@@ -5157,7 +5139,7 @@
     }
   ],
   "stats": {
-    "games": 41186,
+    "games": 41187,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
