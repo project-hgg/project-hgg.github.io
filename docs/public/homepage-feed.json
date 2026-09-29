@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-09-29T04:21:38.053Z",
+  "updatedAt": "2026-09-29T12:11:54.126Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_22a1607d09bd2566",
+      "title": "Highschool J",
+      "slug": "itch-highschool-j",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjIyOTc5LnBuZw==/315x250%23c/DkUpD2.png",
+      "rating": 100,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Umigame",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790683865000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjIyOTc5LnBuZw==/315x250%23c/DkUpD2.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_70a04364603bd667",
       "title": "sweet instincts",
@@ -1297,74 +1329,6 @@
           "country": "US"
         }
       ]
-    },
-    {
-      "id": "cmqsas3wa012lewegbyregwpw",
-      "title": "Heavydelic",
-      "slug": "heavydelic",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobvew.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Heavydelic studio",
-      "genreNames": "adventure, platform, hack-and-slash-beat-em-up, indie, arcade",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cobvew.jpg"
-      ],
-      "tags": [
-        {
-          "name": "folk-horror",
-          "slug": "folk-horror"
-        },
-        {
-          "name": "vhs-analog",
-          "slug": "vhs-analog"
-        },
-        {
-          "name": "setting-sci-fi",
-          "slug": "setting-sci-fi"
-        },
-        {
-          "name": "action-horror",
-          "slug": "action-horror"
-        },
-        {
-          "name": "walking-sim",
-          "slug": "walking-sim"
-        },
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "setting-cyberpunk",
-          "slug": "setting-cyberpunk"
-        },
-        {
-          "name": "setting-space",
-          "slug": "setting-space"
-        },
-        {
-          "name": "setting-rural",
-          "slug": "setting-rural"
-        },
-        {
-          "name": "setting-analog",
-          "slug": "setting-analog"
-        },
-        {
-          "name": "side-view",
-          "slug": "side-view"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
     }
   ],
   "trendingGames": [
@@ -5121,7 +5085,7 @@
     }
   ],
   "stats": {
-    "games": 41189,
+    "games": 41190,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
