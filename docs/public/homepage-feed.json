@@ -1,7 +1,71 @@
 {
-  "updatedAt": "2026-09-28T23:00:02.123Z",
+  "updatedAt": "2026-09-29T04:21:38.053Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_70a04364603bd667",
+      "title": "sweet instincts",
+      "slug": "itch-sweet-instincts",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjU4MDc0LnBuZw==/315x250%23c/IT%2FSzu.png",
+      "rating": 98,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "3005jin",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790655661000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjU4MDc0LnBuZw==/315x250%23c/IT%2FSzu.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_514c0473dddcbb91",
+      "title": "Your New Roommate",
+      "slug": "itch-your-new-roommate",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjE3MzIwLnBuZw==/315x250%23c/exZYZl.png",
+      "rating": 96,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "YOYO",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790655661000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjE3MzIwLnBuZw==/315x250%23c/exZYZl.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_b829050a16de7df6",
       "title": "I Can Smell You from Here",
@@ -1297,88 +1361,6 @@
         {
           "name": "side-view",
           "slug": "side-view"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsauxoq0223ewegtlgibtmy",
-      "title": "The Puppet's Casket",
-      "slug": "the-puppets-casket",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobics.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Tapromance",
-      "genreNames": "adventure, point-and-click, puzzle",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cobics.jpg"
-      ],
-      "tags": [
-        {
-          "name": "mascot-horror",
-          "slug": "mascot-horror"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 5.99,
-          "retailPrice": 5.99,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
-    },
-    {
-      "id": "cmqsik3i40149hkegixlbs8l9",
-      "title": "Lumina Veil",
-      "slug": "lumina-veil",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coag7a.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Hamster Cafe",
-      "genreNames": "adventure",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coag7a.jpg"
-      ],
-      "tags": [
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "isolated",
-          "slug": "isolated"
-        },
-        {
-          "name": "unsettling",
-          "slug": "unsettling"
-        },
-        {
-          "name": "third-person",
-          "slug": "third-person"
         }
       ],
       "purchaseLinks": [],
@@ -5139,7 +5121,7 @@
     }
   ],
   "stats": {
-    "games": 41187,
+    "games": 41189,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
