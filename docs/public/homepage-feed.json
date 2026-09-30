@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-09-30T17:48:58.776Z",
+  "updatedAt": "2026-09-30T21:55:11.465Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_2375b2a235af7494",
+      "title": "Bleach & Blood",
+      "slug": "itch-bleach-blood",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDU0OTEzLmdpZg==/original/AYvo3V.gif",
+      "rating": 92,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Windy",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790805266000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDU0OTEzLmdpZg==/original/AYvo3V.gif"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_4a9ee9a41d305fb0",
       "title": "Tokidoki Tactical Squad",
@@ -1271,38 +1303,6 @@
         {
           "name": "side-view",
           "slug": "side-view"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsadopg05htrcegtpu94c2m",
-      "title": "The Queens Gondola",
-      "slug": "the-queens-gondola",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc6sy.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Morning Crescent",
-      "genreNames": "indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc6sy.jpg"
-      ],
-      "tags": [
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "chaotic-panic",
-          "slug": "chaotic-panic"
         }
       ],
       "purchaseLinks": [],
@@ -5063,7 +5063,7 @@
     }
   ],
   "stats": {
-    "games": 41191,
+    "games": 41192,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
