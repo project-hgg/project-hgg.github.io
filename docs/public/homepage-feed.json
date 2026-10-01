@@ -1,7 +1,103 @@
 {
-  "updatedAt": "2026-09-30T21:55:11.465Z",
+  "updatedAt": "2026-10-01T04:17:15.392Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_5e5602a107887ce5",
+      "title": "Helping Your Boyfriend",
+      "slug": "itch-helping-your-boyfriend",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMTM1Mzc4LmdpZg==/original/U2DC5U.gif",
+      "rating": 94,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Zieelane",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790828199000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMTM1Mzc4LmdpZg==/original/U2DC5U.gif"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_720f4eb4901eec0b",
+      "title": "Next Station: The Moon",
+      "slug": "itch-next-station-the-moon",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjc5MDQ1LnBuZw==/315x250%23c/fv3m06.png",
+      "rating": 98,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Comfort Kuma Studios",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790828199000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjc5MDQ1LnBuZw==/315x250%23c/fv3m06.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_8cbf0495fe8b1fd4",
+      "title": "Going Once, Cut Twice",
+      "slug": "itch-going-once-cut-twice",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwNDA1NjU4LnBuZw==/315x250%23c/BW4RA8.png",
+      "rating": 96,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Sudachys",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790828199000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwNDA1NjU4LnBuZw==/315x250%23c/BW4RA8.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_2375b2a235af7494",
       "title": "Bleach & Blood",
@@ -1133,176 +1229,6 @@
         {
           "name": "bird-view-top-down",
           "slug": "bird-view-top-down"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsadcdo05bwrcegb0jr2mq5",
-      "title": "Brumley",
-      "slug": "brumley",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7ye.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, indie",
-      "platformNames": "Linux, PC (Microsoft Windows), Mac",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7ye.jpg"
-      ],
-      "tags": [
-        {
-          "name": "folk-horror",
-          "slug": "folk-horror"
-        },
-        {
-          "name": "co-op",
-          "slug": "co-op"
-        },
-        {
-          "name": "action-horror",
-          "slug": "action-horror"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "zombie-apocalypse",
-          "slug": "zombie-apocalypse"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsadcdv05bzrceg4p388zue",
-      "title": "Night Duty Log: A Shōwa School Record",
-      "slug": "night-duty-log-a-showa-school-record",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7ze.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "ZipanGames",
-      "genreNames": "adventure, indie, visual-novel",
-      "platformNames": "Linux, PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7ze.jpg"
-      ],
-      "tags": [
-        {
-          "name": "liminal-surreal",
-          "slug": "liminal-surreal"
-        },
-        {
-          "name": "walking-sim",
-          "slug": "walking-sim"
-        },
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "setting-school",
-          "slug": "setting-school"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        },
-        {
-          "name": "visual-novel",
-          "slug": "visual-novel"
-        },
-        {
-          "name": "isolated",
-          "slug": "isolated"
-        },
-        {
-          "name": "unsettling",
-          "slug": "unsettling"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 2.11,
-          "retailPrice": 2.11,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
-    },
-    {
-      "id": "cmqsadm0z05h1rcegosyewpjv",
-      "title": "Dawn Bell",
-      "slug": "dawn-bell",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7do.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, puzzle, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7do.jpg"
-      ],
-      "tags": [
-        {
-          "name": "action-horror",
-          "slug": "action-horror"
-        },
-        {
-          "name": "walking-sim",
-          "slug": "walking-sim"
-        },
-        {
-          "name": "supernatural",
-          "slug": "supernatural"
-        },
-        {
-          "name": "pixel-art",
-          "slug": "pixel-art"
-        },
-        {
-          "name": "narrative-horror",
-          "slug": "narrative-horror"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        },
-        {
-          "name": "hand-drawn",
-          "slug": "hand-drawn"
-        },
-        {
-          "name": "anime-style",
-          "slug": "anime-style"
-        },
-        {
-          "name": "side-view",
-          "slug": "side-view"
         }
       ],
       "purchaseLinks": [],
@@ -5063,7 +4989,7 @@
     }
   ],
   "stats": {
-    "games": 41192,
+    "games": 41195,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
