@@ -1,9 +1,7 @@
 {
   "version": "1.0.0",
-  "totalPending": 69031,
-  "lastUpdated": "2026-10-01T12:29:37.735Z",
-  "compressedBytes": 5256829,
-  "compressedMb": 5.01,
-  "lastEvaluatedAt": "2026-10-01T13:52:14.647Z",
-  "sizeBytes": 5265951
+  "totalPending": 69033,
+  "lastUpdated": "2026-10-01T22:22:29.671Z",
+  "compressedBytes": 5266200,
+  "compressedMb": 5.02
 }
