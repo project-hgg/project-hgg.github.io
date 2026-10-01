@@ -1,7 +1,71 @@
 {
-  "updatedAt": "2026-10-01T04:17:15.392Z",
+  "updatedAt": "2026-10-01T12:30:22.038Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_e9551c991759b276",
+      "title": "The Arcade DEMO",
+      "slug": "itch-the-arcade-demo",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjQzOTkwLnBuZw==/315x250%23c/Vx%2BtX1.png",
+      "rating": 96,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Colourplay Games",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790857779000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjQzOTkwLnBuZw==/315x250%23c/Vx%2BtX1.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_368b8f709200a0ed",
+      "title": "Bite Your Tongue",
+      "slug": "itch-bite-your-tongue",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwNDI0MDc3LnBuZw==/315x250%23c/7ahqcL.png",
+      "rating": 100,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Frogcake",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790857779000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwNDI0MDc3LnBuZw==/315x250%23c/7ahqcL.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_5e5602a107887ce5",
       "title": "Helping Your Boyfriend",
@@ -1145,90 +1209,6 @@
         {
           "name": "unsettling",
           "slug": "unsettling"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsad9hp05awrcegu32tgrc0",
-      "title": "A Game About AI",
-      "slug": "a-game-about-ai",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc85x.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "TaleHammer",
-      "genreNames": "simulator, indie, strategy",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc85x.jpg"
-      ],
-      "tags": [
-        {
-          "name": "stealth-no-combat",
-          "slug": "stealth-no-combat"
-        },
-        {
-          "name": "zombie-apocalypse",
-          "slug": "zombie-apocalypse"
-        },
-        {
-          "name": "isometric",
-          "slug": "isometric"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsadaow05bjrcegync790rq",
-      "title": "Operation: Black Genesis - The Immortal Trials",
-      "slug": "operation-black-genesis-the-immortal-trials",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc80g.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc80g.jpg"
-      ],
-      "tags": [
-        {
-          "name": "survival-horror",
-          "slug": "survival-horror"
-        },
-        {
-          "name": "body-horror",
-          "slug": "body-horror"
-        },
-        {
-          "name": "co-op",
-          "slug": "co-op"
-        },
-        {
-          "name": "action-horror",
-          "slug": "action-horror"
-        },
-        {
-          "name": "zombie-apocalypse",
-          "slug": "zombie-apocalypse"
-        },
-        {
-          "name": "bird-view-top-down",
-          "slug": "bird-view-top-down"
         }
       ],
       "purchaseLinks": [],
@@ -4989,7 +4969,7 @@
     }
   ],
   "stats": {
-    "games": 41195,
+    "games": 41197,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
