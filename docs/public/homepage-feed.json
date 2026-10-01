@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-10-01T12:30:22.038Z",
+  "updatedAt": "2026-10-01T22:23:12.191Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_6e96729385c8c2e3",
+      "title": "LASt Missing",
+      "slug": "itch-last-missing",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwNDEwMjMwLnBuZw==/315x250%23c/CSDNeu.png",
+      "rating": 100,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "akilargie",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790893351000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwNDEwMjMwLnBuZw==/315x250%23c/CSDNeu.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_e9551c991759b276",
       "title": "The Arcade DEMO",
@@ -1169,46 +1201,6 @@
         {
           "name": "visual-novel",
           "slug": "visual-novel"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsad7l405aercegzce4x40z",
-      "title": "Sludge Department",
-      "slug": "sludge-department",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coca51.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, puzzle, indie",
-      "platformNames": "Linux, PC (Microsoft Windows), Mac",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coca51.jpg"
-      ],
-      "tags": [
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "setting-medical",
-          "slug": "setting-medical"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        },
-        {
-          "name": "unsettling",
-          "slug": "unsettling"
         }
       ],
       "purchaseLinks": [],
@@ -4969,7 +4961,7 @@
     }
   ],
   "stats": {
-    "games": 41197,
+    "games": 41198,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
