@@ -1,9 +1,9 @@
 {
-  "commitSha": "9615b98",
-  "fullSha": "9615b980fd179ff6f733e5d5e8245edcb147b75b",
+  "commitSha": "330b5ad",
+  "fullSha": "330b5add88f5ce17328adcd0ba12091d5ac3f3d0",
   "commitMessage": "chore(catalog): auto-sync new itch horror games",
-  "timestamp": "2026-10-01T22:22:32Z",
-  "totalGames": 41198,
+  "timestamp": "2026-10-02T04:09:33Z",
+  "totalGames": 41199,
   "lastRetryAt": "2026-09-27T11:31:48.462Z",
   "retriedCount": 168
 }
