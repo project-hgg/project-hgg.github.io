@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-10-01T22:23:12.191Z",
+  "updatedAt": "2026-10-02T04:10:09.489Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_31717bc3ee2c89c1",
+      "title": "Tomayto Tomahto",
+      "slug": "itch-tomayto-tomahto",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5MzQzNzM1LmdpZg==/original/pFwKq%2F.gif",
+      "rating": 100,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Dreamty Games",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1790914172000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI5MzQzNzM1LmdpZg==/original/pFwKq%2F.gif"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_6e96729385c8c2e3",
       "title": "LASt Missing",
@@ -1165,42 +1197,6 @@
         {
           "name": "ai-text",
           "slug": "ai-text"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsacy860570rceg8siw4m6u",
-      "title": "Digital Anima: Virtual Lifeform Care Kit",
-      "slug": "digital-anima-virtual-lifeform-care-kit",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc9ph.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, simulator, puzzle, indie, visual-novel",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc9ph.jpg"
-      ],
-      "tags": [
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        },
-        {
-          "name": "visual-novel",
-          "slug": "visual-novel"
         }
       ],
       "purchaseLinks": [],
@@ -4961,7 +4957,7 @@
     }
   ],
   "stats": {
-    "games": 41198,
+    "games": 41199,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
