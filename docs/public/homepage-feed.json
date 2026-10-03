@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-10-03T15:50:06.059Z",
+  "updatedAt": "2026-10-03T20:38:19.248Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_6e1d559102daeb4d",
+      "title": "The Sketchbook",
+      "slug": "itch-the-sketchbook",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwNDg4Mjc1LnBuZw==/315x250%23c/2nUOdJ.png",
+      "rating": 100,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Hela Xuves",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1791059864000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwNDg4Mjc1LnBuZw==/315x250%23c/2nUOdJ.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_31717bc3ee2c89c1",
       "title": "Tomayto Tomahto",
@@ -1113,90 +1145,6 @@
         {
           "name": "isolated",
           "slug": "isolated"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsacpa1053vrcegzq4s5yb8",
-      "title": "SCP: Mr. Jupiter",
-      "slug": "scp-mr-jupiter",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb0o.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "puzzle, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb0o.jpg"
-      ],
-      "tags": [
-        {
-          "name": "walking-sim",
-          "slug": "walking-sim"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "setting-industrial",
-          "slug": "setting-industrial"
-        },
-        {
-          "name": "narrative-horror",
-          "slug": "narrative-horror"
-        },
-        {
-          "name": "puzzle-horror",
-          "slug": "puzzle-horror"
-        },
-        {
-          "name": "3d",
-          "slug": "3d"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "physics",
-          "slug": "physics"
-        },
-        {
-          "name": "scary",
-          "slug": "scary"
-        },
-        {
-          "name": "scp",
-          "slug": "scp"
-        },
-        {
-          "name": "singleplayer",
-          "slug": "singleplayer"
-        },
-        {
-          "name": "unreal-engine",
-          "slug": "unreal-engine"
-        },
-        {
-          "name": "voice-acting",
-          "slug": "voice-acting"
-        },
-        {
-          "name": "ai-assisted",
-          "slug": "ai-assisted"
-        },
-        {
-          "name": "ai-text",
-          "slug": "ai-text"
         }
       ],
       "purchaseLinks": [],
@@ -4957,7 +4905,7 @@
     }
   ],
   "stats": {
-    "games": 41199,
+    "games": 41200,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
