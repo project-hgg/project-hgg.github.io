@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-10-03T20:38:19.248Z",
+  "updatedAt": "2026-10-04T04:25:18.507Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_e23f0094e2260eac",
+      "title": "Dead Awake Demo",
+      "slug": "itch-dead-awake-demo",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwNDY2NzU0LmdpZg==/original/NIwdX8.gif",
+      "rating": 96,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "BEDTIMESTORIES",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1791087884000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwNDY2NzU0LmdpZg==/original/NIwdX8.gif"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_6e1d559102daeb4d",
       "title": "The Sketchbook",
@@ -1117,38 +1149,6 @@
           "country": "US"
         }
       ]
-    },
-    {
-      "id": "cmqsacp9v053srcegsfev9cx7",
-      "title": "One Last Box",
-      "slug": "one-last-box",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb60.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb60.jpg"
-      ],
-      "tags": [
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "isolated",
-          "slug": "isolated"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
     }
   ],
   "trendingGames": [
@@ -4905,7 +4905,7 @@
     }
   ],
   "stats": {
-    "games": 41200,
+    "games": 41201,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
