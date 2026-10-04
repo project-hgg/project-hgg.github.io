@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-10-04T16:32:36.116Z",
+  "updatedAt": "2026-10-04T20:54:45.733Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_20a5d3cea36514a9",
+      "title": "PIG IRON",
+      "slug": "itch-pig-iron",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDAxMzc4LnBuZw==/315x250%23c/d7HA3z.png",
+      "rating": 80,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "posmnaut",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1791147249000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDAxMzc4LnBuZw==/315x250%23c/d7HA3z.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_e23f0094e2260eac",
       "title": "Dead Awake Demo",
@@ -1107,48 +1139,6 @@
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
-    },
-    {
-      "id": "cmqsacp9v053rrcegqhi1t17p",
-      "title": "Public Fears: George's Farm",
-      "slug": "public-fears-georges-farm",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb5v.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb5v.jpg"
-      ],
-      "tags": [
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "setting-rural",
-          "slug": "setting-rural"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 4.99,
-          "retailPrice": 4.99,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
     }
   ],
   "trendingGames": [
@@ -4905,7 +4895,7 @@
     }
   ],
   "stats": {
-    "games": 41288,
+    "games": 41289,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
