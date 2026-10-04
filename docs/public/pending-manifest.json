@@ -3,5 +3,7 @@
   "totalPending": 69034,
   "lastUpdated": "2026-10-02T11:55:45.390Z",
   "compressedBytes": 5266347,
-  "compressedMb": 5.02
+  "compressedMb": 5.02,
+  "lastEvaluatedAt": "2026-10-04T09:32:50.381Z",
+  "sizeBytes": 5267367
 }
