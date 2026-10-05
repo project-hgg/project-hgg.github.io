@@ -1,7 +1,135 @@
 {
-  "updatedAt": "2026-10-05T04:10:25.221Z",
+  "updatedAt": "2026-10-05T13:41:41.754Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_f4f0d7990b9df093",
+      "title": "Five Nights At Freddy's: THE FLIPSIDE RPG",
+      "slug": "itch-five-nights-at-freddy-s-the-flipside-rpg",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMDA0NjQxLnBuZw==/315x250%23c/M9FGFw.png",
+      "rating": 100,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "The Blue Hatted",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1791207656000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMDA0NjQxLnBuZw==/315x250%23c/M9FGFw.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_42e46988e0df5eca",
+      "title": "Bleeding In Ink",
+      "slug": "itch-bleeding-in-ink",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwMjYxNjE1LmdpZg==/original/t5WUs0.gif",
+      "rating": 100,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "AKA Space",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1791207656000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwMjYxNjE1LmdpZg==/original/t5WUs0.gif"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_d2b95a8cbd17de12",
+      "title": "Caso: Northport",
+      "slug": "itch-caso-northport",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI5MzQ4NzI1LnBuZw==/315x250%23c/HYM36k.png",
+      "rating": 96,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Entity Zeta",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1791207656000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI5MzQ4NzI1LnBuZw==/315x250%23c/HYM36k.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_8dbf4e5499915aa5",
+      "title": "MALFOID DATING SIM",
+      "slug": "itch-malfoid-dating-sim",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwNDMyODYxLnBuZw==/315x250%23c/XSFDbb.png",
+      "rating": 94,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "COCOLEMON",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1791207656000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwNDMyODYxLnBuZw==/315x250%23c/XSFDbb.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_c4f99f25d75fe4fe",
       "title": "Last Delight",
@@ -829,304 +957,6 @@
         {
           "name": "itch-io",
           "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsc4j6i0005qkeghdblvskc",
-      "title": "The Sinking City 2",
-      "slug": "the-sinking-city-2",
-      "status": "released",
-      "coverUrl": "https://images.gog-statics.com/d9e6c093697ce8ddb1a1272c5fa5eef7b0352f51b6333c372f02a2995139bb29.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Frogwares",
-      "genreNames": "horror, action, survival",
-      "platformNames": "PC (Windows)",
-      "releaseDate": 1787011200000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.gog-statics.com/d9e6c093697ce8ddb1a1272c5fa5eef7b0352f51b6333c372f02a2995139bb29.jpg"
-      ],
-      "tags": [
-        {
-          "name": "survival-horror",
-          "slug": "survival-horror"
-        },
-        {
-          "name": "atmospheric",
-          "slug": "atmospheric"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "survival",
-          "slug": "survival"
-        },
-        {
-          "name": "third-person",
-          "slug": "third-person"
-        },
-        {
-          "name": "mystery",
-          "slug": "mystery"
-        },
-        {
-          "name": "action",
-          "slug": "action"
-        },
-        {
-          "name": "story-rich",
-          "slug": "story-rich"
-        },
-        {
-          "name": "gore",
-          "slug": "gore"
-        },
-        {
-          "name": "violent",
-          "slug": "violent"
-        },
-        {
-          "name": "realistic",
-          "slug": "realistic"
-        },
-        {
-          "name": "fighting",
-          "slug": "fighting"
-        },
-        {
-          "name": "lovecraftian",
-          "slug": "lovecraftian"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "e6f99e72-990d-401e-9516-38cef1cb170e",
-      "title": "Batman™: Arkham Bundle",
-      "slug": "batman-arkham-bundle",
-      "status": "released",
-      "coverUrl": "https://images.gog-statics.com/8480718b9eda57e44a6193fb92954b9195b8b7032458a96fb6a42f183ab089ee.png",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Rocksteady Studios, WB Games Montreal, Splash Damage",
-      "genreNames": "action, adventure, stealth",
-      "platformNames": "PC (Windows)",
-      "releaseDate": 1782844200000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.gog-statics.com/8480718b9eda57e44a6193fb92954b9195b8b7032458a96fb6a42f183ab089ee.png"
-      ],
-      "tags": [
-        {
-          "name": "adventure",
-          "slug": "adventure"
-        },
-        {
-          "name": "action",
-          "slug": "action"
-        },
-        {
-          "name": "atmospheric",
-          "slug": "atmospheric"
-        },
-        {
-          "name": "classic",
-          "slug": "classic"
-        },
-        {
-          "name": "puzzle",
-          "slug": "puzzle"
-        },
-        {
-          "name": "dark",
-          "slug": "dark"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "open-world",
-          "slug": "open-world"
-        },
-        {
-          "name": "third-person",
-          "slug": "third-person"
-        },
-        {
-          "name": "multiplayer",
-          "slug": "multiplayer"
-        },
-        {
-          "name": "sandbox",
-          "slug": "sandbox"
-        },
-        {
-          "name": "mature",
-          "slug": "mature"
-        },
-        {
-          "name": "stealth",
-          "slug": "stealth"
-        },
-        {
-          "name": "fighting",
-          "slug": "fighting"
-        },
-        {
-          "name": "metroidvania",
-          "slug": "metroidvania"
-        },
-        {
-          "name": "beat-em-up",
-          "slug": "beat-em-up"
-        },
-        {
-          "name": "superhero",
-          "slug": "superhero"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 16.45,
-          "retailPrice": 16.45,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
-    },
-    {
-      "id": "2753a9fb-24f5-4715-862b-d1b0984fe444",
-      "title": "R-Type Tactics I • II Cosmos - Unit Color Variation Fighter Pack",
-      "slug": "rtype-tactics-iii-cosmos-unit-color-variation-fighter-pack",
-      "status": "released",
-      "coverUrl": "https://images.gog-statics.com/4bd5cf740bc6170d9e7f587ef9ce7fc98b07b3b64e49d1b86a5f15b1fb73d8f7.png",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Granzella Inc.",
-      "genreNames": "strategy, scifi, rpg",
-      "platformNames": "PC (Windows)",
-      "releaseDate": 1782671400000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.gog-statics.com/4bd5cf740bc6170d9e7f587ef9ce7fc98b07b3b64e49d1b86a5f15b1fb73d8f7.png"
-      ],
-      "tags": [
-        {
-          "name": "strategy",
-          "slug": "strategy"
-        },
-        {
-          "name": "role-playing",
-          "slug": "role-playing"
-        },
-        {
-          "name": "sci-fi",
-          "slug": "sci-fi"
-        },
-        {
-          "name": "turn-based",
-          "slug": "turn-based"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "tactical",
-          "slug": "tactical"
-        },
-        {
-          "name": "space",
-          "slug": "space"
-        },
-        {
-          "name": "robots",
-          "slug": "robots"
-        },
-        {
-          "name": "remake",
-          "slug": "remake"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "e651bd8a-315f-4fcd-ac82-8612445be68a",
-      "title": "R-Type Tactics I • II Cosmos - Unit: ARROW-HEAD G (GRA Ver.)",
-      "slug": "rtype-tactics-iii-cosmos-unit-arrowhead-g-gra-ver",
-      "status": "released",
-      "coverUrl": "https://images.gog-statics.com/e30cf67e4164e0351bc3d6bac434855412685cd87d5326cce23a40ce70355280.png",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Granzella Inc.",
-      "genreNames": "strategy, scifi, rpg",
-      "platformNames": "PC (Windows)",
-      "releaseDate": 1782671400000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.gog-statics.com/e30cf67e4164e0351bc3d6bac434855412685cd87d5326cce23a40ce70355280.png"
-      ],
-      "tags": [
-        {
-          "name": "strategy",
-          "slug": "strategy"
-        },
-        {
-          "name": "role-playing",
-          "slug": "role-playing"
-        },
-        {
-          "name": "sci-fi",
-          "slug": "sci-fi"
-        },
-        {
-          "name": "turn-based",
-          "slug": "turn-based"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "tactical",
-          "slug": "tactical"
-        },
-        {
-          "name": "space",
-          "slug": "space"
-        },
-        {
-          "name": "robots",
-          "slug": "robots"
-        },
-        {
-          "name": "remake",
-          "slug": "remake"
         }
       ],
       "purchaseLinks": [],
@@ -4887,7 +4717,7 @@
     }
   ],
   "stats": {
-    "games": 41290,
+    "games": 41294,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
