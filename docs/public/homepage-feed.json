@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-10-04T20:54:45.733Z",
+  "updatedAt": "2026-10-05T04:10:25.221Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_c4f99f25d75fe4fe",
+      "title": "Last Delight",
+      "slug": "itch-last-delight",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwNDg5NTQ0LnBuZw==/315x250%23c/SrKcdU.png",
+      "rating": 100,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Crossie",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1791173395000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwNDg5NTQ0LnBuZw==/315x250%23c/SrKcdU.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_20a5d3cea36514a9",
       "title": "PIG IRON",
@@ -1095,46 +1127,6 @@
         {
           "name": "remake",
           "slug": "remake"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "cmqsacp9p053mrceghirc75l8",
-      "title": "Maple Ridge",
-      "slug": "maple-ridge",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb0p.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782172800000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb0p.jpg"
-      ],
-      "tags": [
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "setting-urban",
-          "slug": "setting-urban"
-        },
-        {
-          "name": "isolated",
-          "slug": "isolated"
-        },
-        {
-          "name": "unsettling",
-          "slug": "unsettling"
         }
       ],
       "purchaseLinks": [],
@@ -4895,7 +4887,7 @@
     }
   ],
   "stats": {
-    "games": 41289,
+    "games": 41290,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
