@@ -1,7 +1,39 @@
 {
-  "updatedAt": "2026-10-07T12:47:37.772Z",
+  "updatedAt": "2026-10-07T22:46:27.627Z",
   "heroGames": [],
   "latestGames": [
+    {
+      "id": "itch_cf3e60745b375e71",
+      "title": "Tyler's Deal",
+      "slug": "itch-tyler-s-deal",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzMwNTY3ODI2LnBuZw==/315x250%23c/zDB3Wp.png",
+      "rating": 100,
+      "category": 0,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Chodex Productions",
+      "genreNames": "horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1791413156000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzMwNTY3ODI2LnBuZw==/315x250%23c/zDB3Wp.png"
+      ],
+      "tags": [
+        {
+          "name": "indie",
+          "slug": "indie"
+        },
+        {
+          "name": "itch-io",
+          "slug": "itch-io"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "itch_f4f0d7990b9df093",
       "title": "Five Nights At Freddy's: THE FLIPSIDE RPG",
@@ -916,38 +948,6 @@
       "isTrending": false,
       "screenshots": [
         "https://img.itch.zone/aW1nLzI0ODYyODEyLnBuZw==/315x250%23c/EeKAxF.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_b4b386244c02aeee",
-      "title": "Oblivion Blackout - BETA by Cryptid Renchy",
-      "slug": "itch-oblivion-blackout-beta-by-cryptid-renchy",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzIyNzU4NTY4LnBuZw==/315x250%23c/usnUP0.png",
-      "rating": 98,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "cryptid_renchy",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790307172000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzIyNzU4NTY4LnBuZw==/315x250%23c/usnUP0.png"
       ],
       "tags": [
         {
@@ -4717,7 +4717,7 @@
     }
   ],
   "stats": {
-    "games": 41294,
+    "games": 41295,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
