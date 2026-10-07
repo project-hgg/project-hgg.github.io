@@ -1,13 +1,15 @@
 {
   "version": "2026.10.07.1247",
-  "totalGames": 41294,
+  "totalGames": 41295,
   "rawBytes": 194439015,
   "rawMb": 185.43,
-  "compressedBytes": 3194706,
+  "compressedBytes": 3194777,
   "compressedMb": 3.05,
   "offsetsBytes": 1783119,
   "hfDataset": "aurostron/hogamegata",
   "hfFile": "catalog.raw",
-  "updatedAt": "2026-10-07T12:47:37.773Z",
-  "newGamesAppended": 0
+  "updatedAt": "2026-10-07T22:45:57.301Z",
+  "newGamesAppended": 0,
+  "uncompressedBytes": 17615085,
+  "uncompressedMb": 16.8
 }
