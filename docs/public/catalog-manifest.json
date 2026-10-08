@@ -1,5 +1,5 @@
 {
-  "version": "2026.10.08.1535",
+  "version": "2026.10.08.2301",
   "totalGames": 41295,
   "rawBytes": 194440886,
   "rawMb": 185.43,
@@ -8,6 +8,6 @@
   "offsetsBytes": 1783151,
   "hfDataset": "aurostron/hogamegata",
   "hfFile": "catalog.raw",
-  "updatedAt": "2026-10-08T15:35:51.974Z",
+  "updatedAt": "2026-10-08T23:01:16.286Z",
   "newGamesAppended": 0
 }
