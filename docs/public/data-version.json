@@ -1,9 +1,9 @@
 {
-  "commitSha": "f41881c",
-  "fullSha": "f41881c55090bf7b23af289b3c31e7397ccc408d",
+  "commitSha": "9a3acb5",
+  "fullSha": "9a3acb5d1fbae4323f42593760f8d807bf3f694e",
   "commitMessage": "chore(catalog): auto-sync weekly igdb horror games",
-  "timestamp": "2026-10-11T10:27:33Z",
-  "totalGames": 41526,
+  "timestamp": "2026-10-18T08:26:27Z",
+  "totalGames": 41702,
   "lastRetryAt": "2026-10-08T23:00:29.268Z",
   "retriedCount": 169
 }
