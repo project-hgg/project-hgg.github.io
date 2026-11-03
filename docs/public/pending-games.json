@@ -8,7 +8,8 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "coverUrl": "https://img.itch.zone/aW1nLzI5MzgxMzkxLmdpZg==/original/z8beDl.gif",
-    "queuedAt": "2026-11-03T05:20:23.876Z"
+    "queuedAt": "2026-11-03T05:20:23.876Z",
+    "inHf": true
   },
   {
     "id": "itch_75c0d79e19ae9c25",
@@ -26,6 +27,7 @@
     "retailPrice": 0,
     "discountPercent": 0,
     "queuedAt": "2026-11-03T05:20:23.876Z",
-    "graduatedFromIncubation": true
+    "graduatedFromIncubation": true,
+    "inHf": true
   }
 ]
