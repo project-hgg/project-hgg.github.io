@@ -4,6 +4,6 @@
   "commitMessage": "chore(catalog): keep-only curated snapshot (53,741 games) [skip ci]",
   "timestamp": "2026-11-03T10:20:27.712Z",
   "totalGames": 53741,
-  "lastRetryAt": "2026-11-03T10:20:27.712Z",
-  "retriedCount": 0
+  "lastRetryAt": "2026-11-03T13:43:41.457Z",
+  "retriedCount": 2
 }
