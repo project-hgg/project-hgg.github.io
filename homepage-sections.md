@@ -15,7 +15,7 @@
 
 ## Trending Now
 badge: FEATURED SPOTLIGHT
-subtitle: The hottest survival horror and psychological nightmares right now
+subtitle: Hottest right now
 type: spotlight
 actionText: Browse All Trending
 actionHref: trending
