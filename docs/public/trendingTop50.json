@@ -1,552 +1,553 @@
 [
   {
     "rank": 1,
-    "slug": "lethal-company",
-    "title": "Lethal Company",
-    "category": "viral-indie",
-    "score": 99,
-    "reason": "Remains a massive viral hit due to its unique co-op scavenging, terrifying creatures, and hilarious emergent gameplay.",
+    "slug": "dead-by-daylight",
+    "title": "Dead by Daylight",
+    "category": "community-favorite",
+    "score": 98,
+    "reason": "Consistently a top seller and community favorite, maintaining strong player engagement with ongoing updates.",
     "sources": [
+      "Steam",
       "Community Buzz"
     ]
   },
   {
     "rank": 2,
-    "slug": "dead-by-daylight",
-    "title": "Dead by Daylight",
-    "category": "blockbuster",
-    "score": 98,
-    "reason": "Consistently a top seller and community favorite for its ongoing asymmetrical horror gameplay and new content.",
+    "slug": "itch-voices-of-the-void-alpha",
+    "title": "\"Voices Of The Void\" Alpha",
+    "category": "viral-indie",
+    "score": 97,
+    "reason": "A trending Itch.io alpha game explicitly highlighted for its unique found-footage horror experience.",
     "sources": [
-      "Steam",
+      "Itch.io",
       "Community Buzz"
     ]
   },
   {
     "rank": 3,
+    "slug": "buckshot-roulette--1",
+    "title": "Buckshot Roulette",
+    "category": "viral-indie",
+    "score": 96,
+    "reason": "A highly viral indie game from Itch.io, known for its unique and intense gameplay loop.",
+    "sources": [
+      "Itch.io",
+      "Community Buzz"
+    ]
+  },
+  {
+    "rank": 4,
     "slug": "phasmophobia",
     "title": "Phasmophobia",
     "category": "viral-indie",
-    "score": 97,
-    "reason": "Continues to be a highly popular co-op ghost hunting experience, frequently streamed and discussed.",
+    "score": 95,
+    "reason": "Continues to be a Steam top seller and a go-to for co-op ghost hunting, frequently streamed and discussed.",
     "sources": [
       "Steam",
       "Community Buzz"
     ]
   },
   {
-    "rank": 4,
-    "slug": "buckshot-roulette",
-    "title": "Buckshot Roulette",
-    "category": "viral-indie",
-    "score": 96,
-    "reason": "Its unique and intense Russian roulette gameplay has made it a viral sensation across streaming platforms.",
-    "sources": [
-      "Itch.io",
-      "Community Buzz"
-    ]
-  },
-  {
     "rank": 5,
-    "slug": "the-outlast-trials",
-    "title": "The Outlast Trials",
+    "slug": "sons-of-the-forest",
+    "title": "Sons of the Forest",
     "category": "blockbuster",
-    "score": 95,
-    "reason": "The latest installment in the popular Outlast series maintains strong player engagement with its co-op horror.",
+    "score": 94,
+    "reason": "A major survival horror title on Steam, maintaining high player counts and ongoing development.",
     "sources": [
-      "Steam"
+      "Steam",
+      "Community Buzz"
     ]
   },
   {
     "rank": 6,
-    "slug": "itch-voices-of-the-void-alpha",
-    "title": "\"Voices Of The Void\" Alpha",
-    "category": "viral-indie",
-    "score": 95,
-    "reason": "This experimental found-footage horror game continues to trend on Itch.io and gain traction with streamers.",
+    "slug": "the-outlast-trials",
+    "title": "The Outlast Trials",
+    "category": "blockbuster",
+    "score": 93,
+    "reason": "A popular co-op horror experience from a well-known franchise, consistently performing well on Steam.",
     "sources": [
-      "Itch.io",
-      "Community Buzz"
+      "Steam"
     ]
   },
   {
     "rank": 7,
-    "slug": "resident-evil-4--1",
-    "title": "Resident Evil 4",
-    "category": "blockbuster",
-    "score": 94,
-    "reason": "The critically acclaimed remake continues to be a top seller, drawing in new players and series veterans.",
+    "slug": "doki-doki-literature-club--1",
+    "title": "Doki Doki Literature Club",
+    "category": "viral-indie",
+    "score": 92,
+    "reason": "A classic viral indie horror visual novel, still trending on Itch.io for its psychological twists.",
     "sources": [
-      "Steam"
+      "Itch.io"
     ]
   },
   {
     "rank": 8,
-    "slug": "crow-country",
-    "title": "Crow Country",
+    "slug": "escape-the-backrooms",
+    "title": "Escape the Backrooms",
     "category": "viral-indie",
-    "score": 94,
-    "reason": "Praised for its retro survival horror aesthetic and puzzle-driven gameplay, it's a recent indie darling.",
-    "sources": [
-      "Community Buzz"
-    ]
-  },
-  {
-    "rank": 9,
-    "slug": "sons-of-the-forest",
-    "title": "Sons of the Forest",
-    "category": "blockbuster",
-    "score": 93,
-    "reason": "Its unique blend of survival, crafting, and horror keeps it a strong contender on the sales charts.",
+    "score": 91,
+    "reason": "Capitalizes on the popular 'Backrooms' creepypasta, trending on Steam for its atmospheric horror.",
     "sources": [
       "Steam"
     ]
   },
   {
-    "rank": 10,
-    "slug": "signalis",
-    "title": "Signalis",
+    "rank": 9,
+    "slug": "dead-plate",
+    "title": "Dead Plate",
     "category": "viral-indie",
-    "score": 93,
-    "reason": "Continues to be highly recommended for its atmospheric sci-fi survival horror and psychological depth.",
+    "score": 90,
+    "reason": "A highly-rated and trending indie horror game on Itch.io, praised for its narrative and atmosphere.",
     "sources": [
-      "Community Buzz"
+      "Itch.io"
+    ]
+  },
+  {
+    "rank": 10,
+    "slug": "dayz",
+    "title": "DayZ",
+    "category": "community-favorite",
+    "score": 88,
+    "reason": "A long-standing survival horror game with a dedicated community, consistently appearing on top seller lists.",
+    "sources": [
+      "Steam"
     ]
   },
   {
     "rank": 11,
-    "slug": "resident-evil-7-biohazard",
-    "title": "Resident Evil 7: Biohazard",
-    "category": "blockbuster",
-    "score": 92,
-    "reason": "Continues to be a benchmark for modern first-person horror, frequently revisited by players.",
+    "slug": "hunt-showdown-1896",
+    "title": "Hunt: Showdown 1896",
+    "category": "community-favorite",
+    "score": 87,
+    "reason": "A unique PvPvE horror shooter with a strong player base, frequently updated and trending on Steam.",
     "sources": [
       "Steam"
     ]
   },
   {
     "rank": 12,
-    "slug": "iron-lung",
-    "title": "Iron Lung",
-    "category": "viral-indie",
-    "score": 92,
-    "reason": "Its claustrophobic, minimalist horror experience continues to be a popular short-form streamable game.",
+    "slug": "7-days-to-die",
+    "title": "7 Days to Die",
+    "category": "community-favorite",
+    "score": 86,
+    "reason": "A popular open-world survival horror game with continuous development and a loyal following on Steam.",
     "sources": [
-      "Community Buzz"
+      "Steam"
     ]
   },
   {
     "rank": 13,
-    "slug": "resident-evil-village",
-    "title": "Resident Evil Village",
-    "category": "blockbuster",
-    "score": 91,
-    "reason": "The direct sequel to RE7 maintains strong sales and community interest with its unique setting and characters.",
+    "slug": "no-more-room-in-hell-2",
+    "title": "No More Room in Hell 2",
+    "category": "community-favorite",
+    "score": 85,
+    "reason": "The anticipated sequel to a beloved co-op zombie horror game, trending on Steam.",
     "sources": [
       "Steam"
     ]
   },
   {
     "rank": 14,
-    "slug": "mouthwashing",
-    "title": "Mouthwashing",
-    "category": "viral-indie",
-    "score": 91,
-    "reason": "A recent indie horror game gaining traction for its unsettling atmosphere and unique narrative.",
+    "slug": "castlevania-belmonts-curse",
+    "title": "Castlevania: Belmont's Curse",
+    "category": "classic-revival",
+    "score": 84,
+    "reason": "A new entry in the iconic Castlevania series, generating buzz on both Steam and community channels.",
     "sources": [
+      "Steam",
       "Community Buzz"
     ]
   },
   {
     "rank": 15,
-    "slug": "doki-doki-literature-club",
-    "title": "Doki Doki Literature Club!",
-    "category": "viral-indie",
-    "score": 90,
-    "reason": "Its deceptive visual novel premise and psychological horror twists maintain its enduring popularity.",
-    "sources": [
-      "Itch.io"
-    ]
-  },
-  {
-    "rank": 16,
-    "slug": "itch-garula-the-freak-circus",
-    "title": "The Freak Circus",
-    "category": "viral-indie",
-    "score": 89,
-    "reason": "Topping the Itch.io charts, indicating strong current interest in its unique horror premise.",
-    "sources": [
-      "Itch.io"
-    ]
-  },
-  {
-    "rank": 17,
-    "slug": "slay-the-princess-the-pristine-cut",
-    "title": "Slay the Princess: The Pristine Cut",
-    "category": "viral-indie",
-    "score": 89,
-    "reason": "The expanded version of the critically acclaimed narrative horror game continues to attract attention.",
+    "slug": "clive-barkers-hellraiser-revival",
+    "title": "Clive Barker's Hellraiser: Revival",
+    "category": "classic-revival",
+    "score": 83,
+    "reason": "A revival of the Hellraiser franchise, drawing interest from horror fans on Steam.",
     "sources": [
       "Steam"
     ]
   },
   {
+    "rank": 16,
+    "slug": "halloween-the-game",
+    "title": "Halloween: The Game",
+    "category": "classic-revival",
+    "score": 82,
+    "reason": "A game based on the classic horror film franchise, trending on Steam for its nostalgic appeal.",
+    "sources": [
+      "Steam"
+    ]
+  },
+  {
+    "rank": 17,
+    "slug": "silent-hill-townfall",
+    "title": "Silent Hill: Townfall",
+    "category": "blockbuster",
+    "score": 81,
+    "reason": "A highly anticipated upcoming title in the Silent Hill franchise, generating significant community discussion.",
+    "sources": [
+      "Community Buzz"
+    ]
+  },
+  {
     "rank": 18,
-    "slug": "itch-14-days-with-you-demo",
-    "title": "14 Days With You [DEMO]",
+    "slug": "itch-garula-the-freak-circus",
+    "title": "The Freak Circus",
     "category": "viral-indie",
-    "score": 88,
-    "reason": "A trending demo on Itch.io, indicating strong player interest in its horror visual novel experience.",
+    "score": 80,
+    "reason": "A top trending indie horror game on Itch.io, captivating players with its unique premise.",
     "sources": [
       "Itch.io"
     ]
   },
   {
     "rank": 19,
-    "slug": "escape-the-backrooms",
-    "title": "Escape the Backrooms",
+    "slug": "14-days-with-you",
+    "title": "14 Days With You",
     "category": "viral-indie",
-    "score": 88,
-    "reason": "Capitalizes on the popular internet lore, offering a trending multiplayer horror experience.",
+    "score": 79,
+    "reason": "A trending demo on Itch.io, building anticipation for its full release with a compelling horror premise.",
     "sources": [
-      "Steam"
+      "Itch.io"
     ]
   },
   {
     "rank": 20,
-    "slug": "itch-1998-found-footage-backroom-horror-game-free-microphone-sensitive-demo-game",
-    "title": "1998 - Found Footage Backroom Horror Game FREE (Microphone Sensitive Demo Game)",
+    "slug": "last-seen-online--1",
+    "title": "Last Seen Online",
     "category": "viral-indie",
-    "score": 87,
-    "reason": "Its innovative use of microphone sensitivity and found-footage style makes it a trending demo.",
+    "score": 77,
+    "reason": "A trending indie horror game on Itch.io, likely leveraging internet-based or found-footage themes.",
     "sources": [
       "Itch.io"
     ]
   },
   {
     "rank": 21,
-    "slug": "dayz",
-    "title": "DayZ",
-    "category": "community-favorite",
-    "score": 87,
-    "reason": "Its hardcore survival mechanics with persistent zombie threats keep a dedicated player base engaged.",
+    "slug": "itch-vincent-the-secret-of-myers",
+    "title": "Vincent: The Secret of Myers",
+    "category": "viral-indie",
+    "score": 73,
+    "reason": "A high-rated indie horror game on Itch.io, offering a mysterious and suspenseful narrative.",
     "sources": [
-      "Steam"
+      "Itch.io"
     ]
   },
   {
     "rank": 22,
-    "slug": "itch-touchstarved-a-dark-romance-visual-novel",
-    "title": "TOUCHSTARVED: A Dark Romance Visual Novel",
+    "slug": "flesh-blood-and-concrete",
+    "title": "Flesh, Blood, & Concrete",
     "category": "viral-indie",
-    "score": 87,
-    "reason": "A popular horror visual novel on Itch.io, attracting players with its dark romance themes.",
+    "score": 72,
+    "reason": "A trending indie horror game on Itch.io, likely featuring visceral and intense horror elements.",
     "sources": [
       "Itch.io"
     ]
   },
   {
     "rank": 23,
-    "slug": "dead-plate",
-    "title": "Dead Plate",
+    "slug": "elevator-hitch",
+    "title": "Elevator Hitch",
     "category": "viral-indie",
-    "score": 86,
-    "reason": "A popular Itch.io horror game with a strong following for its narrative and art style.",
+    "score": 71,
+    "reason": "A trending indie horror game on Itch.io, likely using a confined setting for psychological tension.",
     "sources": [
       "Itch.io"
     ]
   },
   {
     "rank": 24,
-    "slug": "last-seen-online--1",
-    "title": "Last Seen Online",
+    "slug": "when-the-night-comes",
+    "title": "When the Night Comes",
     "category": "viral-indie",
-    "score": 86,
-    "reason": "A trending horror game on Itch.io, capturing player interest with its online-themed scares.",
+    "score": 69,
+    "reason": "A high-rated indie horror game on Itch.io, known for its dark themes and narrative.",
     "sources": [
       "Itch.io"
     ]
   },
   {
     "rank": 25,
-    "slug": "7-days-to-die",
-    "title": "7 Days to Die",
-    "category": "community-favorite",
-    "score": 86,
-    "reason": "A long-standing survival horror game that consistently ranks due to its crafting, building, and zombie horde mechanics.",
+    "slug": "paper-lily-chapter-1",
+    "title": "Paper Lily: Chapter 1",
+    "category": "viral-indie",
+    "score": 67,
+    "reason": "A trending indie horror game on Itch.io, offering an intriguing first chapter to a larger story.",
     "sources": [
-      "Steam"
+      "Itch.io"
     ]
   },
   {
     "rank": 26,
-    "slug": "no-more-room-in-hell-2",
-    "title": "No More Room in Hell 2",
-    "category": "community-favorite",
-    "score": 85,
-    "reason": "The anticipated sequel to the popular free-to-play zombie survival game is generating significant buzz.",
+    "slug": "shift-at-midnight",
+    "title": "Shift at Midnight",
+    "category": "viral-indie",
+    "score": 66,
+    "reason": "A trending indie horror game on Steam, likely featuring a night shift setting for its scares.",
     "sources": [
       "Steam"
     ]
   },
   {
     "rank": 27,
-    "slug": "silent-hill-townfall",
-    "title": "Silent Hill: Townfall",
-    "category": "blockbuster",
-    "score": 85,
-    "reason": "Part of the highly anticipated Silent Hill revival, generating significant buzz for its upcoming release.",
+    "slug": "playrooms",
+    "title": "Playrooms",
+    "category": "viral-indie",
+    "score": 65,
+    "reason": "A trending indie horror game on Steam, likely exploring liminal spaces or childhood fears.",
     "sources": [
-      "Web Signals"
+      "Steam"
     ]
   },
   {
     "rank": 28,
-    "slug": "itch-where-eternity-sleeps",
-    "title": "Where Eternity Sleeps",
+    "slug": "silver-pines",
+    "title": "Silver Pines",
     "category": "viral-indie",
-    "score": 85,
-    "reason": "A high-ranking horror game on Itch.io, indicating current player engagement.",
+    "score": 64,
+    "reason": "An upcoming indie horror game highlighted in community discussions for its potential.",
     "sources": [
-      "Itch.io"
+      "Community Buzz"
     ]
   },
   {
     "rank": 29,
-    "slug": "paper-lily-chapter-1",
-    "title": "Paper Lily: Chapter 1",
+    "slug": "the-road-of-dust-and-sorrow",
+    "title": "The Road of Dust and Sorrow",
     "category": "viral-indie",
-    "score": 85,
-    "reason": "The first chapter of this narrative horror game is trending on Itch.io, building anticipation.",
+    "score": 63,
+    "reason": "An upcoming indie horror game gaining traction in community discussions for its unique premise.",
     "sources": [
-      "Itch.io"
+      "Community Buzz"
     ]
   },
   {
     "rank": 30,
-    "slug": "resident-evil-requiem",
-    "title": "Resident Evil Requiem",
-    "category": "community-favorite",
-    "score": 84,
-    "reason": "An unofficial or fan-made title that has managed to climb Steam's horror bestsellers, indicating strong community interest.",
+    "slug": "lsd-revamped",
+    "title": "LSD: Revamped",
+    "category": "viral-indie",
+    "score": 62,
+    "reason": "An upcoming indie horror game generating interest in community channels.",
     "sources": [
-      "Steam"
+      "Community Buzz"
     ]
   },
   {
     "rank": 31,
-    "slug": "castlevania-belmonts-curse",
-    "title": "Castlevania: Belmont's Curse",
-    "category": "classic-revival",
-    "score": 84,
-    "reason": "An upcoming title leveraging a beloved classic IP, appearing on both sales charts and upcoming lists.",
+    "slug": "itch-blight",
+    "title": "BLIGHT",
+    "category": "viral-indie",
+    "score": 61,
+    "reason": "An upcoming indie horror game featured in community discussions about future releases.",
     "sources": [
-      "Steam",
-      "Web Signals"
+      "Community Buzz"
     ]
   },
   {
     "rank": 32,
-    "slug": "itch-project-kat",
-    "title": "Project Kat",
+    "slug": "curse-of-resthaven",
+    "title": "Curse of Resthaven",
     "category": "viral-indie",
-    "score": 84,
-    "reason": "A popular indie horror game on Itch.io, known for its unique style and narrative.",
+    "score": 60,
+    "reason": "An upcoming indie horror game mentioned in community roundups of anticipated titles.",
     "sources": [
-      "Itch.io"
+      "Community Buzz"
     ]
   },
   {
     "rank": 33,
-    "slug": "halloween-the-game",
-    "title": "Halloween: The Game",
-    "category": "community-favorite",
-    "score": 83,
-    "reason": "Capitalizing on the iconic horror franchise, this game is trending on Steam's horror list.",
+    "slug": "bloody-hell-hotel",
+    "title": "Bloody Hell Hotel",
+    "category": "viral-indie",
+    "score": 59,
+    "reason": "An upcoming indie horror game highlighted in community discussions for its unique concept.",
     "sources": [
-      "Steam"
+      "Community Buzz"
     ]
   },
   {
     "rank": 34,
-    "slug": "prescription-love",
-    "title": "Prescription: Love",
+    "slug": "itch-eve",
+    "title": "Eve",
     "category": "viral-indie",
-    "score": 83,
-    "reason": "A trending horror visual novel on Itch.io, appealing to fans of the genre.",
+    "score": 58,
+    "reason": "An upcoming indie horror game generating buzz in community channels.",
     "sources": [
-      "Itch.io"
+      "Community Buzz"
     ]
   },
   {
     "rank": 35,
-    "slug": "clive-barkers-hellraiser-revival",
-    "title": "Clive Barker's Hellraiser: Revival",
-    "category": "community-favorite",
-    "score": 82,
-    "reason": "A game based on the classic horror IP, showing renewed interest on Steam.",
+    "slug": "itch-mag-abyss",
+    "title": "Abyss",
+    "category": "viral-indie",
+    "score": 57,
+    "reason": "An upcoming indie horror game featured in community discussions about new releases.",
     "sources": [
-      "Steam"
+      "Community Buzz"
     ]
   },
   {
     "rank": 36,
-    "slug": "online-obsession",
-    "title": "Online Obsession",
+    "slug": "lethal-company",
+    "title": "Lethal Company",
     "category": "viral-indie",
-    "score": 82,
-    "reason": "A trending horror game on Itch.io, exploring themes of digital paranoia and obsession.",
+    "score": 99,
+    "reason": "A highly viral co-op horror game that continues to dominate discussions and streams for its unique blend of tension and humor.",
     "sources": [
-      "Itch.io"
+      "Community Buzz"
     ]
   },
   {
     "rank": 37,
-    "slug": "shift-at-midnight",
-    "title": "Shift at Midnight",
+    "slug": "crow-country",
+    "title": "Crow Country",
     "category": "viral-indie",
-    "score": 81,
-    "reason": "A trending indie horror title on Steam, indicating current player engagement.",
+    "score": 97,
+    "reason": "A recently released indie horror game praised for its retro survival horror aesthetic and trending among critics and players.",
     "sources": [
-      "Steam"
+      "Community Buzz"
     ]
   },
   {
     "rank": 38,
-    "slug": "itch-vincent-the-secret-of-myers",
-    "title": "Vincent: The Secret of Myers",
+    "slug": "signalis",
+    "title": "Signalis",
     "category": "viral-indie",
-    "score": 81,
-    "reason": "A popular indie horror game on Itch.io, drawing players into its mysterious narrative.",
+    "score": 96,
+    "reason": "A critically acclaimed indie survival horror game with a dedicated following, frequently discussed for its atmosphere and story.",
     "sources": [
-      "Itch.io"
+      "Community Buzz"
     ]
   },
   {
     "rank": 39,
-    "slug": "reanimal",
-    "title": "REANIMAL",
+    "slug": "iron-lung",
+    "title": "Iron Lung",
     "category": "viral-indie",
-    "score": 80,
-    "reason": "An indie horror game making its way onto the Steam top sellers list.",
+    "score": 95,
+    "reason": "A short but intensely claustrophobic indie horror game that remains a popular choice for streamers and horror fans.",
     "sources": [
-      "Steam"
+      "Community Buzz"
     ]
   },
   {
     "rank": 40,
-    "slug": "flesh-blood-and-concrete",
-    "title": "Flesh, Blood, & Concrete",
+    "slug": "mouthwashing",
+    "title": "Mouthwashing",
     "category": "viral-indie",
-    "score": 80,
-    "reason": "A trending horror game on Itch.io, noted for its visceral themes.",
+    "score": 94,
+    "reason": "An indie horror game known for its disturbing visuals and psychological themes, frequently discussed in horror communities.",
     "sources": [
-      "Itch.io"
+      "Community Buzz"
     ]
   },
   {
     "rank": 41,
-    "slug": "bendy-and-the-ink-machine",
-    "title": "Bendy and the Ink Machine",
-    "category": "community-favorite",
-    "score": 80,
-    "reason": "A popular indie horror franchise frequently mentioned in discussions about streamable horror games.",
+    "slug": "resident-evil-village",
+    "title": "Resident Evil Village",
+    "category": "blockbuster",
+    "score": 93,
+    "reason": "A modern entry in the iconic Resident Evil series, consistently popular and a benchmark for contemporary horror gaming.",
     "sources": [
       "Community Buzz"
     ]
   },
   {
     "rank": 42,
-    "slug": "elevator-hitch",
-    "title": "Elevator Hitch",
-    "category": "viral-indie",
-    "score": 79,
-    "reason": "A trending horror game on Itch.io, offering a unique premise within a confined space.",
+    "slug": "silent-hill-2--2",
+    "title": "Silent Hill 2",
+    "category": "classic-revival",
+    "score": 92,
+    "reason": "A timeless classic in horror gaming, frequently discussed and anticipated for its upcoming remake, keeping the original relevant.",
     "sources": [
-      "Itch.io"
+      "Community Buzz"
     ]
   },
   {
     "rank": 43,
-    "slug": "the-road-of-dust-and-sorrow",
-    "title": "The Road of Dust and Sorrow",
-    "category": "viral-indie",
-    "score": 79,
-    "reason": "Featured in upcoming indie horror lists, generating early buzz for its unique concept.",
+    "slug": " 4096 colors",
+    "title": " ceilings",
+    "category": "community-favorite",
+    "score": 80,
+    "reason": "Consistently popular and highly-rated horror classic.",
     "sources": [
-      "Web Signals"
+      "Catalog Community Index"
     ]
   },
   {
     "rank": 44,
-    "slug": "bloody-hell-hotel",
-    "title": "Bloody Hell Hotel",
-    "category": "viral-indie",
-    "score": 78,
-    "reason": "An upcoming indie horror game generating excitement for its blend of hotel management and vampiric horror.",
+    "slug": "umineko-no-naku-koro-ni-chiru",
+    "title": "Umineko no Naku Koro ni Chiru",
+    "category": "community-favorite",
+    "score": 80,
+    "reason": "Consistently popular and highly-rated horror classic.",
     "sources": [
-      "Web Signals"
+      "Catalog Community Index"
     ]
   },
   {
     "rank": 45,
-    "slug": "silver-pines",
-    "title": "Silver Pines",
-    "category": "viral-indie",
-    "score": 77,
-    "reason": "An upcoming indie horror title highlighted in community discussions for its potential.",
+    "slug": "arches",
+    "title": "Arches",
+    "category": "community-favorite",
+    "score": 80,
+    "reason": "Consistently popular and highly-rated horror classic.",
     "sources": [
-      "Web Signals"
+      "Catalog Community Index"
     ]
   },
   {
     "rank": 46,
-    "slug": "slash-r",
-    "title": "/R",
-    "category": "viral-indie",
-    "score": 76,
-    "reason": "An upcoming indie horror game gaining attention from community previews and discussions.",
+    "slug": "alone-in-the-dark-the-new-nightmare--2",
+    "title": "Alone in the Dark: The New Nightmare",
+    "category": "community-favorite",
+    "score": 80,
+    "reason": "Consistently popular and highly-rated horror classic.",
     "sources": [
-      "Web Signals"
+      "Catalog Community Index"
     ]
   },
   {
     "rank": 47,
-    "slug": "itch-blight",
-    "title": "BLIGHT",
-    "category": "viral-indie",
-    "score": 75,
-    "reason": "Featured in upcoming horror game lists, indicating early community interest.",
+    "slug": "bubsy-3d-bubsy-visits-the-james-turrell-retrospective",
+    "title": "Bubsy 3D: Bubsy Visits the James Turrell Retrospective",
+    "category": "community-favorite",
+    "score": 80,
+    "reason": "Consistently popular and highly-rated horror classic.",
     "sources": [
-      "Web Signals"
+      "Catalog Community Index"
     ]
   },
   {
     "rank": 48,
-    "slug": "curse-of-resthaven",
-    "title": "Curse of Resthaven",
-    "category": "viral-indie",
-    "score": 74,
-    "reason": "An upcoming indie horror game generating buzz within the community for its premise.",
+    "slug": "terraria-calamity-mod",
+    "title": "Terraria: Calamity Mod",
+    "category": "community-favorite",
+    "score": 80,
+    "reason": "Consistently popular and highly-rated horror classic.",
     "sources": [
-      "Web Signals"
+      "Catalog Community Index"
     ]
   },
   {
     "rank": 49,
-    "slug": "itch-never",
-    "title": "Never/Ніколи",
-    "category": "viral-indie",
-    "score": 73,
-    "reason": "An upcoming indie horror game highlighted in community discussions for its unique approach.",
+    "slug": "lurkers--2",
+    "title": "Lurkers",
+    "category": "community-favorite",
+    "score": 80,
+    "reason": "Consistently popular and highly-rated horror classic.",
     "sources": [
-      "Web Signals"
+      "Catalog Community Index"
     ]
   },
   {
     "rank": 50,
-    "slug": "itch-big-bad-dogs",
-    "title": "Big Bad Dogs",
+    "slug": "pinball-m",
+    "title": "Pinball M",
     "category": "community-favorite",
     "score": 80,
     "reason": "Consistently popular and highly-rated horror classic.",
