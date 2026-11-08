@@ -1,9 +1,9 @@
 {
-  "commitSha": "893c844",
-  "fullSha": "893c844e54fd3d2faa319f65d16544dbe9e7ecd0",
-  "commitMessage": "chore(catalog): keep-only curated snapshot (53,741 games) [skip ci]",
-  "timestamp": "2026-11-03T10:20:27.712Z",
-  "totalGames": 53741,
+  "commitSha": "3b2b742",
+  "fullSha": "3b2b74269cab456b75ce9450cb0ccb5f0fd589bd",
+  "commitMessage": "chore(catalog): auto-sync weekly igdb horror games",
+  "timestamp": "2026-11-08T10:56:27Z",
+  "totalGames": 58276,
   "lastRetryAt": "2026-11-03T13:43:41.457Z",
   "retriedCount": 2
 }
