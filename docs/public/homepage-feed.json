@@ -1,962 +1,1688 @@
 {
-  "updatedAt": "2026-11-03T05:21:06.111Z",
+  "updatedAt": "2026-11-03T13:44:23.674Z",
   "heroGames": [],
   "latestGames": [
     {
-      "id": "itch_cf3e60745b375e71",
-      "title": "Tyler's Deal",
-      "slug": "itch-tyler-s-deal",
+      "id": "cmqsc4j6i0005qkeghdblvskc",
+      "title": "The Sinking City 2",
+      "slug": "the-sinking-city-2",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwNTY3ODI2LnBuZw==/315x250%23c/zDB3Wp.png",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://images.gog-statics.com/d9e6c093697ce8ddb1a1272c5fa5eef7b0352f51b6333c372f02a2995139bb29.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Chodex Productions",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1791413156000,
+      "developerNames": "Frogwares",
+      "genreNames": "horror, action, survival",
+      "platformNames": "PC (Windows)",
+      "releaseDate": 1787011200000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwNTY3ODI2LnBuZw==/315x250%23c/zDB3Wp.png"
+        "https://images.gog-statics.com/d9e6c093697ce8ddb1a1272c5fa5eef7b0352f51b6333c372f02a2995139bb29.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "survival-horror",
+          "slug": "survival-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "survival",
+          "slug": "survival"
+        },
+        {
+          "name": "third-person",
+          "slug": "third-person"
+        },
+        {
+          "name": "mystery",
+          "slug": "mystery"
+        },
+        {
+          "name": "action",
+          "slug": "action"
+        },
+        {
+          "name": "story-rich",
+          "slug": "story-rich"
+        },
+        {
+          "name": "gore",
+          "slug": "gore"
+        },
+        {
+          "name": "violent",
+          "slug": "violent"
+        },
+        {
+          "name": "realistic",
+          "slug": "realistic"
+        },
+        {
+          "name": "fighting",
+          "slug": "fighting"
+        },
+        {
+          "name": "lovecraftian",
+          "slug": "lovecraftian"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_f4f0d7990b9df093",
-      "title": "Five Nights At Freddy's: THE FLIPSIDE RPG",
-      "slug": "itch-five-nights-at-freddy-s-the-flipside-rpg",
+      "id": "e6f99e72-990d-401e-9516-38cef1cb170e",
+      "title": "Batman™: Arkham Bundle",
+      "slug": "batman-arkham-bundle",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDA0NjQxLnBuZw==/315x250%23c/M9FGFw.png",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://images.gog-statics.com/8480718b9eda57e44a6193fb92954b9195b8b7032458a96fb6a42f183ab089ee.png",
+      "rating": null,
+      "category": 1,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "The Blue Hatted",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1791207656000,
+      "developerNames": "Rocksteady Studios, WB Games Montreal, Splash Damage",
+      "genreNames": "action, adventure, stealth",
+      "platformNames": "PC (Windows)",
+      "releaseDate": 1782844200000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDA0NjQxLnBuZw==/315x250%23c/M9FGFw.png"
+        "https://images.gog-statics.com/8480718b9eda57e44a6193fb92954b9195b8b7032458a96fb6a42f183ab089ee.png"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "adventure",
+          "slug": "adventure"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "action",
+          "slug": "action"
+        },
+        {
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "classic",
+          "slug": "classic"
+        },
+        {
+          "name": "puzzle",
+          "slug": "puzzle"
+        },
+        {
+          "name": "dark",
+          "slug": "dark"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "open-world",
+          "slug": "open-world"
+        },
+        {
+          "name": "third-person",
+          "slug": "third-person"
+        },
+        {
+          "name": "multiplayer",
+          "slug": "multiplayer"
+        },
+        {
+          "name": "sandbox",
+          "slug": "sandbox"
+        },
+        {
+          "name": "mature",
+          "slug": "mature"
+        },
+        {
+          "name": "stealth",
+          "slug": "stealth"
+        },
+        {
+          "name": "fighting",
+          "slug": "fighting"
+        },
+        {
+          "name": "metroidvania",
+          "slug": "metroidvania"
+        },
+        {
+          "name": "beat-em-up",
+          "slug": "beat-em-up"
+        },
+        {
+          "name": "superhero",
+          "slug": "superhero"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": [
+        {
+          "storeName": "itch.io",
+          "dealPrice": 16.45,
+          "retailPrice": 16.45,
+          "discountPercent": 0,
+          "dealUrl": null,
+          "currency": "USD",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "id": "2753a9fb-24f5-4715-862b-d1b0984fe444",
+      "title": "R-Type Tactics I • II Cosmos - Unit Color Variation Fighter Pack",
+      "slug": "rtype-tactics-iii-cosmos-unit-color-variation-fighter-pack",
+      "status": "released",
+      "coverUrl": "https://images.gog-statics.com/4bd5cf740bc6170d9e7f587ef9ce7fc98b07b3b64e49d1b86a5f15b1fb73d8f7.png",
+      "rating": null,
+      "category": 1,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Granzella Inc.",
+      "genreNames": "strategy, scifi, rpg",
+      "platformNames": "PC (Windows)",
+      "releaseDate": 1782671400000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://images.gog-statics.com/4bd5cf740bc6170d9e7f587ef9ce7fc98b07b3b64e49d1b86a5f15b1fb73d8f7.png"
+      ],
+      "tags": [
+        {
+          "name": "strategy",
+          "slug": "strategy"
+        },
+        {
+          "name": "role-playing",
+          "slug": "role-playing"
+        },
+        {
+          "name": "sci-fi",
+          "slug": "sci-fi"
+        },
+        {
+          "name": "turn-based",
+          "slug": "turn-based"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "tactical",
+          "slug": "tactical"
+        },
+        {
+          "name": "space",
+          "slug": "space"
+        },
+        {
+          "name": "robots",
+          "slug": "robots"
+        },
+        {
+          "name": "remake",
+          "slug": "remake"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_42e46988e0df5eca",
-      "title": "Bleeding In Ink",
-      "slug": "itch-bleeding-in-ink",
+      "id": "e651bd8a-315f-4fcd-ac82-8612445be68a",
+      "title": "R-Type Tactics I • II Cosmos - Unit: ARROW-HEAD G (GRA Ver.)",
+      "slug": "rtype-tactics-iii-cosmos-unit-arrowhead-g-gra-ver",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjYxNjE1LmdpZg==/original/t5WUs0.gif",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://images.gog-statics.com/e30cf67e4164e0351bc3d6bac434855412685cd87d5326cce23a40ce70355280.png",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "AKA Space",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1791207656000,
+      "developerNames": "Granzella Inc.",
+      "genreNames": "strategy, scifi, rpg",
+      "platformNames": "PC (Windows)",
+      "releaseDate": 1782671400000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjYxNjE1LmdpZg==/original/t5WUs0.gif"
+        "https://images.gog-statics.com/e30cf67e4164e0351bc3d6bac434855412685cd87d5326cce23a40ce70355280.png"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "strategy",
+          "slug": "strategy"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "role-playing",
+          "slug": "role-playing"
+        },
+        {
+          "name": "sci-fi",
+          "slug": "sci-fi"
+        },
+        {
+          "name": "turn-based",
+          "slug": "turn-based"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "tactical",
+          "slug": "tactical"
+        },
+        {
+          "name": "space",
+          "slug": "space"
+        },
+        {
+          "name": "robots",
+          "slug": "robots"
+        },
+        {
+          "name": "remake",
+          "slug": "remake"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_d2b95a8cbd17de12",
-      "title": "Caso: Northport",
-      "slug": "itch-caso-northport",
+      "id": "cmqsacp9p053mrceghirc75l8",
+      "title": "Maple Ridge",
+      "slug": "maple-ridge",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5MzQ4NzI1LnBuZw==/315x250%23c/HYM36k.png",
-      "rating": 96,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb0p.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Entity Zeta",
-      "genreNames": "horror",
+      "developerNames": null,
+      "genreNames": "adventure, indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1791207656000,
+      "releaseDate": 1782172800000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5MzQ4NzI1LnBuZw==/315x250%23c/HYM36k.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb0p.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "first-person",
+          "slug": "first-person"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "setting-urban",
+          "slug": "setting-urban"
+        },
+        {
+          "name": "isolated",
+          "slug": "isolated"
+        },
+        {
+          "name": "unsettling",
+          "slug": "unsettling"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_8dbf4e5499915aa5",
-      "title": "MALFOID DATING SIM",
-      "slug": "itch-malfoid-dating-sim",
+      "id": "cmqsacpa1053vrcegzq4s5yb8",
+      "title": "SCP: Mr. Jupiter",
+      "slug": "scp-mr-jupiter",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwNDMyODYxLnBuZw==/315x250%23c/XSFDbb.png",
-      "rating": 94,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb0o.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "COCOLEMON",
-      "genreNames": "horror",
+      "developerNames": null,
+      "genreNames": "puzzle, indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1791207656000,
+      "releaseDate": 1782172800000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwNDMyODYxLnBuZw==/315x250%23c/XSFDbb.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb0o.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "walking-sim",
+          "slug": "walking-sim"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "setting-industrial",
+          "slug": "setting-industrial"
+        },
+        {
+          "name": "narrative-horror",
+          "slug": "narrative-horror"
+        },
+        {
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        },
+        {
+          "name": "3d",
+          "slug": "3d"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "physics",
+          "slug": "physics"
+        },
+        {
+          "name": "scary",
+          "slug": "scary"
+        },
+        {
+          "name": "scp",
+          "slug": "scp"
+        },
+        {
+          "name": "singleplayer",
+          "slug": "singleplayer"
+        },
+        {
+          "name": "unreal-engine",
+          "slug": "unreal-engine"
+        },
+        {
+          "name": "voice-acting",
+          "slug": "voice-acting"
+        },
+        {
+          "name": "ai-assisted",
+          "slug": "ai-assisted"
+        },
+        {
+          "name": "ai-text",
+          "slug": "ai-text"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_c4f99f25d75fe4fe",
-      "title": "Last Delight",
-      "slug": "itch-last-delight",
+      "id": "cmqsacy860570rceg8siw4m6u",
+      "title": "Digital Anima: Virtual Lifeform Care Kit",
+      "slug": "digital-anima-virtual-lifeform-care-kit",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwNDg5NTQ0LnBuZw==/315x250%23c/SrKcdU.png",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc9ph.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Crossie",
-      "genreNames": "horror",
+      "developerNames": null,
+      "genreNames": "adventure, simulator, puzzle, indie, visual-novel",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1791173395000,
+      "releaseDate": 1782172800000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwNDg5NTQ0LnBuZw==/315x250%23c/SrKcdU.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc9ph.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "psychological",
+          "slug": "psychological"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        },
+        {
+          "name": "visual-novel",
+          "slug": "visual-novel"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_20a5d3cea36514a9",
-      "title": "PIG IRON",
-      "slug": "itch-pig-iron",
+      "id": "cmqsad7l405aercegzce4x40z",
+      "title": "Sludge Department",
+      "slug": "sludge-department",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDAxMzc4LnBuZw==/315x250%23c/d7HA3z.png",
-      "rating": 80,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coca51.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "posmnaut",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1791147249000,
+      "developerNames": null,
+      "genreNames": "adventure, puzzle, indie",
+      "platformNames": "Linux, PC (Microsoft Windows), Mac",
+      "releaseDate": 1782172800000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDAxMzc4LnBuZw==/315x250%23c/d7HA3z.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coca51.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "first-person",
+          "slug": "first-person"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "setting-medical",
+          "slug": "setting-medical"
+        },
+        {
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        },
+        {
+          "name": "unsettling",
+          "slug": "unsettling"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_e23f0094e2260eac",
-      "title": "Dead Awake Demo",
-      "slug": "itch-dead-awake-demo",
+      "id": "cmqsadaow05bjrcegync790rq",
+      "title": "Operation: Black Genesis - The Immortal Trials",
+      "slug": "operation-black-genesis-the-immortal-trials",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwNDY2NzU0LmdpZg==/original/NIwdX8.gif",
-      "rating": 96,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc80g.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "BEDTIMESTORIES",
-      "genreNames": "horror",
+      "developerNames": null,
+      "genreNames": "adventure",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1791087884000,
+      "releaseDate": 1782172800000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwNDY2NzU0LmdpZg==/original/NIwdX8.gif"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc80g.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "survival-horror",
+          "slug": "survival-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "body-horror",
+          "slug": "body-horror"
+        },
+        {
+          "name": "co-op",
+          "slug": "co-op"
+        },
+        {
+          "name": "action-horror",
+          "slug": "action-horror"
+        },
+        {
+          "name": "zombie-apocalypse",
+          "slug": "zombie-apocalypse"
+        },
+        {
+          "name": "bird-view-top-down",
+          "slug": "bird-view-top-down"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_6e1d559102daeb4d",
-      "title": "The Sketchbook",
-      "slug": "itch-the-sketchbook",
+      "id": "cmqsadcdo05bwrcegb0jr2mq5",
+      "title": "Brumley",
+      "slug": "brumley",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwNDg4Mjc1LnBuZw==/315x250%23c/2nUOdJ.png",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7ye.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Hela Xuves",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1791059864000,
+      "developerNames": null,
+      "genreNames": "adventure, indie",
+      "platformNames": "Linux, PC (Microsoft Windows), Mac",
+      "releaseDate": 1782172800000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwNDg4Mjc1LnBuZw==/315x250%23c/2nUOdJ.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7ye.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "folk-horror",
+          "slug": "folk-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "co-op",
+          "slug": "co-op"
+        },
+        {
+          "name": "action-horror",
+          "slug": "action-horror"
+        },
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "zombie-apocalypse",
+          "slug": "zombie-apocalypse"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_31717bc3ee2c89c1",
-      "title": "Tomayto Tomahto",
-      "slug": "itch-tomayto-tomahto",
+      "id": "cmqsadcdv05bzrceg4p388zue",
+      "title": "Night Duty Log: A Shōwa School Record",
+      "slug": "night-duty-log-a-showa-school-record",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5MzQzNzM1LmdpZg==/original/pFwKq%2F.gif",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7ze.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Dreamty Games",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790914172000,
+      "developerNames": "ZipanGames",
+      "genreNames": "adventure, indie, visual-novel",
+      "platformNames": "Linux, PC (Microsoft Windows)",
+      "releaseDate": 1782172800000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzI5MzQzNzM1LmdpZg==/original/pFwKq%2F.gif"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7ze.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "liminal-surreal",
+          "slug": "liminal-surreal"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "walking-sim",
+          "slug": "walking-sim"
+        },
+        {
+          "name": "psychological",
+          "slug": "psychological"
+        },
+        {
+          "name": "setting-school",
+          "slug": "setting-school"
+        },
+        {
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        },
+        {
+          "name": "visual-novel",
+          "slug": "visual-novel"
+        },
+        {
+          "name": "isolated",
+          "slug": "isolated"
+        },
+        {
+          "name": "unsettling",
+          "slug": "unsettling"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": [
+        {
+          "storeName": "itch.io",
+          "dealPrice": 2.11,
+          "retailPrice": 2.11,
+          "discountPercent": 0,
+          "dealUrl": null,
+          "currency": "USD",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "id": "cmqsadm0z05h1rcegosyewpjv",
+      "title": "Dawn Bell",
+      "slug": "dawn-bell",
+      "status": "released",
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7do.jpg",
+      "rating": null,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": null,
+      "genreNames": "adventure, puzzle, indie",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1782172800000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc7do.jpg"
+      ],
+      "tags": [
+        {
+          "name": "action-horror",
+          "slug": "action-horror"
+        },
+        {
+          "name": "walking-sim",
+          "slug": "walking-sim"
+        },
+        {
+          "name": "supernatural",
+          "slug": "supernatural"
+        },
+        {
+          "name": "pixel-art",
+          "slug": "pixel-art"
+        },
+        {
+          "name": "narrative-horror",
+          "slug": "narrative-horror"
+        },
+        {
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        },
+        {
+          "name": "hand-drawn",
+          "slug": "hand-drawn"
+        },
+        {
+          "name": "anime-style",
+          "slug": "anime-style"
+        },
+        {
+          "name": "side-view",
+          "slug": "side-view"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_6e96729385c8c2e3",
-      "title": "LASt Missing",
-      "slug": "itch-last-missing",
+      "id": "cmqsapugm007jewegid2qoue2",
+      "title": "Deadwave",
+      "slug": "deadwave",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwNDEwMjMwLnBuZw==/315x250%23c/CSDNeu.png",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc412.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "akilargie",
-      "genreNames": "horror",
+      "developerNames": "Firewall Games",
+      "genreNames": "shooter, indie, arcade",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790893351000,
+      "releaseDate": 1782172800000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwNDEwMjMwLnBuZw==/315x250%23c/CSDNeu.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc412.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "action-horror",
+          "slug": "action-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "zombie-apocalypse",
+          "slug": "zombie-apocalypse"
+        },
+        {
+          "name": "multiplayer",
+          "slug": "multiplayer"
+        },
+        {
+          "name": "stylized",
+          "slug": "stylized"
+        },
+        {
+          "name": "third-person",
+          "slug": "third-person"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": [
+        {
+          "storeName": "itch.io",
+          "dealPrice": 9.99,
+          "retailPrice": 9.99,
+          "discountPercent": 0,
+          "dealUrl": null,
+          "currency": "USD",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "id": "cmqsas3wa012lewegbyregwpw",
+      "title": "Heavydelic",
+      "slug": "heavydelic",
+      "status": "released",
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobvew.jpg",
+      "rating": null,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Heavydelic studio",
+      "genreNames": "adventure, platform, hack-and-slash-beat-em-up, indie, arcade",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1782172800000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/cobvew.jpg"
+      ],
+      "tags": [
+        {
+          "name": "folk-horror",
+          "slug": "folk-horror"
+        },
+        {
+          "name": "vhs-analog",
+          "slug": "vhs-analog"
+        },
+        {
+          "name": "setting-sci-fi",
+          "slug": "setting-sci-fi"
+        },
+        {
+          "name": "action-horror",
+          "slug": "action-horror"
+        },
+        {
+          "name": "walking-sim",
+          "slug": "walking-sim"
+        },
+        {
+          "name": "psychological",
+          "slug": "psychological"
+        },
+        {
+          "name": "setting-cyberpunk",
+          "slug": "setting-cyberpunk"
+        },
+        {
+          "name": "setting-space",
+          "slug": "setting-space"
+        },
+        {
+          "name": "setting-rural",
+          "slug": "setting-rural"
+        },
+        {
+          "name": "setting-analog",
+          "slug": "setting-analog"
+        },
+        {
+          "name": "side-view",
+          "slug": "side-view"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_e9551c991759b276",
-      "title": "The Arcade DEMO",
-      "slug": "itch-the-arcade-demo",
+      "id": "cmqsauxoq0223ewegtlgibtmy",
+      "title": "The Puppet's Casket",
+      "slug": "the-puppets-casket",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjQzOTkwLnBuZw==/315x250%23c/Vx%2BtX1.png",
-      "rating": 96,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobics.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Colourplay Games",
-      "genreNames": "horror",
+      "developerNames": "Tapromance",
+      "genreNames": "adventure, point-and-click, puzzle",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790857779000,
+      "releaseDate": 1782172800000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjQzOTkwLnBuZw==/315x250%23c/Vx%2BtX1.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/cobics.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "mascot-horror",
+          "slug": "mascot-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": [
+        {
+          "storeName": "itch.io",
+          "dealPrice": 5.99,
+          "retailPrice": 5.99,
+          "discountPercent": 0,
+          "dealUrl": null,
+          "currency": "USD",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "id": "cmqsik3i40149hkegixlbs8l9",
+      "title": "Lumina Veil",
+      "slug": "lumina-veil",
+      "status": "released",
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coag7a.jpg",
+      "rating": null,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Hamster Cafe",
+      "genreNames": "adventure",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1782172800000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coag7a.jpg"
+      ],
+      "tags": [
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "isolated",
+          "slug": "isolated"
+        },
+        {
+          "name": "unsettling",
+          "slug": "unsettling"
+        },
+        {
+          "name": "third-person",
+          "slug": "third-person"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_368b8f709200a0ed",
-      "title": "Bite Your Tongue",
-      "slug": "itch-bite-your-tongue",
+      "id": "cmqsacp9v053qrcegx75gh41r",
+      "title": "Paranormal Meatball Simulator",
+      "slug": "paranormal-meatball-simulator",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwNDI0MDc3LnBuZw==/315x250%23c/7ahqcL.png",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb5t.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Frogcake",
-      "genreNames": "horror",
+      "developerNames": null,
+      "genreNames": "adventure, simulator, indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790857779000,
+      "releaseDate": 1782086400000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwNDI0MDc3LnBuZw==/315x250%23c/7ahqcL.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb5t.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "supernatural",
+          "slug": "supernatural"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        },
+        {
+          "name": "chaotic-panic",
+          "slug": "chaotic-panic"
+        },
+        {
+          "name": "third-person",
+          "slug": "third-person"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": [
+        {
+          "storeName": "itch.io",
+          "dealPrice": 1.99,
+          "retailPrice": 1.99,
+          "discountPercent": 0,
+          "dealUrl": null,
+          "currency": "USD",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "id": "cmqsacs65054prceglskkzpad",
+      "title": "Acatalepsy",
+      "slug": "acatalepsy--1",
+      "status": "released",
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocat4.jpg",
+      "rating": null,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": null,
+      "genreNames": "adventure, indie",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1782086400000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocat4.jpg"
+      ],
+      "tags": [
+        {
+          "name": "liminal-surreal",
+          "slug": "liminal-surreal"
+        },
+        {
+          "name": "folk-horror",
+          "slug": "folk-horror"
+        },
+        {
+          "name": "setting-sci-fi",
+          "slug": "setting-sci-fi"
+        },
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "setting-medical",
+          "slug": "setting-medical"
+        },
+        {
+          "name": "setting-space",
+          "slug": "setting-space"
+        },
+        {
+          "name": "isolated",
+          "slug": "isolated"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_5e5602a107887ce5",
-      "title": "Helping Your Boyfriend",
-      "slug": "itch-helping-your-boyfriend",
+      "id": "cmqsacs6d054urcegh5oy0o91",
+      "title": "Forgive Me My Love",
+      "slug": "forgive-me-my-love",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMTM1Mzc4LmdpZg==/original/U2DC5U.gif",
-      "rating": 94,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocatg.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Zieelane",
-      "genreNames": "horror",
+      "developerNames": "POS Games",
+      "genreNames": "indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790828199000,
+      "releaseDate": 1782086400000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMTM1Mzc4LmdpZg==/original/U2DC5U.gif"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocatg.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "psychological",
+          "slug": "psychological"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "oppressive",
+          "slug": "oppressive"
+        },
+        {
+          "name": "melancholic",
+          "slug": "melancholic"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_720f4eb4901eec0b",
-      "title": "Next Station: The Moon",
-      "slug": "itch-next-station-the-moon",
+      "id": "cmqsadist05ftrcegriu4ep45",
+      "title": "Crazy Neighbour",
+      "slug": "crazy-neighbour",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjc5MDQ1LnBuZw==/315x250%23c/fv3m06.png",
-      "rating": 98,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb57.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Comfort Kuma Studios",
-      "genreNames": "horror",
+      "developerNames": "Wamu Games",
+      "genreNames": "adventure, puzzle, indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790828199000,
+      "releaseDate": 1782086400000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjc5MDQ1LnBuZw==/315x250%23c/fv3m06.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb57.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "psychological",
+          "slug": "psychological"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "setting-deep-sea",
+          "slug": "setting-deep-sea"
+        },
+        {
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_8cbf0495fe8b1fd4",
-      "title": "Going Once, Cut Twice",
-      "slug": "itch-going-once-cut-twice",
+      "id": "cmqsj5tob089shkeg2vqb3qga",
+      "title": "Desolation Seed",
+      "slug": "desolation-seed",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwNDA1NjU4LnBuZw==/315x250%23c/BW4RA8.png",
-      "rating": 96,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8jd.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Sudachys",
-      "genreNames": "horror",
+      "developerNames": "Emergent Cybersoft",
+      "genreNames": "simulator, puzzle, indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790828199000,
+      "releaseDate": 1782086400000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwNDA1NjU4LnBuZw==/315x250%23c/BW4RA8.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8jd.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "body-horror",
+          "slug": "body-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "setting-sci-fi",
+          "slug": "setting-sci-fi"
+        },
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "setting-cyberpunk",
+          "slug": "setting-cyberpunk"
+        },
+        {
+          "name": "setting-analog",
+          "slug": "setting-analog"
+        },
+        {
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": [
+        {
+          "storeName": "itch.io",
+          "dealPrice": 13.49,
+          "retailPrice": 13.49,
+          "discountPercent": 0,
+          "dealUrl": null,
+          "currency": "USD",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "id": "cmqqsf0nz000gpoegiafkalmz",
+      "title": "Hariti",
+      "slug": "itch-hariti",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI3OTU2NzI0LnBuZw==/original/ATJf9E.png",
+      "rating": null,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Ghostcase001",
+      "genreNames": "",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1782031440000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI3OTU2NzI0LnBuZw==/original/ATJf9E.png"
+      ],
+      "tags": [
+        {
+          "name": "body-horror",
+          "slug": "body-horror"
+        },
+        {
+          "name": "folk-horror",
+          "slug": "folk-horror"
+        },
+        {
+          "name": "action-horror",
+          "slug": "action-horror"
+        },
+        {
+          "name": "supernatural",
+          "slug": "supernatural"
+        },
+        {
+          "name": "adventure",
+          "slug": "adventure"
+        },
+        {
+          "name": "3d",
+          "slug": "3d"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "psychological",
+          "slug": "psychological"
+        },
+        {
+          "name": "singleplayer",
+          "slug": "singleplayer"
+        },
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "creature-horror",
+          "slug": "creature-horror"
+        },
+        {
+          "name": "setting-medical",
+          "slug": "setting-medical"
+        },
+        {
+          "name": "narrative-horror",
+          "slug": "narrative-horror"
+        },
+        {
+          "name": "third-person",
+          "slug": "third-person"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_2375b2a235af7494",
-      "title": "Bleach & Blood",
-      "slug": "itch-bleach-blood",
+      "id": "cmqsaqed200greweg2xm8plll",
+      "title": "Curse: The First Knot",
+      "slug": "curse-the-first-knot",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMDU0OTEzLmdpZg==/original/AYvo3V.gif",
-      "rating": 92,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc1gx.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Windy",
-      "genreNames": "horror",
+      "developerNames": "Kaan ASLAN",
+      "genreNames": "adventure, puzzle, indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790805266000,
+      "releaseDate": 1782000000000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMDU0OTEzLmdpZg==/original/AYvo3V.gif"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc1gx.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "walking-sim",
+          "slug": "walking-sim"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "supernatural",
+          "slug": "supernatural"
+        },
+        {
+          "name": "psychological",
+          "slug": "psychological"
+        },
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "setting-rural",
+          "slug": "setting-rural"
+        },
+        {
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        },
+        {
+          "name": "jumpscare-heavy",
+          "slug": "jumpscare-heavy"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_4a9ee9a41d305fb0",
-      "title": "Tokidoki Tactical Squad",
-      "slug": "itch-tokidoki-tactical-squad",
+      "id": "cmqqsc7j40003poegozmgwe7m",
+      "title": "MATILDA 2",
+      "slug": "itch-matilda-2-2-50-",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzIzMzY5NzEyLnBuZw==/315x250%23c/Za89Bz.png",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://img.itch.zone/aW1nLzI4MDA3MDU2LnBuZw==/original/9xwHcU.png",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "CuteShadow",
-      "genreNames": "horror",
+      "developerNames": "Red Cap Games",
+      "genreNames": "",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790790479000,
+      "releaseDate": 1781978640000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzIzMzY5NzEyLnBuZw==/315x250%23c/Za89Bz.png"
+        "https://img.itch.zone/aW1nLzI4MDA3MDU2LnBuZw==/original/9xwHcU.png"
       ],
       "tags": [
+        {
+          "name": "folk-horror",
+          "slug": "folk-horror"
+        },
+        {
+          "name": "vhs-analog",
+          "slug": "vhs-analog"
+        },
+        {
+          "name": "retro-ps1",
+          "slug": "retro-ps1"
+        },
+        {
+          "name": "mascot-horror",
+          "slug": "mascot-horror"
+        },
+        {
+          "name": "setting-sci-fi",
+          "slug": "setting-sci-fi"
+        },
+        {
+          "name": "slasher",
+          "slug": "slasher"
+        },
+        {
+          "name": "stealth-no-combat",
+          "slug": "stealth-no-combat"
+        },
+        {
+          "name": "walking-sim",
+          "slug": "walking-sim"
+        },
+        {
+          "name": "supernatural",
+          "slug": "supernatural"
+        },
+        {
+          "name": "3d",
+          "slug": "3d"
+        },
+        {
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
         {
           "name": "indie",
           "slug": "indie"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "psychological",
+          "slug": "psychological"
+        },
+        {
+          "name": "short",
+          "slug": "short"
+        },
+        {
+          "name": "singleplayer",
+          "slug": "singleplayer"
+        },
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "creepy",
+          "slug": "creepy"
+        },
+        {
+          "name": "setting-rural",
+          "slug": "setting-rural"
+        },
+        {
+          "name": "setting-analog",
+          "slug": "setting-analog"
+        },
+        {
+          "name": "narrative-horror",
+          "slug": "narrative-horror"
+        },
+        {
+          "name": "high-tension",
+          "slug": "high-tension"
+        },
+        {
+          "name": "isolated",
+          "slug": "isolated"
+        },
+        {
+          "name": "unsettling",
+          "slug": "unsettling"
+        },
+        {
+          "name": "dark",
+          "slug": "dark"
+        },
+        {
+          "name": "ai-assisted",
+          "slug": "ai-assisted"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": [
+        {
+          "storeName": "itch.io",
+          "dealPrice": 5,
+          "retailPrice": 5,
+          "discountPercent": 0,
+          "dealUrl": null,
+          "currency": "USD",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "id": "cmqsactaa055grcegcbcqul35",
+      "title": "Shout-Ai",
+      "slug": "shout-ai",
+      "status": "released",
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocarr.jpg",
+      "rating": null,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": null,
+      "genreNames": "adventure, visual-novel",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1781913600000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/cocarr.jpg"
+      ],
+      "tags": [
+        {
+          "name": "body-horror",
+          "slug": "body-horror"
+        },
+        {
+          "name": "vhs-analog",
+          "slug": "vhs-analog"
+        },
+        {
+          "name": "psychological",
+          "slug": "psychological"
+        },
+        {
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        },
+        {
+          "name": "visual-novel",
+          "slug": "visual-novel"
+        },
+        {
+          "name": "unsettling",
+          "slug": "unsettling"
+        },
+        {
+          "name": "text",
+          "slug": "text"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_22a1607d09bd2566",
-      "title": "Highschool J",
-      "slug": "itch-highschool-j",
+      "id": "cmqsaqd1000gkewegduprxb2s",
+      "title": "Reality Stability Office",
+      "slug": "reality-stability-office",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjIyOTc5LnBuZw==/315x250%23c/DkUpD2.png",
-      "rating": 100,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc1os.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Umigame",
-      "genreNames": "horror",
+      "developerNames": "Nyrel Design LLC",
+      "genreNames": "adventure, simulator, indie, strategy",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790683865000,
+      "releaseDate": 1781913600000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjIyOTc5LnBuZw==/315x250%23c/DkUpD2.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc1os.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "psychological",
+          "slug": "psychological"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "narrative-horror",
+          "slug": "narrative-horror"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_70a04364603bd667",
-      "title": "sweet instincts",
-      "slug": "itch-sweet-instincts",
+      "id": "cmqsacw3o0569rcegb3d2qiaa",
+      "title": "Tales Beyond the Tomb: No Witnesses",
+      "slug": "tales-beyond-the-tomb-no-witnesses",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjU4MDc0LnBuZw==/315x250%23c/IT%2FSzu.png",
-      "rating": 98,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coca91.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "3005jin",
-      "genreNames": "horror",
+      "developerNames": "616 GAMES",
+      "genreNames": "adventure",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790655661000,
+      "releaseDate": 1781827200000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjU4MDc0LnBuZw==/315x250%23c/IT%2FSzu.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coca91.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "slasher",
+          "slug": "slasher"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "action-horror",
+          "slug": "action-horror"
+        },
+        {
+          "name": "psychological",
+          "slug": "psychological"
+        },
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "unsettling",
+          "slug": "unsettling"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_514c0473dddcbb91",
-      "title": "Your New Roommate",
-      "slug": "itch-your-new-roommate",
+      "id": "cmqsad67a059yrceg8xqf3rcr",
+      "title": "Just a Little Longer",
+      "slug": "just-a-little-longer--1",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjE3MzIwLnBuZw==/315x250%23c/exZYZl.png",
-      "rating": 96,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8ml.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "YOYO",
-      "genreNames": "horror",
+      "developerNames": null,
+      "genreNames": "shooter, adventure, indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790655661000,
+      "releaseDate": 1781827200000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjE3MzIwLnBuZw==/315x250%23c/exZYZl.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8ml.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "action-horror",
+          "slug": "action-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
+        },
+        {
+          "name": "isometric",
+          "slug": "isometric"
+        },
+        {
+          "name": "bird-view-top-down",
+          "slug": "bird-view-top-down"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_b829050a16de7df6",
-      "title": "I Can Smell You from Here",
-      "slug": "itch-i-can-smell-you-from-here",
+      "id": "cmqsadak305bcrcegt9huwivc",
+      "title": "Rabbits Hunt",
+      "slug": "rabbits-hunt",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjEwNTQyLmpwZw==/315x250%23c/baNJVN.jpg",
-      "rating": 98,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc82q.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "catproblem9735",
-      "genreNames": "horror",
+      "developerNames": null,
+      "genreNames": "adventure, indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790567175000,
+      "releaseDate": 1781827200000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjEwNTQyLmpwZw==/315x250%23c/baNJVN.jpg"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc82q.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "action-horror",
+          "slug": "action-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "first-person",
+          "slug": "first-person"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_45c92f0a9605fa2e",
-      "title": "Wender",
-      "slug": "itch-wender",
+      "id": "cmqsadoqs05hzrcegmutpgn9p",
+      "title": "Team Panic",
+      "slug": "team-panic",
       "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjUzMTQ0LnBuZw==/315x250%23c/IALIPW.png",
-      "rating": 92,
-      "category": 0,
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc6rc.jpg",
+      "rating": null,
+      "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "wizorge",
-      "genreNames": "horror",
+      "developerNames": "Furko Games",
+      "genreNames": "adventure, puzzle, indie",
       "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790542519000,
+      "releaseDate": 1781827200000,
       "trailerUrl": null,
       "isTrending": false,
       "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjUzMTQ0LnBuZw==/315x250%23c/IALIPW.png"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc6rc.jpg"
       ],
       "tags": [
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "co-op",
+          "slug": "co-op"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_d8f85f5ae7e85ed1",
-      "title": "Amoris",
-      "slug": "itch-amoris",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI5Njk1MDg0LnBuZw==/315x250%23c/eKzVmg.png",
-      "rating": 96,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Xiaonur",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790480818000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI5Njk1MDg0LnBuZw==/315x250%23c/eKzVmg.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
+          "name": "psychological",
+          "slug": "psychological"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_378e46cf10cf3c98",
-      "title": "Save Me a Slice!",
-      "slug": "itch-save-me-a-slice",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjU5NzI2LnBuZw==/315x250%23c/WBrVin.png",
-      "rating": 96,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Mooki !!",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790419896000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjU5NzI2LnBuZw==/315x250%23c/WBrVin.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
+          "name": "first-person",
+          "slug": "first-person"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_9f20150e7c82c469",
-      "title": "Five Nights in Anime: REDUX",
-      "slug": "itch-five-nights-in-anime-redux",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzMwMjM5NDU1LmpwZw==/315x250%23c/pl7p97.jpg",
-      "rating": 88,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "FNIA Studios (Nateraizer)",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790334749000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzMwMjM5NDU1LmpwZw==/315x250%23c/pl7p97.jpg"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
+          "name": "creature-horror",
+          "slug": "creature-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_8b7bf55bb5f47e0e",
-      "title": "Big Bad Dogs",
-      "slug": "itch-big-bad-dogs",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzIyMTY5MDQxLmdpZg==/original/FqFEf8.gif",
-      "rating": 98,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "spar0w",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790307172000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzIyMTY5MDQxLmdpZg==/original/FqFEf8.gif"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
+          "name": "puzzle-horror",
+          "slug": "puzzle-horror"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_14a8df4b98d6c8b3",
-      "title": "House of Petals",
-      "slug": "itch-house-of-petals",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI3NzM5MDkzLmpwZw==/315x250%23c/61e7EC.jpg",
-      "rating": 94,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Little Snake Studio",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790307172000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI3NzM5MDkzLmpwZw==/315x250%23c/61e7EC.jpg"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
+          "name": "high-tension",
+          "slug": "high-tension"
         },
         {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_1c4b3742322834f5",
-      "title": "Koibito No Nazo | Lover's Enigma (Prologue)",
-      "slug": "itch-koibito-no-nazo-lover-s-enigma-prologue",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzIxODQ2NTA5LnBuZw==/315x250%23c/KmjczW.png",
-      "rating": 98,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "FallenCranberry Studio",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790307172000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzIxODQ2NTA5LnBuZw==/315x250%23c/KmjczW.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_222b33e9bea5520e",
-      "title": "Allele: Origin",
-      "slug": "itch-allele-origin",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzI0ODYyODEyLnBuZw==/315x250%23c/EeKAxF.png",
-      "rating": 96,
-      "category": 0,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "coffeedripstudios",
-      "genreNames": "horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1790307172000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzI0ODYyODEyLnBuZw==/315x250%23c/EeKAxF.png"
-      ],
-      "tags": [
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "itch-io",
-          "slug": "itch-io"
+          "name": "chaotic-panic",
+          "slug": "chaotic-panic"
         }
       ],
       "purchaseLinks": [],
@@ -1107,38 +1833,6 @@
           "country": "US"
         }
       ]
-    },
-    {
-      "id": "cmqsesiv001dpqwegy6xi1f0f",
-      "title": "Fears to Fathom: Scratch Creek",
-      "slug": "fears-to-fathom-scratch-creek",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coatgh.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Rayll Studios",
-      "genreNames": "adventure, indie, strategy",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1781049600000,
-      "trailerUrl": null,
-      "isTrending": true,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coatgh.jpg"
-      ],
-      "tags": [
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
     },
     {
       "id": "cmqsj6yzd08lohkeg06v1tkag",
@@ -2823,42 +3517,6 @@
       "priceSnapshots": []
     },
     {
-      "id": "cmqsjdh320azphkegxuycwt2k",
-      "title": "Chronotopophobia",
-      "slug": "chronotopophobia",
-      "status": "released",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gvi.jpg",
-      "rating": null,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Hideous Cave Goblin",
-      "genreNames": "adventure",
-      "platformNames": "Web browser",
-      "releaseDate": 1577232000000,
-      "trailerUrl": null,
-      "isTrending": true,
-      "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gvi.jpg"
-      ],
-      "tags": [
-        {
-          "name": "psychological",
-          "slug": "psychological"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "isometric",
-          "slug": "isometric"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
       "id": "cmqsjdj2g0b05hkeg5rcd4u06",
       "title": "Kusarihime: Euthanasia",
       "slug": "kusarihime-euthanasia",
@@ -2905,36 +3563,114 @@
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
-    }
-  ],
-  "upcomingGames": [
+    },
     {
-      "id": "cmqqlbyaj004950egg0mbzzzf",
-      "title": "Station Nexus",
-      "slug": "station-nexus",
-      "status": "upcoming",
-      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8ky.jpg",
+      "id": "cmqsjdpjd0b30hkegpx0bacp7",
+      "title": "Domvs",
+      "slug": "domvs",
+      "status": "released",
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2g1r.jpg",
       "rating": null,
       "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": null,
-      "genreNames": "adventure, simulator, indie",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1782259200000,
+      "developerNames": "litrouke",
+      "genreNames": "adventure, indie",
+      "platformNames": "Web browser",
+      "releaseDate": 1576368000000,
       "trailerUrl": null,
-      "isTrending": false,
+      "isTrending": true,
       "screenshots": [
-        "https://images.igdb.com/igdb/image/upload/t_cover_big/coc8ky.jpg"
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/co2g1r.jpg"
       ],
       "tags": [
         {
-          "name": "setting-sci-fi",
-          "slug": "setting-sci-fi"
+          "name": "supernatural",
+          "slug": "supernatural"
         },
         {
-          "name": "setting-space",
-          "slug": "setting-space"
+          "name": "narrative-horror",
+          "slug": "narrative-horror"
+        },
+        {
+          "name": "text-based",
+          "slug": "text-based"
+        },
+        {
+          "name": "text",
+          "slug": "text"
+        },
+        {
+          "name": "interactive-fiction",
+          "slug": "interactive-fiction"
+        },
+        {
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "demon",
+          "slug": "demon"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "mouse-only",
+          "slug": "mouse-only"
+        },
+        {
+          "name": "mystery",
+          "slug": "mystery"
+        },
+        {
+          "name": "twine",
+          "slug": "twine"
+        },
+        {
+          "name": "no-ai",
+          "slug": "no-ai"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "cmqsjdqwh0b3chkegtaj6ojvv",
+      "title": "Zelter",
+      "slug": "zelter",
+      "status": "released",
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2g4l.jpg",
+      "rating": null,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "G1 Playground",
+      "genreNames": "shooter, adventure, role-playing-rpg, indie",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1603324800000,
+      "trailerUrl": null,
+      "isTrending": true,
+      "screenshots": [
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/co2g4l.jpg"
+      ],
+      "tags": [
+        {
+          "name": "action-horror",
+          "slug": "action-horror"
+        },
+        {
+          "name": "pixel-art",
+          "slug": "pixel-art"
+        },
+        {
+          "name": "zombie-apocalypse",
+          "slug": "zombie-apocalypse"
+        },
+        {
+          "name": "setting-rural",
+          "slug": "setting-rural"
         },
         {
           "name": "isometric",
@@ -2942,8 +3678,20 @@
         }
       ],
       "purchaseLinks": [],
-      "priceSnapshots": []
-    },
+      "priceSnapshots": [
+        {
+          "storeName": "itch.io",
+          "dealPrice": 8.59,
+          "retailPrice": 8.59,
+          "discountPercent": 0,
+          "dealUrl": null,
+          "currency": "USD",
+          "country": "US"
+        }
+      ]
+    }
+  ],
+  "upcomingGames": [
     {
       "id": "cmqqlbyaj004a50eg2fma9yq0",
       "title": "Blood Welkin",
@@ -3587,9 +4335,94 @@
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
+    },
+    {
+      "id": "cmqqlbzp6004w50egbj692ox6",
+      "title": "Athanasia",
+      "slug": "athanasia",
+      "status": "upcoming",
+      "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wni.jpg",
+      "rating": null,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Momentum Games LLC",
+      "genreNames": "shooter, indie",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1782777600000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wni.jpg"
+      ],
+      "tags": [
+        {
+          "name": "survival-horror",
+          "slug": "survival-horror"
+        },
+        {
+          "name": "setting-sci-fi",
+          "slug": "setting-sci-fi"
+        },
+        {
+          "name": "action-horror",
+          "slug": "action-horror"
+        },
+        {
+          "name": "walking-sim",
+          "slug": "walking-sim"
+        },
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "creature-horror",
+          "slug": "creature-horror"
+        },
+        {
+          "name": "setting-urban",
+          "slug": "setting-urban"
+        },
+        {
+          "name": "setting-industrial",
+          "slug": "setting-industrial"
+        },
+        {
+          "name": "narrative-horror",
+          "slug": "narrative-horror"
+        },
+        {
+          "name": "immersive-sim",
+          "slug": "immersive-sim"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
     }
   ],
   "topRatedGames": [
+    {
+      "id": "32e1f885-6d07-41bb-839e-787a12ee81c1",
+      "title": " ceilings",
+      "slug": " 4096 colors",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": 19,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Ion Storm",
+      "genreNames": "turn-based-strategy-tbs, horror",
+      "platformNames": "PC (Microsoft Windows)",
+      "releaseDate": 1345368000,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
     {
       "id": "cmpwg3pmo00a6g4egq780nha6",
       "title": "Arches",
@@ -3755,365 +4588,16 @@
       ]
     },
     {
-      "id": "32e1f885-6d07-41bb-839e-787a12ee81c1",
-      "title": " ceilings",
-      "slug": " 4096 colors",
-      "status": "released",
-      "coverUrl": null,
-      "rating": 100,
-      "category": 19,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Ion Storm",
-      "genreNames": "turn-based-strategy-tbs, horror",
-      "platformNames": "PC (Microsoft Windows)",
-      "releaseDate": 1345368000,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [],
-      "tags": [],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_38e5e018b460215e",
-      "title": "Where Eternity Sleeps",
-      "slug": "itch-where-eternity-sleeps",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzIxMzIyOTk2LnBuZw==/original/ep276p.png",
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Livingslime",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzIxMzIyOTk2LnBuZw==/original/ep276p.png"
-      ],
-      "tags": [
-        {
-          "name": "amare",
-          "slug": "amare"
-        },
-        {
-          "name": "anime",
-          "slug": "anime"
-        },
-        {
-          "name": "dark-fantasy",
-          "slug": "dark-fantasy"
-        },
-        {
-          "name": "dating-sim",
-          "slug": "dating-sim"
-        },
-        {
-          "name": "fantasy",
-          "slug": "fantasy"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "otome",
-          "slug": "otome"
-        },
-        {
-          "name": "romance",
-          "slug": "romance"
-        },
-        {
-          "name": "yandere",
-          "slug": "yandere"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_dff2dd81399e19d5",
-      "title": "Demon Slayer",
-      "slug": "itch-demon-slayer",
-      "status": "released",
-      "coverUrl": "https://img.itch.zone/aW1nLzYxNTI5NzIuZ2lm/original/O0duob.gif",
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Zenteku",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [
-        "https://img.itch.zone/aW1nLzYxNTI5NzIuZ2lm/original/O0duob.gif"
-      ],
-      "tags": [
-        {
-          "name": "survival",
-          "slug": "survival"
-        },
-        {
-          "name": "2d",
-          "slug": "2d"
-        },
-        {
-          "name": "fantasy",
-          "slug": "fantasy"
-        },
-        {
-          "name": "gamemaker",
-          "slug": "gamemaker"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "pixel-art",
-          "slug": "pixel-art"
-        },
-        {
-          "name": "retro",
-          "slug": "retro"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 11.99,
-          "retailPrice": 11.99,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
-    },
-    {
-      "id": "itch_bb648652cbcc2ae5",
-      "title": "Enkhirydion: Testament of Shadows",
-      "slug": "itch-enkhirydion-testament-of-shadows",
+      "id": "itch_00062964a193dad1",
+      "title": "Sea Town: Forgotten Lives",
+      "slug": "itch-sea-town-forgotten-lives",
       "status": "released",
       "coverUrl": null,
       "rating": 100,
       "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Lemonade Soft",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [],
-      "tags": [
-        {
-          "name": "exploration",
-          "slug": "exploration"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "magic",
-          "slug": "magic"
-        },
-        {
-          "name": "medieval",
-          "slug": "medieval"
-        },
-        {
-          "name": "metroidvania",
-          "slug": "metroidvania"
-        },
-        {
-          "name": "pixel-art",
-          "slug": "pixel-art"
-        },
-        {
-          "name": "skeletons",
-          "slug": "skeletons"
-        },
-        {
-          "name": "souls-like",
-          "slug": "souls-like"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 9,
-          "retailPrice": 9,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
-    },
-    {
-      "id": "itch_d18502a572d64af0",
-      "title": "My Vampire Boyfriend Smokes Lucky Strikes",
-      "slug": "itch-my-vampire-boyfriend-smokes-lucky-strikes",
-      "status": "released",
-      "coverUrl": null,
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "justacarrot",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [],
-      "tags": [
-        {
-          "name": "dark-humor",
-          "slug": "dark-humor"
-        },
-        {
-          "name": "dating-sim",
-          "slug": "dating-sim"
-        },
-        {
-          "name": "gay",
-          "slug": "gay"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "lgbt",
-          "slug": "lgbt"
-        },
-        {
-          "name": "romance",
-          "slug": "romance"
-        },
-        {
-          "name": "vampire",
-          "slug": "vampire"
-        },
-        {
-          "name": "yandere",
-          "slug": "yandere"
-        },
-        {
-          "name": "yaoi",
-          "slug": "yaoi"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_fa7be927f0b46326",
-      "title": "(PRE-ALPHA) WARHEART",
-      "slug": "itch-pre-alpha-warheart",
-      "status": "released",
-      "coverUrl": null,
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "codewar",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [],
-      "tags": [
-        {
-          "name": "interactive-fiction",
-          "slug": "interactive-fiction"
-        },
-        {
-          "name": "dark-fantasy",
-          "slug": "dark-fantasy"
-        },
-        {
-          "name": "fantasy",
-          "slug": "fantasy"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "medieval",
-          "slug": "medieval"
-        },
-        {
-          "name": "mystery",
-          "slug": "mystery"
-        },
-        {
-          "name": "twine",
-          "slug": "twine"
-        },
-        {
-          "name": "war",
-          "slug": "war"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 7,
-          "retailPrice": 7,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
-    },
-    {
-      "id": "itch_b3c5cafec8c80763",
-      "title": "Touch of Madness Demo",
-      "slug": "itch-touch-of-madness-demo",
-      "status": "released",
-      "coverUrl": null,
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "NLT Productions",
+      "developerNames": "David Pires",
       "genreNames": "horror, indie",
       "platformNames": "PC",
       "releaseDate": null,
@@ -4130,20 +4614,12 @@
           "slug": "creepy"
         },
         {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
           "name": "horror",
           "slug": "horror"
-        },
-        {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "minimalist",
-          "slug": "minimalist"
-        },
-        {
-          "name": "monsters",
-          "slug": "monsters"
         },
         {
           "name": "short",
@@ -4163,81 +4639,29 @@
         }
       ],
       "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_6df106a956911c16",
-      "title": "kaschei",
-      "slug": "itch-kaschei",
-      "status": "released",
-      "coverUrl": null,
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Independent Creator",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [],
-      "tags": [
+      "priceSnapshots": [
         {
-          "name": "atmospheric",
-          "slug": "atmospheric"
-        },
-        {
-          "name": "coming-of-age",
-          "slug": "coming-of-age"
-        },
-        {
-          "name": "female-protagonist",
-          "slug": "female-protagonist"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "lesbian",
-          "slug": "lesbian"
-        },
-        {
-          "name": "lgbt",
-          "slug": "lgbt"
-        },
-        {
-          "name": "queer",
-          "slug": "queer"
-        },
-        {
-          "name": "story-rich",
-          "slug": "story-rich"
-        },
-        {
-          "name": "transgender",
-          "slug": "transgender"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
+          "storeName": "itch.io",
+          "dealPrice": 1,
+          "retailPrice": 1,
+          "discountPercent": 0,
+          "dealUrl": null,
+          "currency": "USD",
+          "country": "US"
         }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
+      ]
     },
     {
-      "id": "itch_c43f8f5bedc69232",
-      "title": "The Cardinal Park Case - Chapters 1-4",
-      "slug": "itch-the-cardinal-park-case-chapters-1-4",
+      "id": "itch_0022bb53b5ef449c",
+      "title": "Trick Treat Test!",
+      "slug": "itch-trick-treat-test",
       "status": "released",
       "coverUrl": null,
       "rating": 100,
       "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "LiminAce",
+      "developerNames": "Arrokoth486958",
       "genreNames": "horror, indie",
       "platformNames": "PC",
       "releaseDate": null,
@@ -4246,174 +4670,8 @@
       "screenshots": [],
       "tags": [
         {
-          "name": "atmospheric",
-          "slug": "atmospheric"
-        },
-        {
-          "name": "creepy",
-          "slug": "creepy"
-        },
-        {
-          "name": "dark-humor",
-          "slug": "dark-humor"
-        },
-        {
-          "name": "drama",
-          "slug": "drama"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "noir",
-          "slug": "noir"
-        },
-        {
-          "name": "rpg-maker",
-          "slug": "rpg-maker"
-        },
-        {
-          "name": "story-rich",
-          "slug": "story-rich"
-        },
-        {
-          "name": "thriller",
-          "slug": "thriller"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_cc2bb3afb629d1af",
-      "title": "INCREDIBOX - sprunki remastered cancelled build",
-      "slug": "itch-incredibox-sprunki-remastered-cancelled-build",
-      "status": "released",
-      "coverUrl": null,
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "NyankoBfLol",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [],
-      "tags": [
-        {
-          "name": "rhythm",
-          "slug": "rhythm"
-        },
-        {
-          "name": "fangame",
-          "slug": "fangame"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "incredibox",
-          "slug": "incredibox"
-        },
-        {
-          "name": "sprunki",
-          "slug": "sprunki"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_424253c9a141676c",
-      "title": "Nightmare of the Attic",
-      "slug": "itch-nightmare-of-the-attic",
-      "status": "released",
-      "coverUrl": null,
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "ShootingStarrfish",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [],
-      "tags": [
-        {
-          "name": "interactive-fiction",
-          "slug": "interactive-fiction"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
-        },
-        {
-          "name": "pixel-art",
-          "slug": "pixel-art"
-        },
-        {
-          "name": "rpg-maker",
-          "slug": "rpg-maker"
-        },
-        {
-          "name": "short",
-          "slug": "short"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": []
-    },
-    {
-      "id": "itch_a58267cb45521b8c",
-      "title": "protoViolence - Definitive Edition",
-      "slug": "itch-protoviolence-definitive-edition",
-      "status": "released",
-      "coverUrl": null,
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Mado",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [],
-      "tags": [
-        {
-          "name": "anime",
-          "slug": "anime"
-        },
-        {
-          "name": "dark",
-          "slug": "dark"
-        },
-        {
-          "name": "female-protagonist",
-          "slug": "female-protagonist"
-        },
-        {
-          "name": "futuristic",
-          "slug": "futuristic"
+          "name": "2d",
+          "slug": "2d"
         },
         {
           "name": "horror",
@@ -4428,12 +4686,20 @@
           "slug": "narrative"
         },
         {
-          "name": "sci-fi",
-          "slug": "sci-fi"
+          "name": "point-click",
+          "slug": "point-click"
         },
         {
-          "name": "story-rich",
-          "slug": "story-rich"
+          "name": "rpg-maker",
+          "slug": "rpg-maker"
+        },
+        {
+          "name": "spooky",
+          "slug": "spooky"
+        },
+        {
+          "name": "storygame",
+          "slug": "storygame"
         },
         {
           "name": "no-ai",
@@ -4444,16 +4710,16 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_681a630fa827c749",
-      "title": "Bem Feito (2020 Legacy Edition)",
-      "slug": "itch-bem-feito-2020-legacy-edition",
+      "id": "itch_0023adde8a27f3ec",
+      "title": "Ding DONG!",
+      "slug": "itch-ding-dong",
       "status": "released",
       "coverUrl": null,
       "rating": 100,
       "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "oiCabie",
+      "developerNames": "Master Yu",
       "genreNames": "horror, indie",
       "platformNames": "PC",
       "releaseDate": null,
@@ -4462,16 +4728,468 @@
       "screenshots": [],
       "tags": [
         {
-          "name": "arg",
-          "slug": "arg"
+          "name": "3d",
+          "slug": "3d"
         },
         {
-          "name": "creepypasta",
-          "slug": "creepypasta"
+          "name": "gacha",
+          "slug": "gacha"
         },
         {
-          "name": "cute",
-          "slug": "cute"
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "liminal-space",
+          "slug": "liminal-space"
+        },
+        {
+          "name": "no-ai",
+          "slug": "no-ai"
+        },
+        {
+          "name": "ps",
+          "slug": "ps"
+        },
+        {
+          "name": "short",
+          "slug": "short"
+        },
+        {
+          "name": "simple",
+          "slug": "simple"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_0025e43a4bd46acb",
+      "title": "Minced: Chapter 7",
+      "slug": "itch-minced-chapter-7",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Stopshut",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "no-ai",
+          "slug": "no-ai"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_002a7281792b2907",
+      "title": "Cosmogonic Overflow",
+      "slug": "itch-cosmogonic-overflow",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Rezydent",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [
+        {
+          "name": "card-game",
+          "slug": "card-game"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "metroidvania",
+          "slug": "metroidvania"
+        },
+        {
+          "name": "no-ai",
+          "slug": "no-ai"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_002c6e5b76b4ca26",
+      "title": "APPLE COLLAPSE (demo)",
+      "slug": "itch-apple-collapse-demo",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "nataliecu",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [
+        {
+          "name": "apocalypse",
+          "slug": "apocalypse"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "interactive-fiction",
+          "slug": "interactive-fiction"
+        },
+        {
+          "name": "pixel-art",
+          "slug": "pixel-art"
+        },
+        {
+          "name": "school",
+          "slug": "school"
+        },
+        {
+          "name": "no-ai",
+          "slug": "no-ai"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_002cc6be56b3bd4b",
+      "title": "In Silent Walls Origines (DEMO)",
+      "slug": "itch-in-silent-walls-origines-demo",
+      "status": "released",
+      "coverUrl": "https://img.itch.zone/aW1nLzI3NzQ3MDk4LnBuZw==/original/5NxWl9.png",
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Hollow Signal Games",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI3NzQ3MDk4LnBuZw==/original/5NxWl9.png"
+      ],
+      "tags": [
+        {
+          "name": "3d",
+          "slug": "3d"
+        },
+        {
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "creepy",
+          "slug": "creepy"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "singleplayer",
+          "slug": "singleplayer"
+        },
+        {
+          "name": "walking-simulator",
+          "slug": "walking-simulator"
+        },
+        {
+          "name": "ai-assisted",
+          "slug": "ai-assisted"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_002e6990bc87f49c",
+      "title": "NatureBoxV1-SPUNDER (Official remake) Big update",
+      "slug": "itch-natureboxv1-spunder-official-remake-big-update",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "confusedtelletuby",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "incredibox",
+          "slug": "incredibox"
+        },
+        {
+          "name": "naturebox",
+          "slug": "naturebox"
+        },
+        {
+          "name": "no-ai",
+          "slug": "no-ai"
+        },
+        {
+          "name": "rhythm",
+          "slug": "rhythm"
+        },
+        {
+          "name": "sprunki",
+          "slug": "sprunki"
+        },
+        {
+          "name": "spunder",
+          "slug": "spunder"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_002f53504291384d",
+      "title": "The Grady Group",
+      "slug": "itch-the-grady-group",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "MagicChickenStudios",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [
+        {
+          "name": "3d",
+          "slug": "3d"
+        },
+        {
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "creepy",
+          "slug": "creepy"
+        },
+        {
+          "name": "dark",
+          "slug": "dark"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "low-poly",
+          "slug": "low-poly"
+        },
+        {
+          "name": "short",
+          "slug": "short"
+        },
+        {
+          "name": "singleplayer",
+          "slug": "singleplayer"
+        },
+        {
+          "name": "survival-horror",
+          "slug": "survival-horror"
+        },
+        {
+          "name": "no-ai",
+          "slug": "no-ai"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_0030bca33053cd08",
+      "title": "The Gallery",
+      "slug": "itch-the-gallery",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "AdamDev",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [
+        {
+          "name": "3d",
+          "slug": "3d"
+        },
+        {
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "casual",
+          "slug": "casual"
+        },
+        {
+          "name": "creepy",
+          "slug": "creepy"
+        },
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "narrative",
+          "slug": "narrative"
+        },
+        {
+          "name": "singleplayer",
+          "slug": "singleplayer"
+        },
+        {
+          "name": "surreal",
+          "slug": "surreal"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_0032234bed953977",
+      "title": "Hallway Flashlight Returns",
+      "slug": "itch-hallway-flashlight-returns",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "PYNKBLUD",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [
+        {
+          "name": "3d",
+          "slug": "3d"
+        },
+        {
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "comedy",
+          "slug": "comedy"
+        },
+        {
+          "name": "female-protagonist",
+          "slug": "female-protagonist"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
+          "name": "parody",
+          "slug": "parody"
+        },
+        {
+          "name": "retro",
+          "slug": "retro"
+        },
+        {
+          "name": "no-ai",
+          "slug": "no-ai"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_003aabd05c784f25",
+      "title": "Silent Hill Play Novel - español",
+      "slug": "itch-silent-hill-play-novel-espaol",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Diega",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [
+        {
+          "name": "8-bit",
+          "slug": "8-bit"
+        },
+        {
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "creepy",
+          "slug": "creepy"
+        },
+        {
+          "name": "game-boy",
+          "slug": "game-boy"
         },
         {
           "name": "horror",
@@ -4486,74 +5204,6 @@
           "slug": "retro"
         },
         {
-          "name": "singleplayer",
-          "slug": "singleplayer"
-        },
-        {
-          "name": "no-ai",
-          "slug": "no-ai"
-        }
-      ],
-      "purchaseLinks": [],
-      "priceSnapshots": [
-        {
-          "storeName": "itch.io",
-          "dealPrice": 3,
-          "retailPrice": 3,
-          "discountPercent": 0,
-          "dealUrl": null,
-          "currency": "USD",
-          "country": "US"
-        }
-      ]
-    },
-    {
-      "id": "itch_f9e1987794c0d96d",
-      "title": "King's Field ll Remade",
-      "slug": "itch-kings-field-ll-remade",
-      "status": "released",
-      "coverUrl": null,
-      "rating": 100,
-      "category": null,
-      "esrbRating": null,
-      "pegiRating": null,
-      "developerNames": "Rotmill Dev",
-      "genreNames": "horror, indie",
-      "platformNames": "PC",
-      "releaseDate": null,
-      "trailerUrl": null,
-      "isTrending": false,
-      "screenshots": [],
-      "tags": [
-        {
-          "name": "3d",
-          "slug": "3d"
-        },
-        {
-          "name": "action-rpg",
-          "slug": "action-rpg"
-        },
-        {
-          "name": "dungeon-crawler",
-          "slug": "dungeon-crawler"
-        },
-        {
-          "name": "first-person",
-          "slug": "first-person"
-        },
-        {
-          "name": "horror",
-          "slug": "horror"
-        },
-        {
-          "name": "metroidvania",
-          "slug": "metroidvania"
-        },
-        {
-          "name": "retro",
-          "slug": "retro"
-        },
-        {
           "name": "no-ai",
           "slug": "no-ai"
         }
@@ -4562,16 +5212,16 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_17e8cb5d2630aa2d",
-      "title": "Trenches VR Demo - WW1 Horror Survival Game",
-      "slug": "itch-trenches-vr-demo-ww1-horror-survival-game",
+      "id": "itch_003bc4f029d9bd52",
+      "title": "Bell Bookmark Subscribe",
+      "slug": "itch-bell-bookmark-subscribe",
       "status": "released",
       "coverUrl": null,
       "rating": 100,
       "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Steelkrill Studio",
+      "developerNames": "Ludipe",
       "genreNames": "horror, indie",
       "platformNames": "PC",
       "releaseDate": null,
@@ -4584,28 +5234,24 @@
           "slug": "atmospheric"
         },
         {
+          "name": "creepy",
+          "slug": "creepy"
+        },
+        {
+          "name": "experimental",
+          "slug": "experimental"
+        },
+        {
           "name": "horror",
           "slug": "horror"
         },
         {
-          "name": "indie",
-          "slug": "indie"
+          "name": "singleplayer",
+          "slug": "singleplayer"
         },
         {
-          "name": "scary",
-          "slug": "scary"
-        },
-        {
-          "name": "survival",
-          "slug": "survival"
-        },
-        {
-          "name": "survival-horror",
-          "slug": "survival-horror"
-        },
-        {
-          "name": "virtual-reality-vr",
-          "slug": "virtual-reality-vr"
+          "name": "weird",
+          "slug": "weird"
         },
         {
           "name": "no-ai",
@@ -4616,16 +5262,16 @@
       "priceSnapshots": []
     },
     {
-      "id": "itch_8ebe3782ac277531",
-      "title": "Catalyst: Blind Faith",
-      "slug": "itch-catalyst-blind-faith",
+      "id": "itch_00403895f8d674bf",
+      "title": "Pinwheel",
+      "slug": "itch-pinwheel",
       "status": "released",
       "coverUrl": null,
       "rating": 100,
       "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "Just Write Studios",
+      "developerNames": "Wolfbell",
       "genreNames": "horror, indie",
       "platformNames": "PC",
       "releaseDate": null,
@@ -4634,63 +5280,69 @@
       "screenshots": [],
       "tags": [
         {
-          "name": "dark-fantasy",
-          "slug": "dark-fantasy"
+          "name": "3d",
+          "slug": "3d"
+        },
+        {
+          "name": "arcade",
+          "slug": "arcade"
+        },
+        {
+          "name": "atmospheric",
+          "slug": "atmospheric"
+        },
+        {
+          "name": "clown",
+          "slug": "clown"
+        },
+        {
+          "name": "creepy",
+          "slug": "creepy"
         },
         {
           "name": "horror",
           "slug": "horror"
         },
         {
-          "name": "indie",
-          "slug": "indie"
-        },
-        {
-          "name": "male-protagonist",
-          "slug": "male-protagonist"
-        },
-        {
-          "name": "meaningful-choices",
-          "slug": "meaningful-choices"
-        },
-        {
-          "name": "monsters",
-          "slug": "monsters"
-        },
-        {
-          "name": "multiple-endings",
-          "slug": "multiple-endings"
-        },
-        {
-          "name": "story-rich",
-          "slug": "story-rich"
-        },
-        {
           "name": "no-ai",
           "slug": "no-ai"
+        },
+        {
+          "name": "rhythm",
+          "slug": "rhythm"
+        },
+        {
+          "name": "roguelike",
+          "slug": "roguelike"
         }
       ],
       "purchaseLinks": [],
       "priceSnapshots": []
     },
     {
-      "id": "itch_201fbdbe1fc66fe0",
-      "title": "Good Morning, Gogy",
-      "slug": "itch-good-morning-gogy",
+      "id": "itch_00428a6ebd7ccdf4",
+      "title": "Incredibox Vega junkys update 9.0",
+      "slug": "itch-incredibox-vega-junkys-update-90",
       "status": "released",
-      "coverUrl": null,
+      "coverUrl": "https://img.itch.zone/aW1nLzI1MDE2MTkzLmdpZg==/original/bR%2BSQ8.gif",
       "rating": 100,
       "category": null,
       "esrbRating": null,
       "pegiRating": null,
-      "developerNames": "AsterHours",
+      "developerNames": "PanaMichibf bcx",
       "genreNames": "horror, indie",
       "platformNames": "PC",
       "releaseDate": null,
       "trailerUrl": null,
       "isTrending": false,
-      "screenshots": [],
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzI1MDE2MTkzLmdpZg==/original/bR%2BSQ8.gif"
+      ],
       "tags": [
+        {
+          "name": "2d",
+          "slug": "2d"
+        },
         {
           "name": "cute",
           "slug": "cute"
@@ -4700,12 +5352,86 @@
           "slug": "horror"
         },
         {
+          "name": "incredibox",
+          "slug": "incredibox"
+        },
+        {
+          "name": "minigames",
+          "slug": "minigames"
+        },
+        {
+          "name": "music",
+          "slug": "music"
+        },
+        {
+          "name": "rhythm",
+          "slug": "rhythm"
+        },
+        {
+          "name": "sprunki",
+          "slug": "sprunki"
+        },
+        {
+          "name": "vega-junkys",
+          "slug": "vega-junkys"
+        },
+        {
+          "name": "ai-assisted",
+          "slug": "ai-assisted"
+        }
+      ],
+      "purchaseLinks": [],
+      "priceSnapshots": []
+    },
+    {
+      "id": "itch_004839bfe5f668b4",
+      "title": "BIOMASS",
+      "slug": "itch-rogue_steve-biomass",
+      "status": "released",
+      "coverUrl": null,
+      "rating": 100,
+      "category": null,
+      "esrbRating": null,
+      "pegiRating": null,
+      "developerNames": "Rogue_Steve",
+      "genreNames": "horror, indie",
+      "platformNames": "PC",
+      "releaseDate": null,
+      "trailerUrl": null,
+      "isTrending": false,
+      "screenshots": [],
+      "tags": [
+        {
+          "name": "first-person",
+          "slug": "first-person"
+        },
+        {
+          "name": "horror",
+          "slug": "horror"
+        },
+        {
           "name": "multiple-endings",
           "slug": "multiple-endings"
         },
         {
-          "name": "storygame",
-          "slug": "storygame"
+          "name": "retro",
+          "slug": "retro"
+        },
+        {
+          "name": "sci-fi",
+          "slug": "sci-fi"
+        },
+        {
+          "name": "short",
+          "slug": "short"
+        },
+        {
+          "name": "survival-horror",
+          "slug": "survival-horror"
+        },
+        {
+          "name": "unity",
+          "slug": "unity"
         },
         {
           "name": "no-ai",
@@ -4717,7 +5443,7 @@
     }
   ],
   "stats": {
-    "games": 42009,
+    "games": 53741,
     "developers": 68034,
     "tags": 15825,
     "deals": 111168
