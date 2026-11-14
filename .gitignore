@@ -10,3 +10,6 @@ dist-hf/
 
 # Local environment secrets
 .env
+
+# Local directory cache
+.cache/
