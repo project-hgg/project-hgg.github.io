@@ -31,8 +31,6 @@ actionHref: trending
 
 ---
 
----
-
 ## Coming Soon
 type: countdown
 actionText: Browse All Upcoming
@@ -48,9 +46,6 @@ actionHref: upcoming
 - starcult-night-twisted-age
 - unhost
 - courier-beware
-
----
-
 
 ---
 
