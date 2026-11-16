@@ -31,6 +31,48 @@ actionHref: trending
 
 ---
 
+---
+
+## Coming Soon
+type: countdown
+actionText: Browse All Upcoming
+actionHref: upcoming
+
+- amen-the-quiet-exodus | Featured 1
+- obol | Featured 2
+- corridor-13
+- hermit-computer
+- rest-stop
+- ghost-sector
+- remothered-red-nuns-legacy
+- starcult-night-twisted-age
+- unhost
+- courier-beware
+
+---
+
+
+---
+
+## Released Recently
+type: recent
+actionText: Browse All New Releases
+actionHref: latest
+
+- tenebris-somnia | Featured 1
+- silver-pines | Featured 2
+- breach-signal
+- castlevania-belmonts-curse
+- valor-mortis
+- ghostpunk
+- clive-barkers-hellraiser-revival
+- they-are-here-alien-abduction-horror
+- demon-spore
+- shutter-story
+
+---
+
+
 ## Emerging now
 badge:
 subtitle: Emerging horror games
@@ -84,9 +126,10 @@ actionHref: top-rated
 - outlast
 
 ## survivalhorrors.com Specials
-subtitle: Best of survival horror
+badge: PARTNER ARCHIVE
+subtitle: Classic and influential survival horror games curated with SurvivalHorrors.com
 type: grid
-actionText: Check out survivalhorrors.com
+actionText: Explore Collection
 actionHref: /survival-horrors
 
 - tormented-souls
