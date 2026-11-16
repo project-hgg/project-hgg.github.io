@@ -274,7 +274,8 @@
       "category": null,
       "status": "upcoming",
       "featured": true,
-      "curatorNote": "A stunning blend of 2D survival horror and live-action cinematic dread that breaks new ground."
+      "curatorNote": "A stunning blend of 2D survival horror and live-action cinematic dread that breaks new ground.",
+      "scareRating": 70
     },
     {
       "id": "cmqsf484n059dqweglofv665y",
@@ -291,7 +292,8 @@
       "category": null,
       "status": "upcoming",
       "featured": true,
-      "curatorNote": "Wych Elm delivers an evocative, story-driven mystery soaked in rural isolation."
+      "curatorNote": "Wych Elm delivers an evocative, story-driven mystery soaked in rural isolation.",
+      "scareRating": 72
     },
     {
       "id": "cmqseuxbj027gqwegpyzfulyl",
@@ -325,7 +327,8 @@
       "category": null,
       "status": "upcoming",
       "featured": false,
-      "curatorNote": "Evil Empire injects dark, gothic action-horror energy into a legendary lineage."
+      "curatorNote": "Evil Empire injects dark, gothic action-horror energy into a legendary lineage.",
+      "scareRating": 35
     },
     {
       "id": "cmqsepzdz00eeqwegcp32q5mb",
@@ -342,7 +345,8 @@
       "category": null,
       "status": "upcoming",
       "featured": false,
-      "curatorNote": "Brutal, relentless first-person combat through grotesque historical nightmares."
+      "curatorNote": "Brutal, relentless first-person combat through grotesque historical nightmares.",
+      "scareRating": 55
     },
     {
       "id": "cmqsact8u055brceg4ct4kay6",
@@ -376,7 +380,8 @@
       "category": null,
       "status": "upcoming",
       "featured": false,
-      "curatorNote": "Mad Head Games channels visceral body horror and iconic dark fantasy."
+      "curatorNote": "Mad Head Games channels visceral body horror and iconic dark fantasy.",
+      "scareRating": 78
     },
     {
       "id": "cmqsja3k309qkhkeg90xjhn50",
